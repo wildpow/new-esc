@@ -14,7 +14,7 @@ const Top = styled.div`
   font-family: 'Open Sans', sans-serif;
   font-size: .8rem;
 
-  @media (min-width: 1024px) { font-size: 1.4rem; }
+  @media (min-width: 1024px) { font-size: 1.8rem; }
   @media (min-width: 768px) { font-size: 1.5rem; padding: 10px 12px 12px 12px; }
   
 `;
@@ -27,7 +27,10 @@ const Wrapper = styled.div`
 const Phone = styled.a`
   text-decoration: none;
   color: #ffffff;
-  
+  transition: all .25s ease-in;
+  &:hover {
+    color: #eb1c24;
+    text-shadow: 0px 0px 0px rgba(0, 0, 0, .1);
 `;
 const PhoneWrapper = styled.div`
   margin: 0;
