@@ -11,11 +11,15 @@ const Top = styled.div`
   font-variant: small-caps;
   padding: 5px 6px 10px 6px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
-  font-family: 'Open Sans', sans-serif;
+  transition: all .25s ease-in;
+  font-family: 'Roboto', sans-serif;
   font-size: .8rem;
 
-  @media (min-width: 1024px) { font-size: 1.8rem; }
-  @media (min-width: 768px) { font-size: 1.5rem; padding: 10px 12px 12px 12px; }
+  @media (min-width: 1024px) { font-size: 1.8rem;}
+  @media (min-width: 768px) { 
+    font-size: 1.3rem;
+    padding: 10px 12px 12px 12px;
+    letter-spacing: .1rem; }
   
 `;
 
@@ -31,6 +35,7 @@ const Phone = styled.a`
   &:hover {
     color: #eb1c24;
     text-shadow: 0px 0px 0px rgba(0, 0, 0, .1);
+  }
 `;
 const PhoneWrapper = styled.div`
   margin: 0;

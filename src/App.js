@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Topper from './components/Topper.js';
+import Topper from './components/TopperComponent/Topper.js';
+import MainHeader from './components/MainHeaderComponent/MainHeader.js'
 import 'normalize.css';
 
 class App extends Component {
@@ -7,7 +8,7 @@ class App extends Component {
     return (
       <div>
         <Topper />
-        <h1>Hello World</h1>
+        <MainHeader />
       </div>
     );
   }
