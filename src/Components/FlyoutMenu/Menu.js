@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Menu.css";
-import { NavLink, Link, withRouter } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styled, { ThemeProvider } from 'styled-components';
 import { Image } from '../Logo/LogoStyles'; 
 import Topper from '../Topper/Topper';
@@ -56,5 +56,5 @@ class Menu extends Component {
   }
 }
  
-export default withRouter(Menu);
+export default Menu;
 //withRouter ????

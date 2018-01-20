@@ -6,8 +6,6 @@ const Main = styled.div`
   justify-content: center;
   justify-self: center;
   border: 2px solid black;
-  /* width: 100vw;
-  height: 100vh; */
   text-align: center;
 `
 
