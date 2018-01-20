@@ -7,7 +7,7 @@ const Top = styled.div`
   flex-direction: row;
   justify-content: space-between;
   color: #ffffff;
-  background-color: #1565c0;
+  background-color: ${props => props.theme.main};
   font-variant: small-caps;
   padding: 5px 6px 10px 6px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
@@ -22,6 +22,12 @@ const Top = styled.div`
     letter-spacing: .1rem; }
   
 `;
+
+Top.defaultProps = {
+  theme: {
+    main: '#1565c0'
+  }
+}
 
 const Wrapper = styled.div`
   margin:0;
@@ -45,7 +51,6 @@ const PhoneWrapper = styled.div`
     transform: scale(1.1);
   }
 `;
-
 const Topper = () => {
   return (
     <Top>

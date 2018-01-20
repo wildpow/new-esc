@@ -1,18 +1,6 @@
 import styled from 'styled-components';
 
-export const Header = styled.header`
-  display: flex;
-  flex-direction: column;
-  font-family: 'Roboto', sans-serif;
-  margin-top: -15px;
 
-  @media (min-width: 768px) {
-    margin-top: -22px;
-  }
-  @media (min-width: 1022px) {
-    margin-top: -250px;
-  }
-`
 export const Image = styled.img`
   transition: all .25s ease-in;
   align-self: center;
