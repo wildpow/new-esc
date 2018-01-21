@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import '../../app.css'
 
 const Main = styled.div`
   display: flex;
@@ -13,7 +14,7 @@ const Main = styled.div`
 
 const AjustableComponent = () => {
   return (
-    <Main>
+    <Main className="animated fadeIn">
       <h1>Ajustable Component</h1>
     </Main>
   )

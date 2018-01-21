@@ -3,10 +3,12 @@ import { Route } from 'react-router-dom';
 import 'normalize.css';
 import styled from 'styled-components';
 
-import MenuButton from './Components/FlyoutMenu/MenuButton'
-import Menu from './Components/FlyoutMenu/Menu'
+import './app.css'
 
-import Topper from './Components/Topper/Topper'
+import MenuButton from './Components/FlyoutMenu/MenuButton'
+import Menu from './Components/FlyoutMenu/Menu';
+import Footer from './Components/Footer/Footer';
+import Topper from './Components/Topper/Topper';
 import Navigation from './Components/Nav/Navigation';
 import Logo from './Components/Logo/Logo';
 
@@ -18,15 +20,18 @@ import FinancingComponent from './Components/Financing/Financing';
 import BlogComponent from './Components/Blog/Blog';
 import AboutComponent from './Components/About/About';
 
+import Sealy from './Components/Brands/Sealy';
+
 const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
   margin-top: 15px;
-  @media (min-width: 1200px) { width: 1170px; }
-  @media (min-width: 992px) { width: 970px; }
-  @media (min-width: 768px) { width: 750px; }
+  transition: all .25s ease-in;
+  @media (min-width: 768px) { width: 750px; padding-left: 10px; padding-right: 10px; }
+  @media (min-width: 992px) { width: 970px; padding-left: 5px; padding-right: 5px;}
+  @media (min-width: 1200px) { width: 1170px;}
 `
 
 class App extends Component {
@@ -52,7 +57,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="animated fadeIn">
         <Topper />
         <MenuButton handleMouseDown={this.handleMouseDown}/>
         <Menu handleMouseDown={this.handleMouseDown}
@@ -60,13 +65,19 @@ class App extends Component {
         <Navigation/>
         <Logo/>
         <Container>
+          <div>
           <Route path="/" component={HomeComponent} exact/>
           <Route path="/brands" component={BrandsComponent} />
+
+          <Route path="/brands/sealy" component={Sealy} exact/>
+
           <Route path="/ajustable" component={AjustableComponent} />
           <Route path="/Accessories" component={AccessoriesCompoent} />
           <Route path="/financing" component={FinancingComponent} exact/>
           <Route path="/blog" component={BlogComponent} />
           <Route path="/about" component={AboutComponent} />
+          </div>
+          <Footer/>
         </Container>
       </div>
     );

@@ -43,12 +43,12 @@ class Menu extends Component {
         </ThemeProvider>
       <Nav>
         <NavLink className="flyoutLinks" to="/">Home</NavLink>
-        <NavLink className="flyoutLinks" to="/brands">Brands</NavLink>
-        <NavLink className="flyoutLinks" to="/ajustable">Ajustable</NavLink>
-        <NavLink className="flyoutLinks" to="/accessories">Accessories</NavLink>
-        <NavLink className="flyoutLinks" to="/financing">Financing</NavLink>
-        <NavLink className="flyoutLinks" to="/blog">Our Blog</NavLink>
-        <NavLink className="flyoutLinks" to="/about">About Us</NavLink>
+        <NavLink activeClassName="flyoutActive" className="flyoutLinks" to="/brands">Brands</NavLink>
+        <NavLink activeClassName="flyoutActive" className="flyoutLinks" to="/ajustable">Ajustable</NavLink>
+        <NavLink activeClassName="flyoutActive" className="flyoutLinks" to="/accessories">Accessories</NavLink>
+        <NavLink activeClassName="flyoutActive" className="flyoutLinks" to="/financing">Financing</NavLink>
+        <NavLink activeClassName="flyoutActive" className="flyoutLinks" to="/blog">Our Blog</NavLink>
+        <NavLink activeClassName="flyoutActive" className="flyoutLinks" to="/about">About Us</NavLink>
       </Nav>
       <Image src={image}/>
       </Wrapper>

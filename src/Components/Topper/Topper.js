@@ -9,12 +9,12 @@ const Top = styled.div`
   color: #ffffff;
   background-color: ${props => props.theme.main};
   font-variant: small-caps;
-  padding: 5px 6px 10px 6px;
+  padding: 10px 6px 10px 6px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
   transition: all .25s ease-in;
   font-family: 'Roboto', sans-serif;
   font-size: .8rem;
-
+  
   @media (min-width: 1024px) { font-size: 1.8rem;}
   @media (min-width: 768px) { 
     font-size: 1.3rem;
