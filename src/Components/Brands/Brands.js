@@ -27,7 +27,7 @@ const TempurImg = styled.img`
     max-width: 25rem;
   }
   @media(min-width: 1022px) {
-    max-width: 19rem;
+    max-width: 20rem;
     margin: auto;
   }
   
@@ -38,8 +38,9 @@ const StearnsImg = styled.img`
   padding-top: 30px;
   padding-bottom: 15px;
   @media(min-width: 1022px) {
-  max-width: 14rem;
-  margin: auto;
+  max-width: 15rem;
+  /* margin: auto; */
+  padding-top: 30px;
 }
 `;
 const SealyImg = styled.img`
@@ -49,7 +50,7 @@ padding-top: 30px;
 padding-bottom: 15px;
 @media(min-width: 1022px) {
   max-width: 9rem;
-  margin: auto;
+  /* margin: auto; */
   padding-top: 15px;
   padding-bottom: 10px;
 }
@@ -78,6 +79,7 @@ const Footer = styled.p`
 `
 const StyledLink = styled(Link)`
       text-decoration: none;
+      flex-basis: 100%;
       color: black;
       border: 2px solid black;
       box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .9); 
@@ -86,6 +88,10 @@ const StyledLink = styled(Link)`
       margin-bottom: 20px;
       font-family: 'Open Sans', sans-serif;
       display: flex;
+      transition: all .25s ease-in-out;
+      &:hover {
+        transform: scale(1.01);
+      }
       @media(min-width: 1022px) {
         margin: 0 auto;
         flex-wrap: wrap;
@@ -113,12 +119,12 @@ const StearnsWrapper = StyledLink.extend`
 
 `;
 
-const Mfooter = Footer.extend`
-  @media(min-width: 1022px) {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-`
+// const Mfooter = Footer.extend`
+//   @media(min-width: 1022px) {
+//     padding-left: 20px;
+//     padding-right: 20px;
+//   }
+// `
 
 const BrandsComponent = () => {
   return (

@@ -79,7 +79,7 @@ const Navigation = () => {
     <Header>
       <Nav>
         <StyledLinkLeft to="/brands">Brands</StyledLinkLeft>
-        <StyledLinkLeft to="/ajustable">Ajustable</StyledLinkLeft>
+        <StyledLinkLeft to="/adjustable">Ajustable</StyledLinkLeft>
         <StyledLinkLeft to="/accessories">Accessories</StyledLinkLeft>
       </Nav>
       <Nav>

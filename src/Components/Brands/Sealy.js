@@ -1,22 +1,30 @@
-import React from 'react'
-import gql from 'graphql-tag'
-import { graphql } from 'react-apollo'
-import Markdown from 'react-markdown'
+import React from 'react';
+import gql from 'graphql-tag';
+import { graphql } from 'react-apollo';
+import styled from 'styled-components';
+import Matt from './Matt'
 
+const Wrapper = styled.div`
+display: flex;
+flex-direction: row;
+margin: 0;
+flex-wrap: wrap;
+flex-basis: 100%;
+`
 
 const Sealy = ({ data: { loading, error, Brands} }) => {
   if (error) return <h1>Sorry try again</h1>
   if(!loading) {
     return (
-      <div>
-        {Brands.mattresses.map((mattress) => {
-          return (
-            <div  key={mattress.id}>
-            <img src={`https://media.graphcms.com/resize=w:650,h:366,fit:crop/${mattress.coverImg.handle}`} alt="this"/>
-              <h2>{mattress.name}</h2>
-            </div>)
+      <Wrapper>
+        <Wrapper>
+          {Brands.mattresses.map((mattress) => {
+            return (
+              <Matt key={mattress.id} data={mattress} />
+            )
         })}
-      </div>
+      </Wrapper>
+      </Wrapper>
     )
   }
   return <h1>Loading</h1>
@@ -28,7 +36,8 @@ export const sealyMattresses = gql`
     Brands(brand:"Sealy") {
       mattresses {
         id
-        name
+        subBrand
+        subName
         coverImg {
           handle
         }

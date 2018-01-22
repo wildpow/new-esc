@@ -32,6 +32,9 @@ const Container = styled.div`
   @media (min-width: 768px) { width: 750px; padding-left: 10px; padding-right: 10px; }
   @media (min-width: 992px) { width: 970px; padding-left: 5px; padding-right: 5px;}
   @media (min-width: 1200px) { width: 1170px;}
+  @media (min-width: 1300px) { width: 1270px;}
+  @media (min-width: 1400px) { width: 1370px;}
+  @
 `
 
 class App extends Component {
@@ -67,9 +70,10 @@ class App extends Component {
         <Container>
           <div>
           <Route path="/" component={HomeComponent} exact/>
-          <Route path="/brands" component={BrandsComponent} />
+          <Route path="/brands/sealy" component={Sealy}/>
+          <Route path="/brands" exact component={BrandsComponent} />
 
-          <Route path="/brands/sealy" component={Sealy} exact/>
+          
 
           <Route path="/ajustable" component={AjustableComponent} />
           <Route path="/Accessories" component={AccessoriesCompoent} />

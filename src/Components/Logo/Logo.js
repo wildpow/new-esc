@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import logo from '../../images/logo.png';
 import { Image, H1, Span } from './LogoStyles.js';
 
+
 const Wrapper = styled.div`
 display: flex;
 flex-direction: column;
@@ -25,14 +26,20 @@ const StyledLink = styled(NavLink)`
   font-family: 'Roboto', sans-serif;
   margin-top: -15px;
   margin: auto;
+  &:hover {
+    transform: scale3d(1.05,1.05,1);
+  }
 `
 const Logo = () => {
   return (
     <Wrapper>
+   
         <StyledLink to="/" exact>
-          <Image src={logo}/>
+          <Image src={logo} />
+          
         </StyledLink>
           <H1><Span>E.S.C.</Span> Mattress Center </H1>
+    
     </Wrapper>
   )
 }
