@@ -26,6 +26,7 @@ const StyledLink = styled(NavLink)`
   font-family: 'Roboto', sans-serif;
   margin-top: -15px;
   margin: auto;
+  transition: all .20s ease-in;
   &:hover {
     transform: scale3d(1.05,1.05,1);
   }
