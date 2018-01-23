@@ -9,19 +9,22 @@ const MainFooter = styled.footer`
   margin-top: 15px;
   border: 2px solid black;
   box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .9);
+ 
 `;
 
 const Social = styled.div`
   display: flex;
   flex-direction: row;
+  padding: 7px 7px 4px 7px;
 `;
 
 const FBimage = styled.img`
-max-width: 4rem;
+max-width: 3.5rem;
 `;
 
 const Timage = styled.img`
-max-width: 4rem;
+max-width: 4.1rem;
+padding-left: 10px;
 `;
 
 const Graph = styled.div``;
@@ -31,6 +34,7 @@ const Address = styled.div``;
 const Footer = () => {
   return(
     <MainFooter>
+      <Wrapper>
       <Social>
       <a href="https://www.facebook.com/ESCMattressCenter/" target="_blank" rel="noopener noreferrer">
         <FBimage src={fbIcon} alt="facebook" class="fb__img"/>
@@ -45,7 +49,7 @@ const Footer = () => {
       <Graph>
 
       </Graph>
-      
+      </Wrapper>
     </MainFooter>
   )
 }

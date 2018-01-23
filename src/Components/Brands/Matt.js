@@ -41,10 +41,10 @@ const Name = styled.p`
   
 `;
 const Matt = ({data}) => {
-  const uri = `/brands/sealy/${data.subName.replace(" ","_")}`;
+  const uri = `/brands/sealy/${data.id}`;
   return (
-    <Wrapper>
-      <StyledLink to={uri}>
+    <Wrapper id={data.id}>
+      <StyledLink to={uri} id={data.id}>
         <Img src={`https://media.graphcms.com/resize=w:200,h:200,fit:clip/${data.coverImg.handle}`} alt="this"/>
         <Name>{data.subBrand}<br/>{data.subName}</Name>
       </StyledLink>
@@ -53,3 +53,5 @@ const Matt = ({data}) => {
 }
 
 export default Matt
+
+//${data.subName.replace(" ","_")}

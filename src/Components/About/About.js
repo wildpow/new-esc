@@ -7,9 +7,11 @@ const Main = styled.div`
   display: flex;
   justify-content: center;
   justify-self: center;
-  border: 2px solid black;
+  padding-left: 150px;
+padding-right: 150px;
   text-align: center;
   flex-direction: column;
+  
 `
 const Img = styled.img`
 max-width: 20rem;
@@ -19,14 +21,21 @@ const AboutText = styled.p`
   font-family: 'Open Sans', sans-serif;
   color: white;
   margin-top: 0;
+  
   margin-bottom: 0;
   padding: 15px;
   background-color: ${props => props.red ? '#eb1c24' : '#1565c0'}
 `
+
+const Wrapper = styled.div`
+align-self: center;
+border: 2px solid black;
+
+`
 const AboutComponent = () => {
   return (
     <Main className="animated fadeIn">
-      <div>
+      <Wrapper>
       
       <AboutText>With over 20 years of mattress industry
         knowledge between us we set out to create a better 
@@ -40,7 +49,7 @@ const AboutComponent = () => {
         specializes in helping out guests get the best
         nights sleep to “Sleep like the experts do!”
       </AboutText>
-      </div>
+      </Wrapper>
      
     </Main>
   )

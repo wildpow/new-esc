@@ -44,7 +44,7 @@ class Menu extends Component {
       <Nav>
         <NavLink className="flyoutLinks" to="/">Home</NavLink>
         <NavLink activeClassName="flyoutActive" className="flyoutLinks" to="/brands">Brands</NavLink>
-        <NavLink activeClassName="flyoutActive" className="flyoutLinks" to="/ajustable">Ajustable</NavLink>
+        <NavLink activeClassName="flyoutActive" className="flyoutLinks" to="/adjustable">Adjustable</NavLink>
         <NavLink activeClassName="flyoutActive" className="flyoutLinks" to="/accessories">Accessories</NavLink>
         <NavLink activeClassName="flyoutActive" className="flyoutLinks" to="/financing">Financing</NavLink>
         <NavLink activeClassName="flyoutActive" className="flyoutLinks" to="/blog">Our Blog</NavLink>

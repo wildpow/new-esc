@@ -72,7 +72,7 @@ class App extends Component {
         <Container>
           <div>
           <Route path="/" component={HomeComponent} exact/>
-          <Route path="/brands/sealy/:id" component={TheOne} />
+          {/* <Route path="/brands/sealy/:id" component={TheOne} /> */}
           <Route path="/brands/sealy" exact component={Sealy}/>
           <Route path="/brands" exact component={BrandsComponent} />
 
