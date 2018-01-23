@@ -51,7 +51,7 @@ padding-bottom: 15px;
 @media(min-width: 1022px) {
   max-width: 9rem;
   /* margin: auto; */
-  padding-top: 15px;
+  padding-top: 5px;
   padding-bottom: 10px;
 }
 `;

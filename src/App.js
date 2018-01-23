@@ -14,11 +14,13 @@ import Logo from './Components/Logo/Logo';
 
 import HomeComponent from './Components/Home/Home';
 import BrandsComponent from './Components/Brands/Brands';
-import AjustableComponent from './Components/Ajustable/Ajustable';
+import AdjustableComponent from './Components/Adjustable/Adjustable';
 import AccessoriesCompoent from './Components/Accessories/Accessories';
 import FinancingComponent from './Components/Financing/Financing';
 import BlogComponent from './Components/Blog/Blog';
 import AboutComponent from './Components/About/About';
+
+import TheOne from './Components/Brands/TheOne'
 
 import Sealy from './Components/Brands/Sealy';
 
@@ -70,12 +72,13 @@ class App extends Component {
         <Container>
           <div>
           <Route path="/" component={HomeComponent} exact/>
-          <Route path="/brands/sealy" component={Sealy}/>
+          <Route path="/brands/sealy/:id" component={TheOne} />
+          <Route path="/brands/sealy" exact component={Sealy}/>
           <Route path="/brands" exact component={BrandsComponent} />
 
           
 
-          <Route path="/ajustable" component={AjustableComponent} />
+          <Route path="/adjustable" component={AdjustableComponent} />
           <Route path="/Accessories" component={AccessoriesCompoent} />
           <Route path="/financing" component={FinancingComponent} exact/>
           <Route path="/blog" component={BlogComponent} />

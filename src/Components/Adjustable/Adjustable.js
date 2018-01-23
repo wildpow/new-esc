@@ -12,12 +12,12 @@ const Main = styled.div`
   text-align: center;
 `
 
-const AjustableComponent = () => {
+const AdjustableComponent = () => {
   return (
     <Main className="animated fadeIn">
-      <h1>Ajustable Component</h1>
+      <h1>Adjustable Component</h1>
     </Main>
   )
 }
 
-export default AjustableComponent;
+export default AdjustableComponent;

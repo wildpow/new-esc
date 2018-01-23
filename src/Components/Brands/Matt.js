@@ -41,9 +41,10 @@ const Name = styled.p`
   
 `;
 const Matt = ({data}) => {
+  const uri = `/brands/sealy/${data.subName.replace(" ","_")}`;
   return (
     <Wrapper>
-      <StyledLink to="/brands/sealy/:id">
+      <StyledLink to={uri}>
         <Img src={`https://media.graphcms.com/resize=w:200,h:200,fit:clip/${data.coverImg.handle}`} alt="this"/>
         <Name>{data.subBrand}<br/>{data.subName}</Name>
       </StyledLink>

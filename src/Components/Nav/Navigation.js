@@ -28,10 +28,10 @@ const StyledLinkLeft = styled(NavLink)`
     margin-left: 20px;
     color: #1565c0;
     transition: all .20s ease-in;
-    border-top-left-radius: 2rem;
+    /* border-top-left-radius: 2rem;
     border-top-right-radius: 2rem;
     border-bottom-right-radius: 2rem;
-    border-bottom-left-radius: 2rem;
+    border-bottom-left-radius: 2rem; */
     &:hover {
       border-top: 8px solid #eb1c24;
     }
@@ -55,10 +55,10 @@ const StyledLinkRight = styled(NavLink)`
   text-decoration: none;
   font-family: 'Open Sans', sans-serif;
   color: #1565c0;
-  border-top-left-radius: 2rem;
+  /* border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
   border-bottom-right-radius: 2rem;
-  border-bottom-left-radius: 2rem;
+  border-bottom-left-radius: 2rem; */
   &:hover {
       border-top: 8px solid #eb1c24;
     }
@@ -79,7 +79,7 @@ const Navigation = () => {
     <Header>
       <Nav>
         <StyledLinkLeft to="/brands">Brands</StyledLinkLeft>
-        <StyledLinkLeft to="/adjustable">Ajustable</StyledLinkLeft>
+        <StyledLinkLeft to="/adjustable">Adjustable</StyledLinkLeft>
         <StyledLinkLeft to="/accessories">Accessories</StyledLinkLeft>
       </Nav>
       <Nav>
