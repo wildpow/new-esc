@@ -1,19 +1,17 @@
 import React from 'react'
 import gql from 'graphql-tag'
 import { graphql } from 'react-apollo';
-import { Wrapper, MainTitle, Main, MainInfo, PriceWrapper, MattOnly, MattSet, PriceTitle } from './SingleMatt';
+import { Wrapper, MainTitle, Main, MainInfo, PriceWrapper, MattOnly, MattSet, PriceTitle } from './SingleMattStyles';
 import Markdown from 'react-markdown'
-
-import styled from 'styled-components';
 import './stuff.css';
-
+import '../../app.css';
 
 //Wrapper: column
 const SingleMattress = ({ data: { loading, error, mattress } }) => {
   if (error) return <h1>Error fetching the Mattress!</h1>
   if (!loading) {
     return (
-<Wrapper> 
+<Wrapper className="animated fadeIn"> 
   <MainTitle>
     <h1>{mattress.name}</h1>
   </MainTitle>

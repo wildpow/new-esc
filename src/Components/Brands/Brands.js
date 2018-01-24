@@ -39,6 +39,7 @@ const StearnsImg = styled.img`
   padding-bottom: 15px;
   @media(min-width: 1022px) {
   max-width: 15rem;
+  
   /* margin: auto; */
   padding-top: 30px;
 }

@@ -9,21 +9,21 @@ import {  MainWrapper,
           MattImg,
           Name  } from './MattListStyles';
 
-import StearnsImg from '../../images/StearnsLogo.png'
+import TempurImg from '../../images/TempurLogo2.png';
 import '../../app.css';
 
-const Sealy = ({ data: { loading, error, Brands} }) => {
+const Tempur = ({ data: { loading, error, Brands} }) => {
   if (error) return <h1>Shit Cra Cra {console.log(error)}</h1>
   if(!loading) {
     return (
-      <MainWrapper>
+      <MainWrapper className="animated fadeIn">
         <WrapperRight>
-          <Img src={StearnsImg} alt="Logo"/>
+          <Img src={TempurImg} alt="Logo"/>
         </WrapperRight>
         <Wrapper>
           {Brands.mattresses.map((mattress) => {
             return (
-              <LinkWrapper  key={mattress.id} className="animated fadeIn">
+              <LinkWrapper  key={mattress.id}>
                 <StyledLink to={`/brands/stearns/${mattress.id}`}>
                   <MattImg src={`https://media.graphcms.com/resize=w:250,h:250,fit:clip/${mattress.coverImg.handle}`} alt="this"/>
                   <Name>{mattress.subBrand}<br/>{mattress.subName}</Name>
@@ -37,10 +37,9 @@ const Sealy = ({ data: { loading, error, Brands} }) => {
   return <h1>Loading</h1>
 }
 
-
-export const stearnsMattresses = gql`
-  query stearnsMattresses {
-    Brands(brand:"Stearns&Foster") {
+export const tempurMattresses = gql`
+  query tempurMattresses {
+    Brands(brand:"Tempur-Pedic") {
       mattresses {
         id
         subName
@@ -54,4 +53,4 @@ export const stearnsMattresses = gql`
 ` 
 
 
-export default graphql(stearnsMattresses)(Sealy);
+export default graphql(tempurMattresses)(Tempur);
