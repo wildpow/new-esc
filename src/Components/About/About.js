@@ -7,17 +7,27 @@ const Main = styled.div`
   display: flex;
   justify-content: center;
   justify-self: center;
-  padding-left: 150px;
-padding-right: 150px;
+ 
   text-align: center;
   flex-direction: column;
   
 `
 const Img = styled.img`
-max-width: 20rem;
+padding-top: 15px;
+padding-bottom: 15px;
+max-width: 21rem;
 align-self: center;
+@media(min-width: 768px) {
+  max-width: 35rem;
+  padding-top: 25px;
+}
 `
 const AboutText = styled.p`
+  @media(min-width: 768px) {
+    padding: 25px;
+    line-height: 2.5rem;
+    word-spacing: .24rem;
+}
   font-family: 'Open Sans', sans-serif;
   color: white;
   margin-top: 0;
@@ -30,6 +40,12 @@ const AboutText = styled.p`
 const Wrapper = styled.div`
 align-self: center;
 border: 2px solid black;
+@media(min-width:768px) {
+    font-size: 1.8rem;
+  }
+@media(min-width: 1200px) {
+  max-width: 75vw;
+}
 
 `
 const AboutComponent = () => {

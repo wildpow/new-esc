@@ -25,7 +25,6 @@ const StyledLink = styled(Link)`
   text-decoration: none;
   justify-content: space-between;
   margin: 0;
-  
 `;
 const Img = styled.img`
   margin: 0  auto;

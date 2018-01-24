@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import 'normalize.css';
 import styled from 'styled-components';
 
@@ -20,10 +20,11 @@ import FinancingComponent from './Components/Financing/Financing';
 import BlogComponent from './Components/Blog/Blog';
 import AboutComponent from './Components/About/About';
 
-import TheOne from './Components/Brands/TheOne'
+// import TheOne from './Components/Brands/SingleMattress'
 
-import Sealy from './Components/Brands/Sealy';
-
+import SingleMattress from './Components/Brands/SingleMattress'
+import Sealy from './Components/Brands/Sealy2';
+import Stearns from './Components/Brands/Stearns'
 const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
@@ -70,10 +71,11 @@ class App extends Component {
         <Navigation/>
         <Logo/>
         <Container>
-          <div>
+          <Switch>
           <Route path="/" component={HomeComponent} exact/>
-          {/* <Route path="/brands/sealy/:id" component={TheOne} /> */}
+          <Route path="/brands/sealy/:id" component={SingleMattress} />
           <Route path="/brands/sealy" exact component={Sealy}/>
+          <Route path="/brands/stearns" component={Stearns}/>
           <Route path="/brands" exact component={BrandsComponent} />
 
           
@@ -83,7 +85,8 @@ class App extends Component {
           <Route path="/financing" component={FinancingComponent} exact/>
           <Route path="/blog" component={BlogComponent} />
           <Route path="/about" component={AboutComponent} />
-          </div>
+          
+          </Switch>
           <Footer/>
         </Container>
       </div>

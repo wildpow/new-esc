@@ -1,0 +1,18 @@
+
+.marker {
+  font-family: 'Open Sans', sans-serif;
+  
+  padding: 30px;
+  
+ 
+}
+.marker p {
+  font-size: 2.3rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.marker ul {
+ list-style: square;
+ margin-top: 5px;
+ font-size:  1.8rem;
+}
