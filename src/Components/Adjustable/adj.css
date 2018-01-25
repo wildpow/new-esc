@@ -1,6 +1,7 @@
 .adj {
   font-family: 'Open Sans', sans-serif;
   padding: 30px;
+  display: none;
 }
 .adj p {
   font-size: 1.6rem;
@@ -23,6 +24,7 @@
 
 @media(min-width: 692px) {
 .adj {
+  display: block;
   font-family: 'Open Sans', sans-serif;
   padding: 30px;
 }

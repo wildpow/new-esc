@@ -43,14 +43,21 @@ const StyledLink = styled(Link)`
 `
 export const H3 = styled.h3`
 font-family: 'Roboto', sans-serif;
-font-size: 1.2rem;
-padding: 10px 30px 10px 30px;
+font-size: 1rem;
+padding: 10px 5px 10px 5px;
 background-color: #1565c0;
 color: white;
 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 margin-top: 0;
+text-align: center;
 margin-bottom: 0;
-
+  @media(min-width: 581px) {
+    font-size: 1.2rem;
+    padding: 10px 30px 10px 30px;
+}
+  @media(min-width: 692px) {
+    text-align: left;
+  }
 `;
 
 const InfoWrapper = styled.div`
@@ -75,24 +82,24 @@ const AdjustableComponent = ({ data: {error, loading, Bases} }) => {
     return (
     <Main className="animated fadeIn">
       {Bases.map((base) => (
-        <StyledLink to="/eewffewf/wefwefwef/wefwef">
-      <H3>{base.fullName}</H3>
-      <InfoWrapper>
-      <Img src={`https://media.graphcms.com/resize=w:350,h:350,fit:clip/${base.coverImg.handle}`} alt="this"/>
-      <Markdown className="adj" source={base.features} escapeHtml={false} />
-      </InfoWrapper>
-      </StyledLink>
+        <StyledLink to="/eewffewf/wefwefwef/wefwef" key={base.id}>
+          <H3>{base.fullName}</H3>
+          <InfoWrapper>
+            <Img src={`https://media.graphcms.com/resize=w:350,h:350,fit:clip/${base.coverImg.handle}`} alt="this"/>
+            <Markdown className="adj" source={base.features} escapeHtml={false} />
+          </InfoWrapper>
+        </StyledLink>
       ))}
       </Main>
     )
   }
-  return <h3>loading</h3>
+  return <h4>this</h4>
 }
-
 
 export const allAdjustables = gql`
   query allAdjustables {
     Bases: allAdjBaseses {
+      id
       fullName
       features
       coverImg {
