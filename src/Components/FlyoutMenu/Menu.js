@@ -4,7 +4,9 @@ import { NavLink } from 'react-router-dom';
 import styled, { ThemeProvider } from 'styled-components';
 import { Image } from '../Logo/LogoStyles'; 
 import Topper from '../Topper/Topper';
-import image from '../../images/logo.png'
+import image from '../../images/logo.png';
+
+
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -21,10 +23,6 @@ const Nav = styled.nav`
 const theme = {
   main: '#c62828'
 };
-
-
-
-
 
 class Menu extends Component {
   render() {
@@ -51,6 +49,7 @@ class Menu extends Component {
         <NavLink activeClassName="flyoutActive" className="flyoutLinks" to="/about">About Us</NavLink>
       </Nav>
       <Image src={image}/>
+      
       </Wrapper>
     );
   }

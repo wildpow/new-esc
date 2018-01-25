@@ -20,7 +20,7 @@ const Main = styled.div`
   }
 `
 const TempurImg = styled.img`
-  max-width: 21rem;
+  width: 22rem;
   align-self: center;
   padding-top: 22px;
   @media(min-width: 768px) {
@@ -29,30 +29,34 @@ const TempurImg = styled.img`
   @media(min-width: 1022px) {
     max-width: 20rem;
     margin: auto;
+    padding-top: 0px;
   }
   
 `;
 const StearnsImg = styled.img`
   align-self: center;
-  max-width: 17rem;
+  width: 17rem;
   padding-top: 30px;
   padding-bottom: 15px;
   @media(min-width: 1022px) {
   max-width: 15rem;
   
   /* margin: auto; */
-  padding-top: 30px;
+  padding-top: 50px;
 }
 `;
 const SealyImg = styled.img`
 align-self: center;
-max-width: 11rem;
-padding-top: 30px;
+width: 12rem;
+height: 12rem;
+padding-top: 20px;
 padding-bottom: 15px;
 @media(min-width: 1022px) {
-  max-width: 9rem;
+  width: 10rem;
+  height: 10rem;
+
   /* margin: auto; */
-  padding-top: 5px;
+  padding-top: 10px;
   padding-bottom: 10px;
 }
 `;

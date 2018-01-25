@@ -38,10 +38,11 @@ const Phone = styled.a`
   text-decoration: none;
   color: #ffffff;
   transition: all .25s ease-in;
-  &:hover {
-    color: #eb1c24;
-    text-shadow: 0px 0px 0px rgba(0, 0, 0, .1);
-  }
+  text-shadow: 0px 0px 0px rgba(0, 0, 0, .1);
+  /* &:hover {
+    
+    
+  } */
 `;
 const PhoneWrapper = styled.div`
   margin: 0;

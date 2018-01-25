@@ -34,9 +34,21 @@ border-top-left-radius: .14rem;
 border-top-right-radius: .14rem;
 border-bottom-right-radius: .14rem;
 border-bottom-left-radius: .14rem;
+background-color: white;
+transition: all .15s ease-in-out;
+  &:hover {
+    z-index: 999;
+    transform: scale3d(1.05,1.05,1);
+  }
 `;
 export const StyledLink = styled(Link)`
 text-decoration: none;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+
+
 `
 export const MattImg = styled.img`
 margin: auto;
@@ -48,5 +60,5 @@ text-decoration: none;
 text-align: center;
 padding-left: 10px;
 padding-right: 10px;
-
+align-self: center;
 `;

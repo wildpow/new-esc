@@ -1,4 +1,6 @@
 import React from 'react';
+import gql from 'graphql-tag';
+import { graphql } from 'react-apollo'
 import styled from 'styled-components';
 
 export const Promo = styled.p`
@@ -6,10 +8,22 @@ export const Promo = styled.p`
   padding: 0;
 `;
 
-const TopPromo = () => {
+const TopPromo = ({data: {loading, error, allToppers }}) => {
+  if (error) return <Promo> Welcome to E.S.C. Mattress Center</Promo>
+  if (!loading) {
     return (
-      <Promo>Grand Opening Sale Going On Now</Promo>
+      <Promo>{allToppers[0].currentpromo}</Promo>
     )
   }
+  return <Promo>E.S.C Mattress Center Rocks!</Promo>
+};
 
-export default TopPromo;
+export const allToppers = gql`
+  query Toppers {
+    allToppers {
+      currentpromo 
+    }
+  }
+`;
+
+export default graphql(allToppers)(TopPromo);

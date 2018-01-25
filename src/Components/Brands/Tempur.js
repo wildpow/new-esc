@@ -22,9 +22,9 @@ const Tempur = ({ data: { loading, error, Brands} }) => {
         </WrapperRight>
         <Wrapper>
           {Brands.mattresses.map((mattress) => {
-            return (
+            return ( 
               <LinkWrapper  key={mattress.id}>
-                <StyledLink to={`/brands/stearns/${mattress.id}`}>
+                <StyledLink to={`/brands/tempurpedic/${mattress.id}`}>
                   <MattImg src={`https://media.graphcms.com/resize=w:250,h:250,fit:clip/${mattress.coverImg.handle}`} alt="this"/>
                   <Name>{mattress.subBrand}<br/>{mattress.subName}</Name>
                 </StyledLink>

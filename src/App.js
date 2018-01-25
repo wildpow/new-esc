@@ -26,6 +26,7 @@ import SingleMattress from './Components/Brands/SingleMattress'
 import Sealy from './Components/Brands/Sealy2';
 import Tempur from './Components/Brands/Tempur';
 import Stearns from './Components/Brands/Stearns'
+
 const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
@@ -73,14 +74,13 @@ class App extends Component {
         <Logo/>
         <Container>
           <Switch>
-          <Route path="/brands/tempurpedic" component={Tempur} exact/>
+          <Route path="/" component={HomeComponent} exact/>
+          <Route path="/brands/tempurpedic/:id" component={SingleMattress}/>
           <Route path="/brands/sealy/:id" component={SingleMattress} />
           <Route path="/brands/stearns/:id" component={SingleMattress} />
-          <Route path="/" component={HomeComponent} exact/>
-          {/* <Route path="/brands/sealy/:id" component={SingleMattress} />
-          <Route path="/brands/stearns/:id" component={SingleMattress} /> */}
-          <Route path="/brands/sealy" component={Sealy}/>
-          <Route path="/brands/tempur" component={Tempur} exact/>
+          
+          <Route path="/brands/tempurpedic" component={Tempur} exact/>
+          <Route path="/brands/sealy" component={Sealy} exact/>
           <Route path="/brands/stearns" component={Stearns} exact/>
           <Route path="/brands" component={BrandsComponent} exact/>
 

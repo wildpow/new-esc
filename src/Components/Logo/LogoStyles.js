@@ -8,6 +8,12 @@ export const Image = styled.img`
   @media (min-width: 500px) { height: 8em; }
   @media (min-width: 768px) { height: 11em; }
 `
+
+// export const FlyoutImage = Image.extend`
+  
+//   margin-bottom: -42px;
+  
+// `
 export const H1 = styled.h1`
   transition: all .25s ease-in;
   z-index: -1;
