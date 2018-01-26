@@ -32,13 +32,19 @@ const StyledLink = styled(Link)`
   border: 2px solid black;
   margin-bottom: 20px;
   box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .9); 
-  border-top-left-radius: .2rem;
-  border-top-right-radius: .2rem;
-  border-bottom-right-radius: .2rem;
-  border-bottom-left-radius: .2rem;
+  border-top-left-radius: .14rem;
+  border-top-right-radius: .14rem;
+  border-bottom-right-radius: .14rem;
+  border-bottom-left-radius: .14rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transition: all .15s ease-in-out;
+  background-color: white;
+  &:hover {
+    z-index: 999;
+    transform: scale3d(1.02,1.02,1);
+  }
 
 `
 export const H3 = styled.h3`
@@ -82,7 +88,7 @@ const AdjustableComponent = ({ data: {error, loading, Bases} }) => {
     return (
     <Main className="animated fadeIn">
       {Bases.map((base) => (
-        <StyledLink to="/eewffewf/wefwefwef/wefwef" key={base.id}>
+        <StyledLink to="/adjustable/:id" key={base.id}>
           <H3>{base.fullName}</H3>
           <InfoWrapper>
             <Img src={`https://media.graphcms.com/resize=w:350,h:350,fit:clip/${base.coverImg.handle}`} alt="this"/>

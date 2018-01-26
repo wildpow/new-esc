@@ -21,7 +21,7 @@ import BlogComponent from './Components/Blog/Blog';
 import AboutComponent from './Components/About/About';
 
 // import TheOne from './Components/Brands/SingleMattress'
-
+import SingleBase from './Components/Adjustable/SingleBase'
 import SingleMattress from './Components/Brands/SingleMattress'
 import Sealy from './Components/Brands/Sealy2';
 import Tempur from './Components/Brands/Tempur';
@@ -85,7 +85,7 @@ class App extends Component {
           <Route path="/brands" component={BrandsComponent} exact/>
 
           
-
+          <Route path="/adjustable/:id" component={SingleBase} />
           <Route path="/adjustable" component={AdjustableComponent} />
           <Route path="/Accessories" component={AccessoriesCompoent} />
           <Route path="/financing" component={FinancingComponent} exact/>
