@@ -209,7 +209,7 @@ const AboutComponent = () => {
         
         <Col>
           <Div>
-            <HH4>Billy</HH4><H4>Mike</H4><HH4>Willy</HH4>
+            <HH4>Billy</HH4><H4>Joshua</H4><HH4>Willy</HH4>
           </Div>
           <PopImg src={pop} alt="pops"/>
         </Col>
