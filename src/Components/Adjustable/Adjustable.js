@@ -11,12 +11,7 @@ const Main = styled.div`
   flex-direction: column;
   margin-left: 20px;
   margin-right: 20px;
-  /* justify-content: center;
-  justify-self: center; */
   border: 2px solid black;
-  /* width: 100vw;
-  height: 100vh; */
-  /* text-align: center; */
   padding-top: 20px;
   box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .9); 
   @media(min-width:1200px) {
