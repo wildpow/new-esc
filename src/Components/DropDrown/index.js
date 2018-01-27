@@ -45,11 +45,11 @@ class DropDown extends React.Component {
           {(function() {
             switch(this.state.selected) {
               case 1:
-                return <h1>twin</h1>;
+                return <h1>This is a twin price</h1>;
               case 2:
-                return <h1>full</h1>;
+                return <h1>This is the Full price</h1>;
               case 3:
-                return <h1>Queen</h1>
+                return <h1>this the queen price</h1>
               default:
                 return null;
           }
