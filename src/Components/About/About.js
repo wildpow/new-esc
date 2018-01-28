@@ -25,10 +25,33 @@ const Header = styled.header`
   text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 `
+const HeaderText = styled.h2`
+font-size: .9rem;
+padding-right: 5px;
+padding-left: 5px;
+@media(min-width: 768px) {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+@media(min-width: 1024px) {
+  font-size: 1.5rem;
+}
+@media(min-width: 1300px) {
+  font-size: 1.8rem;
+  letter-spacing: .1rem;
+}
+
+`
 const PicHolder = styled.div`
 display: flex;
 flex-direction: row;
 justify-content: space-between;
+@media(min-width: 640px) {
+  justify-content: space-around;
+}
+@media(min-width: 768px) {
+  justify-content: space-between;
+}
 `
 const STOREIMG1 = styled.img`
   width: 105px;
@@ -76,68 +99,85 @@ height: 100px;
     height: 350px;}
 `
 
-const HeaderText = styled.h2`
-font-size: .9rem;
-padding-right: 5px;
-padding-left: 5px;
-@media(min-width: 768px) {
-  font-size: 1.2rem;
-}
-@media(min-width: 1024px) {
-  font-size: 1.4rem;
-}
-@media(min-width: 1300px) {
-  font-size: 1.8rem;
-  letter-spacing: .1rem;
-}
 
-`
 const Address = styled.p`
   font-family: 'Open Sans', sans-serif;
   background: #eb1c24;
   color: white;
   text-align: center;
-  font-size: 1.3rem;
+  font-size: .9rem;
   padding: 10px;
-  line-height: 2rem;
+  line-height: 1.2rem;
   margin-top: 0;
   font-variant: small-caps;
   margin-bottom: 0;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  @media(min-width:768px) {
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+  }
 `
 const Span = styled.span`
-  font-size: 1.8rem;
+  font-size: 1.2rem;
+  @media(min-width:768px) {
+    font-size: 1.6rem;
+    
+    
+  }
 `
 const FirstP = styled.p`
  font-family: 'Open Sans', sans-serif;
-  padding-left: 80px;
-  padding-right: 80px;
-  line-height: 1.7rem;
-  font-size: 1.2rem;
+  padding-left: 12px;
+  padding-right: 12px;
+  line-height: 1.4rem;
+  font-size: 1rem;
   text-indent: 30px;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 0px;
+  @media(min-width:768px) {
+    margin-bottom: 0;
+    padding-right: 60px;
+    padding-left: 60px;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+  @media(min-width:1024px) {
+    margin-bottom: 0;
+    padding-right: 80px;
+    padding-left: 80px;
+    font-size: 1.6rem;
+    line-height: 1.7rem;
+  }
 `
 const Blue = styled.div`
+margin-top: 20px;
 background-color: #1565c0;
 color: white;
+@media(min-width:1024px) {margin-top: 40px }
 `
 const SecondP = styled.p`
 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   font-family: 'Open Sans', sans-serif;
   padding-left: 30px;
   padding-right: 30px;
-  line-height: 1.7rem;
-  font-size: 1.4rem;
+  line-height: 1.6rem;
+  font-size: 1.3rem;
   letter-spacing: .1rem;
   font-variant: small-caps;
   text-align: center;
   padding-top: 5px;
   padding-bottom: 5px;
+  @media(min-width:1024px) {
+    line-height: 2rem;
+  font-size: 1.8rem;
+  }
 `
 const PopImg = styled.img`
-  max-width: 50rem;
+  max-width: 20rem;
   margin: auto;
+  @media(min-width: 700px) {
+    max-width: 50rem;
+  }
 `
 const PopHolder = styled.div`
   display: flex;
@@ -147,14 +187,27 @@ const Div = styled.div`
   display: flex;
   justify-content: center;
   font-family: 'Roboto', sans-serif;
-  font-size: 2rem;
+  font-size: 1rem;
+  @media(min-width: 700px) {
+    font-size: 2rem;
+  }
+  
 
 `
 const H4 = styled.h4`
 justify-content: space-around;
-padding-right: 145px;
-padding-left: 145px;
+padding-right: 55px;
+padding-left: 55px;
 margin-bottom: 10px;
+@media(min-width: 700px) {
+  padding-right: 145px;
+  padding-left: 145px;
+  }
+  @media(min-width:1024px) {
+    padding-right: 110px;
+    padding-left: 110px;
+  }
+
 `
 const Col = styled.div`
 display: flex;
@@ -162,6 +215,7 @@ flex-direction: column;
 `
 const HH4 = styled.h4`
 margin-bottom: 10px;
+
 `
 const AboutComponent = () => {
   return (
@@ -186,7 +240,7 @@ const AboutComponent = () => {
       priced rectangle, we want to focus on you and getting you the best night’s sleep possible.
       With over twenty years of combined industry experience we take pride in helping you find the
       “bed of your dreams” so that you can wake up feeling rested and ready to take on all that 
-      your day has to offer.   We’re here to help advise you by having our non-commissioned staff
+      your day has to offer. </FirstP>  <FirstP>We’re here to help advise you by having our non-commissioned staff
       ask you some questions and listen to your answers to help recommend products that suit your needs.
       We believe sleep is an important part of everyone’s day, and people have a better life when they’re waking
       up every morning feeling rested, rejuvenated and refreshed.
