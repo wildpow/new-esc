@@ -16,11 +16,11 @@ const Sealy = ({ data: { loading, error, essentials, performance, premium} }) =>
   if(!loading) {
     return (
       <MainWrapper className="animated fadeIn">
-        <WrapperRight>
+        {/* <WrapperRight>
          <Img src={SealyImg} alt="Logo"/>
          <Img src={SealyImg} alt="Logo"/>
          <Img src={SealyImg} alt="Logo"/>
-        </WrapperRight>
+        </WrapperRight> */}
         <Wrapper>
           {essentials.mattresses.map((mattress) => (
               <LinkWrapper key={mattress.id}>

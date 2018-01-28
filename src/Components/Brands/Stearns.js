@@ -17,9 +17,9 @@ const Sealy = ({ data: { loading, error, Brands} }) => {
   if(!loading) {
     return (
       <MainWrapper>
-        <WrapperRight>
+        {/* <WrapperRight>
           <Img src={StearnsImg} alt="Logo"/>
-        </WrapperRight>
+        </WrapperRight> */}
         <Wrapper>
           {Brands.mattresses.map((mattress) => {
             return (

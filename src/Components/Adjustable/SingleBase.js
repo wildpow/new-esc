@@ -26,7 +26,7 @@ const SingleBase = ({data: { loading, error, base}}) => {
     return(
       <Wrapper className="animated fadeIn">
         <MainTitle>
-          <h1>{base.name}</h1>
+          <h1>{base.fullName}</h1>
         </MainTitle>
         <div>
 
@@ -68,4 +68,4 @@ export default graphql(singleBase, {
       id: match.params.id
     }
   })
-})(ingleBase)
+})(SingleBase)

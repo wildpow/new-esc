@@ -3,18 +3,21 @@ import styled from 'styled-components';
 
 const ButtonWrapper = styled.div`
 display: flex;
+&:hover {background-color: #f1f1f1}
 `
 const DropDownWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  flex-shrink:1;
-  flex-basis: 100px;
-  
   position: absolute;
+  background-color: #1565c0;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  &:hover {background-color: #f1f1f1}
 `
 const WholeThing = styled.div`
-display: flex;
-flex-direction: column;
+position: relative;
+display: inline-block;
 `
 const Ul = styled.ul`
 padding-top: 20px;
@@ -25,17 +28,21 @@ overflow: hidden;
 position: absolute;
 `
 const Button = styled.button`
-font-size: 1.3rem;
-border: 2px solid blue;
+background-color: #1565c0;
 color: white;
-background: red;
+padding: 16px;
+font-size: 16px;
+border: none;
+cursor: pointer;
 outline: none;
+&:hover {background-color: #eb1c24}
+&:focus { background:#eb1c24;}
 `
 const ButtonIcon = styled.div`
-font-size: 1.3rem;
-border: 2px solid blue;
+background-color: #1565c0;
 color: white;
-background: red;
+padding: 16px;
+font-size: 16px;
 `
 class DropDown extends React.Component {
   constructor(props) {
@@ -56,7 +63,7 @@ class DropDown extends React.Component {
       this.setState({
         selected: e.currentTarget.dataset.id
       })
-      console.log(this.state.selected)
+      this.handleDropdown()
     }
   
   selector() {
@@ -79,27 +86,20 @@ class DropDown extends React.Component {
       <div>
       <WholeThing>
         <ButtonWrapper>
-        <Button onClick={this.handleDropdown}>
-          {this.state.buttonContent}
+        <Button onMouseDown={this.handleDropdown}>
+          {this.state.buttonContent}&nbsp;&nbsp; { this.state.open ? '\u25B2' : '\u25BC'}
         </Button>
-        <ButtonIcon>
+        {/* <ButtonIcon>
         { this.state.open ? '\u25B2' : '\u25BC'}
-        </ButtonIcon>
+        </ButtonIcon> */}
         </ButtonWrapper>
           { this.state.open &&
-          <DropDownWrapper>
-            <Ul>
-              <li>
-              <button onClick={this.drop} data-id="1">twin</button>
-              </li>
-              <li>
-              <button onClick={this.drop} data-id="2">full</button>
-              </li>
-              <li>
-              <button onClick={this.drop} data-id="3">Queen</button>
-              </li>
-            </Ul>
-    
+          <DropDownWrapper onMouseLeave={this.handleDropdown}>
+              <Button onClick={this.drop} data-id="1">Twin</Button>
+              <Button onClick={this.drop} data-id="2">TwinXL</Button>
+              <Button onClick={this.drop} data-id="3">Full</Button>
+              <Button onClick={this.drop} data-id="4">Queen</Button>
+              <Button onClick={this.drop} data-id="5">King/Cal. King</Button>
           </DropDownWrapper>
           }
           </WholeThing>

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 export const MainWrapper = styled.div`
 display: flex;
 flex-direction: row;
+justify-content: center;
 `
 export const WrapperRight = styled.div`
 margin-right: 15px;
@@ -47,6 +48,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: space-between;
+color: #1565c0;
 
 
 `

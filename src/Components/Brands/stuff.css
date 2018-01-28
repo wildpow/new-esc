@@ -1,18 +1,36 @@
 
 .marker {
   font-family: 'Open Sans', sans-serif;
-  
-  padding: 30px;
-  
- 
+  padding-top: 5px;
+  margin-left: 20px;
 }
 .marker p {
-  font-size: 2.3rem;
+  font-size: 1rem;
   margin-top: 0;
   margin-bottom: 0;
 }
 .marker ul {
  list-style: square;
  margin-top: 5px;
- font-size:  1.8rem;
+ font-size:  .6rem;
+}
+
+li {
+  font-size: .2rem;
+}
+
+@media(min-width:768px) {
+  .marker p {
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .marker ul {
+   list-style: square;
+   margin-top: 5px;
+   font-size:  .6rem;
+  }
+  .marker li {
+    font-size: 1rem;
+  }
 }

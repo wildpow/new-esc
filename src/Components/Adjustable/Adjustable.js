@@ -83,7 +83,7 @@ const AdjustableComponent = ({ data: {error, loading, Bases} }) => {
     return (
     <Main className="animated fadeIn">
       {Bases.map((base) => (
-        <StyledLink to="/adjustable/:id" key={base.id}>
+        <StyledLink to={`/adjustable/${base.id}`} key={base.id}>
           <H3>{base.fullName}</H3>
           <InfoWrapper>
             <Img src={`https://media.graphcms.com/resize=w:350,h:350,fit:clip/${base.coverImg.handle}`} alt="this"/>

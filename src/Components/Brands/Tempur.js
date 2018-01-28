@@ -17,9 +17,9 @@ const Tempur = ({ data: { loading, error, Brands} }) => {
   if(!loading) {
     return (
       <MainWrapper className="animated fadeIn">
-        <WrapperRight>
+        {/* <WrapperRight>
           <Img src={TempurImg} alt="Logo"/>
-        </WrapperRight>
+        </WrapperRight> */}
         <Wrapper>
           {Brands.mattresses.map((mattress) => {
             return ( 
