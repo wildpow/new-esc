@@ -34,3 +34,20 @@ li {
     font-size: 1rem;
   }
 }
+
+@media(min-width:1022px) {
+  .marker p {
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .marker ul {
+   list-style: square;
+   margin-top: 5px;
+  
+  }
+  .marker li {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+}

@@ -22,6 +22,11 @@ display: flex;
 flex-direction: column;
 border: 2px solid black;
 justify-content: center;
+  box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .9); 
+  border-top-left-radius: .11rem;
+  border-top-right-radius: .11rem;
+  border-bottom-right-radius: .11rem;
+  border-bottom-left-radius: .11rem;
 `;
 
 export const MainTitle = styled.header`
@@ -54,28 +59,37 @@ export const PriceWrapper = styled.div`
  display: flex;
  flex-direction: row;
  justify-content: space-between;
- margin-top: 20px;
+ /* margin-top: 20px; */
+ flex-wrap: wrap;
 `
 
 export const MattSet = styled.div`
 display: flex;
 flex-direction: column;
-margin-left: 20px;
+/* margin-left: 20px; */
+justify-content: center;
+justify-items: center;
+align-content: center;
 `
 export const MattOnly = styled.div`
 
 display: flex;
 flex-direction: column;
-
+justify-content: center;
+justify-items: center;
+align-content: center;
 `
 
 export const PriceTitle = styled.p`
   text-align: center;
-  
+  padding-bottom: 10px;
   margin-top: 0;
   margin-bottom: 0;
-  font-size: .8rem;
+  font-size: .7rem;
   font-family: 'Open Sans', sans-serif;
+  @media(min-width: 1022px) {
+    font-size: 1.4rem;
+  }
 `
 
 export const MainImg = styled.img`

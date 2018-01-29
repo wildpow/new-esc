@@ -20,9 +20,10 @@ position: relative;
 display: inline-block;
 `
 const Ul = styled.ul`
-padding-top: 20px;
+padding-top: 0px;
 list-style: none;
-float: left;
+padding-left: 0px;
+
 z-index: 999;
 overflow: hidden;
 position: absolute;
@@ -30,11 +31,13 @@ position: absolute;
 const Button = styled.button`
 background-color: #1565c0;
 color: white;
-padding: 16px;
-font-size: 16px;
 border: none;
 cursor: pointer;
 outline: none;
+
+padding: 8px;
+font-size: .8rem;
+@media(min-width: 1024px) { font-size: 1rem; padding: 16px;}
 &:hover {background-color: #eb1c24}
 &:focus { background:#eb1c24;}
 `
@@ -43,6 +46,27 @@ background-color: #1565c0;
 color: white;
 padding: 16px;
 font-size: 16px;
+`
+const Price = styled.div`
+  background: 2px solid black;
+  margin-left: 5px;
+  background: grey;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  font-size: 1rem;
+  text-align: center;
+  @media(min-width: 1024px) { font-size: 1.4rem; padding: 10px; width: 100px; height: 50px; margin-left: 10px;}
+`
+
+const Wrapper = styled.div`
+display: flex;
+flex-direction:row;
+justify-content: center;
+justify-items: center;
+justify-self: center;
+align-items: center;
+
 `
 class DropDown extends React.Component {
   constructor(props) {
@@ -71,11 +95,15 @@ class DropDown extends React.Component {
 
     switch(selected) {
       case '1':
-        return <h1>This is a twin price</h1>;
+        return `Twin: $${this.props.data[0]}`;
       case '2':
-        return <h1>This is the Full price</h1>;
+        return `TwinXL: $${this.props.data[1]}`;
       case '3':
-        return <h1>this the queen price</h1>
+        return `Full: $${this.props.data[2]}`
+      case '4':
+        return `Queen: $${this.props.data[3]}`
+      case '5':
+        return `King/Cal. King: $${this.props.data[0]}`
       default:
         return null;
     }
@@ -83,15 +111,12 @@ class DropDown extends React.Component {
   
   render() {
     return (
-      <div>
-      <WholeThing>
+      <Wrapper>
+        <WholeThing>
         <ButtonWrapper>
         <Button onMouseDown={this.handleDropdown}>
           {this.state.buttonContent}&nbsp;&nbsp; { this.state.open ? '\u25B2' : '\u25BC'}
         </Button>
-        {/* <ButtonIcon>
-        { this.state.open ? '\u25B2' : '\u25BC'}
-        </ButtonIcon> */}
         </ButtonWrapper>
           { this.state.open &&
           <DropDownWrapper onMouseLeave={this.handleDropdown}>
@@ -103,10 +128,10 @@ class DropDown extends React.Component {
           </DropDownWrapper>
           }
           </WholeThing>
-          <div>
+          <Price>
             {this.selector()}
-          </div>
-      </div>
+          </Price>
+      </Wrapper>
     );
   }
 
