@@ -42,6 +42,7 @@
 }
 .adj li {
   padding-bottom: 2px;
+  font-size: .9rem;
 }
 }
 @media(min-width: 992px) {
@@ -49,16 +50,17 @@
     padding: 30px;
   }
   .adj p {
-    font-size: 2rem;
+    font-size: 2.4rem;
     margin-top: 0;
     margin-bottom: 0;
     padding-bottom: 2px;
     }
     .adj ul {
       margin-top: 10px;
-      font-size:  1.2rem;
+      font-size:  1.8rem;
     }
     .adj li {
       padding-bottom: 2px;
+      font-size: 1.4rem;
     }
   }

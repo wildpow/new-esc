@@ -58,6 +58,8 @@ margin-bottom: 0;
 }
   @media(min-width: 692px) {
     text-align: left;
+    word-spacing: .18rem;
+    letter-spacing: .17rem;
   }
 `;
 
@@ -65,17 +67,22 @@ const InfoWrapper = styled.div`
 display: flex;
 flex-direction: row;
 justify-content: space-around;
-@media(min-width: 1200px) {
-    justify-content: space-around;
+@media(min-width: 1024px) {
+    justify-content: space-evenly;
+    /* margin-top:20px; */
   }
 `;
 const Img = styled.img`
-  @media(max-width: 991px) {
-    max-width: 250px;
-    max-height: 250px;
-    /* align-self: center; */
+  width: 200px;
+  height: 150px;
+  align-self: center;
+  @media(min-width: 991px) {
+    width: 400px;
+    height: 300px;
+    align-self: center;
     margin-left: 20px; 
   }
+ 
 `;
 const AdjustableComponent = ({ data: {error, loading, Bases} }) => {
   if (error) return <h3>error {console.log(error)}</h3>
@@ -86,7 +93,7 @@ const AdjustableComponent = ({ data: {error, loading, Bases} }) => {
         <StyledLink to={`/adjustable/${base.id}`} key={base.id}>
           <H3>{base.fullName}</H3>
           <InfoWrapper>
-            <Img src={`https://media.graphcms.com/resize=w:350,h:350,fit:clip/${base.coverImg.handle}`} alt="this"/>
+            <Img src={`https://media.graphcms.com/resize=w:400,h:350,fit:clip/${base.coverImg.handle}`} alt="this"/>
             <Markdown className="adj" source={base.features} escapeHtml={false} />
           </InfoWrapper>
         </StyledLink>
