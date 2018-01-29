@@ -2,14 +2,13 @@ import React from 'react';
 import gql from 'graphql-tag';
 import { graphql } from 'react-apollo';
 import {  MainWrapper,
-          WrapperRight,
-          Img,Wrapper,
+          Wrapper,
           LinkWrapper,
           StyledLink,
           MattImg,
           Name  } from './MattListStyles';
 
-import TempurImg from '../../images/TempurLogo2.png';
+// import TempurImg from '../../images/TempurLogo2.png';
 import '../../app.css';
 
 const Tempur = ({ data: { loading, error, Brands} }) => {

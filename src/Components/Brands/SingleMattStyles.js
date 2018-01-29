@@ -101,31 +101,3 @@ export const MainImg = styled.img`
     max-width: 17rem;
   }
 `
-export const Img1 = styled.img`
-max-width: 2rem;
-@media(min-width: 768px) {
-    max-width: 5rem;
-  }
-  @media(min-width: 1024px) {
-    max-width: 7rem;
-  }
-`
-export const Img2 = styled.img`
-max-width: 2rem;
-@media(min-width: 768px) {
-    max-width: 5rem;
-  }
-  @media(min-width: 1024px) {
-    max-width: 7rem;
-  }
-`
-export const Img3 = styled.img`
-max-width: 2rem;
-max-height: 2rem;
-@media(min-width: 768px) {
-    max-width: 5rem;
-  }
-  @media(min-width: 1024px) {
-    max-width: 7rem;
-  }
-`

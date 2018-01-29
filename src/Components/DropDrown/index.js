@@ -19,15 +19,7 @@ const WholeThing = styled.div`
 position: relative;
 display: inline-block;
 `
-const Ul = styled.ul`
-padding-top: 0px;
-list-style: none;
-padding-left: 0px;
 
-z-index: 999;
-overflow: hidden;
-position: absolute;
-`
 const Button = styled.button`
 background-color: #1565c0;
 color: white;
@@ -41,12 +33,7 @@ font-size: .8rem;
 &:hover {background-color: #eb1c24}
 &:focus { background:#eb1c24;}
 `
-const ButtonIcon = styled.div`
-background-color: #1565c0;
-color: white;
-padding: 16px;
-font-size: 16px;
-`
+
 const Price = styled.div`
   background: 2px solid black;
   margin-left: 5px;

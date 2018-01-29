@@ -1,10 +1,9 @@
 import React from 'react';
 import gql from 'graphql-tag';
 import { graphql } from 'react-apollo';
-import SealyImg from '../../images/SealyLogo.png';
+// import SealyImg from '../../images/SealyLogo.png';
 import {  MainWrapper,
-  WrapperRight,
-  Img,Wrapper,
+  Wrapper,
   LinkWrapper,
   StyledLink,
   MattImg,

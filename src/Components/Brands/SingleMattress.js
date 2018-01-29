@@ -1,10 +1,10 @@
 import React from 'react'
 import gql from 'graphql-tag'
 import { graphql } from 'react-apollo';
-import { Wrapper, MainImg, MainTitle, Main,
+import { Wrapper, MainTitle, Main,
         MainInfo, PriceWrapper, MattOnly,
-        MattSet, PriceTitle, Img1, Img2, Img3,
-        PriceList, Overview } from './SingleMattStyles';
+        MattSet, PriceTitle,
+        Overview } from './SingleMattStyles';
 import Markdown from 'react-markdown'
 import './stuff.css';
 import '../../app.css';
@@ -51,7 +51,7 @@ const SingleMattress = ({ data: { loading, error, mattress } }) => {
     <h1>{mattress.name}</h1>
   </MainTitle>
   <Main>
-    <ImageViewer cover={mattress.coverImg.handle} img1={mattress.detail1.handle} img2={mattress.detail2.handle} img2={mattress.detail2.handle}/>
+    <ImageViewer cover={mattress.coverImg.handle} img1={mattress.detail1.handle} img2={mattress.detail2.handle} />
     <MainInfo>
       <Markdown className="marker" source={mattress.features} escapeHtml={false} />
       <PriceWrapper>

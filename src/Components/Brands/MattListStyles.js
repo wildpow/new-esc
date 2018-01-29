@@ -6,20 +6,20 @@ display: flex;
 flex-direction: row;
 justify-content: center;
 `
-export const WrapperRight = styled.div`
-margin-right: 15px;
-display: flex;
-flex-direction: column;
-border: 2px solid black;
+// export const WrapperRight = styled.div`
+// margin-right: 15px;
+// display: flex;
+// flex-direction: column;
+// border: 2px solid black;
 
-align-self: flex-start;
-flex-basis: 20%;
-`
+// align-self: flex-start;
+// flex-basis: 20%;
+// `
 
-export const Img = styled.img`
-  max-width: 15rem;
-  align-self: center;
-`
+// export const Img = styled.img`
+//   max-width: 15rem;
+//   align-self: center;
+// `
 export const Wrapper = styled.div`
 display: flex;
 flex-direction: row;

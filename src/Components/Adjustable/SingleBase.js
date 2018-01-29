@@ -1,7 +1,7 @@
 import React from 'react'
 import gql from 'graphql-tag'
 import { graphql } from 'react-apollo';
-import Markdown from 'react-markdown'
+// import Markdown from 'react-markdown'
 import '../../app.css';
 import styled from 'styled-components';
 
