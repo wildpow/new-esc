@@ -1,6 +1,5 @@
 import React from 'react';
-import ComingSoon from '../ComingSoon/index'
- 
+import ComingSoon from '../ComingSoon/index';
 
 const AccessoriesComponent = () => {
   return (

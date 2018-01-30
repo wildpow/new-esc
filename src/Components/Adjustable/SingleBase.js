@@ -1,18 +1,16 @@
 import React from 'react'
 import gql from 'graphql-tag'
 import { graphql } from 'react-apollo';
-import Markdown from 'react-markdown'
 import '../../app.css';
+import { Wrapper, MainTitle, Main, MainInfo, PriceWrapper,
+        MattOnly, PriceTitle, Warranty, Description, Overview }
+        from '../Brands/SingleMattStyles';
+import { SingleBaseMD } from './AdjustableStyles';
+import DropDown from '../DropDrown/index';
+import ImageViewer from '../ImageViewer/ImageViewer';
 
-import { Wrapper, MainTitle, Main,
-  MainInfo, PriceWrapper, MattOnly,
-  PriceTitle, Warranty, Description,
-  Overview } from '../Brands/SingleMattStyles'
-  import DropDown from '../DropDrown/index'
-import ImageViewer from '../ImageViewer/ImageViewer'
-import './adj.css'
 const SingleBase = ({data: { loading, error, base}}) => {
-  if (error) return <h1>Error fetching the base</h1>
+  if (error) return <div>{console.log(error)}</div>
   if (!loading) {
     return(
       <Wrapper className="animated fadeIn">
@@ -22,7 +20,7 @@ const SingleBase = ({data: { loading, error, base}}) => {
         <Main>
         <ImageViewer cover={base.coverImg.handle} img1={base.detail1.handle} img2={base.detail2.handle} />
         <MainInfo>
-          <Markdown className="adj" source={base.features} escapeHtml={false} />
+          <SingleBaseMD source={base.features} escapeHtml={false} />
           <PriceWrapper>
             <MattOnly>
               <PriceTitle>Base Price</PriceTitle>
@@ -38,14 +36,14 @@ const SingleBase = ({data: { loading, error, base}}) => {
     </Overview><Description>
       {base.baseDescription}</Description>
       <p>Profile: {base.height}"</p>
-      <Markdown className="adj" source={base.keyfeatures} escapeHtml={false} />
+      <SingleBaseMD source={base.keyfeatures} escapeHtml={false} />
       <Warranty>{base.warranty}</Warranty>
   </div>
 
       </Wrapper>
     )
   }
-  return <h3>loading base</h3>
+  return null
 }
 
 export const singleBase = gql`
