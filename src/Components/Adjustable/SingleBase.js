@@ -1,25 +1,16 @@
 import React from 'react'
 import gql from 'graphql-tag'
 import { graphql } from 'react-apollo';
-// import Markdown from 'react-markdown'
+import Markdown from 'react-markdown'
 import '../../app.css';
-import styled from 'styled-components';
 
-const Wrapper = styled.div`
-display: flex;
-flex-direction: column;
-border: 2px solid black;
-justify-content: center;
-`;
-const MainTitle = styled.header`
-font-family: 'Roboto', sans-serif;
-font-size: 1.2rem;
-padding: 0px 30px 0px 30px;
-background-color: #1565c0;
-color: white;
-text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-
-`;
+import { Wrapper, MainTitle, Main,
+  MainInfo, PriceWrapper, MattOnly,
+  PriceTitle, Warranty, Description,
+  Overview } from '../Brands/SingleMattStyles'
+  import DropDown from '../DropDrown/index'
+import ImageViewer from '../ImageViewer/ImageViewer'
+import './adj.css'
 const SingleBase = ({data: { loading, error, base}}) => {
   if (error) return <h1>Error fetching the base</h1>
   if (!loading) {
@@ -28,9 +19,28 @@ const SingleBase = ({data: { loading, error, base}}) => {
         <MainTitle>
           <h1>{base.fullName}</h1>
         </MainTitle>
-        <div>
+        <Main>
+        <ImageViewer cover={base.coverImg.handle} img1={base.detail1.handle} img2={base.detail2.handle} />
+        <MainInfo>
+          <Markdown className="adj" source={base.features} escapeHtml={false} />
+          <PriceWrapper>
+            <MattOnly>
+              <PriceTitle>Base Price</PriceTitle>
+                <DropDown data={base.price}/>
+            </MattOnly>
+          </PriceWrapper>
+        </MainInfo>
+      </Main>
 
-        </div>
+      <div id='row'>
+    <Overview>
+      OVERVIEW & SPECS
+    </Overview><Description>
+      {base.baseDescription}</Description>
+      <p>Profile: {base.height}"</p>
+      <Markdown className="adj" source={base.keyfeatures} escapeHtml={false} />
+      <Warranty>{base.warranty}</Warranty>
+  </div>
 
       </Wrapper>
     )
@@ -50,6 +60,7 @@ query singleBase($id: ID!) {
     brandName
     baseDescription
     height
+    warranty
     coverImg {
       handle
     }

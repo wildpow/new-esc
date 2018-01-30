@@ -101,3 +101,33 @@ export const MainImg = styled.img`
     max-width: 17rem;
   }
 `
+export const Warranty = styled.p`
+font-size: .8rem;
+`
+
+export const Description = styled.p`
+font-size: .6rem;
+/* padding-right: 20px;
+padding-left: 20px; */
+font-family: 'Open Sans', sans-serif;
+background: lightgray;
+@media(min-width: 768px) {
+  font-size: 1.1rem;
+  /* padding-right: 40px;
+  padding-left: 40px; */
+  line-height: 1.3rem;
+}
+@media(min-width: 1022px) {
+  font-size: 1.2rem;
+  /* padding-right: 60px;
+  padding-left: 60px; */
+  line-height: 1.4rem;
+}
+@media(min-width: 1300px) {
+  font-size: 1.3rem;
+  /* padding-right: 80px;
+  padding-left: 80px; */
+  line-height: 1.5rem;
+  margin: auto;
+}
+`

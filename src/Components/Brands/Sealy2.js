@@ -8,7 +8,7 @@ import {  MainWrapper,
   LinkWrapper,
   StyledLink,
   MattImg,
-  Name, MainTitle, Title,Img  } from './MattListStyles';
+  Name, MainTitle,Img  } from './MattListStyles';
   import '../../app.css';
 
 const Sealy = ({ data: { loading, error, essentials, performance, premium} }) => {
