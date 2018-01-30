@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./Menu.css";
 import { NavLink } from 'react-router-dom';
 import styled, { ThemeProvider } from 'styled-components';
-import { Image } from '../Logo/LogoStyles'; 
 import Topper from '../Topper/Topper';
 import image from '../../images/logo.png';
 
@@ -16,10 +15,16 @@ const Nav = styled.nav`
   display: flex;
   flex-direction: column;
   font-size: 1.4rem;
-  padding-bottom: 10px;
+  
   text-align: center;
 `;
-
+export const Image = styled.img`
+transition: all .25s ease-in;
+align-self: center;
+height: 6em;
+@media (min-width: 500px) { height: 8em; }
+@media (min-width: 768px) { height: 11em; }
+`
 const theme = {
   main: '#c62828'
 };
@@ -47,8 +52,9 @@ class Menu extends Component {
         <NavLink activeClassName="flyoutActive" className="flyoutLinks" to="/financing">Financing</NavLink>
         <NavLink activeClassName="flyoutActive" className="flyoutLinks" to="/blog">Our Blog</NavLink>
         <NavLink activeClassName="flyoutActive" className="flyoutLinks" to="/about">About Us</NavLink>
+        <Image src={image}/>
       </Nav>
-      <Image src={image}/>
+      
       
       </Wrapper>
     );
@@ -56,4 +62,3 @@ class Menu extends Component {
 }
  
 export default Menu;
-//withRouter ????

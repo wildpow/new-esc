@@ -2,34 +2,100 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const MainWrapper = styled.div`
+
 display: flex;
-flex-direction: row;
-justify-content: center;
+flex-direction: column;
+justify-content: space-between;
+
+@media(min-width: 768px) {
+  /* flex-direction: row; */
+}
+
+box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .9); 
+  border-top-left-radius: .11rem;
+  border-top-right-radius: .11rem;
+  border-bottom-right-radius: .11rem;
+  border-bottom-left-radius: .11rem;
+  border: 2px solid black;
+`
+export const MainTitle = styled.header`
+display: flex;
+padding: 0px 10px 0px 10px;
+background-color: #1565c0;
+
+`;
+export const Title = styled.h2`
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 4rem;
+`
+export const StearnTitle = styled.h2`
+padding-left: 5px;
+padding-right: 5px;
+padding: 60px;
+font-size: .8rem;
 `
 // export const WrapperRight = styled.div`
+// background-color: #1565c0;
 // margin-right: 15px;
 // display: flex;
 // flex-direction: column;
-// border: 2px solid black;
 
+// margin-left: 15px;
 // align-self: flex-start;
+// margin-top: 15px;
 // flex-basis: 20%;
 // `
 
-// export const Img = styled.img`
-//   max-width: 15rem;
-//   align-self: center;
-// `
+export const Img = styled.img`
+ max-width: 5rem;
+ margin: auto;
+ align-self: center;
+ padding: 5px;
+@media(min-width: 768px) {
+  max-width: 15rem;
+  margin-top: 20px;
+  padding: 30px;
+}
+
+ 
+  
+  
+  background: white;
+  border: 2px solid bkack;
+  
+`
 export const Wrapper = styled.div`
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
 flex-basis: 100%;
+justify-content: center;
+align-self: center;
+align-items: center;
+justify-items: center;
+
+
 `
 export const LinkWrapper = styled.div`
 border: 2px solid black;
 margin-right: 10px;
 margin-bottom: 10px;
+width: 150px;
+height: 200px;
+@media(min-width: 768px) {
+  width: 340px;
+  height: 350px;
+  margin-right: 10px;
+margin-bottom: 20px;
+}
+@media(min-width: 1024px) { 
+  width: 300px;
+  height: 350px;
+  margin-right: 10px;
+margin-bottom: 20px;
+}
+margin-top: 20px;
 box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .9);
 border-top-left-radius: .14rem;
 border-top-right-radius: .14rem;
@@ -41,26 +107,43 @@ transition: all .15s ease-in-out;
     z-index: 999;
     transform: scale3d(1.05,1.05,1);
   }
+
 `;
 export const StyledLink = styled(Link)`
 text-decoration: none;
 display: flex;
 flex-direction: column;
-align-items: center;
-justify-content: space-between;
+
+
+justify-content: space-between !important;
 color: #1565c0;
 
 
 `
 export const MattImg = styled.img`
 margin: auto;
+width: 120px;
+  height: 100px;
+@media(min-width: 768px) {
+  width: 250px;
+  height: 250px;
+}
+
 `
 export const Name = styled.p`
-font-size: 1rem;
+font-size: .8rem;
+
 font-family: 'Open Sans', sans-serif;
 text-decoration: none;
 text-align: center;
-padding-left: 10px;
-padding-right: 10px;
-align-self: center;
+padding-left: 5px;
+padding-right: 5px;
+
+
+@media(min-width: 768px) {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 1.2rem;
+}
 `;
+

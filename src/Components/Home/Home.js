@@ -11,28 +11,52 @@ import './home.css';
 
 const Main = styled.div`
 background-color: white;
-margin-right: 10px;
-margin-left: 10px;
+margin-right: 0;
+margin-left: 0;
 @media (min-width: 1300px) {
-  margin-right: 150px;
-margin-left: 150px;
+  margin-right: 50px;
+margin-left: 50px;
 }
 
 `
 
 const Img = styled.img`
 background-color: white;
-max-width: 80rem;
-max-height: 70rem;
+width: 360px;
+height: 320px;
+@media(min-width: 768px) {
+  width: 500px;
+  height: 450px;
+}
+@media(min-width: 1024px) {
+    width: 1000px;
+    height: 600px;
+  }
 `
 const SaleImg = styled.img`
-  max-width: 40rem;
-  max-height: 35rem;
+  width: 300px !important;
+  height: 320px;
+  @media(min-width: 768px) {
+    width: 500px;
+    height: 450px;
+  }
+  @media(min-width: 1024px) {
+      width: 500px !important;
+      height: 600px;
+    }
   margin: auto;
 `
 const TempurImg = styled.img`
- max-width: 80rem;
- max-height: 100rem;
+ width: 360px;
+ height: 320px;
+ @media(min-width: 768px) {
+   width: 500px;
+   height: 450px;
+ }
+ @media(min-width: 1024px) {
+    width: 1000px;
+    height: 600px;
+  }
   margin: auto;
   align-self: center;
   
@@ -42,8 +66,16 @@ const SaleWrapper = styled.div`
  background-color: #eb1c24;
 `
 const StearnsImg = styled.img`
-  max-width: 80rem;
-  max-height: 70rem;
+  width: 360px;
+  height: 320px;
+  @media(min-width: 768px) {
+    width: 500px;
+    height: 450px;
+  }
+  @media(min-width: 1024px) {
+    width: 1000px;
+    height: 600px;
+  }
   
   margin: auto;
 `

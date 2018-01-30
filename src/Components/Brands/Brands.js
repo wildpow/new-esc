@@ -142,7 +142,7 @@ const BrandsComponent = () => {
           TEMPUR® material is infinitely adaptable, responding to your body temperature, adapting to your weight
           and unique shape, giving you personalized support and alignment for undisturbed sleep.
         </MainText>
-        <Footer>Tempur-Pedic:<br/> Life-changing sleep.</Footer>
+        <Footer blue>Tempur-Pedic:<br/> Life-changing sleep.</Footer>
       </BrandWrapper>
       </StyledLink>
       <StearnsWrapper to='/brands/stearns'>
@@ -166,7 +166,7 @@ const BrandsComponent = () => {
           need it most.  By precisely engineering the mattress into specific zones,
           they’re able to target reinforced support, while providing exceptional full-body support.
         </MainText>
-        <Footer>Sealy:<br/> Proud supporter of you.</Footer>
+        <Footer blue>Sealy:<br/> Proud supporter of you.</Footer>
       </BrandWrapper>
       </StyledLink>
     </Main>

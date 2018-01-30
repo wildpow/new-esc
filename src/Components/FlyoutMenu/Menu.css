@@ -17,7 +17,8 @@
  
 #flyoutMenu.show {
   transform: translate3d(0vw, 0, 0);
-  overflow: hidden;
+
+
 }
 
 
@@ -40,7 +41,11 @@
 .flyoutActive {
   border-bottom: 8px solid #eb1c24;
 }
-
+/* @media(min-width: 550px) {
+  .flyoutLinks {
+    font-size: 2rem;
+  }
+}  */
 /* .flyoutLinks:hover {
   border-bottom: 8px solid #eb1c24;
 } */

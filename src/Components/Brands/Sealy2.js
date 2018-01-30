@@ -1,31 +1,30 @@
 import React from 'react';
 import gql from 'graphql-tag';
 import { graphql } from 'react-apollo';
-// import SealyImg from '../../images/SealyLogo.png';
+
+import SealyImg from '../../images/SealyLogo.png';
 import {  MainWrapper,
   Wrapper,
   LinkWrapper,
   StyledLink,
   MattImg,
-  Name  } from './MattListStyles';
+  Name, MainTitle, Title,Img  } from './MattListStyles';
   import '../../app.css';
 
 const Sealy = ({ data: { loading, error, essentials, performance, premium} }) => {
-  if (error) return <h1>Sorry try again</h1>
+  if (error) return <h6>panda's having trouble getting mattresses {console.log(error)}</h6>
   if(!loading) {
     return (
       <MainWrapper className="animated fadeIn">
-        {/* <WrapperRight>
+        <MainTitle>
          <Img src={SealyImg} alt="Logo"/>
-         <Img src={SealyImg} alt="Logo"/>
-         <Img src={SealyImg} alt="Logo"/>
-        </WrapperRight> */}
+        </MainTitle>
         <Wrapper>
           {essentials.mattresses.map((mattress) => (
               <LinkWrapper key={mattress.id}>
                 <StyledLink to={`/brands/sealy/${mattress.id}`}>
                   <MattImg src={`https://media.graphcms.com/resize=w:250,h:250,fit:clip/${mattress.coverImg.handle}`} alt="this"/>
-                  <Name>{mattress.subBrand}<br/>{mattress.subName}</Name>
+                  <Name>{mattress.brandName}<br/>{mattress.subBrand}<br/>{mattress.subName}</Name>
                 </StyledLink>
               </LinkWrapper>
           ))}
@@ -33,7 +32,7 @@ const Sealy = ({ data: { loading, error, essentials, performance, premium} }) =>
               <LinkWrapper key={mattress.id}>
                 <StyledLink to={`/brands/sealy/${mattress.id}`}>
                   <MattImg src={`https://media.graphcms.com/resize=w:250,h:250,fit:clip/${mattress.coverImg.handle}`} alt="this"/>
-                  <Name>{mattress.subBrand}<br/>{mattress.subName}</Name>
+                  <Name>{mattress.brandName}<br/>{mattress.subBrand}<br/>{mattress.subName}</Name>
                 </StyledLink>
               </LinkWrapper>
           ))}
@@ -41,7 +40,7 @@ const Sealy = ({ data: { loading, error, essentials, performance, premium} }) =>
               <LinkWrapper key={mattress.id}>
                 <StyledLink to={`/brands/sealy/${mattress.id}`}>
                   <MattImg src={`https://media.graphcms.com/resize=w:250,h:250,fit:clip/${mattress.coverImg.handle}`} alt="this"/>
-                  <Name>{mattress.subBrand}<br/>{mattress.subName}</Name>
+                  <Name>{mattress.brandName}<br/>{mattress.subBrand}<br/>{mattress.subName}</Name>
                 </StyledLink>
               </LinkWrapper>
           ))}
@@ -49,7 +48,7 @@ const Sealy = ({ data: { loading, error, essentials, performance, premium} }) =>
       </MainWrapper>
       )
     }
-  return <h1>Loading</h1>
+  return <div></div>
 }
 
 
@@ -57,6 +56,7 @@ export const sealyMattresses = gql`
   query subBrands {
     essentials: SubLine(subLineName: "essentials") {
     mattresses {
+      brandName
       id
       subBrand
       subName
@@ -67,6 +67,7 @@ export const sealyMattresses = gql`
   },
   performance: SubLine(subLineName: "performance") {
     mattresses {
+      brandName
       id
       subBrand
       subName
@@ -77,6 +78,7 @@ export const sealyMattresses = gql`
   },
   premium: SubLine(subLineName: "premium") {
     mattresses {
+      brandName
       id
       subBrand
       subName
