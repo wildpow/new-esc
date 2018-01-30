@@ -23,7 +23,7 @@ const Tempur = ({ data: { loading, error, Brands} }) => {
           {Brands.mattresses.map((mattress) => {
             return ( 
               <LinkWrapper  key={mattress.id}>
-                <StyledLink to={`/brands/tempurpedic/${mattress.id}`}>
+                <StyledLink to={`/brands/tempurpedic/${mattress.uri}`}>
                   <MattImg src={`https://media.graphcms.com/resize=w:250,h:250,fit:clip/${mattress.coverImg.handle}`} alt="this"/>
                   <Name>{mattress.brandName}<br/>{mattress.subBrand}<br/>{mattress.subName}</Name>
                 </StyledLink>
@@ -33,13 +33,14 @@ const Tempur = ({ data: { loading, error, Brands} }) => {
       </MainWrapper>
     )
   }
-  return <div></div>
+  return null
 }
 
 export const tempurMattresses = gql`
   query tempurMattresses {
     Brands(brand:"Tempur-Pedic") {
       mattresses {
+        uri
         brandName
         id
         subName

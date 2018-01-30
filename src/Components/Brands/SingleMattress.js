@@ -82,12 +82,12 @@ const SingleMattress = ({ data: { loading, error, mattress } }) => {
 </Wrapper>
     )
   }
-  return <h2>Loading Mattresses!!!</h2>
+  return null
 }
 
 export const singleMatt = gql`
-  query singleMatt($id: ID!) {
-    mattress: Mattress(id: $id) {
+  query singleMatt($uri: String) {
+    mattress: Mattress(uri: $uri) {
       id
       subName
       subBrand
@@ -114,7 +114,7 @@ export const singleMatt = gql`
 export default graphql(singleMatt, {
   options: ({ match }) => ({
     variables: {
-      id: match.params.id
+      uri: match.params.uri
     }
   })
 })(SingleMattress)

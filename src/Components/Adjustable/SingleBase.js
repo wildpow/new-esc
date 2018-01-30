@@ -47,9 +47,10 @@ const SingleBase = ({data: { loading, error, base}}) => {
 }
 
 export const singleBase = gql`
-query singleBase($id: ID!) {
-  base: AdjBases(id: $id) {
+query singleBase($uri: String) {
+  base: AdjBases(uri: $uri) {
     id
+    uri
     fullName
     keyfeatures
     features
@@ -74,7 +75,7 @@ query singleBase($id: ID!) {
 export default graphql(singleBase, {
   options: ({ match }) => ({
     variables: {
-      id: match.params.id
+      uri: match.params.uri
     }
   })
 })(SingleBase)

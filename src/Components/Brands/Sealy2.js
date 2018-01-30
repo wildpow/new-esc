@@ -22,7 +22,7 @@ const Sealy = ({ data: { loading, error, essentials, performance, premium} }) =>
         <Wrapper>
           {essentials.mattresses.map((mattress) => (
               <LinkWrapper key={mattress.id}>
-                <StyledLink to={`/brands/sealy/${mattress.id}`}>
+                <StyledLink to={`/brands/sealy/${mattress.uri}`}>
                   <MattImg src={`https://media.graphcms.com/resize=w:250,h:250,fit:clip/${mattress.coverImg.handle}`} alt="this"/>
                   <Name>{mattress.brandName}<br/>{mattress.subBrand}<br/>{mattress.subName}</Name>
                 </StyledLink>
@@ -30,7 +30,7 @@ const Sealy = ({ data: { loading, error, essentials, performance, premium} }) =>
           ))}
             {performance.mattresses.map((mattress) => (
               <LinkWrapper key={mattress.id}>
-                <StyledLink to={`/brands/sealy/${mattress.id}`}>
+                <StyledLink to={`/brands/sealy/${mattress.uri}`}>
                   <MattImg src={`https://media.graphcms.com/resize=w:250,h:250,fit:clip/${mattress.coverImg.handle}`} alt="this"/>
                   <Name>{mattress.brandName}<br/>{mattress.subBrand}<br/>{mattress.subName}</Name>
                 </StyledLink>
@@ -38,7 +38,7 @@ const Sealy = ({ data: { loading, error, essentials, performance, premium} }) =>
           ))}
             {premium.mattresses.map((mattress) => (
               <LinkWrapper key={mattress.id}>
-                <StyledLink to={`/brands/sealy/${mattress.id}`}>
+                <StyledLink to={`/brands/sealy/${mattress.uri}`}>
                   <MattImg src={`https://media.graphcms.com/resize=w:250,h:250,fit:clip/${mattress.coverImg.handle}`} alt="this"/>
                   <Name>{mattress.brandName}<br/>{mattress.subBrand}<br/>{mattress.subName}</Name>
                 </StyledLink>
@@ -48,7 +48,7 @@ const Sealy = ({ data: { loading, error, essentials, performance, premium} }) =>
       </MainWrapper>
       )
     }
-  return <div></div>
+  return null
 }
 
 
@@ -57,6 +57,7 @@ export const sealyMattresses = gql`
     essentials: SubLine(subLineName: "essentials") {
     mattresses {
       brandName
+      uri
       id
       subBrand
       subName
@@ -69,6 +70,7 @@ export const sealyMattresses = gql`
     mattresses {
       brandName
       id
+      uri
       subBrand
       subName
       coverImg {
@@ -80,6 +82,7 @@ export const sealyMattresses = gql`
     mattresses {
       brandName
       id
+      uri
       subBrand
       subName
       coverImg {

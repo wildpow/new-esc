@@ -75,9 +75,9 @@ class App extends Component {
         <Container>
           <Switch>
           <Route path="/" component={HomeComponent} exact/>
-          <Route path="/brands/tempurpedic/:id" component={SingleMattress}/>
-          <Route path="/brands/sealy/:id" component={SingleMattress} />
-          <Route path="/brands/stearns/:id" component={SingleMattress} />
+          <Route path="/brands/tempurpedic/:uri" component={SingleMattress}/>
+          <Route path="/brands/sealy/:uri" component={SingleMattress} />
+          <Route path="/brands/stearns/:uri" component={SingleMattress} />
           
           <Route path="/brands/tempurpedic" component={Tempur} exact/>
           <Route path="/brands/sealy" component={Sealy} exact/>
@@ -85,7 +85,7 @@ class App extends Component {
           <Route path="/brands" component={BrandsComponent} exact/>
 
           
-          <Route path="/adjustable/:id" component={SingleBase} />
+          <Route path="/adjustable/:uri" component={SingleBase} />
           <Route path="/adjustable" component={AdjustableComponent} />
           <Route path="/Accessories" component={AccessoriesCompoent} />
           <Route path="/financing" component={FinancingComponent} exact/>

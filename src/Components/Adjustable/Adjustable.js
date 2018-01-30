@@ -9,7 +9,7 @@ const AdjustableComponent = ({ data: {error, loading, Bases} }) => {
     return (
     <Main className="animated fadeIn">
       {Bases.map((base) => (
-        <StyledLink to={`/adjustable/${base.id}`} key={base.id}>
+        <StyledLink to={`/adjustable/${base.uri}`} key={base.id}>
           <H3>{base.fullName}</H3>
           <InfoWrapper>
             <Img src={`https://media.graphcms.com/resize=w:400,h:350,fit:clip/${base.coverImg.handle}`} alt="this"/>
@@ -26,6 +26,7 @@ const AdjustableComponent = ({ data: {error, loading, Bases} }) => {
 export const allAdjustables = gql`
   query allAdjustables {
     Bases: allAdjBaseses {
+      uri
       id
       fullName
       features
