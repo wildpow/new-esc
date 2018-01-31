@@ -2,7 +2,7 @@ import React from 'react'
 import image from '../../images/ezgif.com-optimize.gif';
 import styled from 'styled-components';
 import '../../app.css';
-
+import { Link } from 'react-router-dom';
 const Main = styled.div`
   font-family: 'Open Sans', sans-serif;
   display: flex;
@@ -43,7 +43,7 @@ const Panda404 = () => {
       <Header>
         <Title>Our panda couldn't find the product your looking for...</Title>
       </Header>
-      <Img src={image} alt="panda sleeping"/>
+      <Link to='/'><Img src={image} alt="panda sleeping"/></Link>
     </Main>
   )
 };

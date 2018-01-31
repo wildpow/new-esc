@@ -48,7 +48,7 @@ const AboutComponent = () => {
         <SecondP>
           We offer almost fifty mattresses in a wide range of prices to fit every budget.  Our mattresses are made in the USA 
           -- with most of them coming from local manufacturing plants -- 
-          and are brands that most people know and trust <br/>(Sealy, Stearns & Foster, TempurPEDIC).  
+          and are brands that most people know and trust <br/>(Sealy, Stearns & Foster, Tempur-PEDIC).  
         </SecondP>
       </BlueWrapper>
 
@@ -63,7 +63,7 @@ const AboutComponent = () => {
       <PopHolder>  
         <Col>
           <PopNameHolder>
-            <HH4>Billy</HH4><H4>Joshua</H4><HH4>Willy</HH4>
+            <HH4>Bill</HH4><H4>Joshua</H4><HH4>Will</HH4>
           </PopNameHolder>
           <PopImg src={pop} alt="pops"/>
         </Col>

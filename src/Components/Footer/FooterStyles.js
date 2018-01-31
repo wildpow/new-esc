@@ -16,18 +16,24 @@ export const MainFooter = styled.footer`
 `;
 
 export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
   align-self: center;
   background-color: white;
   border: 2px solid black;
   box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .9);
   @media(min-width: 1200px) {
     max-width: 75vw;
+    padding-right: 20px;
+    padding-left: 20px;
   }
 `;
 
 export const Social = styled.div`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   padding: 7px 7px 4px 7px;
 `;
 
@@ -83,7 +89,57 @@ export const MapsImg = styled.img`
     transform: scale3d(1.1,1.1,1);
   }
 `;
+export const GraphLink = styled.a`
+  align-self: center;
+  margin: auto;
+`
 
-export const Graph = styled.div``;
 
-export const Hours = styled.div``;
+export const GraphImg = styled.img`
+ transition: all .25s ease-in;
+ align-self: center;
+ margin-left: 10px;
+  &:hover {
+    transform: scale3d(1.1,1.1,1);
+  }
+`
+
+export const Contact = styled.div`
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+margin-top: 10px;
+margin-bottom: 10px;
+`
+
+
+export const Hours = styled.div`
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  @media (min-width: 768px) { font-size: 1.3rem; }
+`;
+
+export const HoursPara = styled.p`
+  margin-top: 4px;
+  margin: 0;
+  font-variant: small-caps;
+`
+
+export const HoursSpan = styled.span`
+  text-decoration: underline;
+  padding-bottom: 5px;
+`
+
+export const Address = styled.div`
+
+`
+export const AddressPara = styled.p`
+
+`
+
+export const AddressSpan = styled.span`
+
+`

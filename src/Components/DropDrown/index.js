@@ -40,7 +40,7 @@ class DropDown extends React.Component {
       case '4':
         return `Queen: $${this.props.data[3]}`
       case '5':
-        return `King/Cal. King: $${this.props.data[0]}`
+        return `King/Cal. King: $${this.props.data[4]}`
       default:
         return null;
     }
@@ -50,6 +50,7 @@ class DropDown extends React.Component {
     return (
       <Wrapper>
         <WholeThing>
+          {console.log(this.props.data)}
           <ButtonWrapper>
             <Button onMouseDown={this.handleDropdown}>
               {this.state.buttonContent}&nbsp;&nbsp; { this.state.open ? '\u25B2' : '\u25BC'}

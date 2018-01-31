@@ -26,6 +26,8 @@ const SingleBase = ({data: { loading, error, base}}) => {
           <PriceWrapper>
             <MattOnly>
               <PriceTitle>Base Price</PriceTitle>
+              {console.log(base)}
+              
                 <DropDown data={base.price}/>
             </MattOnly>
           </PriceWrapper>

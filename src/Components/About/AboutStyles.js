@@ -160,7 +160,7 @@ export const H4 = styled.h4`
   padding-left: 55px;
   margin-bottom: 10px;
   @media(min-width: 700px) { padding-right: 145px; padding-left: 145px; }
-  @media(min-width:1024px) { padding-right: 110px; padding-left: 110px; }
+  @media(min-width:1024px) { padding-right: 124px; padding-left: 124px; }
 `;
 
 export const Col = styled.div`
