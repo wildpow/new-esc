@@ -3,20 +3,6 @@ import styled from 'styled-components';
 export const PriceList = styled.ul`
 font-size: .3rem;
 `
-export const Overview = styled.h2`
- font-family: 'Roboto', sans-serif;
-  font-size: .3rem;
-  padding: 2px 20px 2px 20px;
-  /* background-color: #1565c0;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); */
-  text-align: center;
-  @media(min-width: 768px) {
-    font-size: 1.3rem;
-    padding: 10px 20px 10px 20px;
-    
-  }
-`
 export const Wrapper = styled.div`
 display: flex;
 flex-direction: column;
@@ -29,30 +15,20 @@ justify-content: center;
   border-bottom-left-radius: .11rem;
 `;
 
-export const MainTitle = styled.header`
-  font-family: 'Roboto', sans-serif;
-  font-size: .3rem;
-  padding: 0px 30px 0px 30px;
-  background-color: #1565c0;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  @media(min-width: 768px) {
-    font-size: .9rem;
-    padding: 0px 5px 0px 10px;
-  }
-`;
 
 export const Main = styled.div`
+  margin-top: 9px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-
+  @media(min-width: 768px) {
+    margin-bottom: 10px;
+  }
 `;
 export const MainInfo = styled.div`
 display: flex;
 flex-direction: column;
 justify-content: space-around;
-
 
 `;
 export const PriceWrapper = styled.div`
@@ -61,6 +37,11 @@ export const PriceWrapper = styled.div`
  justify-content: space-between;
  /* margin-top: 20px; */
  flex-wrap: wrap;
+ @media(min-width: 768px) {
+   flex-direction: column;
+   justify-content: center;
+ }
+ 
 `
 
 export const MattSet = styled.div`
@@ -70,7 +51,28 @@ flex-direction: column;
 justify-content: center;
 justify-items: center;
 align-content: center;
-`
+`;
+
+export const MainTitle = styled.header`
+  font-family: 'Roboto', sans-serif;
+  font-size: .5rem;
+  padding: 0px 10px 0px 10px;
+  text-align: center;
+  background-color: #1565c0;
+  letter-spacing: .1rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  @media(min-width: 768px) {
+    text-align: left;
+    font-size: .9rem;
+    padding: 0px 5px 0px 10px;
+  }
+  @media(min-width: 1300px) {
+    font-size: 1.2rem;
+    letter-spacing: .13rem;
+    padding-left: 30px;
+  }
+`;
 export const MattOnly = styled.div`
 
 display: flex;
@@ -81,14 +83,23 @@ align-content: center;
 `
 
 export const PriceTitle = styled.p`
-  text-align: center;
-  padding-bottom: 10px;
+  
+  padding-top: 10px;
+  padding-bottom: 2px;
   margin-top: 0;
-  margin-bottom: 0;
-  font-size: .7rem;
+  margin-bottom: -5px;
+  font-size: .8rem;
   font-family: 'Open Sans', sans-serif;
+  @media(min-width: 768px) {
+    font-size: 1rem;
+    padding-top: 0px;
+    padding-bottom: 7px;
+
+  }
   @media(min-width: 1022px) {
-    font-size: 1.4rem;
+    font-size: 1.7rem;
+    margin-bottom: 5px;
+    margin-top: 5px;
   }
 `
 
@@ -103,7 +114,12 @@ export const MainImg = styled.img`
 `
 export const Warranty = styled.p`
 font-size: .8rem;
-`
+font-family: 'Open Sans', sans-serif;
+@media(min-width: 768px) {
+  font-size: 1.5rem;
+}
+`;
+
 
 export const Description = styled.p`
 font-size: .6rem;
@@ -118,7 +134,7 @@ background: lightgray;
   line-height: 1.3rem;
 }
 @media(min-width: 1022px) {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   /* padding-right: 60px;
   padding-left: 60px; */
   line-height: 1.4rem;
@@ -130,4 +146,31 @@ background: lightgray;
   line-height: 1.5rem;
   margin: auto;
 }
+`
+export const Overview = styled.header`
+font-family: 'Roboto', sans-serif;
+font-size: .5rem;
+padding: 0px 12px 0px 12px;
+text-align: center;
+background-color: #eb1c24;
+letter-spacing: .1rem;
+color: white;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+@media(min-width: 768px) {
+  text-align: left;
+  font-size: .9rem;
+  padding: 0px 5px 0px 10px;
+}
+@media(min-width: 1024px) {
+  text-align: center;
+  font-size: 1.2rem;
+}
+`
+export const Article = styled.article`
+  display: flex;
+  background: rgba(224,224,224,0.42);
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 `

@@ -3,10 +3,10 @@ import styled from 'styled-components';
 
 const ImgWrapper = styled.div`
    display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   flex-direction: column;
-  align-self: center;
-  margin-top: 20px;
+  /* align-self: center; */
+  margin: 0;
 `
 const SmallImgHolder = styled.div`
   display: flex;
@@ -17,7 +17,10 @@ const SmallImgHolder = styled.div`
 const SmImg = styled.img`
   width: 50px;
   height: 50px;
-
+  @media(min-width: 768px) {
+    width: 100px;
+    height: 80px;
+  }
   @media(min-width: 1024px) {
     width: 150px;
     height: 150px;
@@ -28,8 +31,12 @@ const SmImg = styled.img`
   }
 `
 const LargeImg = styled.img`
-width: 150px;
-height: 150px;
+width: 180px;
+height: 160px;
+@media(min-width: 768px) {
+  width: 350px;
+  height: 200px;
+}
 @media(min-width: 1024px) {
   width: 450px;
   height: 300px;

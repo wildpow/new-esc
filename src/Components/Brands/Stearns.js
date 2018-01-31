@@ -6,10 +6,24 @@ import {  MainWrapper,
           LinkWrapper,
           StyledLink,
           MattImg,
-          Name, Img, MainTitle } from './MattListStyles';
-
+          Img, MainTitle } from './MattListStyles';
+import styled from 'styled-components';
 import StearnsImg from '../../images/StearnsLogo.png'
 import '../../app.css';
+
+const Name = styled.p`
+  font-size: .9rem;
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  @media(min-width: 768px) {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1.2rem;
+  }
+`;
 
 const Sealy = ({ data: { loading, error, Brands} }) => {
   if (error) return <h6>panda's having trouble getting mattresses {console.log(error)}</h6>

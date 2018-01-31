@@ -74,15 +74,18 @@ justify-content: center;
 align-self: center;
 align-items: center;
 justify-items: center;
+margin-bottom: 10px;
 
 
 `
 export const LinkWrapper = styled.div`
 border: 2px solid black;
-margin-right: 10px;
-margin-bottom: 10px;
+margin-right: 5px;
+margin-left: 5px;
+margin-bottom: 5px;
+margin-top: 5px;
 width: 150px;
-height: 200px;
+height: 205px;
 @media(min-width: 768px) {
   width: 340px;
   height: 350px;
@@ -131,7 +134,7 @@ width: 120px;
 
 `
 export const Name = styled.p`
-font-size: .8rem;
+font-size: 1rem;
 
 font-family: 'Open Sans', sans-serif;
 text-decoration: none;

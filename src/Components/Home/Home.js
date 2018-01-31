@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import '../../app.css'
 import { Carousel } from 'react-responsive-carousel'; 
 import '../../../node_modules/react-responsive-carousel/lib/styles/carousel.min.css'
-import Sealy from '../../images/SealyModal.jpg'
-import Tempur from '../../images/TempurModal.jpg'
-import Stearns from '../../images/StearnsModal.jpg'
+import Sealy from '../../images/SealyLifestyleRatio.jpg'
+import Tempur from '../../images/TempurLifestyleRatio.jpg'
+import Stearns from '../../images/StearnsLifestyleRatio.jpg'
 import Sale from '../../images/grandOpening.png'
 import './home.css';
 
@@ -22,39 +22,41 @@ margin-left: 50px;
 
 const Img = styled.img`
 background-color: white;
-width: 360px;
-height: 320px;
+max-width: 600px;
+ max-height: 1000px;
 @media(min-width: 768px) {
-  width: 500px;
-  height: 450px;
+  max-width: 800px;
+  max-height: 600px;
 }
 @media(min-width: 1024px) {
-    width: 1000px;
+    max-width: 1000px;
     height: 600px;
   }
 `
 const SaleImg = styled.img`
-  width: 300px !important;
-  height: 320px;
+  max-width: 200px;
+  max-height: 200px;
+  margin: auto;
+  background-color: #eb1c24;
   @media(min-width: 768px) {
-    width: 500px;
-    height: 450px;
+    max-width: 500px;
+    max-height: 700px;
   }
   @media(min-width: 1024px) {
       width: 500px !important;
       height: 600px;
     }
-  margin: auto;
+  
 `
 const TempurImg = styled.img`
- width: 360px;
- height: 320px;
+ max-width: 600px;
+ max-height: 1000px;
  @media(min-width: 768px) {
-   width: 500px;
-   height: 450px;
+  max-width: 800px;
+  max-height: 600px;
  }
  @media(min-width: 1024px) {
-    width: 1000px;
+    max-width: 1000px;
     height: 600px;
   }
   margin: auto;
@@ -64,16 +66,17 @@ const TempurImg = styled.img`
 
 const SaleWrapper = styled.div`
  background-color: #eb1c24;
+ 
 `
 const StearnsImg = styled.img`
-  width: 360px;
-  height: 320px;
+ max-width: 600px;
+ max-height: 1000px;
   @media(min-width: 768px) {
-    width: 500px;
-    height: 450px;
+    max-width: 800px;
+    max-height: 600px;
   }
   @media(min-width: 1024px) {
-    width: 1000px;
+    max-width: 1000px;
     height: 600px;
   }
   
