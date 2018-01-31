@@ -1,63 +1,19 @@
 import React from 'react';
-import styled from 'styled-components';
-
-const ImgWrapper = styled.div`
-   display: flex;
-  /* justify-content: center; */
-  flex-direction: column;
-  /* align-self: center; */
-  margin: 0;
-`
-const SmallImgHolder = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-self: center;
-`
-const SmImg = styled.img`
-  width: 50px;
-  height: 50px;
-  @media(min-width: 768px) {
-    width: 100px;
-    height: 80px;
-  }
-  @media(min-width: 1024px) {
-    width: 150px;
-    height: 150px;
-  }
-  border: 2px solid white;
-  &:hover {
-    border: 2px solid black;
-  }
-`
-const LargeImg = styled.img`
-width: 180px;
-height: 160px;
-@media(min-width: 768px) {
-  width: 350px;
-  height: 200px;
-}
-@media(min-width: 1024px) {
-  width: 450px;
-  height: 300px;
-}
-
-`
+import { ImgWrapper, SmallImgHolder, SmImg, LargeImg} from './ImageViewerStyles';
 
 class ImageViewer extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       activeImg: '1'
-    }
+    };
     this.changeActiveImage = this.changeActiveImage.bind(this);
-
-  }
+  };
   changeActiveImage(e) {
     this.setState({
       activeImg: e.currentTarget.dataset.id
-    })
-  }
+    });
+  };
   selector() {
     const { activeImg } = this.state
 
@@ -71,8 +27,7 @@ class ImageViewer extends React.Component {
       default:
         break;
     }
-  }
-
+  };
   render() {
     return (
       <ImgWrapper>
@@ -85,7 +40,6 @@ class ImageViewer extends React.Component {
       </ImgWrapper>
     )
   }
-  
-}
+};
 
 export default ImageViewer;

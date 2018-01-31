@@ -1,12 +1,7 @@
 import React from 'react';
 import gql from 'graphql-tag';
-import { graphql } from 'react-apollo'
-import styled from 'styled-components';
-
-export const Promo = styled.p`
-  margin: 0;
-  padding: 0;
-`;
+import { graphql } from 'react-apollo';
+import { Promo } from './TopperStyles';
 
 const TopPromo = ({data: {loading, error, allToppers }}) => {
   if (error) return <Promo> Welcome to E.S.C. Mattress Center</Promo>
@@ -15,7 +10,7 @@ const TopPromo = ({data: {loading, error, allToppers }}) => {
       <Promo>{allToppers[0].currentpromo}</Promo>
     )
   }
-  return <Promo>E.S.C Mattress Center Rocks!</Promo>
+  return <Promo>Welcome to E.S.C. Mattress Center</Promo>
 };
 
 export const allToppers = gql`

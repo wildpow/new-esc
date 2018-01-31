@@ -3,13 +3,8 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   display: flex;
   flex-direction:row;
-  /* justify-content: space-around;
-  justify-items: center;
-  justify-self: center;
-  align-items: center; */
   margin: 0;
   padding: 0;
-  
   @media(min-width: 1024px) {  margin-left: 20px;}
 `;
 
@@ -19,7 +14,6 @@ align-self: center;
   display: inline-block;
   margin: 0;
   padding: 0;
-  
 `;
 
 export const ButtonWrapper = styled.div`
@@ -32,11 +26,9 @@ export const ButtonWrapper = styled.div`
 export const Button = styled.button`
   background-color: #1565c0;
   color: white;
-  
   border: none;
   cursor: pointer;
   outline: none;
-  
   padding: 8px;
   font-size: .8rem;
   border-top-left-radius: .11rem;
@@ -66,19 +58,11 @@ export const Price = styled.p`
 font-size: .9rem !important;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
-  
   padding-top: 10px;
   font-size: 1rem;
   text-align: center !important;
-  
- 
-  
   align-self: center !important;
-  @media(min-width: 768px) { 
-    padding-left: 25px;
-    
-    font-size: 1.1rem;
-  }
+  @media(min-width: 768px) { padding-left: 25px; font-size: 1.1rem; }
   @media(min-width: 1024px) { font-size: 1.7rem !important;  width: 250px !important; height: 60px; margin-top: 0; margin-bottom: 0;}
   @media(min-width: 1300px) { padding-left: 30px; height: 70px; width: 300px !important;}
 `;

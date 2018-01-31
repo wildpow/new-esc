@@ -6,7 +6,7 @@ import {  MainWrapper,
           LinkWrapper,
           StyledLink,
           MattImg,
-          Name, Img, MainTitle  } from './MattListStyles';
+          Name, MainTitle, TempurPImg  } from './MattListStyles';
 
 import TempurImg from '../../images/TempurLogo2.png';
 import '../../app.css';
@@ -17,7 +17,7 @@ const Tempur = ({ data: { loading, error, Brands} }) => {
     return (
       <MainWrapper className="animated fadeIn">
         <MainTitle>
-          <Img src={TempurImg} alt="Logo"/>
+          <TempurPImg src={TempurImg} alt="Logo"/>
         </MainTitle>
         <Wrapper>
           {Brands.mattresses.map((mattress) => {

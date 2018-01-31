@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Markdown from 'react-markdown';
 
 export const PriceList = styled.ul`
 font-size: .3rem;
@@ -83,7 +84,6 @@ align-content: center;
 `
 
 export const PriceTitle = styled.p`
-  
   padding-top: 10px;
   padding-bottom: 2px;
   margin-top: 0;
@@ -185,3 +185,71 @@ export const Article = styled.article`
   align-items: center;
   padding-left: 10px;
 `
+export const Profile = styled.p`
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 0;
+  font-size: .9rem;
+  @media(min-width: 768px) { font-size: 1.3rem; }
+  @media(min-width: 1024px) { font-size: 1.6rem; }
+`;
+
+export const StyledMarkDown = styled(Markdown)`
+  font-family: 'Open Sans', sans-serif;
+  padding: 0px;
+  & p {
+    font-size: .9rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-bottom: 4px solid #eb1c24;
+    padding-bottom: 2px;
+  }
+  & ul {
+    list-style: square;
+    margin-top: 10px;
+    font-size:  .7rem;
+    padding-left: 20px;
+    margin-bottom: 5px;
+  }
+  & li {
+    padding-bottom: 2px;
+  }
+  @media(min-width: 692px) {
+    font-family: 'Open Sans', sans-serif;
+    padding: 10px 30px 10px 30px;
+
+    & p {
+      font-size: 1.8rem;
+      margin-top: 0;
+      margin-bottom: 0;
+      border-bottom: 4px solid red;
+      padding-bottom: 2px;
+    }
+    & ul {
+      list-style: square;
+      margin-top: 10px;
+      font-size:  1rem;
+    }
+    & li {
+      padding-bottom: 2px;
+      font-size: 1.1rem;
+    }
+  }
+  @media(min-width: 992px) {
+    padding: 30px;
+    
+    & p {
+      font-size: 2.4rem;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-bottom: 2px;
+    }
+    & ul {
+      margin-top: 10px;
+      font-size:  1.8rem;
+    }
+    & li {
+      padding-bottom: 2px;
+      font-size: 1.8rem;
+    }
+  }
+`;

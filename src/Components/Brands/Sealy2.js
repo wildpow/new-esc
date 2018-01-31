@@ -3,12 +3,8 @@ import gql from 'graphql-tag';
 import { graphql } from 'react-apollo';
 import styled from 'styled-components';
 import SealyImg from '../../images/SealyLogo.png';
-import {  MainWrapper,
-  Wrapper,
-  LinkWrapper,
-  StyledLink,
-  MattImg,
-  MainTitle,Img  } from './MattListStyles';
+import {  MainWrapper, Wrapper, LinkWrapper, StyledLink,
+  MattImg, MainTitle, SealyImgPlace } from './MattListStyles';
   import '../../app.css';
 
 const Name = styled.p`
@@ -31,7 +27,7 @@ const Sealy = ({ data: { loading, error, essentials, performance, premium} }) =>
     return (
       <MainWrapper className="animated fadeIn">
         <MainTitle>
-         <Img src={SealyImg} alt="Logo"/>
+          <SealyImgPlace src={SealyImg} alt="Logo"/>
         </MainTitle>
         <Wrapper>
           {essentials.mattresses.map((mattress) => (

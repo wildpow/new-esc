@@ -3,27 +3,17 @@ import gql from 'graphql-tag'
 import { graphql } from 'react-apollo';
 import '../../app.css';
 import { Wrapper, MainTitle, Main, MainInfo, PriceWrapper,
-        MattOnly, PriceTitle, Warranty, Description, Overview, Article }
+        MattOnly, PriceTitle, Warranty, Description, Overview,
+        Article, StyledMarkDown, Profile }
         from '../Brands/SingleMattStyles';
-import { SingleBaseMD } from './AdjustableStyles';
 import DropDown from '../DropDrown/index';
 import ImageViewer from '../ImageViewer/ImageViewer';
-import styled from 'styled-components';
-
-
-
-
-const Profile = styled.p`
-margin-top: 0;
-@media(min-width: 768px) {
-  font-size: 1.3rem;
-}
-@media(min-width: 1024px) { font-size: 2rem; }
-`;
+import { Redirect } from 'react-router-dom';
 
 const SingleBase = ({data: { loading, error, base}}) => {
   if (error) return <div>{console.log(error)}</div>
   if (!loading) {
+    if(!base) return <Redirect to='/404'/>
     return(
       <Wrapper className="animated fadeIn">
         <MainTitle>
@@ -32,7 +22,7 @@ const SingleBase = ({data: { loading, error, base}}) => {
         <Main>
         <ImageViewer cover={base.coverImg.handle} img1={base.detail1.handle} img2={base.detail2.handle} />
         <MainInfo>
-          <SingleBaseMD source={base.features} escapeHtml={false} />
+          <StyledMarkDown source={base.features} escapeHtml={false} />
           <PriceWrapper>
             <MattOnly>
               <PriceTitle>Base Price</PriceTitle>
@@ -49,7 +39,7 @@ const SingleBase = ({data: { loading, error, base}}) => {
           {base.baseDescription}
         </Description>
           <Profile>Profile: {base.height}</Profile>
-          <SingleBaseMD source={base.keyfeatures} escapeHtml={false} />
+          <StyledMarkDown source={base.keyfeatures} escapeHtml={false} />
           <Warranty>{base.warranty}</Warranty>
       </Article>
 
