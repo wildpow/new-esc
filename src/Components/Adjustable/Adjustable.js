@@ -36,6 +36,4 @@ export const allAdjustables = gql`
   }
 }
 `;
-
-
 export default graphql(allAdjustables)(AdjustableComponent);

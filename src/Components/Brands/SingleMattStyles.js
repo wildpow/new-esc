@@ -183,4 +183,5 @@ export const Article = styled.article`
   justify-content: center;
   align-content: center;
   align-items: center;
+  padding-left: 10px;
 `

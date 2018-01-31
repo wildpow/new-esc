@@ -71,10 +71,7 @@ export const Main = styled.div`
   border: 2px solid black;
   padding-top: 20px;
   box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .9); 
-  @media(min-width:1200px) {
-    margin-left: 120px;
-    margin-right: 120px;
-  }
+  @media(min-width:1200px) { margin-left: 120px; margin-right: 120px; }
 `;
 
 export const StyledLink = styled(Link)`

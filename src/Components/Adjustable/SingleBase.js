@@ -48,7 +48,7 @@ const SingleBase = ({data: { loading, error, base}}) => {
         <Description>
           {base.baseDescription}
         </Description>
-          <Profile>Profile: {base.height}"</Profile>
+          <Profile>Profile: {base.height}</Profile>
           <SingleBaseMD source={base.keyfeatures} escapeHtml={false} />
           <Warranty>{base.warranty}</Warranty>
       </Article>
