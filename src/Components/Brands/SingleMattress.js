@@ -4,7 +4,7 @@ import { graphql } from 'react-apollo';
 import { Wrapper, MainTitle, Main,
         MainInfo, PriceWrapper, MattOnly,
         MattSet, PriceTitle, Article,
-        Overview, Warranty } from './SingleMattStyles';
+        Overview, Warranty, Description } from './SingleMattStyles';
 import Markdown from 'react-markdown'
 
 import '../../app.css';
@@ -82,42 +82,7 @@ export const SingleMattMD = styled(Markdown)`
 `;
 
 
-const Description = styled.p`
-font-size: .9rem;
-align-self: center;
-font-family: 'Open Sans', sans-serif;
-line-height: 1.1rem;
-margin-left: 0px;
-margin-right: 0px;
-padding-left: 14px;
-padding-right: 14px;
-padding-top: 10px;
-padding-bottom: 10px;
-border-top-left-radius: .11rem; 
-  border-top-right-radius: .11rem;
-  border-bottom-right-radius: .11rem;
-  border-bottom-left-radius: .11rem;
-@media(min-width: 768px) {
-  font-size: 1.1rem;
-  padding-right: 40px;
-  padding-left: 40px;
-  line-height: 1.3rem;
-}
-@media(min-width: 1022px) {
-  font-size: 1.8rem;
-  padding-right: 60px;
-  padding-left: 60px;
-  line-height: 1.9rem;
-}
-@media(min-width: 1300px) {
-  font-size: 1.3rem;
-  padding-top: 30px;
-  padding-right: 80px;
-  padding-left: 80px;
-  line-height: 1.5rem;
-  margin: auto;
-}
-`
+
 const MainTitleText = styled.h2`
 
 `

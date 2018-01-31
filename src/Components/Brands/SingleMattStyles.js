@@ -122,27 +122,37 @@ font-family: 'Open Sans', sans-serif;
 
 
 export const Description = styled.p`
-font-size: .6rem;
-/* padding-right: 20px;
-padding-left: 20px; */
+font-size: .9rem;
+align-self: center;
 font-family: 'Open Sans', sans-serif;
-background: lightgray;
+line-height: 1.1rem;
+margin-left: 0px;
+margin-right: 0px;
+padding-left: 14px;
+padding-right: 14px;
+padding-top: 10px;
+padding-bottom: 10px;
+border-top-left-radius: .11rem; 
+  border-top-right-radius: .11rem;
+  border-bottom-right-radius: .11rem;
+  border-bottom-left-radius: .11rem;
 @media(min-width: 768px) {
   font-size: 1.1rem;
-  /* padding-right: 40px;
-  padding-left: 40px; */
+  padding-right: 40px;
+  padding-left: 40px;
   line-height: 1.3rem;
 }
 @media(min-width: 1022px) {
-  font-size: 1.4rem;
-  /* padding-right: 60px;
-  padding-left: 60px; */
-  line-height: 1.4rem;
+  font-size: 1.8rem;
+  padding-right: 60px;
+  padding-left: 60px;
+  line-height: 1.9rem;
 }
 @media(min-width: 1300px) {
   font-size: 1.3rem;
-  /* padding-right: 80px;
-  padding-left: 80px; */
+  padding-top: 30px;
+  padding-right: 80px;
+  padding-left: 80px;
   line-height: 1.5rem;
   margin: auto;
 }

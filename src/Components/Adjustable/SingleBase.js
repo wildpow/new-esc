@@ -3,11 +3,23 @@ import gql from 'graphql-tag'
 import { graphql } from 'react-apollo';
 import '../../app.css';
 import { Wrapper, MainTitle, Main, MainInfo, PriceWrapper,
-        MattOnly, PriceTitle, Warranty, Description, Overview }
+        MattOnly, PriceTitle, Warranty, Description, Overview, Article }
         from '../Brands/SingleMattStyles';
 import { SingleBaseMD } from './AdjustableStyles';
 import DropDown from '../DropDrown/index';
 import ImageViewer from '../ImageViewer/ImageViewer';
+import styled from 'styled-components';
+
+
+
+
+const Profile = styled.p`
+margin-top: 0;
+@media(min-width: 768px) {
+  font-size: 1.3rem;
+}
+@media(min-width: 1024px) { font-size: 2rem; }
+`;
 
 const SingleBase = ({data: { loading, error, base}}) => {
   if (error) return <div>{console.log(error)}</div>
@@ -29,16 +41,17 @@ const SingleBase = ({data: { loading, error, base}}) => {
           </PriceWrapper>
         </MainInfo>
       </Main>
-
-      <div id='row'>
-    <Overview>
-      OVERVIEW & SPECS
-    </Overview><Description>
-      {base.baseDescription}</Description>
-      <p>Profile: {base.height}"</p>
-      <SingleBaseMD source={base.keyfeatures} escapeHtml={false} />
-      <Warranty>{base.warranty}</Warranty>
-  </div>
+      <Overview>
+        <h2>OVERVIEW & SPECS</h2>
+      </Overview>
+      <Article>
+        <Description>
+          {base.baseDescription}
+        </Description>
+          <Profile>Profile: {base.height}"</Profile>
+          <SingleBaseMD source={base.keyfeatures} escapeHtml={false} />
+          <Warranty>{base.warranty}</Warranty>
+      </Article>
 
       </Wrapper>
     )

@@ -18,7 +18,7 @@ WebFont.load({
   }
 });
 
-const GRAPHCMS_API = 'https://api.graphcms.com/simple/v1/poop';
+const GRAPHCMS_API = 'https://api.graphcms.com/simple/v1/escPandaMattress';
 
 const client = new ApolloClient({
   link: new HttpLink({ uri: GRAPHCMS_API }),

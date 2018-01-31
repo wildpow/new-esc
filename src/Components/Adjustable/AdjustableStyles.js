@@ -145,29 +145,30 @@ export const Img = styled.img`
 
 export const SingleBaseMD = styled(Markdown)`
   font-family: 'Open Sans', sans-serif;
-  padding: 30px;
-  
+  padding: 0px;
   & p {
-    font-size: 1.6rem;
+    font-size: .9rem;
     margin-top: 0;
     margin-bottom: 0;
-    border-bottom: 4px solid red;
+    border-bottom: 4px solid #eb1c24;
     padding-bottom: 2px;
   }
   & ul {
     list-style: square;
     margin-top: 10px;
-    font-size:  1rem;
+    font-size:  .7rem;
+    padding-left: 20px;
+    margin-bottom: 5px;
   }
   & li {
     padding-bottom: 2px;
   }
   @media(min-width: 692px) {
     font-family: 'Open Sans', sans-serif;
-    padding: 30px;
+    padding: 10px 30px 10px 30px;
 
     & p {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
       margin-top: 0;
       margin-bottom: 0;
       border-bottom: 4px solid red;
@@ -180,7 +181,7 @@ export const SingleBaseMD = styled(Markdown)`
     }
     & li {
       padding-bottom: 2px;
-      font-size: .9rem;
+      font-size: 1.1rem;
     }
   }
   @media(min-width: 992px) {
@@ -198,7 +199,8 @@ export const SingleBaseMD = styled(Markdown)`
     }
     & li {
       padding-bottom: 2px;
-      font-size: 1.4rem;
+      font-size: 1.8rem;
     }
   }
+
 `;
