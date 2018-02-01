@@ -36,7 +36,7 @@ export const Button = styled.button`
   border-bottom-right-radius: .11rem;
   border-bottom-left-radius: .11rem;
   @media(min-width: 768px) { font-size: 1rem; padding: 9px;}
-  @media(min-width: 1024px) { font-size: 1.6rem; padding: 16px; }
+  @media(min-width: 1024px) { font-size: 1.6rem; padding: 16px;}
   &:hover {background-color: #eb1c24}
   &:focus { background:#eb1c24;}
 `;
@@ -55,14 +55,16 @@ export const DropDownWrapper = styled.div`
 `;
 
 export const Price = styled.p`
-font-size: .9rem !important;
+  font-size: .5rem;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
   padding-top: 10px;
-  font-size: 1rem;
+  padding-left: 5px;
+  width: 100px;
+  height: 40px;
   text-align: center !important;
   align-self: center !important;
-  @media(min-width: 768px) { padding-left: 25px; font-size: 1.1rem; }
+  @media(min-width: 768px) { padding-left: 25px; font-size: 1.1rem; width: 200px; height: 60px;}
   @media(min-width: 1024px) { font-size: 1.7rem !important;  width: 250px !important; height: 60px; margin-top: 0; margin-bottom: 0;}
   @media(min-width: 1300px) { padding-left: 30px; height: 70px; width: 300px !important;}
 `;

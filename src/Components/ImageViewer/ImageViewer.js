@@ -33,9 +33,9 @@ class ImageViewer extends React.Component {
       <ImgWrapper>
         <div className="MainImgHolder">{this.selector()}</div>
         <SmallImgHolder className="SmallImgHolder">
-          <SmImg className="SmallPic" onMouseOver={this.changeActiveImage} src={`https://media.graphcms.com/resize=w:150,h:150,fit:clip/${this.props.cover}`} alt="ths" data-id="1"/>
-          <SmImg className="SmallPic" onMouseOver={this.changeActiveImage} src={`https://media.graphcms.com/resize=w:150,h:150,fit:clip/${this.props.img1}`}  alt="ths" data-id="2" />
-          <SmImg className="SmallPic" onMouseOver={this.changeActiveImage} src={`https://media.graphcms.com/resize=w:150,h:150,fit:clip/${this.props.img2}`} width="150" height="150" alt="sfwef" data-id="3"/>
+          <SmImg className="SmallPic" onMouseOver={this.changeActiveImage} src={`https://media.graphcms.com/resize=w:165,h:150,fit:clip/${this.props.cover}`} alt="ths" data-id="1"/>
+          <SmImg className="SmallPic" onMouseOver={this.changeActiveImage} src={`https://media.graphcms.com/resize=w:165,h:150,fit:clip/${this.props.img1}`}  alt="ths" data-id="2" />
+          <SmImg className="SmallPic" onMouseOver={this.changeActiveImage} src={`https://media.graphcms.com/resize=w:165,h:150,fit:clip/${this.props.img2}`} width="150" height="150" alt="sfwef" data-id="3"/>
         </SmallImgHolder>
       </ImgWrapper>
     )

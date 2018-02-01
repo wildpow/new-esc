@@ -92,6 +92,8 @@ export const MapsImg = styled.img`
 export const GraphLink = styled.a`
   align-self: center;
   margin: auto;
+  padding-top: 5px;
+  @media(min-width:500px) { padding-top: 0px;}
 `
 
 

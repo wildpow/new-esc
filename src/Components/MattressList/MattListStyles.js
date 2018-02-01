@@ -121,6 +121,7 @@ margin: auto;
 width: 120px;
   height: 100px;
 @media(min-width: 768px) { width: 250px; height: 250px; }
+@media(min-width: 1022px) { width: 290px;}
 `;
 
 export const Name = styled.p`
@@ -141,4 +142,18 @@ export const StearnName = styled.p`
   padding-left: 5px;
   padding-right: 5px;
   @media(min-width: 768px) { padding-left: 10px; padding-right: 10px; font-size: 1.2rem; }
+`;
+
+export const SealyName = styled.p`
+  font-size: .9rem;
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  @media(min-width: 768px) {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1.2rem;
+  }
 `;

@@ -26,6 +26,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "apollo-cache-persist": "^0.1.1",
     "typescript": "^2.6.2",
     "typescript-styled-plugin": "^0.4.0"
   }

@@ -12,10 +12,11 @@ export const SaleWrapper = styled.div`
 `;
 
 export const SaleImg = styled.img`
-  max-width: 200px;
-  max-height: 200px;
+  max-width: 240px;
+  max-height: 240px;
   margin: auto;
   background-color: #eb1c24;
+  @media(min-width: 600px) {max-height: 350px; max-width: 400px; }
   @media(min-width: 768px) { max-width: 500px; max-height: 700px; }
   @media(min-width: 1024px) { width: 500px !important; height: 600px; }
 `;

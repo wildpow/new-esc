@@ -25,6 +25,7 @@ export const Main = styled.div`
   @media(min-width: 768px) {
     margin-bottom: 10px;
   }
+  @media(min-width: 1024px) { justify-content: space-evenly; margin-left: 5px; margin-bottom: 20px;}
 `;
 export const MainInfo = styled.div`
 display: flex;
@@ -94,12 +95,14 @@ export const PriceTitle = styled.p`
     font-size: 1rem;
     padding-top: 0px;
     padding-bottom: 7px;
-
   }
   @media(min-width: 1022px) {
     font-size: 1.7rem;
+    padding-left: 20px;
+    /* margin: auto; */
     margin-bottom: 5px;
     margin-top: 5px;
+    /* text-align: center; */
   }
 `
 

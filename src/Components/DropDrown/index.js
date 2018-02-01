@@ -4,7 +4,7 @@ import { Wrapper, WholeThing,
         DropDownWrapper, Price 
       } from './DropDownStyles';
 
-class DropDown extends React.Component {
+class DropDown extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -50,7 +50,6 @@ class DropDown extends React.Component {
     return (
       <Wrapper>
         <WholeThing>
-          {console.log(this.props.data)}
           <ButtonWrapper>
             <Button onMouseDown={this.handleDropdown}>
               {this.state.buttonContent}&nbsp;&nbsp; { this.state.open ? '\u25B2' : '\u25BC'}
