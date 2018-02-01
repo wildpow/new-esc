@@ -18,7 +18,7 @@ const Sealy = ({ data: { loading, error, essentials, performance, premium} }) =>
           {essentials.mattresses.map((mattress) => (
               <LinkWrapper key={mattress.id}>
                 <StyledLink to={`/brands/sealy/${mattress.uri}`}>
-                  <MattImg src={`https://media.graphcms.com/resize=w:250,h:250,fit:clip/${mattress.coverImg.handle}`} alt="this"/>
+                  <MattImg src={`https://media.graphcms.com/resize=w:290,h:250,fit:clip/${mattress.coverImg.handle}`} alt="this"/>
                   <SealyName>{mattress.brandName}<br/>{mattress.subBrand}<br/>{mattress.subName}</SealyName>
                 </StyledLink>
               </LinkWrapper>
@@ -26,7 +26,7 @@ const Sealy = ({ data: { loading, error, essentials, performance, premium} }) =>
             {performance.mattresses.map((mattress) => (
               <LinkWrapper key={mattress.id}>
                 <StyledLink to={`/brands/sealy/${mattress.uri}`}>
-                  <MattImg src={`https://media.graphcms.com/resize=w:250,h:250,fit:clip/${mattress.coverImg.handle}`} alt="this"/>
+                  <MattImg src={`https://media.graphcms.com/resize=w:290,h:250,fit:clip/${mattress.coverImg.handle}`} alt="this"/>
                   <SealyName>{mattress.brandName}<br/>{mattress.subBrand}<br/>{mattress.subName}</SealyName>
                 </StyledLink>
               </LinkWrapper>
@@ -34,7 +34,7 @@ const Sealy = ({ data: { loading, error, essentials, performance, premium} }) =>
             {premium.mattresses.map((mattress) => (
               <LinkWrapper key={mattress.id}>
                 <StyledLink to={`/brands/sealy/${mattress.uri}`}>
-                  <MattImg src={`https://media.graphcms.com/resize=w:250,h:250,fit:clip/${mattress.coverImg.handle}`} alt="this"/>
+                  <MattImg src={`https://media.graphcms.com/resize=w:290,h:250,fit:clip/${mattress.coverImg.handle}`} alt="this"/>
                   <SealyName>{mattress.brandName}<br/>{mattress.subBrand}<br/>{mattress.subName}</SealyName>
                 </StyledLink>
               </LinkWrapper>

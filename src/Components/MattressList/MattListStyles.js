@@ -121,6 +121,7 @@ margin: auto;
 width: 120px;
   height: 100px;
 @media(min-width: 768px) { width: 250px; height: 250px; }
+@media(min-width: 1022px) { width: 290px;}
 `;
 
 export const Name = styled.p`
