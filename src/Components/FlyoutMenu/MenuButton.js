@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import './MenuButtonStyles.css';
 import styled from 'styled-components'
 
@@ -35,7 +35,7 @@ const Button = styled.button`
 
 `;
 
-class MenuButton extends Component {
+class MenuButton extends PureComponent {
   render() {
     return (
         <Button className="menu" id="menu-btn" onMouseUp={this.props.handleMouseDown}>

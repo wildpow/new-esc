@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import "./Menu.css";
 import { NavLink } from 'react-router-dom';
 import styled, { ThemeProvider } from 'styled-components';
@@ -29,7 +29,7 @@ const theme = {
   main: '#c62828'
 };
 
-class Menu extends Component {
+class Menu extends PureComponent {
   render() {
     var visibility = "hide";
  
