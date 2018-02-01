@@ -41,7 +41,7 @@ const Panda404 = () => {
   return (
     <Main className="animated fadeIn">
       <Header>
-        <Title>Our panda couldn't find the product your looking for...</Title>
+        <Title>Our panda couldn't find the product you're looking for...</Title>
       </Header>
       <Link to='/'><Img src={image} alt="panda sleeping"/></Link>
     </Main>
