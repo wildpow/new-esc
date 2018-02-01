@@ -88,13 +88,7 @@ class App extends Component {
             <Route path="/brands/sealy/:uri" component={SingleMattress}/>
             <Route path="/brands/stearns/:uri" component={SingleMattress}/>
             <Route component={Panda404}/>
-              
-            
             </Switch>
-            
-            
-           
-         
           <Footer/>
         </Container>
       </div>

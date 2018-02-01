@@ -2,7 +2,7 @@ import React from 'react';
 import { MainFooter, Social, FBimage, Timage,
           Wrapper, YelpHolder, YelpImg, InstaImg,
           MapsImg, Hours, HoursSpan, HoursPara,
-          Address, AddressSpan, AddressPara, Contact,
+          Contact,
           GraphImg, GraphLink
         } from './FooterStyles';
 import fbIcon from '../../images/FB.png';

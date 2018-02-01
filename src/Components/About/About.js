@@ -2,7 +2,7 @@ import React from 'react';
 import { Main, Header, HeaderText, PicHolder, StoreImg1,
           MapImg, StoreImg2, Address, Span, RegularParagraph,
           BlueWrapper, SecondP, PopImg, PopHolder, PopNameHolder,
-          H4, Col, HH4
+          Josh, Col, Bill, Will
         } from './AboutStyles';
 import '../../app.css';
 
@@ -48,7 +48,7 @@ const AboutComponent = () => {
         <SecondP>
           We offer almost fifty mattresses in a wide range of prices to fit every budget.  Our mattresses are made in the USA 
           -- with most of them coming from local manufacturing plants -- 
-          and are brands that most people know and trust <br/>(Sealy, Stearns & Foster, Tempur-PEDIC).  
+          and are brands that most people know and trust <br/>(Sealy, Stearns & Foster, Tempur-Pedic).  
         </SecondP>
       </BlueWrapper>
 
@@ -63,7 +63,7 @@ const AboutComponent = () => {
       <PopHolder>  
         <Col>
           <PopNameHolder>
-            <HH4>Bill</HH4><H4>Joshua</H4><HH4>Will</HH4>
+            <Bill>Bill</Bill><Josh>Joshua</Josh><Will>William</Will>
           </PopNameHolder>
           <PopImg src={pop} alt="pops"/>
         </Col>
