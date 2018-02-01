@@ -5,7 +5,7 @@ import '../../app.css';
 import { Wrapper, MainTitle, Main, MainInfo, PriceWrapper,
         MattOnly, PriceTitle, Warranty, Description, Overview,
         Article, StyledMarkDown, Profile }
-        from '../Brands/SingleMattStyles';
+        from '../SingleMattress/SingleMattStyles';
 import DropDown from '../DropDrown/index';
 import ImageViewer from '../ImageViewer/ImageViewer';
 import { Redirect } from 'react-router-dom';
@@ -20,31 +20,28 @@ const SingleBase = ({data: { loading, error, base}}) => {
           <h1>{base.fullName}</h1>
         </MainTitle>
         <Main>
-        <ImageViewer cover={base.coverImg.handle} img1={base.detail1.handle} img2={base.detail2.handle} />
-        <MainInfo>
-          <StyledMarkDown source={base.features} escapeHtml={false} />
-          <PriceWrapper>
-            <MattOnly>
-              <PriceTitle>Base Price</PriceTitle>
-              {console.log(base)}
-              
+          <ImageViewer cover={base.coverImg.handle} img1={base.detail1.handle} img2={base.detail2.handle} />
+          <MainInfo>
+            <StyledMarkDown source={base.features} escapeHtml={false} />
+            <PriceWrapper>
+              <MattOnly>
+                <PriceTitle>Base Price</PriceTitle>
                 <DropDown data={base.price}/>
-            </MattOnly>
-          </PriceWrapper>
-        </MainInfo>
-      </Main>
-      <Overview>
-        <h2>OVERVIEW & SPECS</h2>
-      </Overview>
-      <Article>
-        <Description>
-          {base.baseDescription}
-        </Description>
+              </MattOnly>
+            </PriceWrapper>
+          </MainInfo>
+        </Main>
+        <Overview>
+          <h2>OVERVIEW & SPECS</h2>
+        </Overview>
+        <Article>
+          <Description>
+            {base.baseDescription}
+          </Description>
           <Profile>Profile: {base.height}</Profile>
           <StyledMarkDown source={base.keyfeatures} escapeHtml={false} />
           <Warranty>{base.warranty}</Warranty>
-      </Article>
-
+        </Article>
       </Wrapper>
     )
   }

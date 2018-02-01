@@ -21,10 +21,11 @@ import BlogComponent from './Components/Blog/Blog';
 import AboutComponent from './Components/About/About';
 
 import SingleBase from './Components/Adjustable/SingleBase';
-import SingleMattress from './Components/Brands/SingleMattress';
-import Sealy from './Components/Brands/Sealy2';
-import Tempur from './Components/Brands/Tempur';
-import Stearns from './Components/Brands/Stearns';
+import SingleMattress from './Components/SingleMattress/SingleMattress';
+
+import Sealy from './Components/MattressList/Sealy';
+import Tempur from './Components/MattressList/Tempur';
+import Stearns from './Components/MattressList/Stearns';
 import Panda404 from './Components/Panda404/Panda404';
 
 const Container = styled.div`

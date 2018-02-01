@@ -142,3 +142,17 @@ export const StearnName = styled.p`
   padding-right: 5px;
   @media(min-width: 768px) { padding-left: 10px; padding-right: 10px; font-size: 1.2rem; }
 `;
+
+export const SealyName = styled.p`
+  font-size: .9rem;
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  @media(min-width: 768px) {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1.2rem;
+  }
+`;
