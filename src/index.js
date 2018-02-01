@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter } from 'react-router-dom';
-//import { BrowserRouter } from 'react-router-dom';
+
 import WebFont from 'webfontloader';
 
 import { ApolloClient } from 'apollo-client';
