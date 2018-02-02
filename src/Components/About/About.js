@@ -17,7 +17,7 @@ const AboutComponent = () => {
     <Main>
       <Helmet>
         <title>ESC: About Us</title>
-        <meta name="description" content="We’re here to help advise you by having our non-commissioned staff ask you some questions and listen to your answers to help recommend products that suit your needs. We believe sleep is an important part of everyone’s day, and people have a better life when they’re waking up every morning feeling rested, rejuvenated and refreshed."/>
+        <meta name="description" content="Three of the best trained mattress sales people in Western Washington decided to open their own store; so that they could help people the way they believe they should be helped!  We are bringing back the service you are used to!"/>
       </Helmet>
       <Header>
         <HeaderText> Our goal is to help Snohomish County sleep like the experts do and wake up feeling better.</HeaderText>
