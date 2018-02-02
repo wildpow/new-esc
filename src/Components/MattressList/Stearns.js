@@ -6,7 +6,6 @@ import {  MainWrapper, Wrapper, LinkWrapper, StyledLink,
         } from './MattListStyles';
 
 import StearnsImg from '../../images/StearnsLogo.png';
-import '../../app.css';
 
 const Stearns = ({ data: { loading, error, Brands} }) => {
   if (error) return <h6>panda's having trouble getting mattresses {console.log(error)}</h6>

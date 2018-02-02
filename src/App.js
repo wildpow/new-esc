@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import 'normalize.css';
-import styled from 'styled-components';
-
-import './app.css';
+import styled, { injectGlobal, keyframes } from 'styled-components';
 
 import MenuButton from './Components/FlyoutMenu/MenuButton';
 import Menu from './Components/FlyoutMenu/Menu';
@@ -28,6 +26,15 @@ import Tempur from './Components/MattressList/Tempur';
 import Stearns from './Components/MattressList/Stearns';
 import Panda404 from './Components/Panda404/Panda404';
 
+injectGlobal`
+      html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+`
+
 const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
@@ -40,8 +47,22 @@ const Container = styled.div`
   @media (min-width: 1200px) { width: 1170px; }
   @media (min-width: 1300px) { width: 1270px; }
   @media (min-width: 1400px) { width: 1370px; }
-  
-`
+`;
+
+const HomeFadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+const MainWrapper = styled.div`
+  animation-duration: .5s;
+  animation-name: ${HomeFadeIn};
+  animation-fill-mode: both;
+`;
+
 
 class App extends Component {
   constructor(props, context) {
@@ -63,7 +84,7 @@ class App extends Component {
   };
   render() {
     return (
-      <div className="animated fadeIn">
+      <MainWrapper>
         <Topper />
         <MenuButton handleMouseDown={this.handleMouseDown}/>
         <Menu handleMouseDown={this.handleMouseDown}
@@ -92,7 +113,7 @@ class App extends Component {
             </Switch>
           <Footer/>
         </Container>
-      </div>
+      </MainWrapper>
     );
   }
 }

@@ -1,11 +1,10 @@
 import React from 'react';
 import { Main, Img, Header, Title } from '../Panda404/Panda404Styles';
 import image from '../../images/ezgif.com-optimize.gif';
-import '../../app.css';
 
 const ComingSoon = () => {
   return (
-    <Main className="animated fadeIn">
+    <Main>
       <Header>
         <Title>Coming Soon...</Title>
       </Header>

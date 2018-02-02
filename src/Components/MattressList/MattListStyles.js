@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import FadeIn from '../../App';
 
 export const MainWrapper = styled.div`
   display: flex;
@@ -11,6 +12,9 @@ export const MainWrapper = styled.div`
   border-bottom-right-radius: .11rem;
   border-bottom-left-radius: .11rem;
   border: 2px solid black;
+  animation-duration: .5s;
+  animation-name: ${FadeIn};
+  animation-fill-mode: both;
 `;
 
 export const MainTitle = styled.header`

@@ -1,10 +1,24 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+
+const AboutFadIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
 
 export const Main = styled.div`
   display: flex;
   flex-direction: column;
   border: 2px solid black;
   box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .9); 
+  animation-duration: .5s;
+  animation-name: ${AboutFadIn};
+  animation-fill-mode: both;
   @media(min-width:1200px) { margin-left: 10px; margin-right: 10px; }
 `;
 

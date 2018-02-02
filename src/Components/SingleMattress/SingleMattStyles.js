@@ -1,19 +1,33 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import Markdown from 'react-markdown';
+
+
+const SingleFadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
 
 export const PriceList = styled.ul`
 font-size: .3rem;
-`
+`;
+
 export const Wrapper = styled.div`
-display: flex;
-flex-direction: column;
-border: 2px solid black;
-justify-content: center;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  justify-content: center;
   box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .9); 
   border-top-left-radius: .11rem;
   border-top-right-radius: .11rem;
   border-bottom-right-radius: .11rem;
   border-bottom-left-radius: .11rem;
+  animation-duration: .5s;
+  animation-name: ${SingleFadeIn};
+  animation-fill-mode: both;
 `;
 
 

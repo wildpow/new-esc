@@ -1,6 +1,15 @@
 import Markdown from 'react-markdown';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Link } from 'react-router-dom';
+
+const AdjFadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
 
 export const AdjMarkdown = styled(Markdown)`
   font-family: 'Open Sans', sans-serif;
@@ -71,6 +80,9 @@ export const Main = styled.div`
   border: 2px solid black;
   padding-top: 20px;
   box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .9); 
+  animation-duration: .5s;
+  animation-name: ${AdjFadeIn};
+  animation-fill-mode: both;
   @media(min-width:1200px) { margin-left: 120px; margin-right: 120px; }
 `;
 

@@ -1,4 +1,14 @@
-import styled from 'styled-components';
+import styled, {keyframes } from 'styled-components';
+
+const FadeIn404 = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
 
 export const Main = styled.div`
   font-family: 'Open Sans', sans-serif;
@@ -11,6 +21,9 @@ export const Main = styled.div`
   transition: all .2s ease-in;
   text-align: center;
   justify-content: center;
+  animation-duration: .5s;
+  animation-name: ${FadeIn404};
+  animation-fill-mode: both;
 `;
 
 export const Img = styled.img`

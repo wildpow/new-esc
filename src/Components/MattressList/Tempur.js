@@ -9,13 +9,13 @@ import {  MainWrapper,
           Name, MainTitle, TempurPImg  } from './MattListStyles';
 
 import TempurImg from '../../images/TempurLogo2.png';
-import '../../app.css';
+
 
 const Tempur = ({ data: { loading, error, Brands} }) => {
   if (error) return <h6>panda's having trouble getting mattresses {console.log(error)}</h6>
   if(!loading) {
     return (
-      <MainWrapper className="animated fadeIn">
+      <MainWrapper>
         <MainTitle>
           <TempurPImg src={TempurImg} alt="Logo"/>
         </MainTitle>

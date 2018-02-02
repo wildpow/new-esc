@@ -3,14 +3,13 @@ import gql from 'graphql-tag';
 import { graphql } from 'react-apollo';
 import {  MainWrapper, Wrapper, LinkWrapper, StyledLink,
   MattImg, MainTitle, SealyImgPlace, SealyName } from './MattListStyles';
-import '../../app.css';
 import SealyImg from '../../images/SealyLogo.png';
 
 const Sealy = ({ data: { loading, error, essentials, performance, premium} }) => {
   if (error) return <h6>panda's having trouble getting mattresses {console.log(error)}</h6>
   if(!loading) {
     return (
-      <MainWrapper className="animated fadeIn">
+      <MainWrapper>
         <MainTitle>
           <SealyImgPlace src={SealyImg} alt="Logo"/>
         </MainTitle>
