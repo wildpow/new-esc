@@ -1,6 +1,8 @@
 import React from 'react';
 import gql from 'graphql-tag';
 import { graphql } from 'react-apollo';
+import Helmet from 'react-helmet';
+
 import {  MainWrapper, Wrapper, LinkWrapper, StyledLink,
   MattImg, MainTitle, SealyImgPlace, SealyName } from './MattListStyles';
 import SealyImg from '../../images/SealyLogo.png';
@@ -10,6 +12,10 @@ const Sealy = ({ data: { loading, error, essentials, performance, premium} }) =>
   if(!loading) {
     return (
       <MainWrapper>
+        <Helmet>
+          <title>ESC: Sealy</title>
+          <meta name="description" content="One of the worlds most recognized brands, Sealy offers all three styles of mattresses: Traditional innerspring, Hybrid, a mix of traditional and all foam, and all foam option. The Sealy line up offers a little something for everyone."/>
+        </Helmet>
         <MainTitle>
           <SealyImgPlace src={SealyImg} alt="Logo"/>
         </MainTitle>

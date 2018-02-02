@@ -1,4 +1,26 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  margin-top: -15px;
+  text-decoration: none;
+  @media (min-width: 768px) { margin-top: -22px; }
+  @media (min-width: 1022px) { margin-top: -85px; }
+`;
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  margin-top: -15px;
+  margin: auto;
+  transition: all .20s ease-in;
+  &:hover { transform: scale3d(1.05,1.05,1); }
+`;
 
 export const Image = styled.img`
   transition: all .25s ease-in;
