@@ -1,6 +1,7 @@
 import React from 'react'
 import gql from 'graphql-tag'
 import { graphql } from 'react-apollo';
+import Helmet from 'react-helmet';
 import { Wrapper, MainTitle, Main,
         MainInfo, PriceWrapper, MattOnly,
         MattSet, PriceTitle, Article,
@@ -8,7 +9,6 @@ import { Wrapper, MainTitle, Main,
         StyledMarkDown, Profile } from './SingleMattStyles';
 
 import { Redirect } from 'react-router-dom';
-import '../../app.css';
 import DropDown from '../DropDrown/index';
 import ImageViewer from '../ImageViewer/ImageViewer';
 
@@ -17,7 +17,11 @@ const SingleMattress = ({ data: { loading, error, mattress } }) => {
   if (!loading) {
     if(!mattress) return <Redirect to='/404'/>
     return (
-<Wrapper className="animated fadeIn"> 
+<Wrapper>
+  <Helmet>
+    <title>ESC: {mattress.subBrand} {mattress.subName}</title>
+    <meta name="description" content={mattress.discription}/>
+  </Helmet>
   <MainTitle>
     <h2>{mattress.name}</h2>
   </MainTitle>

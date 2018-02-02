@@ -1,7 +1,7 @@
 import React from 'react'
 import gql from 'graphql-tag'
 import { graphql } from 'react-apollo';
-import '../../app.css';
+import { Helmet } from "react-helmet";
 import { Wrapper, MainTitle, Main, MainInfo, PriceWrapper,
         MattOnly, PriceTitle, Warranty, Description, Overview,
         Article, StyledMarkDown, Profile }
@@ -15,7 +15,11 @@ const SingleBase = ({data: { loading, error, base}}) => {
   if (!loading) {
     if(!base) return <Redirect to='/404'/>
     return(
-      <Wrapper className="animated fadeIn">
+      <Wrapper>
+        <Helmet>
+          <title>ESC: {base.fullName}</title>
+          <meta name="description" content={base.baseDescription}/>
+        </Helmet>
         <MainTitle>
           <h1>{base.fullName}</h1>
         </MainTitle>

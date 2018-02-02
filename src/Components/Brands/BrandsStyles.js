@@ -1,10 +1,23 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Link } from 'react-router-dom';
+
+
+const BrandsFadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
 
 export const Main = styled.div`
   display: flex;  
   flex-direction: column;
   text-align: center;
+  animation-duration: .5s;
+  animation-name: ${BrandsFadeIn};
+  animation-fill-mode: both;
   @media(min-width: 1022px) { flex-direction: row; justify-content: center; }
 `;
 

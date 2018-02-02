@@ -1,10 +1,11 @@
 import React from 'react';
+import { Helmet } from "react-helmet";
 import { Main, Header, HeaderText, PicHolder, StoreImg1,
           MapImg, StoreImg2, Address, Span, RegularParagraph,
           BlueWrapper, SecondP, PopImg, PopHolder, PopNameHolder,
           Josh, Col, Bill, Will
         } from './AboutStyles';
-import '../../app.css';
+
 
 import store1 from '../../images/outsideNight.jpg';
 import store2 from '../../images/OutsideOfStore.jpg';
@@ -13,7 +14,11 @@ import pop from '../../images/funCo.png';
 
 const AboutComponent = () => {
   return (
-    <Main className="animated fadeIn">
+    <Main>
+      <Helmet>
+        <title>ESC: About Us</title>
+        <meta name="description" content="We’re here to help advise you by having our non-commissioned staff ask you some questions and listen to your answers to help recommend products that suit your needs. We believe sleep is an important part of everyone’s day, and people have a better life when they’re waking up every morning feeling rested, rejuvenated and refreshed."/>
+      </Helmet>
       <Header>
         <HeaderText> Our goal is to help Snohomish County sleep like the experts do and wake up feeling better.</HeaderText>
       </Header>
