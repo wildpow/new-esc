@@ -4,7 +4,7 @@ import {Button, MenuLines, Bar } from './MenuStyles';
 class MenuButton extends PureComponent {
   render() {
     return (
-        <Button onMouseUp={this.props.handleMouseDown}>
+        <Button type="button" role="button" onMouseUp={this.props.handleMouseDown}>
                 <MenuLines>
                     <Bar></Bar>
                     <Bar></Bar>

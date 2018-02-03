@@ -22,7 +22,7 @@ class Menu extends PureComponent {
         <StyledLink to="/financing">Financing</StyledLink>
         <StyledLink to="/blog">Our Blog</StyledLink>
         <StyledLink to="/about">About Us</StyledLink>
-        <Image src={image}/>
+        <Image src={image} alt="panda"/>
       </Nav>
       
       </Wrapper>

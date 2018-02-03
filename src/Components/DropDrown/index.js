@@ -57,11 +57,11 @@ class DropDown extends React.PureComponent {
           </ButtonWrapper>
           { this.state.open &&
           <DropDownWrapper onMouseLeave={this.handleDropdown}>
-              <Button onClick={this.drop} data-id="1">Twin</Button>
-              <Button onClick={this.drop} data-id="2">TwinXL</Button>
-              <Button onClick={this.drop} data-id="3">Full</Button>
-              <Button onClick={this.drop} data-id="4">Queen</Button>
-              <Button onClick={this.drop} data-id="5">King/Cal. King</Button>
+              <Button type="button" role="button" onClick={this.drop} data-id="1">Twin</Button>
+              <Button type="button" role="button" onClick={this.drop} data-id="2">TwinXL</Button>
+              <Button type="button" role="button" onClick={this.drop} data-id="3">Full</Button>
+              <Button type="button" role="button" onClick={this.drop} data-id="4">Queen</Button>
+              <Button type="button" role="button" onClick={this.drop} data-id="5">King/Cal. King</Button>
           </DropDownWrapper>
           }
           
