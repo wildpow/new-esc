@@ -15,12 +15,11 @@ import App from './App';
 
 WebFont.load({
   google: {
-    families: ['Open Sans', 'Roboto:bold']
+    families: ['Open Sans', 'Roboto:700']
   }
 });
 
 const GRAPHCMS_API = 'https://api.graphcms.com/simple/v1/escPandaMattressTesting';
-
 const client = new ApolloClient({
   link: new HttpLink({ uri: GRAPHCMS_API }),
   cache: new InMemoryCache(),
