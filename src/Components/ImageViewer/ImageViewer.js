@@ -1,7 +1,7 @@
 import React from 'react';
 import { ImgWrapper, SmallImgHolder, SmImg, LargeImg} from './ImageViewerStyles';
 
-class ImageViewer extends React.Component {
+class ImageViewer extends React.PureComponent {
   constructor(props) {
     super(props)
     this.state = {

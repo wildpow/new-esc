@@ -2,8 +2,7 @@ import React from 'react';
 import { Helmet } from "react-helmet";
 import { Link } from 'react-router-dom';
 import { Carousel } from 'react-responsive-carousel'; 
-import '../../../node_modules/react-responsive-carousel/lib/styles/carousel.min.css';
-import './home.css';
+
 import { Main, SaleWrapper, SaleImg, TempurImg, SealyImg, StearnsImg } from './HomeStyles';
 
 import Sealy from '../../images/SealyLifestyleRatio.jpg';
@@ -23,7 +22,7 @@ const HomeComponent = () => {
       </Helmet>
       <Carousel
         infiniteLoop={true} autoPlay={true} showThumbs={false}
-        interval={7000} 
+        interval={6000} 
         centerMode={true}
         centerSlidePercentage={100}
         showStatus={false}
