@@ -15,9 +15,9 @@
     "react-markdown": "^3.1.5",
     "react-responsive-carousel": "^3.1.33",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.1.0",
+    "react-scripts": "^1.1.1",
     "styled-components": "^3.1.6",
-    "styled-normalize": "^3.0.1"
+    "styled-normalize": "^4.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -26,6 +26,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "apollo-cache-persist": "^0.1.1",
     "typescript": "^2.7.1",
     "typescript-styled-plugin": "^0.4.0"
   }
