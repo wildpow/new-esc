@@ -1,14 +1,14 @@
 import React from 'react';
 import { Helmet } from "react-helmet";
-import { Link } from 'react-router-dom';
+
 import { Carousel } from 'react-responsive-carousel'; 
 
-import { Main, SaleWrapper, SaleImg, TempurImg, SealyImg, StearnsImg } from './HomeStyles';
+import { Main, SaleWrapper, OneImg, Linky } from './HomeStyles';
 
 import Sealy from '../../images/SealyLifestyleRatio.jpg';
 import Tempur from '../../images/TempurLifestyleRatio.jpg';
 import Stearns from '../../images/StearnsLifestyleRatio.jpg';
-import Sale from '../../images/grandOpening.png';
+import Sale from '../../images/PresDayCarouselRatio.png';
 
 const HomeComponent = () => {
   return (
@@ -28,17 +28,17 @@ const HomeComponent = () => {
         showStatus={false}
       >
         <SaleWrapper>
-          <SaleImg src={Sale} alt="this"/>
+          <OneImg src={Sale} alt="this"/>
         </SaleWrapper>
-        <Link to='/brands/stearns'>
-          <StearnsImg src={Stearns} alt="this"/>
-        </Link>
-        <Link to='/brands/tempurpedic'>
-          <TempurImg src={Tempur} alt="this"/>
-        </Link>
-        <Link to='/brands/sealy'>
-          <SealyImg src={Sealy} alt="this"/> 
-        </Link>
+        <Linky to='/brands/stearns'>
+          <OneImg src={Stearns} alt="this"/>
+        </Linky>
+        <Linky to='/brands/tempurpedic'>
+          <OneImg src={Tempur} alt="this"/>
+        </Linky>
+        <Linky to='/brands/sealy'>
+          <OneImg src={Sealy} alt="this"/> 
+        </Linky>
       </Carousel>
     </Main>
   )

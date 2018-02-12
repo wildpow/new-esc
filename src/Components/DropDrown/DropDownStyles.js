@@ -24,6 +24,7 @@ export const ButtonWrapper = styled.div`
 `;
 
 export const Button = styled.button`
+  font-family: 'Open Sans', sans-serif;
   background-color: #1565c0;
   color: white;
   border: none;
