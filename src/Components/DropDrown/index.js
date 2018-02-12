@@ -1,19 +1,40 @@
 import React from 'react';
 import { Wrapper, WholeThing,
         ButtonWrapper, Button,
-        DropDownWrapper, Price 
+        DropDownWrapper, Price, TopButton 
       } from './DropDownStyles';
+import styled from 'styled-components';
 
-class DropDown extends React.PureComponent {
+const Sale = styled.div`
+  text-decoration: line-through;
+  text-decoration-color: red;
+  font-size: .5rem;
+  
+  @media(min-width: 1024px) {
+    font-size: 1rem;
+    /* text-align: center; */
+  }
+`
+const Row = styled.div`
+display: flex;
+justify-content: space-around;
+width: 130px;
+@media(min-width: 1024px) {
+  justify-content: space-between;
+}
+/* flex-direction: column; */
+`
+class DropDown extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      buttonContent: 'Size',
+      buttonContent: 'Select Size',
       open: false,
       selected: 0
     }
     this.handleDropdown = this.handleDropdown.bind(this);
     this.drop = this.drop.bind(this);
+    this.selector = this.selector.bind(this)
   }
   handleDropdown() {
     this.setState({
@@ -21,26 +42,68 @@ class DropDown extends React.PureComponent {
     })}
 
   drop(e) {
+    let buttonTitle = this.buttonName(e.currentTarget.dataset.id)
     this.setState({
-      selected: e.currentTarget.dataset.id
+      selected: e.currentTarget.dataset.id,
+      buttonContent: buttonTitle
     })
+    this.buttonName();
     this.handleDropdown();
+   
   }
+  buttonName(num) {
+    switch(num) {
+      case '1': return 'Twin'
+    
+      case '2': return 'TwinXL'
+    
+      case '3': return 'Full'
+      
+      case '4': return 'Queen'
+      
+      case '5': return 'King/Cal. King'
+    
+      default: return null;
+    }}
   
   selector() {
     const { selected } = this.state;
 
     switch(selected) {
       case '1':
-        return `Twin: $${this.props.data[0]}`;
+        // this.setState({ buttonContent: 'Twin', })
+        if(this.props.data2 === null || this.props.data2[0] === 0) {
+          return `$${this.props.data[0]}`
+        } 
+        return  (<Row><Sale>{`$${this.props.data[0]}`}</Sale> <div>{`$${this.props.data2[0]}`}</div></Row>)
+          
       case '2':
-        return `TwinXL: $${this.props.data[1]}`;
+        // this.setState({ buttonContent: 'TwinXL', })
+        if(this.props.data2 === null || this.props.data2[1] === 0) {
+          return `$${this.props.data[1]}`;
+        } 
+        return  (<Row><Sale>{`$${this.props.data[1]}`}</Sale> <div>{`$${this.props.data2[1]}`}</div></Row>)
+
       case '3':
-        return `Full: $${this.props.data[2]}`
+        // this.setState({ buttonContent: 'Full', })
+        if(this.props.data2 === null || this.props.data2[2] === 0) {
+          return `$${this.props.data[2]}`
+        } 
+        return  (<Row><Sale>{`$${this.props.data[2]}`}</Sale> <div>{`$${this.props.data2[2]}`}</div></Row>)
+        
       case '4':
-        return `Queen: $${this.props.data[3]}`
+        // this.setState({ buttonContent: 'Queen', })
+        if(this.props.data2 === null || this.props.data2[3] === 0) {
+          return `$${this.props.data[3]}`
+        }
+        return  (<Row><Sale>{`$${this.props.data[3]}`}</Sale> <div>{`$${this.props.data2[3]}`}</div></Row>) 
+        
       case '5':
-        return `King/Cal. King: $${this.props.data[4]}`
+        // this.setState({ buttonContent: 'King/Cal. King', })
+        if(this.props.data2 === null || this.props.data2[4] === 0) {
+          return `$${this.props.data[4]}`
+        }
+        return  (<Row><Sale>{`$${this.props.data[4]}`}</Sale> <div>{`$${this.props.data2[4]}`}</div></Row>)
       default:
         return null;
     }
@@ -51,9 +114,9 @@ class DropDown extends React.PureComponent {
       <Wrapper>
         <WholeThing>
           <ButtonWrapper>
-            <Button onMouseDown={this.handleDropdown}>
+            <TopButton onClick={this.handleDropdown}>
               {this.state.buttonContent}&nbsp;&nbsp; { this.state.open ? '\u25B2' : '\u25BC'}
-            </Button>
+            </TopButton>
           </ButtonWrapper>
           { this.state.open &&
           <DropDownWrapper onMouseLeave={this.handleDropdown}>

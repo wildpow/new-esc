@@ -32,7 +32,7 @@ export const Wrapper = styled.div`
 
 
 export const Main = styled.div`
-  margin-top: 9px;
+  margin-top: 4px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -49,25 +49,18 @@ justify-content: space-around;
 `;
 export const PriceWrapper = styled.div`
  display: flex;
- flex-direction: row;
- justify-content: space-between;
+ flex-direction: column;
+ justify-content: center;
  /* margin-top: 20px; */
  flex-wrap: wrap;
- @media(min-width: 768px) {
-   flex-direction: column;
+ @media(min-width: 1028px) {
+   flex-direction: row;
    justify-content: center;
  }
  
 `
 
-export const MattSet = styled.div`
-display: flex;
-flex-direction: column;
-/* margin-left: 20px; */
-justify-content: center;
-justify-items: center;
-align-content: center;
-`;
+
 
 export const MainTitle = styled.header`
   font-family: 'Roboto', sans-serif;
@@ -89,36 +82,6 @@ export const MainTitle = styled.header`
     padding-left: 30px;
   }
 `;
-export const MattOnly = styled.div`
-
-display: flex;
-flex-direction: column;
-justify-content: center;
-justify-items: center;
-align-content: center;
-`
-
-export const PriceTitle = styled.p`
-  padding-top: 10px;
-  padding-bottom: 2px;
-  margin-top: 0;
-  margin-bottom: -5px;
-  font-size: .8rem;
-  font-family: 'Open Sans', sans-serif;
-  @media(min-width: 768px) {
-    font-size: 1rem;
-    padding-top: 0px;
-    padding-bottom: 7px;
-  }
-  @media(min-width: 1022px) {
-    font-size: 1.7rem;
-    padding-left: 20px;
-    /* margin: auto; */
-    margin-bottom: 5px;
-    margin-top: 5px;
-    /* text-align: center; */
-  }
-`
 
 export const MainImg = styled.img`
   max-width: 7rem;
@@ -270,3 +233,39 @@ export const StyledMarkDown = styled(Markdown)`
     }
   }
 `;
+
+export const MattSet = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+`;
+
+export const MattOnly = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+`;
+
+export const PriceTitle = styled.p`
+  padding-top: 0px;
+  padding-bottom: 3px;
+  margin-top: 0;
+  margin-bottom: 0px;
+  font-size: .8rem;
+  font-family: 'Open Sans', sans-serif;
+  @media(min-width: 768px) {
+    font-size: 1rem;
+    padding-top: 0px;
+    padding-bottom: 7px;
+  }
+  @media(min-width: 1022px) {
+    font-size: 1.7rem;
+    padding-left: 20px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+`

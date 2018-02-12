@@ -30,7 +30,7 @@ const SingleBase = ({data: { loading, error, base}}) => {
             <PriceWrapper>
               <MattOnly>
                 <PriceTitle>Base Price</PriceTitle>
-                <DropDown data={base.price}/>
+                <DropDown data={base.price} data2={base.salePrice}/>
               </MattOnly>
             </PriceWrapper>
           </MainInfo>
@@ -61,6 +61,7 @@ query singleBase($uri: String) {
     keyfeatures
     features
     price
+    salePrice
     brandLine
     brandName
     baseDescription

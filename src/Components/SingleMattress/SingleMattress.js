@@ -32,11 +32,11 @@ const SingleMattress = ({ data: { loading, error, mattress } }) => {
       <PriceWrapper>
         <MattOnly>
           <PriceTitle>Mattress Only Price</PriceTitle>
-          <DropDown data={mattress.mattOnly}/>
+          <DropDown data={mattress.mattOnly} data2={mattress.mattOnlySale}/>
         </MattOnly>
         <MattSet>
           <PriceTitle>Mattress Set Price</PriceTitle>
-          <DropDown data={mattress.setPrice}/>
+          <DropDown data={mattress.setPrice} data2={mattress.setPriceSale}/>
         </MattSet>
       </PriceWrapper>
     </MainInfo>
@@ -70,7 +70,9 @@ export const singleMatt = gql`
       profile
       contruction
       mattOnly
+      mattOnlySale
       setPrice
+      setPriceSale
       warranty
       coverImg {
         handle
