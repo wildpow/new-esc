@@ -1,30 +1,11 @@
 import React from 'react';
 import { Wrapper, WholeThing,
         ButtonWrapper, Button,
-        DropDownWrapper, Price, TopButton 
+        DropDownWrapper, Price, TopButton,
+        Row, Sale
       } from './DropDownStyles';
-import styled from 'styled-components';
 
-const Sale = styled.div`
-  text-decoration: line-through;
-  text-decoration-color: red;
-  font-size: .5rem;
-  
-  @media(min-width: 1024px) {
-    font-size: 1rem;
-    /* text-align: center; */
-  }
-`
-const Row = styled.div`
-display: flex;
-justify-content: space-around;
-width: 130px;
-@media(min-width: 1024px) {
-  justify-content: space-between;
-}
-/* flex-direction: column; */
-`
-class DropDown extends React.Component {
+class DropDown extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -54,13 +35,9 @@ class DropDown extends React.Component {
   buttonName(num) {
     switch(num) {
       case '1': return 'Twin'
-    
       case '2': return 'TwinXL'
-    
       case '3': return 'Full'
-      
       case '4': return 'Queen'
-      
       case '5': return 'King/Cal. King'
     
       default: return null;
@@ -71,35 +48,30 @@ class DropDown extends React.Component {
 
     switch(selected) {
       case '1':
-        // this.setState({ buttonContent: 'Twin', })
         if(this.props.data2 === null || this.props.data2[0] === 0) {
           return `$${this.props.data[0]}`
         } 
         return  (<Row><Sale>{`$${this.props.data[0]}`}</Sale> <div>{`$${this.props.data2[0]}`}</div></Row>)
           
       case '2':
-        // this.setState({ buttonContent: 'TwinXL', })
         if(this.props.data2 === null || this.props.data2[1] === 0) {
           return `$${this.props.data[1]}`;
         } 
         return  (<Row><Sale>{`$${this.props.data[1]}`}</Sale> <div>{`$${this.props.data2[1]}`}</div></Row>)
 
       case '3':
-        // this.setState({ buttonContent: 'Full', })
         if(this.props.data2 === null || this.props.data2[2] === 0) {
           return `$${this.props.data[2]}`
         } 
         return  (<Row><Sale>{`$${this.props.data[2]}`}</Sale> <div>{`$${this.props.data2[2]}`}</div></Row>)
         
       case '4':
-        // this.setState({ buttonContent: 'Queen', })
         if(this.props.data2 === null || this.props.data2[3] === 0) {
           return `$${this.props.data[3]}`
         }
         return  (<Row><Sale>{`$${this.props.data[3]}`}</Sale> <div>{`$${this.props.data2[3]}`}</div></Row>) 
         
       case '5':
-        // this.setState({ buttonContent: 'King/Cal. King', })
         if(this.props.data2 === null || this.props.data2[4] === 0) {
           return `$${this.props.data[4]}`
         }

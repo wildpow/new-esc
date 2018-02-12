@@ -102,3 +102,23 @@ export const Price = styled.div`
   @media(min-width: 1024px) { font-size: 1.7rem !important;  width: 250px !important; height: 60px; margin-top: 0; margin-bottom: 0;}
   @media(min-width: 1300px) { padding-left: 30px; height: 70px; width: 300px !important;}
 `;
+
+export const Sale = styled.div`
+  text-decoration: line-through;
+  text-decoration-color: red;
+  font-size: .5rem;
+  
+  @media(min-width: 1024px) {
+    font-size: 1rem;
+    /* text-align: center; */
+  }
+`;
+export const Row = styled.div`
+display: flex;
+justify-content: space-around;
+width: 130px;
+@media(min-width: 1024px) {
+  justify-content: space-between;
+}
+/* flex-direction: column; */
+`;
