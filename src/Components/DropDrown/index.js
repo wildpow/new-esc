@@ -48,31 +48,31 @@ class DropDown extends React.PureComponent {
 
     switch(selected) {
       case '1':
-        if(this.props.data2 === null || this.props.data2[0] === 0) {
+        if(this.props.data2 === null || this.props.data2[0] === undefined || this.props.data2[0] === 0) {
           return `$${this.props.data[0]}`
         } 
         return  (<Row><Sale>{`$${this.props.data[0]}`}</Sale> <div>{`$${this.props.data2[0]}`}</div></Row>)
           
       case '2':
-        if(this.props.data2 === null || this.props.data2[1] === 0) {
+        if(this.props.data2 === null || this.props.data2[1] === undefined || this.props.data2[1] === 0) {
           return `$${this.props.data[1]}`;
         } 
         return  (<Row><Sale>{`$${this.props.data[1]}`}</Sale> <div>{`$${this.props.data2[1]}`}</div></Row>)
 
       case '3':
-        if(this.props.data2 === null || this.props.data2[2] === 0) {
+        if(this.props.data2 === null || this.props.data2[2] === undefined || this.props.data2[2] === 0) {
           return `$${this.props.data[2]}`
         } 
         return  (<Row><Sale>{`$${this.props.data[2]}`}</Sale> <div>{`$${this.props.data2[2]}`}</div></Row>)
         
       case '4':
-        if(this.props.data2 === null || this.props.data2[3] === 0) {
+        if(this.props.data2 === null || this.props.data2[3] === undefined || this.props.data2[3] === 0) {
           return `$${this.props.data[3]}`
         }
         return  (<Row><Sale>{`$${this.props.data[3]}`}</Sale> <div>{`$${this.props.data2[3]}`}</div></Row>) 
         
       case '5':
-        if(this.props.data2 === null || this.props.data2[4] === 0) {
+        if(this.props.data2 === null || this.props.data2[4] === undefined || this.props.data2[4] === 0) {
           return `$${this.props.data[4]}`
         }
         return  (<Row><Sale>{`$${this.props.data[4]}`}</Sale> <div>{`$${this.props.data2[4]}`}</div></Row>)
