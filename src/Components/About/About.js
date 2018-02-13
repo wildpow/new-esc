@@ -7,9 +7,9 @@ import { Main, Header, HeaderText, PicHolder, StoreImg1,
         } from './AboutStyles';
 
 
-import store1 from '../../images/outsideNight.jpg';
-import store2 from '../../images/OutsideOfStore.jpg';
-import map from '../../images/StoreMap.jpg';
+import store1 from '../../images/OutsideNightRatio.jpg';
+import store2 from '../../images/OutsideDayRatio.jpg';
+import map from '../../images/StoreMapRatio.png';
 import pop from '../../images/funCo.png';
 
 const AboutComponent = () => {
