@@ -77,9 +77,9 @@ export const Main = styled.div`
   flex-direction: column;
   margin-left: 20px;
   margin-right: 20px;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   padding-top: 20px;
-  box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .9); 
+  /* box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .9);  */
   animation-duration: .5s;
   animation-name: ${AdjFadeIn};
   animation-fill-mode: both;

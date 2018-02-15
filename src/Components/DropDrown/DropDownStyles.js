@@ -106,6 +106,8 @@ export const Price = styled.div`
 export const Sale = styled.div`
   text-decoration: line-through;
   text-decoration-color: red;
+  -webkit-text-decoration-color: red;
+  -moz-text-decoration-color: red;
   font-size: .5rem;
   
   @media(min-width: 1024px) {
