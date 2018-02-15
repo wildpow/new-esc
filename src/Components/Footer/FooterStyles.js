@@ -133,15 +133,16 @@ export const HoursPara = styled.p`
 export const HoursSpan = styled.span`
   text-decoration: underline;
   padding-bottom: 5px;
-`
+`;
 
-export const Address = styled.div`
+export const MapLink = styled.a`
+  color: black;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: #eb1c24;
+    -webkit-text-decoration-color: #eb1c24;
+    -moz-text-decoration-color: #eb1c24;
+  }
+`;
 
-`
-export const AddressPara = styled.p`
-
-`
-
-export const AddressSpan = styled.span`
-
-`

@@ -2,8 +2,7 @@ import React from 'react';
 import { MainFooter, Social, FBimage, Timage,
           Wrapper, YelpHolder, YelpImg, InstaImg,
           MapsImg, Hours, HoursSpan, HoursPara,
-          Contact,
-          GraphImg, GraphLink
+          Contact, GraphImg, GraphLink, MapLink
         } from './FooterStyles';
 import fbIcon from '../../images/FB.png';
 import twitterIcon from '../../images/twitter.png';
@@ -43,17 +42,19 @@ const Footer = () => {
         <Contact>
           <Hours>
             <HoursSpan>Hours</HoursSpan>
-            <HoursPara> 
-              Mon-Fri 10am - 8pm<br/>
-              Saturday 10am - 7pm<br/>
-              Sunday 10am - 6pm
+            <HoursPara>
+                Mon-Fri 10am - 8pm<br/>
+                Saturday 10am - 7pm<br/>
+                Sunday 10am - 6pm
             </HoursPara>
           </Hours>
         <Hours>
           <HoursSpan>Address</HoursSpan>
           <HoursPara>
+          <MapLink href="https://goo.gl/maps/k4NJFiCyoFF2" target="_blank" rel="noopener noreferrer">
             10121 Evergreen Way<br/> #30<br/>
             Everett, Washington 98204
+            </MapLink>
           </HoursPara>
         </Hours>
       </Contact>
