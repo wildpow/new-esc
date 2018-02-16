@@ -2,13 +2,14 @@ import React from 'react';
 import gql from 'graphql-tag';
 import Helmet from 'react-helmet';
 import { graphql } from 'react-apollo';
-import {  MainWrapper, Wrapper, LinkWrapper, StyledLink,
-          MattImg, MainTitle, StearnsImgPlaceHolder, StearnName
+import {  MainWrapper, Wrapper, LinkWrapper,
+          MainTitle, StearnsImgPlaceHolder
         } from './MattListStyles';
-
+import MattListHoC from './MattListHOC';
 import StearnsImg from '../../images/StearnsLogo.png';
 
 const Stearns = ({ data: { loading, error, Brands} }) => {
+  const title = 'stearns';
   if (error) return <h6>panda's having trouble getting mattresses {console.log(error)}</h6>
   if(!loading) {
     return (
@@ -23,11 +24,17 @@ const Stearns = ({ data: { loading, error, Brands} }) => {
         <Wrapper>
           {Brands.mattresses.map((mattress) => {
             return (
-              <LinkWrapper  key={mattress.id} className="animated fadeIn">
-                <StyledLink to={`/brands/stearns/${mattress.uri}`}>
+              <LinkWrapper  key={mattress.id}>
+                <MattListHoC uri={mattress.uri}
+                              brandName={mattress.brandName}
+                              subBrand={mattress.subBrand}
+                              subName={mattress.subName}
+                              img={mattress.coverImg.handle}
+                              title={title} />
+                {/* <StyledLink to={`/brands/stearns/${mattress.uri}`}>
                   <MattImg src={`https://media.graphcms.com/resize=w:290,h:250,fit:clip/${mattress.coverImg.handle}`} alt="this"/>
                   <StearnName>{mattress.brandName}<br/>{mattress.subBrand}<br/>{mattress.subName}</StearnName>
-                </StyledLink>
+                </StyledLink> */}
               </LinkWrapper>)
           })}
           </Wrapper>

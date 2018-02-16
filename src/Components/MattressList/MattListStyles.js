@@ -129,7 +129,7 @@ width: 120px;
 `;
 
 export const Name = styled.p`
-font-size: 1rem;
+font-size: .9rem;
 font-family: 'Open Sans', sans-serif;
 text-decoration: none;
 text-align: center;
@@ -155,9 +155,5 @@ export const SealyName = styled.p`
   text-align: center;
   padding-left: 5px;
   padding-right: 5px;
-  @media(min-width: 768px) {
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 1.2rem;
-  }
+  @media(min-width: 768px) { padding-left: 10px; padding-right: 10px; font-size: 1.2rem; }
 `;

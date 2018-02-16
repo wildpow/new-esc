@@ -6,7 +6,7 @@ import { Header, Nav, StyledLinkLeft, StyledLinkRight
         } from './NavStyles';
 
 const Navigation = ({client}) => {
-  const adjPreFetch = () => {
+  const adjPreFetch = () => () => {
     client.query({
       query: gql`
       query allAdjustables {
@@ -18,7 +18,7 @@ const Navigation = ({client}) => {
     <Header>
       <Nav>
         <StyledLinkLeft to="/brands">Brands</StyledLinkLeft>
-        <StyledLinkLeft to="/adjustable"onMouseEnter={adjPreFetch()} touchstart={adjPreFetch()}>Adjustable</StyledLinkLeft>
+        <StyledLinkLeft to="/adjustable" onMouseEnter={adjPreFetch()} onTouchStart={adjPreFetch()}>Adjustable</StyledLinkLeft>
         <StyledLinkLeft to="/accessories">Accessories</StyledLinkLeft>
       </Nav>
       <Nav>
