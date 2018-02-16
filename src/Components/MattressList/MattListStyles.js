@@ -129,7 +129,7 @@ width: 120px;
 `;
 
 export const Name = styled.p`
-font-size: 1rem;
+font-size: .9rem;
 font-family: 'Open Sans', sans-serif;
 text-decoration: none;
 text-align: center;

@@ -1,10 +1,10 @@
 import React, { Component, Fragment } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, withRouter } from 'react-router-dom';
 
 import styled, { injectGlobal } from 'styled-components';
 import styledNormalize from 'styled-normalize';
 import MenuButton from './Components/FlyoutMenu/MenuButton';
-import Menu from './Components/FlyoutMenu/Menu';
+import Menu from './Components/FlyoutMenu/Menu2';
 import Footer from './Components/Footer/Footer';
 import Topper from './Components/Topper/Topper';
 import Navigation from './Components/Nav/Navigation';
@@ -53,7 +53,19 @@ const Container = styled.div`
 `;
 
 
+class ScrollToTop extends Component {
+  componentDidUpdate(prevProps) {
+    if (this.props.location !== prevProps.location) {
+      window.scrollTo(0, 0)
+    }
+  }
 
+  render() {
+    return this.props.children
+  }
+}
+
+const ScrollToTopWithRouter = withRouter(ScrollToTop)
 
 class App extends Component {
   constructor(props, context) {
@@ -83,7 +95,9 @@ class App extends Component {
         <Navigation/>
         <Logo/>
         <Container>
+        <ScrollToTopWithRouter>
           <Switch>
+            
             <Route path="/" component={HomeComponent} exact/>
             <Route path="/adjustable" component={AdjustableComponent} exact/>
             <Route path="/Accessories" component={AccessoriesCompoent} exact/>
@@ -101,7 +115,9 @@ class App extends Component {
             <Route path="/brands/sealy/:uri" component={SingleMattress}/>
             <Route path="/brands/stearns/:uri" component={SingleMattress}/>
             <Route component={Panda404}/>
+            
             </Switch>
+            </ScrollToTopWithRouter>
           <Footer/>
         </Container>
       </Fragment>

@@ -11,19 +11,19 @@ import TempurLogo from '../../images/TempurLogo2.png';
 
 
 const BrandsComponent = ({client}) => {
-  const stearnsQuery = () => {
+  const stearnsQuery = () =>{
     client.query({
       query: gql`
         query stearnsMattresses {
     Brands(brand:"Stearns&Foster") {
-      mattresses { brandName uri id subName subBrand coverImg { handle } } } } ` }) 
+      mattresses { brandName uri id subName name discription features profile contruction mattOnly mattOnlySale setPrice setPriceSale warranty subBrand coverImg { handle } detail1 { handle } detail2 { handle }} } } ` }) 
   }
-  const temperQuery = () => {
+  const temperQuery = () =>{
     client.query({
       query: gql`
       query tempurMattresses {
     Brands(brand:"Tempur-Pedic") {
-      mattresses { uri brandName id subName subBrand coverImg { handle } } } }` })
+      mattresses { uri brandName id subName name discription features profile contruction mattOnly mattOnlySale setPrice setPriceSale warranty subBrand coverImg { handle } detail1 { handle } detail2 { handle }} } }` })
   }
   const sealyQuery = () => {
     client.query({
@@ -44,7 +44,7 @@ const BrandsComponent = ({client}) => {
         <meta name="description" content="Come visit your locally owned, Everett based Sealy, Stearns and Foster & Tempur-Pedic dealer.  We have over 20 years of experience helping people sleep better on the brands we carry.  We carry 3 of the top 5 mattress brands in the US, so come see us, so we can help you sleep like the experts do!"/>
 
       </Helmet>
-      <StyledLink to='/brands/tempurpedic' onMouseEnter={temperQuery()} touchstart={temperQuery()}>
+      <StyledLink to='/brands/tempurpedic' onMouseEnter={temperQuery()} onTouchStart={temperQuery()}>
       <BrandWrapper>
         <TempurImg src={TempurLogo} alt="Tempur Logo"/>
         <MainText>
@@ -55,7 +55,7 @@ const BrandsComponent = ({client}) => {
         <Footer blue>Tempur-Pedic:<br/> Life-changing sleep.</Footer>
       </BrandWrapper>
       </StyledLink>
-      <StearnsWrapper to='/brands/stearns' onMouseEnter={stearnsQuery()} touchstart={stearnsQuery()}>
+      <StearnsWrapper to='/brands/stearns' onMouseEnter={stearnsQuery()} onTouchStart={stearnsQuery()}>
       <BrandWrapper>
       <StearnsImg src={StearnsLogo} alt="Stearn Logo"/>
         <MainText>
@@ -67,7 +67,7 @@ const BrandsComponent = ({client}) => {
         <Footer blue>Stearns & Foster:<br/> Crafting the world’s finest bed.</Footer>
       </BrandWrapper>
       </StearnsWrapper>
-      <StyledLink to='/brands/sealy' onMouseEnter={sealyQuery()} touchstart={sealyQuery()}>
+      <StyledLink to='/brands/sealy' onMouseEnter={sealyQuery()} onTouchStart={sealyQuery()}>
       <BrandWrapper>
         <SealyImg src={SealyLogo} alt="Sealy Logo"/>
         <MainText>
