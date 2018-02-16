@@ -5,14 +5,14 @@ import { graphql } from 'react-apollo';
 import {  MainWrapper,
           Wrapper,
           LinkWrapper,
-          StyledLink,
-          MattImg,
-          Name, MainTitle, TempurPImg  } from './MattListStyles';
+          MainTitle, TempurPImg  } from './MattListStyles';
 
 import TempurImg from '../../images/TempurLogo2.png';
-
+import MattListHoC from './MattListHOC';
 
 const Tempur = ({ data: { loading, error, Brands} }) => {
+  const title = 'tempurpedic';
+
   if (error) return <h6>panda's having trouble getting mattresses {console.log(error)}</h6>
   if(!loading) {
     return (
@@ -28,10 +28,16 @@ const Tempur = ({ data: { loading, error, Brands} }) => {
           {Brands.mattresses.map((mattress) => {
             return ( 
               <LinkWrapper  key={mattress.id}>
-                <StyledLink to={`/brands/tempurpedic/${mattress.uri}`}>
+                <MattListHoC uri={mattress.uri}
+                              brandName={mattress.brandName}
+                              subBrand={mattress.subBrand}
+                              subName={mattress.subName}
+                              img={mattress.coverImg.handle}
+                              title={title} />
+                  {/* <StyledLink to={`/brands/tempurpedic/${mattress.uri}`}>
                   <MattImg src={`https://media.graphcms.com/resize=w:290,h:250,fit:clip/${mattress.coverImg.handle}`} alt="this"/>
                   <Name>{mattress.brandName}<br/>{mattress.subBrand}<br/>{mattress.subName}</Name>
-                </StyledLink>
+                </StyledLink> */}
               </LinkWrapper>)
           })}
           </Wrapper>

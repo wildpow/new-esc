@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import styled, { injectGlobal } from 'styled-components';
@@ -75,7 +75,7 @@ class App extends Component {
   };
   render() {
     return (
-      <div>
+      <Fragment>
         <Topper />
         <MenuButton handleMouseDown={this.handleMouseDown}/>
         <Menu handleMouseDown={this.handleMouseDown}
@@ -104,7 +104,7 @@ class App extends Component {
             </Switch>
           <Footer/>
         </Container>
-      </div>
+      </Fragment>
     );
   }
 }

@@ -18,7 +18,7 @@ const Navigation = ({client}) => {
     <Header>
       <Nav>
         <StyledLinkLeft to="/brands">Brands</StyledLinkLeft>
-        <StyledLinkLeft to="/adjustable"onMouseEnter={adjPreFetch()} touchstart={adjPreFetch()}>Adjustable</StyledLinkLeft>
+        <StyledLinkLeft to="/adjustable" onMouseEnter={adjPreFetch()} touchstart={adjPreFetch()}>Adjustable</StyledLinkLeft>
         <StyledLinkLeft to="/accessories">Accessories</StyledLinkLeft>
       </Nav>
       <Nav>
