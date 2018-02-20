@@ -4,7 +4,7 @@ import { Route, Switch, withRouter } from 'react-router-dom';
 import styled, { injectGlobal } from 'styled-components';
 import styledNormalize from 'styled-normalize';
 import MenuButton from './Components/FlyoutMenu/MenuButton';
-import Menu from './Components/FlyoutMenu/Menu2';
+import Menu from './Components/FlyoutMenu/Menu';
 import Footer from './Components/Footer/Footer';
 import Topper from './Components/Topper/Topper';
 import Navigation from './Components/Nav/Navigation';

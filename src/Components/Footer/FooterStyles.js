@@ -1,14 +1,18 @@
 import styled from 'styled-components';
+export const Divy = styled.div`
+display: flex;
+flex-direction: row;
 
+justify-content: center;
+@media(min-width: 768px) {
+  justify-content: flex-end;
+}
+
+`
 export const MainFooter = styled.footer`
-  display: flex;
-  flex-direction: row;
-  margin-top: 10px;
-  margin-bottom: 5px;
-  justify-content: center;
-  justify-self: center;
-  text-align: center;
-  flex-wrap: nowrap;
+  margin-top: 15px;
+  margin-bottom: 10px;
+
   @media (min-width: 768px) {
     margin-top: 15px;
     margin-bottom: 30px;
@@ -16,12 +20,11 @@ export const MainFooter = styled.footer`
 `;
 
 export const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-self: center;
+  margin: 0 auto;
+  padding-top: 5px;
   background-color: white;
-  border: 2px solid black;
-  box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .9);
+  border: 1px solid #eee;
+  box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .6);
   @media(min-width: 1200px) {
     max-width: 75vw;
     padding-right: 20px;
@@ -32,8 +35,7 @@ export const Wrapper = styled.div`
 export const Social = styled.div`
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   padding: 7px 7px 4px 7px;
 `;
 
@@ -90,8 +92,7 @@ export const MapsImg = styled.img`
   }
 `;
 export const GraphLink = styled.a`
-  align-self: center;
-  margin: auto;
+ display: block;
   padding-top: 5px;
   @media(min-width:500px) { padding-top: 0px;}
 `
@@ -99,7 +100,8 @@ export const GraphLink = styled.a`
 
 export const GraphImg = styled.img`
  transition: all .25s ease-in;
- align-self: center;
+ display: inline-block;
+ 
  margin-left: 10px;
   &:hover {
     transform: scale3d(1.1,1.1,1);
@@ -109,7 +111,7 @@ export const GraphImg = styled.img`
 export const Contact = styled.div`
 display: flex;
 flex-direction: row;
-justify-content: space-around;
+justify-content: space-evenly;
 margin-top: 10px;
 margin-bottom: 10px;
 `
@@ -122,6 +124,7 @@ export const Hours = styled.div`
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   @media (min-width: 768px) { font-size: 1.3rem; }
+  @media (min-width: 1024px) { font-size: 1.5rem;}
 `;
 
 export const HoursPara = styled.p`

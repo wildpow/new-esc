@@ -18,9 +18,12 @@ font-size: .3rem;
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  border: 2px solid black;
+  /* border: 2px solid black; */
+  border: 1px solid #eee;
   justify-content: center;
-  box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .9); 
+  box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .6); 
+
+  /* box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .9);  */
   border-top-left-radius: .11rem;
   border-top-right-radius: .11rem;
   border-bottom-right-radius: .11rem;

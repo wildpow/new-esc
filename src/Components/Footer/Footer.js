@@ -2,7 +2,7 @@ import React from 'react';
 import { MainFooter, Social, FBimage, Timage,
           Wrapper, YelpHolder, YelpImg, InstaImg,
           MapsImg, Hours, HoursSpan, HoursPara,
-          Contact, GraphImg, GraphLink, MapLink
+          Contact, GraphImg, GraphLink, MapLink, Divy
         } from './FooterStyles';
 import fbIcon from '../../images/FB.png';
 import twitterIcon from '../../images/twitter.png';
@@ -34,9 +34,7 @@ const Footer = () => {
           <a href="https://goo.gl/maps/87hmC4TV4cv" target="_blank" rel="noopener noreferrer">
             <MapsImg src={Google} alt="google"/>
           </a>
-          <GraphLink href="https://graphcms.com/" target="_blank" rel="noopener noreferrer">
-            <GraphImg src={GraphCMS} alt="GraphCMS logo"/>
-          </GraphLink>
+          
         </Social>
         
         <Contact>
@@ -58,8 +56,11 @@ const Footer = () => {
           </HoursPara>
         </Hours>
       </Contact>
-
-        
+      <Divy>
+        <GraphLink href="https://graphcms.com/" target="_blank" rel="noopener noreferrer">
+            <GraphImg src={GraphCMS} alt="GraphCMS logo"/>
+          </GraphLink>
+          </Divy>
       </Wrapper>
     </MainFooter>
   )

@@ -75,10 +75,10 @@ export const AdjMarkdown = styled(Markdown)`
 export const Main = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 0px;
+  margin-right: 0px;
   /* border: 2px solid black; */
-  padding-top: 20px;
+  padding-top: 5px;
   /* box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .9);  */
   animation-duration: .5s;
   animation-name: ${AdjFadeIn};
@@ -91,9 +91,9 @@ export const StyledLink = styled(Link)`
   margin-left: 20px;
   margin-right: 20px;
   color: black;
-  border: 2px solid black;
+  border: 1px solid #eee;
   margin-bottom: 20px;
-  box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .9); 
+  box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .6); 
   border-top-left-radius: .14rem;
   border-top-right-radius: .14rem;
   border-bottom-right-radius: .14rem;
@@ -119,6 +119,7 @@ export const H3 = styled.h3`
   margin-top: 0;
   text-align: center;
   margin-bottom: 0;
+  letter-spacing: .12rem;
   @media(min-width: 581px) {
     font-size: 1.2rem;
     padding: 10px 30px 10px 30px;
@@ -140,8 +141,8 @@ export const InfoWrapper = styled.div`
 `;
 
 export const Img = styled.img`
-  width: 200px;
-  height: 150px;
+  width: 240px;
+  height: 170px;
   align-self: center;
   @media(min-width: 991px) {
     width: 400px;
