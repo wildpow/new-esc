@@ -28,6 +28,6 @@
   "devDependencies": {
     "apollo-cache-persist": "^0.1.1",
     "typescript": "^2.7.1",
-    "typescript-styled-plugin": "^0.5.1"
+    "typescript-styled-plugin": "^0.6.0"
   }
 }
