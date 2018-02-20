@@ -91,8 +91,8 @@ export const StyledLink = styled(Link)`
   margin-left: 20px;
   margin-right: 20px;
   color: black;
-  border: 1px solid #eee;
   margin-bottom: 20px;
+  border: 1px solid #eee;
   box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .6); 
   border-top-left-radius: .14rem;
   border-top-right-radius: .14rem;

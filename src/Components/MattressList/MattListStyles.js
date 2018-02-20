@@ -6,12 +6,12 @@ export const MainWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .9); 
   border-top-left-radius: .11rem;
   border-top-right-radius: .11rem;
   border-bottom-right-radius: .11rem;
   border-bottom-left-radius: .11rem;
-  border: 2px solid black;
+  border: 1px solid #eee;
+  box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .6); 
   animation-duration: .5s;
   animation-name: ${FadeIn};
   animation-fill-mode: both;

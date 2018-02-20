@@ -14,10 +14,10 @@ export const Main = styled.div`
   font-family: 'Open Sans', sans-serif;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .9); 
+  border: 1px solid #eee;
+  box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .6); 
   border-top-left-radius: .11rem;
   border-top-right-radius: .11rem;
-  border: 2px solid black;
   transition: all .2s ease-in;
   text-align: center;
   justify-content: center;
