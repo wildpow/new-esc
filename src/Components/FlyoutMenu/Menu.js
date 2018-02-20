@@ -6,7 +6,7 @@ import { StyledLink, Nav, Wrapper, Image }  from './MenuStyles';
 import Topper from '../Topper/Topper';
 import image from '../../images/logo.png';
 
-class Menu2 extends React.PureComponent {
+class Menu extends React.PureComponent {
   constructor(props) {
     super(props)
     this.state = {
@@ -74,4 +74,4 @@ render() {
   )
 }}
 
-export default withApollo(Menu2)
+export default withApollo(Menu)
