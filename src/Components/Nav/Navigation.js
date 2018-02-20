@@ -5,7 +5,20 @@ import gql from 'graphql-tag';
 import { Header, Nav, StyledLinkLeft, StyledLinkRight
         } from './NavStyles';
 
-const Navigation = ({client}) => {
+  const Navigation = ({client}) => {
+    const allThePreFetch = () => () => {
+      client.query({
+        query: gql`
+        query AllMattresses {
+          allMattresses { id setPriceSale brandName discription name profile 
+                        subName mattOnlySale contruction warranty
+                        subBrand mattOnly uri features
+                          setPrice coverImg { handle }
+                        detail1 { handle } detail2 { handle } } }`
+      })
+    };
+
+
   const adjPreFetch = () => () => {
     client.query({
       query: gql`
@@ -17,7 +30,7 @@ const Navigation = ({client}) => {
   return (
     <Header>
       <Nav>
-        <StyledLinkLeft to="/brands">Brands</StyledLinkLeft>
+        <StyledLinkLeft to="/brands" onMouseEnter={allThePreFetch()} onTouchStart={allThePreFetch()}>Brands</StyledLinkLeft>
         <StyledLinkLeft to="/adjustable" onMouseEnter={adjPreFetch()} onTouchStart={adjPreFetch()}>Adjustable</StyledLinkLeft>
         <StyledLinkLeft to="/accessories">Accessories</StyledLinkLeft>
       </Nav>
@@ -31,3 +44,6 @@ const Navigation = ({client}) => {
 }
 
 export default withApollo(Navigation);
+
+
+
