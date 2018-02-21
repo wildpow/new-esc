@@ -27,7 +27,7 @@ const AdjustableComponent = ({ data: {error, loading, Bases} }, client) => {
 
 export const allAdjustables = gql`
   query allAdjustables {
-    Bases: allAdjBaseses(orderBy: value_DESC) {
+    Bases: allAdjBaseses(orderBy: value_ASC) {
       uri
       id
       fullName

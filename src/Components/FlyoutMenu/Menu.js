@@ -17,7 +17,7 @@ class Menu extends React.PureComponent {
     this.props.client.query({
       query: gql`
       query allAdjustables {
-        Bases: allAdjBaseses { id uri fullName keyfeatures features price salePrice brandLine brandName baseDescription height warranty coverImg { handle } detail1 { handle} detail2 { handle } } } `
+        Bases: allAdjBaseses { value id uri fullName keyfeatures features price salePrice brandLine brandName baseDescription height warranty coverImg { handle } detail1 { handle} detail2 { handle } } } `
     })
   };
   allThePreFetch(){

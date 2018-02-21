@@ -56,12 +56,13 @@ const Footer = () => {
           </HoursPara>
         </Hours>
       </Contact>
+      
+      </Wrapper>
       <Divy>
         <GraphLink href="https://graphcms.com/" target="_blank" rel="noopener noreferrer">
             <GraphImg src={GraphCMS} alt="GraphCMS logo"/>
           </GraphLink>
           </Divy>
-      </Wrapper>
     </MainFooter>
   )
 };

@@ -1,21 +1,12 @@
 import styled from 'styled-components';
-export const Divy = styled.div`
-display: flex;
-flex-direction: row;
 
-justify-content: center;
-@media(min-width: 768px) {
-  justify-content: flex-end;
-}
-
-`
 export const MainFooter = styled.footer`
   margin-top: 15px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 
   @media (min-width: 768px) {
-    margin-top: 15px;
-    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-bottom: 10px;
   }
 `;
 
@@ -26,7 +17,7 @@ export const Wrapper = styled.div`
   border: 1px solid #eee;
   box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .6);
   @media(min-width: 1200px) {
-    max-width: 75vw;
+    max-width: 100%;
     padding-right: 20px;
     padding-left: 20px;
   }
@@ -149,3 +140,10 @@ export const MapLink = styled.a`
   }
 `;
 
+export const Divy = styled.div`
+display: flex;
+flex-direction: row;
+justify-content: center;
+margin-top: 20px;
+@media(min-width: 768px) { margin-top: 40px; }
+`
