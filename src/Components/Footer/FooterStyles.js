@@ -102,6 +102,7 @@ export const GraphImg = styled.img`
 export const Contact = styled.div`
 display: flex;
 flex-direction: row;
+justify-content: space-around;
 justify-content: space-evenly;
 margin-top: 10px;
 margin-bottom: 10px;
