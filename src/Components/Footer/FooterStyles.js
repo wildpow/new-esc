@@ -20,6 +20,8 @@ export const Wrapper = styled.div`
     max-width: 100%;
     padding-right: 20px;
     padding-left: 20px;
+    margin-left: 220px;
+    margin-right: 220px;
   }
 `;
 

@@ -10,7 +10,7 @@ export const HomeComponent = loadable(() => import('./Components/Home/Home'));
 
 export const SingleBase = loadable(() => import('./Components/Adjustable/SingleBase'));
 export const SingleMattress = loadable(() => import('./Components/SingleMattress/SingleMattress'));
-
+export const Post = loadable(() => import('./Components/Blog/Post/Post'));
 export const Sealy = loadable(() => import('./Components/MattressList/Sealy'));
 export const Tempur = loadable(() => import('./Components/MattressList/Tempur'));
 export const Stearns = loadable(() => import('./Components/MattressList/Stearns'));

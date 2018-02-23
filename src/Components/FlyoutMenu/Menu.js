@@ -1,7 +1,7 @@
 import React from 'react'
 import {withApollo} from 'react-apollo'
 import gql from 'graphql-tag';
-import { AdjustableComponent, BrandsComponent } from '../../Routes'
+import { AdjustableComponent, BrandsComponent, BlogComponent } from '../../Routes'
 import { StyledLink, Nav, Wrapper, Image }  from './MenuStyles';
 import Topper from '../Topper/Topper';
 import image from '../../images/logo.png';
@@ -37,19 +37,21 @@ class Menu extends React.PureComponent {
 
 };
   
-  // blogPreFetch(){
-  //   this.props.client.query({
-  //     query: gql`
-  //     query allPosts { 
-  //       allPosts { id slug title dateAndTime coverImage { handle } } }`  
-  //   }) 
-  // };
+  blogPreFetch(){
+    this.props.client.query({
+      query: gql`
+      query allPosts { 
+        allPosts { id slug title dateAndTime coverImage { handle } } }`  
+    }) 
+  };
   componentWillUpdate() {
     this.adjPreFetch();
     this.allThePreFetch();
+    this.blogPreFetch();
     AdjustableComponent.load();
     BrandsComponent.load();
-    // this.blogPreFetch();
+    BlogComponent.load();
+    
   }
 
 render() {
