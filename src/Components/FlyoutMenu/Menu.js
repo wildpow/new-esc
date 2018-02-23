@@ -1,7 +1,7 @@
 import React from 'react'
 import {withApollo} from 'react-apollo'
 import gql from 'graphql-tag';
-
+import { AdjustableComponent, BrandsComponent } from '../../Routes'
 import { StyledLink, Nav, Wrapper, Image }  from './MenuStyles';
 import Topper from '../Topper/Topper';
 import image from '../../images/logo.png';
@@ -17,7 +17,11 @@ class Menu extends React.PureComponent {
     this.props.client.query({
       query: gql`
       query allAdjustables {
-        Bases: allAdjBaseses { value id uri fullName keyfeatures features price salePrice brandLine brandName baseDescription height warranty coverImg { handle } detail1 { handle} detail2 { handle } } } `
+        Bases: allAdjBaseses(orderBy: value_ASC) {
+          uri value id fullName keyfeatures
+      features price salePrice brandLine
+      brandName baseDescription height warranty
+      coverImg { handle } detail1 { handle} detail2 { handle } } } `
     })
   };
   allThePreFetch(){
@@ -43,6 +47,8 @@ class Menu extends React.PureComponent {
   componentWillUpdate() {
     this.adjPreFetch();
     this.allThePreFetch();
+    AdjustableComponent.load();
+    BrandsComponent.load();
     // this.blogPreFetch();
   }
 

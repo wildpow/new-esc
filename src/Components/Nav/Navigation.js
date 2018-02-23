@@ -1,12 +1,13 @@
 import React from 'react';
 import {withApollo} from 'react-apollo'
 import gql from 'graphql-tag';
-
+import {BrandsComponent, AdjustableComponent, AccessoriesCompoent,
+  FinancingComponent, BlogComponent, AboutComponent} from '../../Routes'
 import { Header, Nav, StyledLinkLeft, StyledLinkRight
         } from './NavStyles';
 
   const Navigation = ({client}) => {
-    const allThePreFetch = () => () => {
+    const allThePreFetch = () => {
       client.query({
         query: gql`
         query AllMattresses {
@@ -19,25 +20,37 @@ import { Header, Nav, StyledLinkLeft, StyledLinkRight
     };
 
 
-  const adjPreFetch = () => () => {
+  const adjPreFetch = () => {
     client.query({
       query: gql`
       query allAdjustables {
-        Bases: allAdjBaseses { value id uri fullName keyfeatures features price salePrice brandLine brandName baseDescription height warranty coverImg { handle } detail1 { handle} detail2 { handle } } } `
+        Bases: allAdjBaseses(orderBy: value_ASC) { 
+          uri value id fullName keyfeatures
+      features price salePrice brandLine
+      brandName baseDescription height warranty
+      coverImg { handle } detail1 { handle} detail2 { handle } } } `
     })
   };
-  
+
+  const adjAndPreLoad = () => () => {
+    adjPreFetch()
+    AdjustableComponent.load()
+  }
+  const AllthePre = () => () => {
+    allThePreFetch()
+    BrandsComponent.load()
+  }
   return (
     <Header>
       <Nav>
-        <StyledLinkLeft to="/brands" onMouseEnter={allThePreFetch()} onTouchStart={allThePreFetch()}>Brands</StyledLinkLeft>
-        <StyledLinkLeft to="/adjustable" onMouseEnter={adjPreFetch()} onTouchStart={adjPreFetch()}>Adjustable</StyledLinkLeft>
-        <StyledLinkLeft to="/accessories">Accessories</StyledLinkLeft>
+        <StyledLinkLeft to="/brands" onMouseEnter={AllthePre()} onTouchStart={AllthePre()}>Brands</StyledLinkLeft>
+        <StyledLinkLeft to="/adjustable" onMouseEnter={adjAndPreLoad()} onTouchStart={adjAndPreLoad()}>Adjustable</StyledLinkLeft>
+        <StyledLinkLeft to="/accessories" onMouseEnter={() => AccessoriesCompoent.load()} onTouchStart={() =>AccessoriesCompoent.load()}>Accessories</StyledLinkLeft>
       </Nav>
       <Nav>
-        <StyledLinkRight to="/financing">Financing</StyledLinkRight>
-        <StyledLinkRight to="/blog">Our Blog</StyledLinkRight>
-        <StyledLinkRight to="/about">About Us</StyledLinkRight>
+      <StyledLinkRight to="/financing" onMouseEnter={() =>FinancingComponent.load()} onTouchStart={() =>FinancingComponent.load()}>Financing</StyledLinkRight>
+        <StyledLinkRight to="/blog" onMouseEnter={() =>BlogComponent.load()} onTouchStart={() =>BlogComponent.load()}>Our Blog</StyledLinkRight>
+        <StyledLinkRight to="/about" onMouseEnter={() =>AboutComponent.load()} onTouchStart={() =>AboutComponent.load()}>About Us</StyledLinkRight>
       </Nav>
     </Header>
   )
