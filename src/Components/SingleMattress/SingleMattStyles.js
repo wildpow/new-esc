@@ -178,6 +178,7 @@ export const Profile = styled.p`
 
 export const StyledMarkDown = styled(Markdown)`
   font-family: 'Open Sans', sans-serif;
+  margin-left: 5px;
   padding: 0px;
   & p {
     font-size: .9rem;
@@ -243,9 +244,11 @@ export const MattSet = styled.div`
   justify-content: center;
   justify-items: center;
   align-content: center;
+  margin-left: 10px;
 `;
 
 export const MattOnly = styled.div`
+  margin-left: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;

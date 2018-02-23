@@ -15,8 +15,9 @@ export const SmallImgHolder = styled.div`
 `;
 
 export const SmImg = styled.img`
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
+  @media(min-width: 500px) { width: 83px; height: 75px; }
   @media(min-width: 768px) { width: 100px; height: 80px; }
   @media(min-width: 1024px) { width: 165px; height: 150px; }
   border: 2px solid white;
@@ -26,6 +27,7 @@ export const SmImg = styled.img`
 export const LargeImg = styled.img`
   width: 180px;
   height: 160px;
+  @media(min-width: 500px) { width: 250px; height: 230px; }
   @media(min-width: 768px) { width: 350px; height: 200px; }
   @media(min-width: 1024px) { width: 500px; height: 300px; }
 `;

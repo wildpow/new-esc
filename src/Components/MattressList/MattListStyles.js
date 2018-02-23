@@ -1,6 +1,14 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Link } from 'react-router-dom';
-import FadeIn from '../../App';
+
+const MattListFadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
 
 export const MainWrapper = styled.div`
   display: flex;
@@ -13,7 +21,7 @@ export const MainWrapper = styled.div`
   border: 1px solid #eee;
   box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .6); 
   animation-duration: .5s;
-  animation-name: ${FadeIn};
+  animation-name: ${MattListFadeIn};
   animation-fill-mode: both;
 `;
 
