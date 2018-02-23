@@ -2,7 +2,7 @@ import React from 'react';
 import { Wrapper, WholeThing,
         ButtonWrapper, Button,
         DropDownWrapper, Price, TopButton,
-        Row, Sale
+        Row, Sale, RegularPrice
       } from './DropDownStyles';
 
 class DropDown extends React.PureComponent {
@@ -51,31 +51,31 @@ class DropDown extends React.PureComponent {
         if(this.props.data2 === null || this.props.data2[0] === undefined || this.props.data2[0] === 0) {
           return `$${this.props.data[0]}`
         } 
-        return  (<Row><Sale>{`$${this.props.data[0]}`}</Sale> <div>{`$${this.props.data2[0]}`}</div></Row>)
+        return  (<Row><Sale>{`$${this.props.data[0]}`}</Sale> <RegularPrice>{`$${this.props.data2[0]}`}</RegularPrice></Row>)
           
       case '2':
         if(this.props.data2 === null || this.props.data2[1] === undefined || this.props.data2[1] === 0) {
           return `$${this.props.data[1]}`;
         } 
-        return  (<Row><Sale>{`$${this.props.data[1]}`}</Sale> <div>{`$${this.props.data2[1]}`}</div></Row>)
+        return  (<Row><Sale>{`$${this.props.data[1]}`}</Sale> <RegularPrice>{`$${this.props.data2[1]}`}</RegularPrice></Row>)
 
       case '3':
         if(this.props.data2 === null || this.props.data2[2] === undefined || this.props.data2[2] === 0) {
           return `$${this.props.data[2]}`
         } 
-        return  (<Row><Sale>{`$${this.props.data[2]}`}</Sale> <div>{`$${this.props.data2[2]}`}</div></Row>)
+        return  (<Row><Sale>{`$${this.props.data[2]}`}</Sale> <RegularPrice>{`$${this.props.data2[2]}`}</RegularPrice></Row>)
         
       case '4':
         if(this.props.data2 === null || this.props.data2[3] === undefined || this.props.data2[3] === 0) {
           return `$${this.props.data[3]}`
         }
-        return  (<Row><Sale>{`$${this.props.data[3]}`}</Sale> <div>{`$${this.props.data2[3]}`}</div></Row>) 
+        return  (<Row><Sale>{`$${this.props.data[3]}`}</Sale> <RegularPrice>{`$${this.props.data2[3]}`}</RegularPrice></Row>) 
         
       case '5':
         if(this.props.data2 === null || this.props.data2[4] === undefined || this.props.data2[4] === 0) {
           return `$${this.props.data[4]}`
         }
-        return  (<Row><Sale>{`$${this.props.data[4]}`}</Sale> <div>{`$${this.props.data2[4]}`}</div></Row>)
+        return  (<Row><Sale>{`$${this.props.data[4]}`}</Sale> <RegularPrice>{`$${this.props.data2[4]}`}</RegularPrice></Row>)
       default:
         return null;
     }

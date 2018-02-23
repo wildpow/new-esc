@@ -95,12 +95,12 @@ export const Price = styled.div`
   padding-top: 5px;
   padding-left: 0px;
   width: 130px;
-  height: 40px;
+  height: 30px;
   /* text-align: center !important;
   align-self: center !important; */
   @media(min-width: 768px) { padding-left: 25px; font-size: 1.1rem; width: 200px; height: 60px;}
   @media(min-width: 1024px) { font-size: 1.7rem !important;  width: 250px !important; height: 60px; margin-top: 0; margin-bottom: 0;}
-  @media(min-width: 1300px) { padding-left: 30px; height: 70px; width: 300px !important;}
+  @media(min-width: 1300px) { padding-left: 35px; height: 70px; width: 300px !important; font-size: 30rem; padding-top: 20px;}
 `;
 
 export const Sale = styled.div`
@@ -114,6 +114,7 @@ export const Sale = styled.div`
     font-size: 1rem;
     /* text-align: center; */
   }
+  @media(min-width: 1300px) {font-size: 1.2rem; margin-right: 20px}
 `;
 export const Row = styled.div`
 display: flex;
@@ -122,5 +123,10 @@ width: 130px;
 @media(min-width: 1024px) {
   justify-content: space-between;
 }
+@media(min-width: 1300px) { justify-content: center; width: 180px;}
 /* flex-direction: column; */
 `;
+
+export const RegularPrice = styled.div`
+  @media(min-width: 1300px) { font-size: 2.4rem;}
+`

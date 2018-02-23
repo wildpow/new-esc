@@ -15,7 +15,7 @@ import App from './App';
 
 
 
-const GRAPHCMS_API = 'https://api.graphcms.com/simple/v1/escPandaMattressTesting';
+const GRAPHCMS_API = 'https://api.graphcms.com/simple/v1/escPandaMattressTestingtobefair';
 const client = new ApolloClient({
   link: new HttpLink({ uri: GRAPHCMS_API }),
   cache: new InMemoryCache(),
