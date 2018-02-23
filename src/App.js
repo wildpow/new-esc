@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { Route, Switch, withRouter } from 'react-router-dom';
-
+import * as Routes from './Routes'
 import styled, { injectGlobal } from 'styled-components';
 import styledNormalize from 'styled-normalize';
 import MenuButton from './Components/FlyoutMenu/MenuButton';
@@ -9,22 +9,6 @@ import Footer from './Components/Footer/Footer';
 import Topper from './Components/Topper/Topper';
 import Navigation from './Components/Nav/Navigation';
 import Logo from './Components/Logo/Logo';
-
-import HomeComponent from './Components/Home/Home';
-import BrandsComponent from './Components/Brands/Brands';
-import AdjustableComponent from './Components/Adjustable/Adjustable';
-import AccessoriesCompoent from './Components/Accessories/Accessories';
-import FinancingComponent from './Components/Financing/Financing';
-import BlogComponent from './Components/Blog/Blog';
-import AboutComponent from './Components/About/About';
-
-import SingleBase from './Components/Adjustable/SingleBase';
-import SingleMattress from './Components/SingleMattress/SingleMattress';
-
-import Sealy from './Components/MattressList/Sealy';
-import Tempur from './Components/MattressList/Tempur';
-import Stearns from './Components/MattressList/Stearns';
-import Panda404 from './Components/Panda404/Panda404';
 
 injectGlobal`
 ${styledNormalize}
@@ -97,25 +81,21 @@ class App extends Component {
         <Container>
         <ScrollToTopWithRouter>
           <Switch>
-            
-            <Route path="/" component={HomeComponent} exact/>
-            <Route path="/adjustable" component={AdjustableComponent} exact/>
-            <Route path="/Accessories" component={AccessoriesCompoent} exact/>
-            <Route path="/financing" component={FinancingComponent} exact/>
-            <Route path="/blog" component={BlogComponent} exact/>
-            <Route path="/about" component={AboutComponent} exact/>
-            <Route path="/brands" component={BrandsComponent} exact/>
-
-            <Route path="/brands/sealy" component={Sealy} exact/>
-            <Route path="/brands/stearns" component={Stearns} exact/>
-            <Route path="/brands/tempurpedic" component={Tempur} exact/>
-            
-            <Route path="/adjustable/:uri" component={SingleBase}/>
-            <Route path="/brands/tempurpedic/:uri" component={SingleMattress}/>
-            <Route path="/brands/sealy/:uri" component={SingleMattress}/>
-            <Route path="/brands/stearns/:uri" component={SingleMattress}/>
-            <Route component={Panda404}/>
-            
+            <Route path="/" component={Routes.HomeComponent} exact/>
+            <Route path="/adjustable" component={Routes.AdjustableComponent} exact/>
+            <Route path="/Accessories" component={Routes.AccessoriesCompoent} exact/>
+            <Route path="/financing" component={Routes.FinancingComponent} exact/>
+            <Route path="/blog" component={Routes.BlogComponent} exact/>
+            <Route path="/about" component={Routes.AboutComponent} exact/>
+            <Route path="/brands" component={Routes.BrandsComponent} exact/>
+            <Route path="/brands/sealy" component={Routes.Sealy} exact/>
+            <Route path="/brands/stearns" component={Routes.Stearns} exact/>
+            <Route path="/brands/tempurpedic" component={Routes.Tempur} exact/>
+            <Route path="/adjustable/:uri" component={Routes.SingleBase}/>
+            <Route path="/brands/tempurpedic/:uri" component={Routes.SingleMattress}/>
+            <Route path="/brands/sealy/:uri" component={Routes.SingleMattress}/>
+            <Route path="/brands/stearns/:uri" component={Routes.SingleMattress}/>
+            <Route component={Routes.Panda404}/>
             </Switch>
             </ScrollToTopWithRouter>
           <Footer/>

@@ -1,7 +1,7 @@
 import React from 'react'
 import {withApollo} from 'react-apollo'
 import gql from 'graphql-tag';
-
+import { AdjustableComponent, BrandsComponent } from '../../Routes'
 import { StyledLink, Nav, Wrapper, Image }  from './MenuStyles';
 import Topper from '../Topper/Topper';
 import image from '../../images/logo.png';
@@ -43,6 +43,8 @@ class Menu extends React.PureComponent {
   componentWillUpdate() {
     this.adjPreFetch();
     this.allThePreFetch();
+    AdjustableComponent.load();
+    BrandsComponent.load();
     // this.blogPreFetch();
   }
 
