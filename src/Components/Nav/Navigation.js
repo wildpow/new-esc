@@ -24,12 +24,11 @@ import { Header, Nav, StyledLinkLeft, StyledLinkRight
     client.query({
       query: gql`
       query allAdjustables {
-        allAdjBaseses { value 
-        id uri fullName keyfeatures
-        features price salePrice
-        brandLine brandName baseDescription
-        height warranty
-        coverImg { handle } detail1 { handle} detail2 { handle } } } `
+        Bases: allAdjBaseses(orderBy: value_ASC) { 
+          uri value id fullName keyfeatures
+      features price salePrice brandLine
+      brandName baseDescription height warranty
+      coverImg { handle } detail1 { handle} detail2 { handle } } } `
     })
   };
 
