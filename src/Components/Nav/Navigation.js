@@ -7,6 +7,15 @@ import { Header, Nav, StyledLinkLeft, StyledLinkRight
         } from './NavStyles';
 
   const Navigation = ({client}) => {
+
+    const blogPreFetch = () => {
+      client.query({
+        query: gql`
+        query allPosts { 
+          allPosts { id slug title dateAndTime coverImage { handle } bottomimg { handle height width} } }`  
+      }) 
+    };
+
     const allThePreFetch = () => {
       client.query({
         query: gql`
@@ -40,6 +49,10 @@ import { Header, Nav, StyledLinkLeft, StyledLinkRight
     allThePreFetch()
     BrandsComponent.load()
   }
+  const BlogPre = () => () => {
+    blogPreFetch()
+    BlogComponent.load()
+  }
   return (
     <Header>
       <Nav>
@@ -49,7 +62,7 @@ import { Header, Nav, StyledLinkLeft, StyledLinkRight
       </Nav>
       <Nav>
       <StyledLinkRight to="/financing" onMouseEnter={() =>FinancingComponent.load()} onTouchStart={() =>FinancingComponent.load()}>Financing</StyledLinkRight>
-        <StyledLinkRight to="/blog" onMouseEnter={() =>BlogComponent.load()} onTouchStart={() =>BlogComponent.load()}>Our Blog</StyledLinkRight>
+        <StyledLinkRight to="/blog" onMouseEnter={BlogPre()} onTouchStart={BlogPre()}>Our Blog</StyledLinkRight>
         <StyledLinkRight to="/about" onMouseEnter={() =>AboutComponent.load()} onTouchStart={() =>AboutComponent.load()}>About Us</StyledLinkRight>
       </Nav>
     </Header>

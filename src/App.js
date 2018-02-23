@@ -91,6 +91,7 @@ class App extends Component {
             <Route path="/brands/sealy" component={Routes.Sealy} exact/>
             <Route path="/brands/stearns" component={Routes.Stearns} exact/>
             <Route path="/brands/tempurpedic" component={Routes.Tempur} exact/>
+            <Route path="/blog/:slug" component={Routes.Post} />
             <Route path="/adjustable/:uri" component={Routes.SingleBase}/>
             <Route path="/brands/tempurpedic/:uri" component={Routes.SingleMattress}/>
             <Route path="/brands/sealy/:uri" component={Routes.SingleMattress}/>
