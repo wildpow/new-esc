@@ -3,7 +3,7 @@ import { withApollo } from 'react-apollo';
 import { StyledLink, H3, InfoWrapper, Img, AdjMarkdown } from './AdjustableStyles' 
 import gql from 'graphql-tag';
 const AdjHoc = (props) => {
-  const prefetch = (baseUrl) => {
+  const prefetch = (baseUrl) => () => {
     props.client.query({
       query: gql`
     query singleBase($uri: String) {
