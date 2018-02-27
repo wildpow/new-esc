@@ -9,7 +9,7 @@ import Footer from './Components/Footer/Footer';
 import Topper from './Components/Topper/Topper';
 import Navigation from './Components/Nav/Navigation';
 import Logo from './Components/Logo/Logo';
-
+import HomeComponent from './Components/Home/Home';
 injectGlobal`
 ${styledNormalize}
       html {
@@ -81,7 +81,7 @@ class App extends Component {
         <Container>
         <ScrollToTopWithRouter>
           <Switch>
-            <Route path="/" component={Routes.HomeComponent} exact/>
+            <Route path="/" component={HomeComponent} exact/>
             <Route path="/adjustable" component={Routes.AdjustableComponent} exact/>
             <Route path="/Accessories" component={Routes.AccessoriesCompoent} exact/>
             <Route path="/financing" component={Routes.FinancingComponent} exact/>

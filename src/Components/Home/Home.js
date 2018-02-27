@@ -1,16 +1,20 @@
 import React from 'react';
 import { Helmet } from "react-helmet";
-
+import GraphImg from 'graphcms-image'
+import gql from 'graphql-tag';
+import { graphql } from 'react-apollo';
 import { Carousel } from 'react-responsive-carousel'; 
 
-import { Main, SaleWrapper, OneImg, Linky } from './HomeStyles';
+import { Main, SaleWrapper, Linky } from './HomeStyles';
 
-import Sealy from '../../images/SealyPresDayCarouselRatio.jpg';
-import Tempur from '../../images/TempurpedicPresDayCarouselRatio.jpg';
-import Stearns from '../../images/StearnsPresDayCarouselRatio.jpg';
-import Sale from '../../images/PresidentsDayBannerCorrected.jpg';
+// import Sealy from '../../images/SealyPresDayCarouselRatio.jpg';
+// import Tempur from '../../images/TempurpedicPresDayCarouselRatio.jpg';
+// import Stearns from '../../images/StearnsPresDayCarouselRatio.jpg';
+// import Sale from '../../images/PresidentsDayBannerCorrected.jpg';
 
-const HomeComponent = () => {
+const HomeComponent = ({data: {error, loading, Images } }) => {
+  if (error) return console.log(error)
+  if (!loading) {
   return (
     <Main>
       <Helmet>
@@ -28,20 +32,49 @@ const HomeComponent = () => {
         showStatus={false}
       >
         <SaleWrapper>
-          <OneImg src={Sale} alt="this"/>
+          <GraphImg image={Images[0].sale} alt="this" maxWidth={1000} withWebp={true}/>
         </SaleWrapper>
         <Linky to='/brands/stearns'>
-          <OneImg src={Stearns} alt="this"/>
+        <GraphImg image={Images[0].pic1} alt="this" maxWidth={1000} withWebp={true}/>
         </Linky>
         <Linky to='/brands/tempurpedic'>
-          <OneImg src={Tempur} alt="this"/>
+        <GraphImg image={Images[0].pic2} alt="this" maxWidth={1000} withWebp={true}/>
         </Linky>
         <Linky to='/brands/sealy'>
-          <OneImg src={Sealy} alt="this"/> 
+        <GraphImg image={Images[0].pic3} alt="this" maxWidth={1000} withWebp={true}/>
         </Linky>
       </Carousel>
     </Main>
   )
 }
+return null
+}
 
-export default HomeComponent;
+export const allCarousels = gql`
+  query allCarousels {
+    Images: allCarousels {
+      sale {
+      handle
+      width
+      height
+    }
+      pic1 {
+      handle
+      height
+      width
+    }
+    pic3 {
+      handle
+      height
+      width
+    }
+    pic2 {
+      handle
+      height
+      width
+    }
+    }
+  }
+`
+
+export default graphql(allCarousels)(HomeComponent);

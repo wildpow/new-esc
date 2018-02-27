@@ -22,10 +22,10 @@ export const Main = styled.div`
 `;
 
 export const SaleWrapper = styled.div`
- 
+ max-height: 100%;
 `;
 export const Linky = styled(Link)`
-margin: auto !important;
+ max-height: 100%;
 `
 export const OneImg = styled.img`
   background-color: white;

@@ -6,7 +6,7 @@ export const AccessoriesCompoent = loadable(() => import('./Components/Accessori
 export const FinancingComponent = loadable(() => import('./Components/Financing/Financing'));
 export const BlogComponent = loadable(() => import('./Components/Blog/Blog'));
 export const AboutComponent = loadable(() => import('./Components/About/About'));
-export const HomeComponent = loadable(() => import('./Components/Home/Home'));
+// export const HomeComponent = loadable(() => import('./Components/Home/Home'));
 
 export const SingleBase = loadable(() => import('./Components/Adjustable/SingleBase'));
 export const SingleMattress = loadable(() => import('./Components/SingleMattress/SingleMattress'));
@@ -20,5 +20,5 @@ export const Panda404 = loadable(() => import('./Components/Panda404/Panda404'))
 
 
 
-HomeComponent.load()
+// HomeComponent.load()
 
