@@ -60,7 +60,7 @@ const Footer = () => {
       </Wrapper>
       <Divy>
         <GraphLink href="https://graphcms.com/" target="_blank" rel="noopener noreferrer">
-            <GraphImg src={GraphCMS} alt="GraphCMS logo"/>
+            <GraphImg src={GraphCMS} alt="GraphCMS Company logo"/>
           </GraphLink>
           </Divy>
     </MainFooter>

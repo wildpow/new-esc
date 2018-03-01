@@ -8,7 +8,7 @@ const ComingSoon = () => {
       <Header>
         <Title>Coming Soon...</Title>
       </Header>
-      <Img src={image} alt="panda sleeping"/>
+      <Img src={image} alt="E S C Mattress Center Sleeping Panda"/>
     </Main>
   )
 }
