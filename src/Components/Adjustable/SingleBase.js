@@ -24,7 +24,7 @@ const SingleBase = ({data: { loading, error, base}}) => {
           <h1>{base.fullName}</h1>
         </MainTitle>
         <Main>
-          <ImageViewer cover={base.coverImg.handle} img1={base.detail1.handle} img2={base.detail2.handle} />
+          <ImageViewer cover={base.coverImg.handle} img1={base.detail1.handle} img2={base.detail2.handle} type={'adjustable base without mattress'} fullname={base.fullName}/>
           <MainInfo>
             <StyledMarkDown source={base.features} escapeHtml={false} />
             <PriceWrapper>

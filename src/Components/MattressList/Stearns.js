@@ -19,7 +19,7 @@ const Stearns = ({ data: { loading, error, Brands} }) => {
           <meta name="description" content="One of the oldest mattress manufactures in in the US, Stearns and Foster offers traditional luxury that you deserve. Come feel the luxury your body deserves on the new Stearns and Foster lines.  Raise your expectations with an adjustable base for the ultimate in comfort."/>
         </Helmet>
         <MainTitle>
-          <StearnsImgPlaceHolder src={StearnsImg} alt="Logo"/>
+          <StearnsImgPlaceHolder src={StearnsImg} alt="Logo of the Stearns and Foster mattress company"/>
         </MainTitle>
         <Wrapper>
           {Brands.mattresses.map((mattress) => {

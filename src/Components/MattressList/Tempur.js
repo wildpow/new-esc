@@ -22,7 +22,7 @@ const Tempur = ({ data: { loading, error, Brands} }) => {
           <meta name="description" content="Tempurpedic is the most recommended brand in the US. They offer a memory foam mattress as well as their flex line, and innovative hybrid from the brand you know and love. Come see JD Power’s Consumers choice award winner for 2017."/>
         </Helmet>
         <MainTitle>
-          <TempurPImg src={TempurImg} alt="Logo"/>
+          <TempurPImg src={TempurImg} alt="Logo of the Tempurpedic mattress company"/>
         </MainTitle>
         <Wrapper>
           {Brands.mattresses.map((mattress) => {

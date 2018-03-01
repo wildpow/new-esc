@@ -9,7 +9,7 @@ const Panda404 = () => {
       <Header>
         <Title>Our panda couldn't find the product you're looking for...</Title>
       </Header>
-      <Link to='/'><Img src={image} alt="panda sleeping"/></Link>
+      <Link to='/'><Img src={image} alt="E S C Mattress Center Sleeping Panda "/></Link>
     </Main>
   )
 };

@@ -18,7 +18,7 @@ const Sealy = ({ data: { loading, error, essentials, performance, premium} }) =>
           <meta name="description" content="One of the worlds most recognized brands, Sealy offers all three styles of mattresses: Traditional innerspring, Hybrid, a mix of traditional and all foam, and all foam option. The Sealy line up offers a little something for everyone."/>
         </Helmet>
         <MainTitle>
-          <SealyImgPlace src={SealyImg} alt="Logo"/>
+          <SealyImgPlace src={SealyImg} alt="A logo of the Sealy mattress company"/>
         </MainTitle>
         <Wrapper>
           {essentials.mattresses.map((mattress) => (

@@ -74,7 +74,7 @@ render() {
     <StyledLink to="/financing">Financing</StyledLink>
     <StyledLink to="/blog" >Our Blog</StyledLink>
     <StyledLink to="/about">About Us</StyledLink>
-    <Image src={image} alt="panda"/>
+    <Image src={image} alt="Image of E S C Mattress Center sleeping panda bear"/>
   </Nav>
   
   </Wrapper>

@@ -28,7 +28,7 @@ const Post = ({ data: { loading, error, post } }) => {
         </Article>
       
         {post.bottomimg ?
-          <BottomImg src={`https://media.graphcms.com/resize=w:${post.bottomimg.width},h:${post.bottomimg.height},fit:clip/${post.bottomimg.handle}`} alt="this"/>
+          <BottomImg src={`https://media.graphcms.com/resize=w:${post.bottomimg.width},h:${post.bottomimg.height},fit:clip/${post.bottomimg.handle}`} alt={`Image related to ${post.title}`}/>
                         : null}
       </Main>
     )

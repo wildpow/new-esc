@@ -16,7 +16,7 @@ const PrefetchPost = (props) => {
   return (
     <StyledLink to={`/blog/${props.slug}`} key={props.id} onMouseEnter={prefetch(props.slug)}>
       <InfoWrapper>
-        <Img src={`https://media.graphcms.com/resize=w:150,h:150,fit:clip/${props.img}`} alt="this"/>
+        <Img src={`https://media.graphcms.com/resize=w:150,h:150,fit:clip/${props.img}`} alt={`Small image for the blog post called ${props.title}`}/>
         
       </InfoWrapper>
       <H3>{props.title}</H3>
