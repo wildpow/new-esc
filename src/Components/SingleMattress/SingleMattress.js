@@ -19,7 +19,7 @@ const SingleMattress = ({ data: { loading, error, mattress } }) => {
     return (
 <Wrapper>
   <Helmet>
-    <title>ESC: {mattress.subBrand} {mattress.subName}</title>
+    <title>ESC: {mattress.subBrand} {mattress.subName} Mattress</title>
     <meta name="description" content={mattress.discription}/>
   </Helmet>
   <MainTitle>

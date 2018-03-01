@@ -14,7 +14,7 @@ const Sealy = ({ data: { loading, error, essentials, performance, premium} }) =>
     return (
       <MainWrapper>
         <Helmet>
-          <title>ESC: Sealy</title>
+          <title>ESC: Sealy Mattresses</title>
           <meta name="description" content="One of the worlds most recognized brands, Sealy offers all three styles of mattresses: Traditional innerspring, Hybrid, a mix of traditional and all foam, and all foam option. The Sealy line up offers a little something for everyone."/>
         </Helmet>
         <MainTitle>
