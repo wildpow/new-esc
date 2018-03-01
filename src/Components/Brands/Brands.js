@@ -46,7 +46,7 @@ const BrandsComponent = ({client}) => {
       </Helmet>
       <StyledLink to='/brands/tempurpedic' onMouseEnter={temperQuery()} onTouchStart={temperQuery()}>
       <BrandWrapper>
-        <TempurImg src={TempurLogo} alt="Tempur Logo"/>
+        <TempurImg src={TempurLogo} alt="Tempurpedic mattress company logo"/>
         <MainText>
           When Tempur-Pedic® introduced their proprietary TEMPUR® material they changed the way the world sleeps.
           TEMPUR® material is infinitely adaptable, responding to your body temperature, adapting to your weight
@@ -57,7 +57,7 @@ const BrandsComponent = ({client}) => {
       </StyledLink>
       <StearnsWrapper to='/brands/stearns' onMouseEnter={stearnsQuery()} onTouchStart={stearnsQuery()}>
       <BrandWrapper>
-      <StearnsImg src={StearnsLogo} alt="Stearn Logo"/>
+      <StearnsImg src={StearnsLogo} alt="Stearn & Foster mattress company Logo"/>
         <MainText>
         The enduring craftsmanship of Stearns & Foster is their legacy.
         Since 1846 their specially-trained craftsmen have been building mattresses by hand,
@@ -69,7 +69,7 @@ const BrandsComponent = ({client}) => {
       </StearnsWrapper>
       <StyledLink to='/brands/sealy' onMouseEnter={sealyQuery()} onTouchStart={sealyQuery()}>
       <BrandWrapper>
-        <SealyImg src={SealyLogo} alt="Sealy Logo"/>
+        <SealyImg src={SealyLogo} alt="Sealy Mattress company Logo"/>
         <MainText>
           At the heart of every Sealy mattress is the support that’s right for you.
           Only Sealy has Posturepedic Technology™ to provide more support where you

@@ -26,7 +26,7 @@ const SingleMattress = ({ data: { loading, error, mattress } }) => {
     <h2>{mattress.name}</h2>
   </MainTitle>
   <Main>
-    <ImageViewer cover={mattress.coverImg.handle} img1={mattress.detail1.handle} img2={mattress.detail2.handle} />
+    <ImageViewer cover={mattress.coverImg.handle} img1={mattress.detail1.handle} img2={mattress.detail2.handle} fullname={mattress.name} type={'mattress'}/>
     <MainInfo>
       <StyledMarkDown source={mattress.features} escapeHtml={false} />
       <PriceWrapper>

@@ -23,9 +23,9 @@ const AboutComponent = () => {
         <HeaderText> Our goal is to help Snohomish County sleep like the experts do and wake up feeling better.</HeaderText>
       </Header>
       <PicHolder>
-        <StoreImg1 src={store1} alt="store"/>
-        <MapImg src={map} alt="store"/>
-        <StoreImg2 src={store2} alt="map"/>
+        <StoreImg1 src={store1} alt="E.S.C Mattress Center store front in Everett Washington at night"/>
+        <MapImg src={map} alt="Map of our mattress store the showing the major cross streets of Pacific Hwy/ Evergreen Way and Everett Mall Way"/>
+        <StoreImg2 src={store2} alt="E.S.C Matttress Center store front from Everett Mall Way in Snohomish County"/>
       </PicHolder>
       
       <Address>
@@ -70,7 +70,7 @@ const AboutComponent = () => {
           <PopNameHolder>
             <Bill>Bill</Bill><Josh>Joshua</Josh><Will>William</Will>
           </PopNameHolder>
-          <PopImg src={pop} alt="pops"/>
+          <PopImg src={pop} alt="FunCo toys of E.S.C Mattress Centers co-founders Bill, Joshua and William"/>
         </Col>
       </PopHolder>
     </Main>

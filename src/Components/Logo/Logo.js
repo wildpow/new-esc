@@ -6,7 +6,7 @@ const Logo = () => {
   return (
     <Wrapper>
       <StyledLink to="/">
-        <Image src={logo} alt="panda"/>  
+        <Image src={logo} alt="E S C Mattress Center logo of a sleeping panda"/>  
       </StyledLink>
       <H1><Span>E.S.C.</Span> Mattress Center </H1>
     </Wrapper>
