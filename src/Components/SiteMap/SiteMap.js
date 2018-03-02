@@ -39,7 +39,7 @@ const SiteMap = ({ data: { loading, error, Sealy, Stearns, Tempur, Ajustable, Bl
         </ul>
       </Main>
       <Main>
-        <ul><h3>Sealy Mattresses</h3>
+        <ul><h3><Link to="/brands/sealy">Sealy Mattresses</Link></h3>
           {Sealy.mattresses.map((mattress) => {
             return (
               <li key={mattress.id}>
@@ -48,7 +48,7 @@ const SiteMap = ({ data: { loading, error, Sealy, Stearns, Tempur, Ajustable, Bl
             )
           })}
         </ul>
-        <ul><h3>Stearns & Foster Mattresses</h3>
+        <ul><h3><Link to="brands/stearns">Stearns & Foster Mattresses</Link></h3>
           {Stearns.mattresses.map((mattress) => {
             return (
               <li key={mattress.id}>
@@ -57,7 +57,7 @@ const SiteMap = ({ data: { loading, error, Sealy, Stearns, Tempur, Ajustable, Bl
             )
           })}
         </ul>
-        <ul><h3>Tempurpedic Mattresses</h3>
+        <ul><h3><Link to="/brands/tempurpedic">Tempurpedic Mattresses</Link></h3>
           {Tempur.mattresses.map((mattress) => {
             return (
               <li key={mattress.id}>
