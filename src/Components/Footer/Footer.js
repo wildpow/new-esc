@@ -10,7 +10,7 @@ import Yelp from '../../images/Yelp_burst_negative_RGB.png';
 import Insta from '../../images/glyph-logo_May2016.png';
 import Google from '../../images/Google_Maps_App_3.png';
 import GraphCMS from '../../images/powered_by_graphcms.svg';
-
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return(
@@ -56,7 +56,7 @@ const Footer = () => {
           </HoursPara>
         </Hours>
       </Contact>
-      
+      <Link to="/sitemap" >Site Map</Link>
       </Wrapper>
       <Divy>
         <GraphLink href="https://graphcms.com/" target="_blank" rel="noopener noreferrer">
