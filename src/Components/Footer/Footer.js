@@ -2,7 +2,8 @@ import React from 'react';
 import { MainFooter, Social, FBimage, Timage,
           Wrapper, YelpHolder, YelpImg, InstaImg,
           MapsImg, Hours, HoursSpan, HoursPara,
-          Contact, GraphImg, GraphLink, MapLink, Divy
+          Contact, GraphImg, GraphLink, MapLink, Divy, BottomLinkWrapper,
+          BottomLinks
         } from './FooterStyles';
 import fbIcon from '../../images/FB.png';
 import twitterIcon from '../../images/twitter.png';
@@ -56,7 +57,9 @@ const Footer = () => {
           </HoursPara>
         </Hours>
       </Contact>
-      
+      <BottomLinkWrapper>
+        <BottomLinks to="/sitemap" >Site Map</BottomLinks>
+      </BottomLinkWrapper>
       </Wrapper>
       <Divy>
         <GraphLink href="https://graphcms.com/" target="_blank" rel="noopener noreferrer">

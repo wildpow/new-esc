@@ -15,7 +15,7 @@ export const Sealy = loadable(() => import('./Components/MattressList/Sealy'));
 export const Tempur = loadable(() => import('./Components/MattressList/Tempur'));
 export const Stearns = loadable(() => import('./Components/MattressList/Stearns'));
 export const Panda404 = loadable(() => import('./Components/Panda404/Panda404'));
-
+export const SiteMap = loadable(() => import('./Components/SiteMap/SiteMap'));
 
 
 

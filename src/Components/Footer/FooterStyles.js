@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const MainFooter = styled.footer`
   margin-top: 15px;
@@ -149,4 +150,20 @@ flex-direction: row;
 justify-content: center;
 margin-top: 20px;
 @media(min-width: 768px) { margin-top: 40px; }
-`
+`;
+
+export const BottomLinkWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+  font-family: 'Open Sans', sans-serif;
+`;
+
+export const BottomLinks = styled(Link)`
+  color: #eb1c24;
+  &:hover {
+    color: #1565c0;
+  }
+`;
