@@ -2,7 +2,7 @@ import React from 'react'
 import gql from 'graphql-tag';
 import Helmet from 'react-helmet';
 import { graphql } from 'react-apollo';
-import { Main, SiteLinks, MainLinks, MattLinksWrapper } from './SiteMapStyles';
+import { Main, SiteLinks, MainLinks, MattLinksWrapper, BrandLinks } from './SiteMapStyles';
 
 const SiteMap = ({ data: { loading, error, Sealy, Stearns, Tempur, Ajustable, Blog} }) => {
   if (error) return <h1>Couldn't find sitemap {console.log(error)}</h1>
@@ -26,7 +26,8 @@ const SiteMap = ({ data: { loading, error, Sealy, Stearns, Tempur, Ajustable, Bl
       </MainLinks>
       <MattLinksWrapper>
         <Main>
-          <ul><h3><SiteLinks to="/brands/sealy">Sealy Mattresses</SiteLinks></h3>
+        <h3><BrandLinks to="/brands/sealy">Sealy Mattresses</BrandLinks></h3>
+          <ul>
             {Sealy.mattresses.map((mattress) => {
               return (
                 <li key={mattress.id}>
@@ -37,8 +38,8 @@ const SiteMap = ({ data: { loading, error, Sealy, Stearns, Tempur, Ajustable, Bl
           </ul>
           </Main>
           <Main>
-          
-          <ul><h3><SiteLinks to="/brands/tempurpedic">Tempurpedic Mattresses</SiteLinks></h3>
+          <h3><BrandLinks to="/brands/tempurpedic">Tempurpedic Mattresses</BrandLinks></h3>
+          <ul>
             {Tempur.mattresses.map((mattress) => {
               return (
                 <li key={mattress.id}>
@@ -49,7 +50,8 @@ const SiteMap = ({ data: { loading, error, Sealy, Stearns, Tempur, Ajustable, Bl
           </ul>
         </Main>
         <Main>
-        <ul><h3><SiteLinks to="brands/stearns">Stearns & Foster Mattresses</SiteLinks></h3>
+        <h3><BrandLinks to="brands/stearns">Stearns & Foster Mattresses</BrandLinks></h3>
+        <ul>
             {Stearns.mattresses.map((mattress) => {
               return (
                 <li key={mattress.id}>
@@ -61,7 +63,8 @@ const SiteMap = ({ data: { loading, error, Sealy, Stearns, Tempur, Ajustable, Bl
         </Main>
       </MattLinksWrapper>
       <Main>
-        <ul><h3>adjustable Bases</h3>
+      <h3><BrandLinks to="/adjustable">Adjustable Bases</BrandLinks></h3>
+        <ul>
           {Ajustable.map((adj) => {
             return (
               <li key={adj.id}>
@@ -70,8 +73,10 @@ const SiteMap = ({ data: { loading, error, Sealy, Stearns, Tempur, Ajustable, Bl
             )
           })}
         </ul>
-        
-        <ul><h3>Blog</h3>
+        </Main>
+        <Main>
+        <h3><BrandLinks to="/blog">Blog</BrandLinks></h3>
+        <ul>
           {Blog.map((post) => {
             return (
               <li key={post.id}>
