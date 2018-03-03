@@ -18,6 +18,14 @@ const AboutComponent = () => {
       <Helmet>
         <title>ESC: About Us</title>
         <meta name="description" content="Three of the best trained mattress sales people in Western Washington decided to open their own store; so that they could help people the way they believe they should be helped!  We are bringing back the service you are used to!"/>
+        
+        <meta name="twitter:image:alt" content="E.S.C Matress Center"/>
+        <meta property="og:image" content="https://www.escmattresscenter.com/static/media/logo.952ae51d.png"/> 
+        <meta property="og:url" content="https://www.escmattresscenter.com/about"/>
+        <meta property="og:description" content="About Us"/>
+        <meta property="og:image:width" content="1200"/>
+        <meta property="og:image:height" content="1200"/>
+        <meta property="og:image:alt" content="E.S.C Mattress Center's logo of a panda"/>
       </Helmet>
       <Header>
         <HeaderText> Our goal is to help Snohomish County sleep like the experts do and wake up feeling better.</HeaderText>
