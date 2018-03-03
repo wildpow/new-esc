@@ -16,6 +16,12 @@ const Post = ({ data: { loading, error, post } }) => {
         <Helmet>
           <title>{post.title}</title>
           <meta name="description" content={post.content}/>
+
+          <meta property="og:image" content="https://www.escmattresscenter.com/static/media/logo.952ae51d.png"/>
+          <meta name="twitter:image:alt" content={`ESC: ${post.title}`}/>
+          <meta property="og:url" content={`https://www.escmattresscenter.com/blog/${post.slug}`}/>
+          <meta property="og:description" content={post.title}/>
+
         </Helmet>
         <Header>
           <HeaderText>{post.title}</HeaderText>

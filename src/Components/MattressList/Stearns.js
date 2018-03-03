@@ -17,6 +17,11 @@ const Stearns = ({ data: { loading, error, Brands} }) => {
         <Helmet>
           <title>ESC: Stearns & Foster Mattresses</title>
           <meta name="description" content="One of the oldest mattress manufactures in in the US, Stearns and Foster offers traditional luxury that you deserve. Come feel the luxury your body deserves on the new Stearns and Foster lines.  Raise your expectations with an adjustable base for the ultimate in comfort."/>
+          
+          <meta name="twitter:image:alt" content="E.S.C Matress Center | Stearns & Foster"/>
+          <meta property="og:image" content="https://www.escmattresscenter.com/static/media/logo.952ae51d.png"/> 
+          <meta property="og:url" content="https://www.escmattresscenter.com/brands/stearns"/>
+          <meta property="og:description" content="Sleep like the experts do."/>
         </Helmet>
         <MainTitle>
           <StearnsImgPlaceHolder src={StearnsImg} alt="Logo of the Stearns and Foster mattress company"/>

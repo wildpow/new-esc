@@ -19,6 +19,11 @@ const SingleBase = ({data: { loading, error, base}}) => {
         <Helmet>
           <title>ESC: {base.fullName}</title>
           <meta name="description" content={base.baseDescription}/>
+
+          <meta property="og:image" content={`https://media.graphcms.com/resize=w:1200,h:1200,fit:clip/${base.coverImg.handle}`}/>
+          <meta name="twitter:image:alt" content={`ESC: ${base.fullName}`}/>
+          <meta property="og:url" content={`https://www.escmattresscenter.com/adjustable/${base.uri}`}/>
+          <meta property="og:description" content={base.fullName}/>
         </Helmet>
         <MainTitle>
           <h1>{base.fullName}</h1>
