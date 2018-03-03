@@ -8,6 +8,11 @@ const FinancingComponent = () => {
       <Helmet>
         <title>ESC: Financing</title>
         <meta name="description" content="Why spend your own money? We have 2 different financing options to suit your needs: Synchrony offers interest free financing, while Ascima offers a no credit needed option. Ask your local store for details."/>
+        
+        <meta name="twitter:image:alt" content="E.S.C Matress Center"/>
+        <meta property="og:image" content="https://www.escmattresscenter.com/static/media/logo.952ae51d.png"/> 
+        <meta property="og:url" content="https://www.escmattresscenter.com/financing"/>
+        <meta property="og:description" content="Sleep like the experts do."/>
       </Helmet>
       <ComingSoon/>
     </div>

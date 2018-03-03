@@ -19,6 +19,11 @@ const HomeComponent = () => {
             We offer almost fifty mattresses in a wide range of prices to fit every budget.
             Our mattresses are made in the USA, with most of them coming from local manufacturing
             plants and are brands that most people know and trust. Sealy, Stearns & Foster, and Tempur-Pedic."/>
+        <meta name="twitter:image:alt" content="E.S.C Matress Center"/>
+        <meta property="og:image" content="https://www.escmattresscenter.com/static/media/logo.952ae51d.png"/> 
+        <meta property="og:url" content="https://www.escmattresscenter.com/"/>
+        <meta property="og:description" content="Sleep like the experts do."/>
+
       </Helmet>
       <Carousel
         infiniteLoop={true} autoPlay={true} showThumbs={false}

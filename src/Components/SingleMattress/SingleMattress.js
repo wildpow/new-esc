@@ -13,14 +13,29 @@ import DropDown from '../DropDrown/index';
 import ImageViewer from '../ImageViewer/ImageViewer';
 
 const SingleMattress = ({ data: { loading, error, mattress } }) => {
+  
   if (error) return <h1>Error fetching the Mattress!</h1>
   if (!loading) {
     if(!mattress) return <Redirect to='/404'/>
+    let name = '';
+    if (mattress.brandName === 'Tempur-PEDIC') {
+      name = 'tempurpedic';
+    } else if (mattress.brandName === 'Sealy'){
+      name = 'sealy'
+    } else {
+      name = 'stearns'
+    }
     return (
 <Wrapper>
   <Helmet>
     <title>ESC: {mattress.subBrand} {mattress.subName} Mattress</title>
     <meta name="description" content={mattress.discription}/>
+    
+    <meta property="og:image" content={`https://media.graphcms.com/resize=w:1200,h:1200,fit:clip/${mattress.coverImg.handle}`}/>
+    <meta name="twitter:image:alt" content={`ESC: ${mattress.name}`}/>
+    <meta property="og:url" content={`https://www.escmattresscenter.com/brands/${name}/${mattress.uri}`}/>
+    <meta property="og:description" content={mattress.name}/>
+
   </Helmet>
   <MainTitle>
     <h2>{mattress.name}</h2>
@@ -62,6 +77,7 @@ export const singleMatt = gql`
   query singleMatt($uri: String) {
     mattress: Mattress(uri: $uri) {
       id
+      brandName
       subName
       subBrand
       name

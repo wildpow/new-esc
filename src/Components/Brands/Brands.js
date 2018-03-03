@@ -42,6 +42,11 @@ const BrandsComponent = ({client}) => {
     <Helmet>
         <title>ESC: Brands</title>
         <meta name="description" content="Come visit your locally owned, Everett based Sealy, Stearns and Foster & Tempur-Pedic dealer.  We have over 20 years of experience helping people sleep better on the brands we carry.  We carry 3 of the top 5 mattress brands in the US, so come see us, so we can help you sleep like the experts do!"/>
+        
+        <meta name="twitter:image:alt" content="E.S.C Matress Center"/>
+        <meta property="og:image" content="https://www.escmattresscenter.com/static/media/logo.952ae51d.png"/> 
+        <meta property="og:url" content="https://www.escmattresscenter.com/brands"/>
+        <meta name="twitter:image:alt" content="E.S.C Matress Center"/>
 
       </Helmet>
       <StyledLink to='/brands/tempurpedic' onMouseEnter={temperQuery()} onTouchStart={temperQuery()}>
