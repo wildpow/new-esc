@@ -2,7 +2,8 @@ import React from 'react';
 import { MainFooter, Social, FBimage, Timage,
           Wrapper, YelpHolder, YelpImg, InstaImg,
           MapsImg, Hours, HoursSpan, HoursPara,
-          Contact, GraphImg, GraphLink, MapLink, Divy
+          Contact, GraphImg, GraphLink, MapLink, Divy, BottomLinkWrapper,
+          BottomLinks
         } from './FooterStyles';
 import fbIcon from '../../images/FB.png';
 import twitterIcon from '../../images/twitter.png';
@@ -10,7 +11,7 @@ import Yelp from '../../images/Yelp_burst_negative_RGB.png';
 import Insta from '../../images/glyph-logo_May2016.png';
 import Google from '../../images/Google_Maps_App_3.png';
 import GraphCMS from '../../images/powered_by_graphcms.svg';
-import { Link } from 'react-router-dom';
+
 
 const Footer = () => {
   return(
@@ -56,7 +57,9 @@ const Footer = () => {
           </HoursPara>
         </Hours>
       </Contact>
-      <Link to="/sitemap" >Site Map</Link>
+      <BottomLinkWrapper>
+        <BottomLinks to="/sitemap" >Site Map</BottomLinks>
+      </BottomLinkWrapper>
       </Wrapper>
       <Divy>
         <GraphLink href="https://graphcms.com/" target="_blank" rel="noopener noreferrer">
