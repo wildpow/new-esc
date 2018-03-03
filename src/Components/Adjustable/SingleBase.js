@@ -24,6 +24,9 @@ const SingleBase = ({data: { loading, error, base}}) => {
           <meta name="twitter:image:alt" content={`ESC: ${base.fullName}`}/>
           <meta property="og:url" content={`https://www.escmattresscenter.com/adjustable/${base.uri}`}/>
           <meta property="og:description" content={base.fullName}/>
+          <meta property="og:image:width" content="1200"/>
+          <meta property="og:image:height" content="1200"/>
+          <meta property="og:image:alt" content={`E.S.C Mattress Center | ${base.fullName}`}/>
         </Helmet>
         <MainTitle>
           <h1>{base.fullName}</h1>

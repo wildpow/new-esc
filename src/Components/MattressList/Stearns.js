@@ -22,6 +22,9 @@ const Stearns = ({ data: { loading, error, Brands} }) => {
           <meta property="og:image" content="https://www.escmattresscenter.com/static/media/logo.952ae51d.png"/> 
           <meta property="og:url" content="https://www.escmattresscenter.com/brands/stearns"/>
           <meta property="og:description" content="Sleep like the experts do."/>
+          <meta property="og:image:width" content="1200"/>
+          <meta property="og:image:height" content="1200"/>
+          <meta property="og:image:alt" content="E.S.C Mattress Center's logo of a panda"/>
         </Helmet>
         <MainTitle>
           <StearnsImgPlaceHolder src={StearnsImg} alt="Logo of the Stearns and Foster mattress company"/>

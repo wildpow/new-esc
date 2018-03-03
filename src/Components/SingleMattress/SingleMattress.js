@@ -35,6 +35,9 @@ const SingleMattress = ({ data: { loading, error, mattress } }) => {
     <meta name="twitter:image:alt" content={`ESC: ${mattress.name}`}/>
     <meta property="og:url" content={`https://www.escmattresscenter.com/brands/${name}/${mattress.uri}`}/>
     <meta property="og:description" content={mattress.name}/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="1200"/>
+    <meta property="og:image:alt" content={`E.S.C Mattress Center | ${mattress.name}`}/>
 
   </Helmet>
   <MainTitle>
