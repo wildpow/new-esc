@@ -36,7 +36,7 @@ export const StyledLinkLeft = styled(NavLink)`
     }  
     @media(min-width: 1300px) {
       margin-left:0;
-      font-size: 1.6rem;
+      font-size: 1.65rem;
       padding-left: 20px;
       padding-right: 20px;
     }

@@ -154,11 +154,18 @@ margin-top: 20px;
 
 export const BottomLinkWrapper = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  line-height: 1.7rem;
   justify-content: space-around;
-  justify-content: space-evenly;
-  margin-bottom: 10px;
+  /* justify-content: space-evenly; */
+  margin-bottom: 15px;
+  margin-top: 25px;
+  text-align: center;
   font-family: 'Open Sans', sans-serif;
+  @media(min-width:640px) {
+    flex-direction: row;
+  }
+  @media(min-width: 1024px) { font-size: 1.3rem;}
 `;
 
 export const BottomLinks = styled(Link)`

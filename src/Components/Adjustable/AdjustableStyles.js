@@ -19,7 +19,7 @@ export const AdjMarkdown = styled(Markdown)`
     font-size: 1.6rem;
     margin-top: 0;
     margin-bottom: 0;
-    border-bottom: 4px solid red;
+    border-bottom: 4px solid #eb1c24;
     padding-bottom: 2px;
   }
   & ul {
@@ -39,7 +39,7 @@ export const AdjMarkdown = styled(Markdown)`
         font-size: 1.6rem;
         margin-top: 0;
         margin-bottom: 0;
-        border-bottom: 4px solid red;
+        border-bottom: 4px solid #eb1c24;
         padding-bottom: 2px;
       }
       & ul {

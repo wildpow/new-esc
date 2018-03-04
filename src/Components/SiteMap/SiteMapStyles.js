@@ -1,5 +1,14 @@
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const SitemapFadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
 
 export const MattLinksWrapper = styled.div`
   display: flex;
@@ -7,6 +16,9 @@ export const MattLinksWrapper = styled.div`
   flex-wrap: wrap;
   justify-content: space-around;
   margin-top: 20px;
+  animation-duration: .5s;
+  animation-name: ${SitemapFadeIn};
+  animation-fill-mode: both;
 `;
 
 export const Main = styled.div`
@@ -52,6 +64,9 @@ export const MainLinks = styled.div`
   flex-direction: column;
   border: 1px solid #eee;
   box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .6);
+  animation-duration: .5s;
+  animation-name: ${SitemapFadeIn};
+  animation-fill-mode: both;
   ul {
     list-style: none;
     line-height: 1.8rem;
@@ -60,33 +75,34 @@ export const MainLinks = styled.div`
     flex-wrap: wrap;
     justify-content: space-around;
     padding-left: 0;
-    }
-    li {
-      font-family: 'Open Sans', sans-serif;
-      font-size: 1rem;
-      letter-spacing: .1rem;
-      padding-left: 10px;
-      padding-right: 10px;
-      @media(min-width:412px) { padding-left: 15px; padding-right: 15px;}
-      @media(min-width: 768px) {
-        font-size: 1.3rem;
-        padding-left: 0px;
+  }
+  li {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    letter-spacing: .1rem;
+    padding-left: 10px;
+    padding-right: 10px;
+    @media(min-width:412px) { padding-left: 15px; padding-right: 15px;}
+    @media(min-width: 768px) {
+      font-size: 1.3rem;
+      padding-left: 0px;
       padding-right: 0px;
-      }
     }
-    h2 {
-      font-family: 'Roboto', sans-serif;
-      text-align: center;
-      background-color: #1565c0;
-      color: white;
-      margin: 0;
-      padding-top: 15px;
-      padding-bottom: 15px;
-      letter-spacing: .25rem;
-      font-size: 1.2rem;
-      @media(min-width: 768px) {
-        font-size: 2rem;
-      }
+  }
+  h2 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    background-color: #1565c0;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    letter-spacing: .25rem;
+    font-size: 1.2rem;
+    @media(min-width: 768px) {
+      font-size: 2rem;
     }
+  }
 `;
 
