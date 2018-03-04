@@ -158,6 +158,7 @@ export const BottomLinkWrapper = styled.div`
   justify-content: space-around;
   justify-content: space-evenly;
   margin-bottom: 10px;
+  margin-top: 25px;
   font-family: 'Open Sans', sans-serif;
 `;
 

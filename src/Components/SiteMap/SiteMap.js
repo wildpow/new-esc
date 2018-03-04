@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import gql from 'graphql-tag';
 import Helmet from 'react-helmet';
 import { graphql } from 'react-apollo';
@@ -8,7 +8,7 @@ const SiteMap = ({ data: { loading, error, Sealy, Stearns, Tempur, Ajustable, Bl
   if (error) return <h1>Couldn't find sitemap {console.log(error)}</h1>
   if(!loading) {
     return (
-      <div>
+      <Fragment>
         <Helmet>
           <title>ESC: Site Map</title>
           <meta name="description" content="Sitemap for E.S.C Mattress Center website"/>
@@ -86,7 +86,7 @@ const SiteMap = ({ data: { loading, error, Sealy, Stearns, Tempur, Ajustable, Bl
           })}
         </ul>
       </Main>
-    </div>
+    </Fragment>
     )
   }
   return null;

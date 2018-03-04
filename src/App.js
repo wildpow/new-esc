@@ -89,6 +89,8 @@ class App extends Component {
             <Route path="/blog" component={Routes.BlogComponent} exact/>
             <Route path="/about" component={Routes.AboutComponent} exact/>
             <Route path="/sitemap" component={Routes.SiteMap} exact/>
+            <Route path="/warranty" component={Routes.Warranty} exact/>
+            <Route path="/policies" component={Routes.Policy} exact/>
             <Route path="/brands" component={Routes.BrandsComponent} exact/>
             <Route path="/brands/sealy" component={Routes.Sealy} exact/>
             <Route path="/brands/stearns" component={Routes.Stearns} exact/>

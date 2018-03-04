@@ -59,6 +59,8 @@ const Footer = () => {
       </Contact>
       <BottomLinkWrapper>
         <BottomLinks to="/sitemap" >Site Map</BottomLinks>
+        <BottomLinks to="/warranty">Warranty Infomation</BottomLinks>
+        <BottomLinks to="/policies">Terms and Policies</BottomLinks>
       </BottomLinkWrapper>
       </Wrapper>
       <Divy>
