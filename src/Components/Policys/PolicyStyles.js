@@ -50,6 +50,8 @@ export const WarranyNumber = styled.a`
 
 export const WarrantyTopper = styled.h3`
   font-family: 'Roboto', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  
   padding-left: 20px;
   padding-right: 20px;
   line-height: 1.2rem;
@@ -96,11 +98,11 @@ export const P = styled.p`
   @media(min-width: 1024px) { 
     font-size: 1.6rem;
     line-height: 2.1rem;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding-right: 25px;
     padding-left: 25px;
-    padding-bottom: 20px;
-    padding-top: 20px;
+    padding-bottom: 15px;
+    padding-top: 15px;
     }
 `;
 
@@ -124,6 +126,8 @@ export const Heading = styled.h3`
 export const Headline = styled.h2`
   font-family: 'Roboto', sans-serif;
   text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  
   background-color: #1565c0;
   color: white;
   margin: 0;
