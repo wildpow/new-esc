@@ -1,5 +1,14 @@
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const SitemapFadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
 
 export const MattLinksWrapper = styled.div`
   display: flex;
@@ -7,6 +16,9 @@ export const MattLinksWrapper = styled.div`
   flex-wrap: wrap;
   justify-content: space-around;
   margin-top: 20px;
+  animation-duration: .5s;
+  animation-name: ${SitemapFadeIn};
+  animation-fill-mode: both;
 `;
 
 export const Main = styled.div`
@@ -52,6 +64,9 @@ export const MainLinks = styled.div`
   flex-direction: column;
   border: 1px solid #eee;
   box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .6);
+  animation-duration: .5s;
+  animation-name: ${SitemapFadeIn};
+  animation-fill-mode: both;
   ul {
     list-style: none;
     line-height: 1.8rem;
