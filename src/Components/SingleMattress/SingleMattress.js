@@ -17,14 +17,14 @@ const SingleMattress = ({ data: { loading, error, mattress } }) => {
   if (error) return <h1>Error fetching the Mattress!</h1>
   if (!loading) {
     if(!mattress) return <Redirect to='/404'/>
-    let name = '';
-    if (mattress.brandName === 'Tempur-PEDIC') {
-      name = 'tempurpedic';
-    } else if (mattress.brandName === 'Sealy'){
-      name = 'sealy'
-    } else {
-      name = 'stearns'
-    }
+    // let name = '';
+    // if (mattress.brandName === 'Tempur-PEDIC') {
+    //   name = 'tempurpedic';
+    // } else if (mattress.brandName === 'Sealy'){
+    //   name = 'sealy'
+    // } else {
+    //   name = 'stearns'
+    // }
     return (
 <Wrapper>
   <Helmet>
@@ -33,13 +33,14 @@ const SingleMattress = ({ data: { loading, error, mattress } }) => {
     
     <meta property="og:image" content={`https://media.graphcms.com/resize=w:1200,h:1200,fit:clip/${mattress.coverImg.handle}`}/>
     <meta name="twitter:image:alt" content={`ESC: ${mattress.name}`}/>
-    <meta property="og:url" content={`https://www.escmattresscenter.com/brands/${name}/${mattress.uri}`}/>
+    {/* <meta property="og:url" content={`https://www.escmattresscenter.com/brands/${name}/${mattress.uri}`}/> */}
     <meta property="og:description" content={mattress.name}/>
     <meta property="og:image:width" content="1200"/>
     <meta property="og:image:height" content="1200"/>
     <meta property="og:image:alt" content={`E.S.C Mattress Center | ${mattress.name}`}/>
-
+    
   </Helmet>
+ 
   <MainTitle>
     <h2>{mattress.name}</h2>
   </MainTitle>
@@ -80,6 +81,7 @@ export const singleMatt = gql`
   query singleMatt($uri: String) {
     mattress: Mattress(uri: $uri) {
       id
+      uri
       brandName
       subName
       subBrand

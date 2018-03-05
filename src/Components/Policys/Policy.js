@@ -10,7 +10,7 @@ const Policy = () => {
         <meta name="description" content="Terms and Policies for E.S.C Mattress Center website"/>        
         <meta name="twitter:image:alt" content="E.S.C Matress Center"/>
         <meta property="og:image" content="https://www.escmattresscenter.com/static/media/logo.952ae51d.png"/> 
-        <meta property="og:url" content="https://www.escmattresscenter.com/policies"/>
+        {/* <meta property="og:url" content="https://www.escmattresscenter.com/policies"/> */}
         <meta property="og:description" content="Terms and Policies for E.S.C Mattress Center website"/>
         <meta property="og:image:width" content="1200"/>
         <meta property="og:image:height" content="1200"/>
