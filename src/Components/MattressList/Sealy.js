@@ -6,6 +6,7 @@ import MattListHoC from './MattListHOC';
 import {  MainWrapper, Wrapper, LinkWrapper,
   MainTitle, SealyImgPlace } from './MattListStyles';
 import SealyImg from '../../images/SealyLogo.png';
+import Loading from '../Loading/Loading';
 
 const Sealy = ({ data: { loading, error, essentials, performance, premium} }) => {
   const title = 'sealy';
@@ -74,7 +75,7 @@ const Sealy = ({ data: { loading, error, essentials, performance, premium} }) =>
       </MainWrapper>
       )
     }
-  return null
+  return <Loading/>
 }
 
 

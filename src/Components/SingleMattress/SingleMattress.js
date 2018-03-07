@@ -7,7 +7,7 @@ import { Wrapper, MainTitle, Main,
         MattSet, PriceTitle, Article,
         Overview, Warranty, Description,
         StyledMarkDown, Profile } from './SingleMattStyles';
-
+import Loading from '../Loading/Loading';
 import { Redirect } from 'react-router-dom';
 import DropDown from '../DropDrown/index';
 import ImageViewer from '../ImageViewer/ImageViewer';
@@ -74,7 +74,7 @@ const SingleMattress = ({ data: { loading, error, mattress } }) => {
 </Wrapper>
     )
   }
-  return null
+  return <Loading/>
 }
 
 export const singleMatt = gql`

@@ -3,6 +3,7 @@ import gql from 'graphql-tag';
 import Helmet from 'react-helmet';
 import { graphql } from 'react-apollo';
 import { Main, SiteLinks, MainLinks, MattLinksWrapper, BrandLinks } from './SiteMapStyles';
+import Loading from '../Loading/Loading';
 
 const SiteMap = ({ data: { loading, error, Sealy, Stearns, Tempur, Ajustable, Blog} }) => {
   if (error) return <h1>Couldn't find sitemap {console.log(error)}</h1>
@@ -96,7 +97,7 @@ const SiteMap = ({ data: { loading, error, Sealy, Stearns, Tempur, Ajustable, Bl
     </Fragment>
     )
   }
-  return null;
+  return <Loading/>;
 }
 
 

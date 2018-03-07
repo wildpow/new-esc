@@ -32,7 +32,7 @@ const Footer = () => {
               <YelpImg src={Yelp} alt="yelp logo"/>
             </YelpHolder>
           </a>
-          <a href="https://goo.gl/maps/87hmC4TV4cv" target="_blank" rel="noopener noreferrer">
+          <a href="https://goo.gl/maps/AivxRZEWVwm" target="_blank" rel="noopener noreferrer">
             <MapsImg src={Google} alt="google maps logo"/>
           </a>
           
@@ -50,7 +50,7 @@ const Footer = () => {
         <Hours>
           <HoursSpan>Address</HoursSpan>
           <HoursPara>
-          <MapLink href="https://goo.gl/maps/k4NJFiCyoFF2" target="_blank" rel="noopener noreferrer">
+          <MapLink href="https://goo.gl/maps/AivxRZEWVwm" target="_blank" rel="noopener noreferrer">
             10121 Evergreen Way<br/> #30<br/>
             Everett, Washington 98204
             </MapLink>

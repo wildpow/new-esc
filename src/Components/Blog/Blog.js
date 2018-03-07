@@ -3,7 +3,7 @@ import { graphql } from 'react-apollo';
 import gql from 'graphql-tag';
 import Helmet from 'react-helmet';
 import { Header, HeaderText, Section, Homebutton, ShowMoreWrapper, Main} from './BlogListStyles'
-
+import Loading from '../Loading/Loading';
 import PrefetchPost from './Prefetch/PrefetchPosts';
 
 const POSTS_PER_PAGE = 4
@@ -44,7 +44,7 @@ const BlogComponent = ({ data: { loading, error, allPosts, _allPostsMeta}, loadM
       </Main>
     )
   }
-  return null;
+  return <Loading/>;
 }
 
 export const allPosts = gql`

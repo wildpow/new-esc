@@ -28,7 +28,7 @@ export const MainWrapper = styled.div`
 export const MainTitle = styled.header`
   display: flex;
   padding: 0px 10px 0px 10px;
-  background-color: #1565c0;
+  background-color: white;
 `;
 
 export const Title = styled.h2`

@@ -8,6 +8,7 @@ import { Wrapper, MainTitle, Main, MainInfo, PriceWrapper,
         from '../SingleMattress/SingleMattStyles';
 import DropDown from '../DropDrown/index';
 import ImageViewer from '../ImageViewer/ImageViewer';
+import Loading from '../Loading/Loading';
 import { Redirect } from 'react-router-dom';
 
 const SingleBase = ({data: { loading, error, base}}) => {
@@ -57,7 +58,7 @@ const SingleBase = ({data: { loading, error, base}}) => {
       </Wrapper>
     )
   }
-  return null
+  return <Loading/>
 }
 
 export const singleBase = gql`

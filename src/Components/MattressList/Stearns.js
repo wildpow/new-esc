@@ -7,6 +7,7 @@ import {  MainWrapper, Wrapper, LinkWrapper,
         } from './MattListStyles';
 import MattListHoC from './MattListHOC';
 import StearnsImg from '../../images/StearnsLogo.png';
+import Loading from '../Loading/Loading';
 
 const Stearns = ({ data: { loading, error, Brands} }) => {
   const title = 'stearns';
@@ -49,7 +50,7 @@ const Stearns = ({ data: { loading, error, Brands} }) => {
       </MainWrapper>
     )
   }
-  return null
+  return <Loading/>
 };
 
 export const stearnsMattresses = gql`
