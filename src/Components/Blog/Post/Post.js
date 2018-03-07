@@ -5,7 +5,7 @@ import { Redirect } from 'react-router-dom';
 import { Helmet } from "react-helmet";
 import Markdown from 'react-markdown';
 import { Article, Header, HeaderText, BottomImg, Main } from './PostStyles';
-
+import Loading from '../../Loading/Loading';
 
 const Post = ({ data: { loading, error, post } }) => {
   if (error) return console.log(error)
@@ -41,7 +41,7 @@ const Post = ({ data: { loading, error, post } }) => {
       </Main>
     )
   }
-  return null
+  return <Loading/>
 }
 
 export const singlePost = gql`

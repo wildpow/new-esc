@@ -6,9 +6,9 @@ import {  MainWrapper,
           Wrapper,
           LinkWrapper,
           MainTitle, TempurPImg  } from './MattListStyles';
-
 import TempurImg from '../../images/TempurLogo2.png';
 import MattListHoC from './MattListHOC';
+import Loading from '../Loading/Loading';
 
 const Tempur = ({ data: { loading, error, Brands} }) => {
   const title = 'tempurpedic';
@@ -51,7 +51,7 @@ const Tempur = ({ data: { loading, error, Brands} }) => {
       </MainWrapper>
     )
   }
-  return null
+  return <Loading/>
 }
 
 export const tempurMattresses = gql`

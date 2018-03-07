@@ -4,6 +4,7 @@ import { graphql } from 'react-apollo';
 import { Helmet } from "react-helmet";
 import { Main} from './AdjustableStyles';
 import AdjHoc from './adjHOC';
+import Loading from '../Loading/Loading';
 
 const AdjustableComponent = ({ data: {error, loading, Bases} }, client) => {
   if (error) return <div>{console.log(error)}</div>
@@ -30,7 +31,7 @@ const AdjustableComponent = ({ data: {error, loading, Bases} }, client) => {
       </Main>
     )
   }
-  return null
+  return <Loading/>
 };
 
 export const allAdjustables = gql`

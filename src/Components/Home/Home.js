@@ -33,16 +33,16 @@ const HomeComponent = () => {
         showStatus={false}
       >
         <SaleWrapper>
-          <OneImg src={Sale} alt="this"/>
+          <OneImg src={Sale} alt="Image of E.S.C Mattress Center's Floor model close out mattress and adjustable base sale."/>
         </SaleWrapper>
         <Linky to='/brands/stearns'>
-          <OneImg src={Stearns} alt="this"/>
+          <OneImg src={Stearns} alt="Image of Stearns and Foster top rated inner spring mattress"/>
         </Linky>
         <Linky to='/brands/tempurpedic'>
-          <OneImg src={Tempur} alt="this"/>
+          <OneImg src={Tempur} alt="Image of Tempurpedic 50% off mattress floor model close out sale"/>
         </Linky>
         <Linky to='/brands/sealy'>
-          <OneImg src={Sealy} alt="this"/> 
+          <OneImg src={Sealy} alt="Image of Sealy's 50% off mattress floor model close out sale"/> 
         </Linky>
       </Carousel>
     </Main>
