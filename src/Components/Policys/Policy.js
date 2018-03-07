@@ -8,16 +8,15 @@ const Policy = () => {
       <Helmet>
         <title>ESC: Terms and Policies</title>
         <meta name="description" content="Terms and Policies for E.S.C Mattress Center website"/>        
-        <meta name="twitter:image:alt" content="E.S.C Matress Center"/>
-        <meta property="og:image" content="https://www.escmattresscenter.com/static/media/logo.952ae51d.png"/> 
-        {/* <meta property="og:url" content="https://www.escmattresscenter.com/policies"/> */}
-        <meta property="og:description" content="Terms and Policies for E.S.C Mattress Center website"/>
+        <meta property="og:type"   content="website" />
+        <meta property="og:site_name" content="E.S.C. Mattress Center"/>
+        <meta property="og:url" content="https://www.escmattresscenter.com/"/>
+        <meta property="og:image:secure_url" content="https://www.escmattresscenter.com/static/media/logo.952ae51d.png"/> 
         <meta property="og:image:width" content="1200"/>
-        <meta property="og:image:height" content="1200"/>
+        <meta property="og:image:height" content="627"/>
         <meta property="og:image:alt" content="E.S.C Mattress Center's logo of a panda"/>
-
-
-
+        <meta property="og:title" content="E.S.C. Mattress Center | Terms and Policies"/>
+        <meta property="og:description" content="A licensed mattress retailer for Sealy, Stearns and Foster, and Tempur-Pedic offering almost fifty mattresses with prices to fit every budget.  ESC Mattress Center is a locally owned company in Everett WA with more than twenty years of mattress industry experience between our non-commissioned staff."/>
       </Helmet>
       <Headline>Terms and Policies</Headline>
       <Heading>90 Day Comfort Guarantee</Heading>

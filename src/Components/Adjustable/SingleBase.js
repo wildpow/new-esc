@@ -20,14 +20,15 @@ const SingleBase = ({data: { loading, error, base}}) => {
         <Helmet>
           <title>ESC: {base.fullName}</title>
           <meta name="description" content={base.baseDescription}/>
-
-          <meta property="og:image" content={`https://media.graphcms.com/resize=w:1200,h:1200,fit:clip/${base.coverImg.handle}`}/>
-          <meta name="twitter:image:alt" content={`ESC: ${base.fullName}`}/>
-          {/* <meta property="og:url" content={`https://www.escmattresscenter.com/adjustable/${base.uri}`}/> */}
-          <meta property="og:description" content={base.fullName}/>
+          <meta property="og:type"   content="website" />
+          <meta property="og:site_name" content="E.S.C. Mattress Center"/>
+          <meta property="og:url" content="https://www.escmattresscenter.com/"/>
+          <meta property="og:image:secure_url" content={`https://media.graphcms.com/resize=w:1200,h:627,fit:clip/${base.coverImg.handle}`}/>
           <meta property="og:image:width" content="1200"/>
-          <meta property="og:image:height" content="1200"/>
+          <meta property="og:image:height" content="627"/>
           <meta property="og:image:alt" content={`E.S.C Mattress Center | ${base.fullName}`}/>
+          <meta property="og:title" content={`E.S.C Mattress Center | ${base.fullName}`}/>
+          <meta property="og:description" content={base.fullName}/>
         </Helmet>
         <MainTitle>
           <h1>{base.fullName}</h1>
