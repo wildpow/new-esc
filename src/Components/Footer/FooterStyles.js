@@ -9,6 +9,9 @@ export const MainFooter = styled.footer`
     margin-top: 30px;
     margin-bottom: 10px;
   }
+  @media (min-width: 1024px) {
+    margin-top: 20px;
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -149,7 +152,7 @@ display: flex;
 flex-direction: row;
 justify-content: center;
 margin-top: 20px;
-@media(min-width: 768px) { margin-top: 40px; }
+@media(min-width: 768px) { margin-top: 30px; }
 `;
 
 export const BottomLinkWrapper = styled.div`
