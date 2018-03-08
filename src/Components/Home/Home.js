@@ -9,6 +9,7 @@ import Sealy from '../../images/SealyFMCOCarouselRatio.jpg';
 import Tempur from '../../images/TempurFMCOCarouselRatio.jpg';
 import Stearns from '../../images/StearnsTopRatedCarouselRatio.jpg';
 import Sale from '../../images/FMCOCarouselRatio.png';
+import Front from '../FrontInfo/front';
 
 const HomeComponent = () => {
   return (
@@ -46,6 +47,7 @@ const HomeComponent = () => {
           <OneImg src={Sealy} alt="Image of Sealy's 50% off mattress floor model close out sale"/> 
         </Linky>
       </Carousel>
+      <Front/>
     </Main>
   )
 }
