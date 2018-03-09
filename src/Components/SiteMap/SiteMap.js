@@ -2,7 +2,8 @@ import React, { Fragment } from 'react'
 import gql from 'graphql-tag';
 import Helmet from 'react-helmet';
 import { graphql } from 'react-apollo';
-import { Main, SiteLinks, MainLinks, MattLinksWrapper, BrandLinks } from './SiteMapStyles';
+import { Main, SiteLinks, MainLinks, MattLinksWrapper, BrandLinks,
+          TheNew2, UnList, Lilist } from './SiteMapStyles';
 import Loading from '../Loading/Loading';
 
 const SiteMap = ({ data: { loading, error, Sealy, Stearns, Tempur, Ajustable, Blog} }) => {
@@ -24,15 +25,15 @@ const SiteMap = ({ data: { loading, error, Sealy, Stearns, Tempur, Ajustable, Bl
           <meta property="og:description" content="Sleep like the experts do."/>
         </Helmet>
       <MainLinks>
-        <h2>Main Site Links</h2>
-        <ul>
-          <li><SiteLinks to="/">Home</SiteLinks></li>
-          <li><SiteLinks to="/about">About</SiteLinks></li>
-          <li><SiteLinks to="/accessories">Accessories</SiteLinks></li>
-          <li><SiteLinks to="/financing">Financing</SiteLinks></li>
-          <li><SiteLinks to="/adjustable">Adjustable</SiteLinks></li>
-          <li><SiteLinks to="/brands">Brands</SiteLinks></li>
-        </ul>
+        <TheNew2>Main Site Links</TheNew2>
+        <UnList>
+          <Lilist><SiteLinks to="/">Home</SiteLinks></Lilist>
+          <Lilist><SiteLinks to="/about">About</SiteLinks></Lilist>
+          <Lilist><SiteLinks to="/accessories">Accessories</SiteLinks></Lilist>
+          <Lilist><SiteLinks to="/financing">Financing</SiteLinks></Lilist>
+          <Lilist><SiteLinks to="/adjustable">Adjustable</SiteLinks></Lilist>
+          <Lilist><SiteLinks to="/brands">Brands</SiteLinks></Lilist>
+        </UnList>
       </MainLinks>
       <MattLinksWrapper>
         <Main>

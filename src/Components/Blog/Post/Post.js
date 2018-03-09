@@ -3,8 +3,7 @@ import gql from 'graphql-tag';
 import { graphql } from 'react-apollo';
 import { Redirect } from 'react-router-dom';
 import { Helmet } from "react-helmet";
-import Markdown from 'react-markdown';
-import { Article, Header, HeaderText, BottomImg, Main } from './PostStyles';
+import { Marker, Header, HeaderText, BottomImg, Main } from './PostStyles';
 import Loading from '../../Loading/Loading';
 
 const Post = ({ data: { loading, error, post } }) => {
@@ -28,12 +27,12 @@ const Post = ({ data: { loading, error, post } }) => {
         <Header>
           <HeaderText>{post.title}</HeaderText>
         </Header>
-        <Article>
-          <Markdown
+        <article>
+          <Marker
             source={post.content}
             escapeHtml={false}
           />
-        </Article>
+        </article>
       
         {post.bottomimg ?
           <BottomImg src={`https://media.graphcms.com/resize=w:${post.bottomimg.width},h:${post.bottomimg.height},fit:clip/${post.bottomimg.handle}`} alt={`Image related to ${post.title}`}/>

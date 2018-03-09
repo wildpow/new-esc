@@ -67,17 +67,10 @@ export const MainLinks = styled.div`
   animation-duration: .5s;
   animation-name: ${SitemapFadeIn};
   animation-fill-mode: both;
-  ul {
-    list-style: none;
-    line-height: 1.8rem;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding-left: 0;
-  }
-  li {
-    font-family: 'Open Sans', sans-serif;
+`;
+
+export const Lilist = styled.li`
+  font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
     letter-spacing: .1rem;
     padding-left: 10px;
@@ -88,8 +81,19 @@ export const MainLinks = styled.div`
       padding-left: 0px;
       padding-right: 0px;
     }
-  }
-  h2 {
+`;
+
+export const UnList = styled.ul`
+  list-style: none;
+  line-height: 1.8rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-left: 0;
+`;
+
+export const TheNew2 = styled.h2`
     font-family: 'Roboto', sans-serif;
     text-align: center;
     background-color: #1565c0;
@@ -103,6 +107,4 @@ export const MainLinks = styled.div`
     @media(min-width: 768px) {
       font-size: 2rem;
     }
-  }
 `;
-
