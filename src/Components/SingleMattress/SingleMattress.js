@@ -25,7 +25,7 @@ const SingleMattress = ({ data: { loading, error, mattress } }) => {
         <meta property="og:type"   content="website" />
         <meta property="og:site_name" content="E.S.C. Mattress Center"/>
         <meta property="og:url" content="https://www.escmattresscenter.com/"/>
-        <meta property="og:image:secure_url" content={`https://media.graphcms.com/resize=w:1200,h:627,fit:clip/${mattress.coverImg.handle}`}/>
+        <meta property="og:image" content={`https://media.graphcms.com/resize=w:1200,h:627,fit:clip/${mattress.coverImg.handle}`}/>
         <meta property="og:image:width" content="1200"/>
         <meta property="og:image:height" content="627"/>
         <meta property="og:image:alt" content={`E.S.C Mattress Center | ${mattress.name}`}/>

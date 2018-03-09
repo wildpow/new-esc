@@ -20,7 +20,7 @@ const HomeComponent = () => {
         <meta property="og:type"   content="website" />
         <meta property="og:site_name" content="E.S.C. Mattress Center"/>
         <meta property="og:url" content="https://www.escmattresscenter.com/"/>
-        <meta property="og:image:secure_url" content="https://www.escmattresscenter.com/static/media/logo.952ae51d.png"/> 
+        <meta property="og:image" content="https://www.escmattresscenter.com/static/media/logo.952ae51d.png"/> 
         <meta property="og:image:width" content="1200"/>
         <meta property="og:image:height" content="627"/>
         <meta property="og:image:alt" content="E.S.C Mattress Center's logo of a panda"/>
