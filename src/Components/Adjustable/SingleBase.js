@@ -4,9 +4,8 @@ import { graphql } from 'react-apollo';
 import { Helmet } from "react-helmet";
 import { Wrapper, Main, MainInfo, PriceWrapper,
   Price, PriceTitle, Warranty, Description, Overview,
-        Article, StyledMarkDown, Profile }
+        Article, StyledMarkDown, Profile, MainTitle }
         from '../SingleMattress/SingleMattStyles';
-import { H2 } from '../../Styles';
 import DropDown from '../DropDrown/index';
 import ImageViewer from '../ImageViewer/ImageViewer';
 import Loading from '../Loading/Loading';
@@ -33,7 +32,7 @@ const SingleBase = ({data: { loading, error, base}}) => {
           <meta property="og:description" content={base.fullName}/>
         </Helmet>
         <header>
-          <H2>{base.fullName}</H2>
+          <MainTitle>{base.fullName}</MainTitle>
         </header>
         <Main>
           <ImageViewer cover={base.coverImg.handle} img1={base.detail1.handle} img2={base.detail2.handle} type={'adjustable base without mattress'} fullname={base.fullName}/>
