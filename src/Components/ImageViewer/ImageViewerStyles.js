@@ -1,15 +1,12 @@
 import styled from 'styled-components';
+import { FlexCol, FlexRow } from '../../Styles';
 
-export const ImgWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
+export const ImgWrapper = FlexCol.extend`
   margin: 0;
   @media(min-width: 1024px) {margin-right: 10px;}
 `;
 
-export const SmallImgHolder = styled.div`
-  display: flex;
-  flex-direction: row;
+export const SmallImgHolder = FlexRow.extend`
   justify-content: center;
   align-self: center;
 `;

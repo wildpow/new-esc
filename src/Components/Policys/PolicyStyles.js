@@ -1,44 +1,39 @@
-import styled, { keyframes } from 'styled-components';
-
-const PolicyFadeIn = keyframes`
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-`;
+import styled from 'styled-components';
+import {FadeIn, Border, BoxShadow,
+        MainFont1, MainFont2, Blue,
+        TextShadow, FlexCol, Animation,
+        RedBorderBottom } from '../../Styles';
 
 export const MainArticle = styled.article`
-  border: 1px solid #eee;
-  box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .6);
-  animation-duration: .5s;
-  animation-name: ${PolicyFadeIn};
-  animation-fill-mode: both;
+  border: ${Border};
+  box-shadow: ${BoxShadow};
+  animation-name: ${FadeIn};
+  ${Animation}
+  @media(min-width: 1300px) {
+    margin-left: 85px;
+    margin-right: 85px;
+  }
 `;
 
-
 export const WarranyName = styled.h4`
+  font-family: ${MainFont1};
+  border-bottom: ${RedBorderBottom};
   text-align: center;
-  border-bottom: 4px solid #eb1c24;
   margin: 0 auto;
   font-size: 1rem;
   letter-spacing: .09rem;
-  /* line-height: 1rem; */
-  font-family: 'Roboto', sans-serif;
   @media(min-width: 768px) { font-size: 1.5rem; letter-spacing: .12rem;}
   @media(min-width: 1022px) { font-size: 1.7rem; letter-spacing: .20rem; }
 `;
 
 export const WarranyNumber = styled.a`
+  color: ${Blue};
+  font-family: ${MainFont2};
   margin-top: 10px;
   margin-bottom: 20px;
   text-align: center;
-  color: #1565c0;
-  font-family: 'Open Sans', sans-serif;
   font-size: 1.2rem;
   letter-spacing: .12rem;
-
   &:hover {
     color: #eb1c24;
   }
@@ -49,18 +44,14 @@ export const WarranyNumber = styled.a`
 `;
 
 export const WarrantyTopper = styled.h3`
-  font-family: 'Roboto', sans-serif;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  
-  padding-left: 20px;
-  padding-right: 20px;
+  font-family: ${MainFont1};
+  text-shadow: ${TextShadow};
+  background-color: ${Blue};
+  padding: 20px; 
   line-height: 1.2rem;
   letter-spacing: .1rem;
-  padding-top: 20px;
-  padding-bottom: 20px;
   text-align: center;
   color: white; 
-  background-color: #1565c0;
   @media(min-width:768px) {
     line-height: 1.8rem;
     letter-spacing: .18rem;
@@ -76,18 +67,16 @@ export const WarrantyTopper = styled.h3`
     letter-spacing: .22rem;}
 `
 
-export const WarrantyWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
+export const WarrantyWrapper = FlexCol.extend`
   justify-content: center;
 `;
 
 export const P = styled.p`
+  font-family: ${MainFont2};
   text-indent: 25px;
   line-height: 1.35rem;
   padding-right: 8px;
   padding-left: 8px;
-  font-family: 'Open Sans', sans-serif;
   margin-top: 10px;
   @media(min-width: 768px) {
     font-size: 1.5rem;
@@ -107,9 +96,9 @@ export const P = styled.p`
 `;
 
 export const Heading = styled.h3`
-  border-bottom: 4px solid #eb1c24;
+  font-family: ${MainFont2};
+  border-bottom: ${RedBorderBottom};
   padding-bottom: 5px;
-  font-family: 'Open Sans', sans-serif;
   padding-left: 10px;
   margin-bottom: 8px;
   @media(min-width: 768px) {
@@ -123,26 +112,25 @@ export const Heading = styled.h3`
   }
 `; 
 
-export const Headline = styled.h2`
-  font-family: 'Roboto', sans-serif;
-  text-align: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  
-  background-color: #1565c0;
-  color: white;
-  margin: 0;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  letter-spacing: .25rem;
-  font-size: 1.2rem;
-  @media(min-width: 768px) {
-    font-size: 2rem;
-  }
-  @media(min-width: 1024px) {
-    font-size: 2.2rem;
-  }
-`;
+// export const WarrantyHeadline = Headline.extend`
+//   margin-bottom: 20px
+// `;
 
-export const WarrantyHeadline = Headline.extend`
-  margin-bottom: 20px
-`;
+// export const Headline = styled.h2`
+//   font-family: ${MainFont1};
+//   text-shadow: ${TextShadow};
+//   background-color: ${Blue};
+//   text-align: center;
+//   color: white;
+//   margin: 0;
+//   padding-top: 15px;
+//   padding-bottom: 15px;
+//   letter-spacing: .25rem;
+//   font-size: 1.2rem;
+//   @media(min-width: 768px) {
+//     font-size: 2rem;
+//   }
+//   @media(min-width: 1024px) {
+//     font-size: 2.2rem;
+//   }
+// `;

@@ -2,17 +2,18 @@ import React from 'react'
 import gql from 'graphql-tag'
 import { graphql } from 'react-apollo';
 import { Helmet } from "react-helmet";
-import { Wrapper, MainTitle, Main, MainInfo, PriceWrapper,
-        MattOnly, PriceTitle, Warranty, Description, Overview,
-        Article, StyledMarkDown, Profile }
+import { Wrapper, Main, MainInfo, PriceWrapper,
+  Price, PriceTitle, Warranty, Description, Overview,
+        Article, StyledMarkDown, Profile, MainTitle }
         from '../SingleMattress/SingleMattStyles';
 import DropDown from '../DropDrown/index';
 import ImageViewer from '../ImageViewer/ImageViewer';
 import Loading from '../Loading/Loading';
 import { Redirect } from 'react-router-dom';
+import Error from '../Error/Error';
 
 const SingleBase = ({data: { loading, error, base}}) => {
-  if (error) return <div>{console.log(error)}</div>
+  if (error) return <Error/>
   if (!loading) {
     if(!base) return <Redirect to='/404'/>
     return(
@@ -30,18 +31,18 @@ const SingleBase = ({data: { loading, error, base}}) => {
           <meta property="og:title" content={`E.S.C Mattress Center | ${base.fullName}`}/>
           <meta property="og:description" content={base.fullName}/>
         </Helmet>
-        <MainTitle>
-          <h1>{base.fullName}</h1>
-        </MainTitle>
+        <header>
+          <MainTitle>{base.fullName}</MainTitle>
+        </header>
         <Main>
           <ImageViewer cover={base.coverImg.handle} img1={base.detail1.handle} img2={base.detail2.handle} type={'adjustable base without mattress'} fullname={base.fullName}/>
           <MainInfo>
             <StyledMarkDown source={base.features} escapeHtml={false} />
             <PriceWrapper>
-              <MattOnly>
+              <Price>
                 <PriceTitle>Base Price</PriceTitle>
                 <DropDown data={base.price} data2={base.salePrice}/>
-              </MattOnly>
+              </Price>
             </PriceWrapper>
           </MainInfo>
         </Main>

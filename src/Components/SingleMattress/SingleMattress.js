@@ -3,18 +3,20 @@ import gql from 'graphql-tag'
 import { graphql } from 'react-apollo';
 import Helmet from 'react-helmet';
 import { Wrapper, MainTitle, Main,
-        MainInfo, PriceWrapper, MattOnly,
-        MattSet, PriceTitle, Article,
+        MainInfo, PriceWrapper,
+        Price, PriceTitle, Article,
         Overview, Warranty, Description,
         StyledMarkDown, Profile } from './SingleMattStyles';
+
 import Loading from '../Loading/Loading';
 import { Redirect } from 'react-router-dom';
 import DropDown from '../DropDrown/index';
 import ImageViewer from '../ImageViewer/ImageViewer';
+import Error from '../Error/Error';
 
 const SingleMattress = ({ data: { loading, error, mattress } }) => {
   
-  if (error) return <h1>Error fetching the Mattress!</h1>
+  if (error) return <Error/>
   if (!loading) {
   if(!mattress) return <Redirect to='/404'/>
   return (
@@ -32,22 +34,22 @@ const SingleMattress = ({ data: { loading, error, mattress } }) => {
         <meta property="og:title" content="E.S.C. Mattress Center"/>
         <meta property="og:description" content={`E.S.C Mattress Center | ${mattress.name}`}/>
       </Helmet>
-      <MainTitle>
-        <h2>{mattress.name}</h2>
-      </MainTitle>
+      <header>
+        <MainTitle>{mattress.name}</MainTitle>
+      </header>
       <Main>
         <ImageViewer cover={mattress.coverImg.handle} img1={mattress.detail1.handle} img2={mattress.detail2.handle} fullname={mattress.name} type={'mattress'}/>
         <MainInfo>
           <StyledMarkDown source={mattress.features} escapeHtml={false} />
           <PriceWrapper>
-            <MattOnly>
+            <Price>
               <PriceTitle>Mattress Only Price</PriceTitle>
               <DropDown data={mattress.mattOnly} data2={mattress.mattOnlySale}/>
-            </MattOnly>
-            <MattSet>
+            </Price>
+            <Price>
               <PriceTitle>Mattress Set Price</PriceTitle>
               <DropDown data={mattress.setPrice} data2={mattress.setPriceSale}/>
-            </MattSet>
+            </Price>
           </PriceWrapper>
         </MainInfo>
       </Main>

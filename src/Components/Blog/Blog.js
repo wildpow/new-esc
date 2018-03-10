@@ -2,14 +2,16 @@ import React from 'react';
 import { graphql } from 'react-apollo';
 import gql from 'graphql-tag';
 import Helmet from 'react-helmet';
-import { Header, HeaderText, Section, Homebutton, ShowMoreWrapper, Main} from './BlogListStyles'
+import { Section, Homebutton, ShowMoreWrapper, Main} from './BlogListStyles';
+import { H2 } from '../../Styles';
 import Loading from '../Loading/Loading';
 import PrefetchPost from './Prefetch/PrefetchPosts';
+import Error from '../Error/Error';
 
 const POSTS_PER_PAGE = 4
 
 const BlogComponent = ({ data: { loading, error, allPosts, _allPostsMeta}, loadMorePosts}) => {
-  if (error) return console.log(error)
+  if (error) return <Error/>
   if (allPosts && _allPostsMeta) {
     const areMorePosts = allPosts.length < _allPostsMeta.count
 
@@ -28,9 +30,9 @@ const BlogComponent = ({ data: { loading, error, allPosts, _allPostsMeta}, loadM
           <meta property="og:title" content="E.S.C. Mattress Center | Blog"/>
           <meta property="og:description" content="Come read about ways to achieve better sleep, and live healthier from people who have been helping people sleep better for 20+ years. Check here to see our schedule of professional speakers speaking on sleep topics."/>
         </Helmet>
-        <Header>
-          <HeaderText>Our Blog</HeaderText>
-        </Header>
+        <header>
+          <H2>Our Blog</H2>
+        </header>
       <Section>
           {allPosts.map(post => (
               <PrefetchPost key={post.id} title={post.title} slug={post.slug} img={post.coverImage.handle}/>

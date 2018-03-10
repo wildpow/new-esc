@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom';
+import { Blue, Red, MainFont1 } from '../../Styles';
 
 export const Button = styled.button`
   float: right;
@@ -36,9 +37,9 @@ export const MenuLines = styled.span`
     height: 6px;
     width: 70%;
   }
-  span:nth-child(1) { top: 0; background: #eb1c24; }
-  span:nth-child(2) { top: 10px; background-color: #1565c0; }
-  span:nth-child(3) { top: 20px; background: #eb1c24; }
+  span:nth-child(1) { top: 0; background: ${Red}; }
+  span:nth-child(2) { top: 10px; background-color: ${Blue}; }
+  span:nth-child(3) { top: 20px; background: ${Red}; }
 
   @media(min-width: 768px) {
     span { height: 8px !important; width: 100% !important; }
@@ -55,10 +56,10 @@ export const Bar = styled.span`
 `;
 
 export const StyledLink = styled(NavLink)`
+  font-family: ${MainFont1};
   padding: 28px 28px 5px 28px;
   text-align: center;
   font-size: 2rem;
-  font-family: 'Roboto', sans-serif;
   letter-spacing: .22rem;
   color: white;
   text-decoration: none;
@@ -93,16 +94,13 @@ export const theme = {
 export const Wrapper = styled.div`
   width: 100vw;
   height: 100vh;
-  background-color: #1565c0;
+  background-color: ${Blue};
   position: fixed;
   top: 0;
   left: 0;
   transition: transform .3s cubic-bezier(0, .52, 0, 1);
   overflow: scroll;
   z-index: 1000;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-between; */
   &.hide { transform: translate3d(-100vw, 0, 0); }
   &.show { transform: translate3d(0vw, 0, 0); }
 `;

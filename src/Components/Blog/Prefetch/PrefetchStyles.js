@@ -16,10 +16,7 @@ export const StyledLink = styled(Link)`
   text-decoration: none;
   border: 2px solid black;
   box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .9); 
-  border-top-left-radius: .14rem;
-  border-top-right-radius: .14rem;
-  border-bottom-right-radius: .14rem;
-  border-bottom-left-radius: .14rem;
+  border-radius: .14rem;
   background-color: white;
   color: #1565c0;
   transition: all .15s ease-in-out;

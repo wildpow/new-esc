@@ -1,9 +1,9 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { MainArticle, WarrantyHeadline,
+import { MainArticle,
         P, WarranyName, WarranyNumber,
         WarrantyWrapper, WarrantyTopper } from './PolicyStyles';
-
+import { H2 } from '../../Styles';
 const Warranty = () => {
   return (
     <MainArticle>
@@ -20,7 +20,9 @@ const Warranty = () => {
         <meta property="og:title" content="E.S.C. Mattress Center | Warranty"/>
         <meta property="og:description" content="A licensed mattress retailer for Sealy, Stearns and Foster, and Tempur-Pedic offering almost fifty mattresses with prices to fit every budget.  ESC Mattress Center is a locally owned company in Everett WA with more than twenty years of mattress industry experience between our non-commissioned staff."/>
       </Helmet>
-      <WarrantyHeadline>Mattress Warranty Information</WarrantyHeadline>
+      <header>
+        <H2>Mattress Warranty Information</H2>
+      </header>
       <P>
         Warranty requirements are determined by the manufacturer and details will be 
         set forth in the warranty card attached to your new mattress set. All warranty 

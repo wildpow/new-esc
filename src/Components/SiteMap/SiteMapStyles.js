@@ -1,29 +1,24 @@
 import { Link } from 'react-router-dom';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
+import { FadeIn, Border, BoxShadow,
+          MainFont1, MainFont2, Blue,
+          FlexCol, FlexRow, Animation } from '../../Styles';
 
-const SitemapFadeIn = keyframes`
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-`;
-
-export const MattLinksWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
+export const MattLinksWrapper = FlexRow.extend`
+  animation-name: ${FadeIn};
   flex-wrap: wrap;
   justify-content: space-around;
   margin-top: 20px;
-  animation-duration: .5s;
-  animation-name: ${SitemapFadeIn};
-  animation-fill-mode: both;
+  ${Animation}
+  @media(min-width: 1300px) {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
 `;
 
 export const Main = styled.div`
-  border: 1px solid #eee;
-  box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .6);
+  border: ${Border};
+  box-shadow: ${BoxShadow};
   margin-bottom: 20px;
     ul {
       padding-right: 20px;
@@ -32,11 +27,11 @@ export const Main = styled.div`
       line-height: 1.9rem;
     }
     li {
-      font-family: 'Open Sans', sans-serif;
+      font-family: ${MainFont2};
     }
     h3 {
-      font-family: 'Roboto', sans-serif;
-      background-color: #1565c0;
+      font-family: ${MainFont1};
+      background-color: ${Blue};
       margin: 0;
       padding-top: 15px;
       padding-bottom: 15px;
@@ -58,28 +53,29 @@ export const SiteLinks = styled(Link)`
   }
 `;
 
-export const MainLinks = styled.div`
-  display: flex;
+export const MainLinks = FlexCol.extend`
+  animation-name: ${FadeIn};
+  border: ${Border};
+  box-shadow: ${BoxShadow};
   margin-top: 15px;
-  flex-direction: column;
-  border: 1px solid #eee;
-  box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .6);
-  animation-duration: .5s;
-  animation-name: ${SitemapFadeIn};
-  animation-fill-mode: both;
+  ${Animation}
+  @media(min-width: 1300px) {
+    margin-left: 85px;
+    margin-right: 85px;
+  }
 `;
 
 export const Lilist = styled.li`
-  font-family: 'Open Sans', sans-serif;
-    font-size: 1rem;
-    letter-spacing: .1rem;
-    padding-left: 10px;
-    padding-right: 10px;
-    @media(min-width:412px) { padding-left: 15px; padding-right: 15px;}
-    @media(min-width: 768px) {
-      font-size: 1.3rem;
-      padding-left: 0px;
-      padding-right: 0px;
+  font-family: ${MainFont2};
+  font-size: 1rem;
+  letter-spacing: .1rem;
+  padding-left: 10px;
+  padding-right: 10px;
+  @media(min-width:412px) { padding-left: 15px; padding-right: 15px;}
+  @media(min-width: 768px) {
+    font-size: 1.3rem;
+    padding-left: 0px;
+    padding-right: 0px;
     }
 `;
 
@@ -93,18 +89,27 @@ export const UnList = styled.ul`
   padding-left: 0;
 `;
 
-export const TheNew2 = styled.h2`
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    background-color: #1565c0;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
-    margin: 0;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    letter-spacing: .25rem;
-    font-size: 1.2rem;
-    @media(min-width: 768px) {
-      font-size: 2rem;
-    }
+export const BottomLinks = FlexRow.extend`
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    @media(min-width: 1300px) {
+    margin-left: 85px;
+    margin-right: 85px;
+  }
 `;
+
+// export const TheNew2 = styled.h2`
+//     font-family: ${MainFont1};
+//     background-color: ${Blue};
+//     text-shadow: ${TextShadow}; 
+//     text-align: center;
+//     color: white;
+//     margin: 0;
+//     padding-top: 15px;
+//     padding-bottom: 15px;
+//     letter-spacing: .25rem;
+//     font-size: 1.2rem;
+//     @media(min-width: 768px) {
+//       font-size: 2rem;
+//     }
+// `;

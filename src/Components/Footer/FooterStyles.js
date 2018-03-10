@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { BoxShadow, Border, FlexRow, FlexCol, MainFont2,
+          Red, Blue} from '../../Styles';
 
 export const MainFooter = styled.footer`
   margin-top: 15px;
   margin-bottom: 5px;
-
   @media (min-width: 768px) {
     margin-top: 30px;
     margin-bottom: 10px;
@@ -15,11 +16,11 @@ export const MainFooter = styled.footer`
 `;
 
 export const Wrapper = styled.div`
+  box-shadow: ${BoxShadow};
+  border: ${Border};
   margin: 0 auto;
   padding-top: 5px;
   background-color: white;
-  border: 1px solid #eee;
-  box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .6);
   @media(min-width: 1200px) {
     max-width: 100%;
     padding-right: 20px;
@@ -28,38 +29,45 @@ export const Wrapper = styled.div`
     margin-right: 220px;
   }
 `;
-
-export const Social = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 7px 7px 4px 7px;
-`;
-
-export const FBimage = styled.img`
-  max-width: 3.5rem;
+const ImgHover = styled.img`
   transition: all .25s ease-in;
   &:hover {
     transform: scale3d(1.1,1.1,1);
   }
 `;
+export const Social = FlexRow.extend`
+  justify-content: center;
+  padding: 7px 7px 4px 7px;
+`;
 
-export const Timage = styled.img`
-max-width: 4.1rem;
-padding-left: 10px;
-transition: all .25s ease-in;
-  &:hover {
-    transform: scale3d(1.1,1.1,1);
-  }
+export const FBimage = ImgHover.extend`
+  max-width: 3.5rem;
+`;
+
+export const Timage = ImgHover.extend`
+  max-width: 4.1rem;
+  padding-left: 10px;
+`;
+
+export const InstaImg = ImgHover.extend`
+  max-width: 3.5rem;
+  margin-left: 10px;
+`;
+
+export const MapsImg = ImgHover.extend`
+  max-width: 3.5rem;
+  margin-left: 10px;
+`;
+
+export const GraphImg = ImgHover.extend`
+  display: inline-block;
+  margin-left: 10px;
 `;
 
 export const YelpHolder = styled.div`
   background-color: #d32323;
   margin-left: 10px;
-  border-top-left-radius: .2rem;
-  border-top-right-radius: .2rem;
-  border-bottom-right-radius: .2rem;
-  border-bottom-left-radius: .2rem;
+  border-radius: .2rem;
   transition: all .25s ease-in;
   &:hover {
     transform: scale3d(1.1,1.1,1);
@@ -71,56 +79,24 @@ export const YelpImg = styled.img`
   max-height: 3.15rem;
 `;
 
-export const InstaImg = styled.img`
-  max-width: 3.5rem;
-  margin-left: 10px;
-  transition: all .25s ease-in;
-  &:hover {
-    transform: scale3d(1.1,1.1,1);
-  }
-`;
-
-export const MapsImg = styled.img`
-  max-width: 3.5rem;
-  margin-left: 10px;
-  transition: all .25s ease-in;
-  &:hover {
-    transform: scale3d(1.1,1.1,1);
-  }
-`;
 export const GraphLink = styled.a`
- display: block;
+  display: block;
   padding-top: 5px;
   @media(min-width:500px) { padding-top: 0px;}
-`
+`;
+
+export const Contact = FlexRow.extend`
+  justify-content: space-around;
+  justify-content: space-evenly;
+  margin-top: 10px;
+  margin-bottom: 10px;
+`;
 
 
-export const GraphImg = styled.img`
- transition: all .25s ease-in;
- display: inline-block;
- 
- margin-left: 10px;
-  &:hover {
-    transform: scale3d(1.1,1.1,1);
-  }
-`
-
-export const Contact = styled.div`
-display: flex;
-flex-direction: row;
-justify-content: space-around;
-justify-content: space-evenly;
-margin-top: 10px;
-margin-bottom: 10px;
-`
-
-
-export const Hours = styled.div`
-  display: flex;
-  flex-direction: column;
-  font-size: 1rem;
+export const Hours = FlexCol.extend`
+  font-family: ${MainFont2};
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
   @media (min-width: 768px) { font-size: 1.3rem; }
   @media (min-width: 1024px) { font-size: 1.5rem;}
 `;
@@ -141,39 +117,30 @@ export const MapLink = styled.a`
   text-decoration: none;
   &:hover {
     text-decoration: underline;
-    text-decoration-color: #eb1c24;
-    -webkit-text-decoration-color: #eb1c24;
-    -moz-text-decoration-color: #eb1c24;
+    text-decoration-color: ${Red};
+    -webkit-text-decoration-color: ${Red};
+    -moz-text-decoration-color: ${Red};
   }
 `;
 
-export const Divy = styled.div`
-display: flex;
-flex-direction: row;
-justify-content: center;
-margin-top: 20px;
-@media(min-width: 768px) { margin-top: 30px; }
+export const Divy = FlexRow.extend`
+  justify-content: center;
+  margin-top: 20px;
+  @media(min-width: 768px) { margin-top: 30px; }
 `;
 
-export const BottomLinkWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
+export const BottomLinkWrapper = FlexCol.extend`
+  font-family: ${MainFont2};
   line-height: 1.7rem;
   justify-content: space-around;
-  /* justify-content: space-evenly; */
   margin-bottom: 15px;
   margin-top: 25px;
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
-  @media(min-width:640px) {
-    flex-direction: row;
-  }
+  @media(min-width:640px) { flex-direction: row; }
   @media(min-width: 1024px) { font-size: 1.3rem;}
 `;
 
 export const BottomLinks = styled(Link)`
-  color: #eb1c24;
-  &:hover {
-    color: #1565c0;
-  }
+  color: ${Red};
+  &:hover { color: ${Blue}; }
 `;

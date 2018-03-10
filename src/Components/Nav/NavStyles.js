@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
+import { MainFont2, Blue} from '../../Styles';
 
 export const Header = styled.header`
   display: flex;
@@ -23,9 +24,9 @@ export const StyledLinkLeft = styled(NavLink)`
     padding-right: 10px;
     font-size: 1.3rem;
     text-decoration: none;
-    font-family: 'Open Sans', sans-serif;
+    font-family: ${MainFont2};
     margin-left: 20px;
-    color: #1565c0;
+    color: ${Blue};
     transition: all .20s ease-in;
     &:hover {
       border-top: 8px solid #eb1c24;
@@ -43,14 +44,14 @@ export const StyledLinkLeft = styled(NavLink)`
 `;
 
 export const StyledLinkRight = styled(NavLink)`
+  font-family: ${MainFont2};
+  color: ${Blue};
   transition: all .20s ease-in;
   margin-right: 20px;
   padding-left: 10px;
   padding-right: 10px;
   font-size: 1.3rem;
   text-decoration: none;
-  font-family: 'Open Sans', sans-serif;
-  color: #1565c0;
     &:hover {
       border-top: 8px solid #eb1c24;
     }

@@ -1,7 +1,7 @@
 import React from 'react';
-import { MainArticle, Headline, P, Heading } from './PolicyStyles';
+import { MainArticle, P, Heading } from './PolicyStyles';
 import Helmet from 'react-helmet';
-
+import { H2 } from '../../Styles';
 const Policy = () => {
   return (
     <MainArticle>
@@ -18,7 +18,9 @@ const Policy = () => {
         <meta property="og:title" content="E.S.C. Mattress Center | Terms and Policies"/>
         <meta property="og:description" content="A licensed mattress retailer for Sealy, Stearns and Foster, and Tempur-Pedic offering almost fifty mattresses with prices to fit every budget.  ESC Mattress Center is a locally owned company in Everett WA with more than twenty years of mattress industry experience between our non-commissioned staff."/>
       </Helmet>
-      <Headline>Terms and Policies</Headline>
+      <header>
+        <H2>Terms and Policies</H2>
+      </header>
       <Heading>90 Day Comfort Guarantee</Heading>
       <P>
         It will take anywhere from 30 to 90 nights for your new mattress to break in and for your body

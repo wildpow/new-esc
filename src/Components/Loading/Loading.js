@@ -17,14 +17,17 @@ const LoadingFadeIn = keyframes`
 `;
 
 const Loader = styled.div`
-    border: 56px solid #f3f3f3; /* Light grey */
-    border-top: 56px solid #1565c0; /* Blue */
+    border: 46px solid #f3f3f3; /* Light grey */
+    border-top: 46px solid #1565c0; /* Blue */
     border-radius: 50%;
-    width: 320px;
-    height: 320px;
+    width: 280px;
+    height: 280px;
+    margin-top: 15px;
     @media(min-width: 768px) {
-      width: 420px;
-      height: 420px;
+      margin-top: 30px;
+      width: 320px;
+      height: 320px;
+      margin-bottom: 30px;
     }
     animation: ${Spinning} 2s linear infinite;
 `;

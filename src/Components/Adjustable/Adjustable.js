@@ -5,9 +5,10 @@ import { Helmet } from "react-helmet";
 import { Main} from './AdjustableStyles';
 import AdjHoc from './adjHOC';
 import Loading from '../Loading/Loading';
+import Error from '../Error/Error';
 
 const AdjustableComponent = ({ data: {error, loading, Bases} }, client) => {
-  if (error) return <div>{console.log(error)}</div>
+  if (error) return <Error/>
   if (!loading) {
     return (
     <Main>

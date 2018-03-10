@@ -1,11 +1,11 @@
 import React from 'react';
 import { Helmet } from "react-helmet";
-import { Main, Header, HeaderText, PicHolder, StoreImg1,
-          MapImg, StoreImg2, Address, Span, RegularParagraph,
-          BlueWrapper, SecondP, PopImg, PopHolder, PopNameHolder,
-          Josh, Col, Bill, Will
+import { Main, PicHolder, StoreImg,
+          MapImg, Address, Span, RegularParagraph,
+          BlueWrapper, SecondP, PopImg, PopNameHolder,
+          Josh, Bill, Will
         } from './AboutStyles';
-
+import { FlexCol, H2 } from '../../Styles';
 
 import store1 from '../../images/OutsideNightRatio.jpg';
 import store2 from '../../images/OutsideDayRatio.jpg';
@@ -28,13 +28,13 @@ const AboutComponent = () => {
         <meta property="og:title" content="E.S.C. Mattress Center"/>
         <meta property="og:description" content="Three of the best trained mattress sales people in Western Washington decided to open their own store; so that they could help people the way they believe they should be helped!  We are bringing back the service you are used to!"/>
       </Helmet>
-      <Header>
-        <HeaderText> Our goal is to help Snohomish County sleep like the experts do and wake up feeling better.</HeaderText>
-      </Header>
+      <header>
+        <H2> Our goal is to help Snohomish County sleep like the experts do and wake up feeling better.</H2>
+      </header>
       <PicHolder>
-        <StoreImg1 src={store1} alt="E.S.C Mattress Center store front in Everett Washington at night"/>
+        <StoreImg src={store1} alt="E.S.C Mattress Center store front in Everett Washington at night"/>
         <MapImg src={map} alt="Map of our mattress store the showing the major cross streets of Pacific Hwy/ Evergreen Way and Everett Mall Way"/>
-        <StoreImg2 src={store2} alt="E.S.C Matttress Center store front from Everett Mall Way in Snohomish County"/>
+        <StoreImg src={store2} alt="E.S.C Matttress Center store front from Everett Mall Way in Snohomish County"/>
       </PicHolder>
       
       <Address>
@@ -74,14 +74,14 @@ const AboutComponent = () => {
         up feeling great and “sleep like the experts do”.
       </RegularParagraph>
       
-      <PopHolder>  
-        <Col>
+      <FlexCol>  
+        <FlexCol>
           <PopNameHolder>
             <Bill>Bill</Bill><Josh>Joshua</Josh><Will>William</Will>
           </PopNameHolder>
           <PopImg src={pop} alt="FunCo toys of E.S.C Mattress Centers co-founders Bill, Joshua and William"/>
-        </Col>
-      </PopHolder>
+        </FlexCol>
+      </FlexCol>
     </Main>
   )
 }
