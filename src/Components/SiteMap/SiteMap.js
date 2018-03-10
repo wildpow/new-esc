@@ -3,11 +3,14 @@ import gql from 'graphql-tag';
 import Helmet from 'react-helmet';
 import { graphql } from 'react-apollo';
 import { Main, SiteLinks, MainLinks, MattLinksWrapper, BrandLinks,
-          TheNew2, UnList, Lilist } from './SiteMapStyles';
+          UnList, Lilist, BottomLinks } from './SiteMapStyles';
+import { H2 } from '../../Styles';
 import Loading from '../Loading/Loading';
+import Error from '../Error/Error';
+
 
 const SiteMap = ({ data: { loading, error, Sealy, Stearns, Tempur, Ajustable, Blog} }) => {
-  if (error) return <h1>Couldn't find sitemap {console.log(error)}</h1>
+  if (error) return <Error/>
   if(!loading) {
     return (
       <Fragment>
@@ -25,7 +28,7 @@ const SiteMap = ({ data: { loading, error, Sealy, Stearns, Tempur, Ajustable, Bl
           <meta property="og:description" content="Sleep like the experts do."/>
         </Helmet>
       <MainLinks>
-        <TheNew2>Main Site Links</TheNew2>
+        <H2>Main Site Links</H2>
         <UnList>
           <Lilist><SiteLinks to="/">Home</SiteLinks></Lilist>
           <Lilist><SiteLinks to="/about">About</SiteLinks></Lilist>
@@ -73,6 +76,7 @@ const SiteMap = ({ data: { loading, error, Sealy, Stearns, Tempur, Ajustable, Bl
           </ul>
         </Main>
       </MattLinksWrapper>
+      <BottomLinks>
       <Main>
       <h3><BrandLinks to="/adjustable">Adjustable Bases</BrandLinks></h3>
         <ul>
@@ -97,6 +101,7 @@ const SiteMap = ({ data: { loading, error, Sealy, Stearns, Tempur, Ajustable, Bl
           })}
         </ul>
       </Main>
+      </BottomLinks>
     </Fragment>
     )
   }

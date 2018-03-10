@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import Markdown from 'react-markdown';
-import {Red, Blue, FlexCol, FlexRow, MainFont1, MainFont2,
-  TextShadow, FadeIn, Border, BoxShadow, Animation, RedBorderBottom} from '../../Styles';
+import {Red, FlexCol, FlexRow, MainFont1, MainFont2,
+  TextShadow, FadeIn, Border, BoxShadow, Animation,
+  RedBorderBottom, H2} from '../../Styles';
 
 export const PriceList = styled.ul`
   font-size: .3rem;
@@ -15,8 +16,8 @@ export const Wrapper = FlexCol.extend`
   justify-content: center; 
   border-radius: .11rem;
   @media(min-width: 1300px) {
-    margin-right: 80px;
-    margin-left: 80px;
+    margin-right: 85px;
+    margin-left: 85px;
   }
 `;
 
@@ -43,23 +44,12 @@ export const PriceWrapper = FlexCol.extend`
   }
 `;
 
-export const MainTitle = styled.header`
-  font-family: ${MainFont1};
-  text-shadow: ${TextShadow};
-  background-color: ${Blue};
-  color: white;
-  text-align: center;
-  font-size: .5rem;
-  letter-spacing: .1rem;
-  padding: 0px 10px 0px 10px;
+export const MainTitle = H2.extend`
   @media(min-width: 768px) {
     text-align: left;
-    font-size: .9rem;
-    padding: 0px 5px 0px 10px;
+    padding-left: 20px;
   }
   @media(min-width: 1300px) {
-    font-size: 1.2rem;
-    letter-spacing: .13rem;
     padding-left: 30px;
   }
 `;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Markdown from 'react-markdown';
 import { BoxShadow, FadeIn, Animation, Border, FlexCol,
-        Blue, MainFont1, MainFont2, TextShadow } from '../../../Styles';
+        Blue, MainFont2 } from '../../../Styles';
 
 export const Main = FlexCol.extend`
   border: ${Border};
@@ -10,24 +10,6 @@ export const Main = FlexCol.extend`
   ${Animation}
   padding-bottom: 20px;
   @media(min-width:1200px) { margin-left: 220px; margin-right: 220px; }
-`;
-
-export const Header = styled.header`
-  font-family: ${MainFont1};
-  background-color: ${Blue};
-  text-shadow: ${TextShadow};
-  color: white;
-  text-align: center;
-  margin-bottom: 5px;
-`;
-
-export const HeaderText = styled.h2`
-  font-size: .9rem;
-  padding-right: 5px;
-  padding-left: 5px;
-  @media(min-width: 768px) { font-size: 1.4rem; line-height: 2rem;letter-spacing: .2rem; }
-  @media(min-width: 1024px) { font-size: 1.5rem; }
-  @media(min-width: 1300px) { font-size: 1.8rem; letter-spacing: .2rem; }
 `;
 
 export const BottomImg = styled.img`
@@ -106,3 +88,21 @@ export const Marker = styled(Markdown)`
     }
   }
 `;
+
+// export const Header = styled.header`
+//   font-family: ${MainFont1};
+//   background-color: ${Blue};
+//   text-shadow: ${TextShadow};
+//   color: white;
+//   text-align: center;
+//   margin-bottom: 5px;
+// `;
+
+// export const HeaderText = styled.h2`
+//   font-size: .9rem;
+//   padding-right: 5px;
+//   padding-left: 5px;
+//   @media(min-width: 768px) { font-size: 1.4rem; line-height: 2rem;letter-spacing: .2rem; }
+//   @media(min-width: 1024px) { font-size: 1.5rem; }
+//   @media(min-width: 1300px) { font-size: 1.8rem; letter-spacing: .2rem; }
+// `;

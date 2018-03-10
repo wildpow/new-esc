@@ -7,14 +7,16 @@ import { Wrapper, MainTitle, Main,
         Price, PriceTitle, Article,
         Overview, Warranty, Description,
         StyledMarkDown, Profile } from './SingleMattStyles';
+
 import Loading from '../Loading/Loading';
 import { Redirect } from 'react-router-dom';
 import DropDown from '../DropDrown/index';
 import ImageViewer from '../ImageViewer/ImageViewer';
+import Error from '../Error/Error';
 
 const SingleMattress = ({ data: { loading, error, mattress } }) => {
   
-  if (error) return <h1>Error fetching the Mattress!</h1>
+  if (error) return <Error/>
   if (!loading) {
   if(!mattress) return <Redirect to='/404'/>
   return (
@@ -32,9 +34,9 @@ const SingleMattress = ({ data: { loading, error, mattress } }) => {
         <meta property="og:title" content="E.S.C. Mattress Center"/>
         <meta property="og:description" content={`E.S.C Mattress Center | ${mattress.name}`}/>
       </Helmet>
-      <MainTitle>
-        <h2>{mattress.name}</h2>
-      </MainTitle>
+      <header>
+        <MainTitle>{mattress.name}</MainTitle>
+      </header>
       <Main>
         <ImageViewer cover={mattress.coverImg.handle} img1={mattress.detail1.handle} img2={mattress.detail2.handle} fullname={mattress.name} type={'mattress'}/>
         <MainInfo>

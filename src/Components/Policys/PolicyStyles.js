@@ -9,6 +9,10 @@ export const MainArticle = styled.article`
   box-shadow: ${BoxShadow};
   animation-name: ${FadeIn};
   ${Animation}
+  @media(min-width: 1300px) {
+    margin-left: 85px;
+    margin-right: 85px;
+  }
 `;
 
 export const WarranyName = styled.h4`
@@ -108,25 +112,25 @@ export const Heading = styled.h3`
   }
 `; 
 
-export const Headline = styled.h2`
-  font-family: ${MainFont1};
-  text-shadow: ${TextShadow};
-  background-color: ${Blue};
-  text-align: center;
-  color: white;
-  margin: 0;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  letter-spacing: .25rem;
-  font-size: 1.2rem;
-  @media(min-width: 768px) {
-    font-size: 2rem;
-  }
-  @media(min-width: 1024px) {
-    font-size: 2.2rem;
-  }
-`;
+// export const WarrantyHeadline = Headline.extend`
+//   margin-bottom: 20px
+// `;
 
-export const WarrantyHeadline = Headline.extend`
-  margin-bottom: 20px
-`;
+// export const Headline = styled.h2`
+//   font-family: ${MainFont1};
+//   text-shadow: ${TextShadow};
+//   background-color: ${Blue};
+//   text-align: center;
+//   color: white;
+//   margin: 0;
+//   padding-top: 15px;
+//   padding-bottom: 15px;
+//   letter-spacing: .25rem;
+//   font-size: 1.2rem;
+//   @media(min-width: 768px) {
+//     font-size: 2rem;
+//   }
+//   @media(min-width: 1024px) {
+//     font-size: 2.2rem;
+//   }
+// `;

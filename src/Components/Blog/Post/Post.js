@@ -3,11 +3,12 @@ import gql from 'graphql-tag';
 import { graphql } from 'react-apollo';
 import { Redirect } from 'react-router-dom';
 import { Helmet } from "react-helmet";
-import { Marker, Header, HeaderText, BottomImg, Main } from './PostStyles';
+import { Marker, BottomImg, Main } from './PostStyles';
 import Loading from '../../Loading/Loading';
-
+import Error from '../../Error/Error';
+import { H2 } from '../../../Styles'
 const Post = ({ data: { loading, error, post } }) => {
-  if (error) return console.log(error)
+  if (error) return <Error/>
   if (!loading) {
     if(!post) return <Redirect to='/404'/>
     return (
@@ -24,9 +25,9 @@ const Post = ({ data: { loading, error, post } }) => {
           <meta property="og:title" content={`E.S.C. Mattress Center | ${post.title}`}/>
           <meta property="og:description" content={post.title}/>
         </Helmet>
-        <Header>
-          <HeaderText>{post.title}</HeaderText>
-        </Header>
+        <header>
+          <H2>{post.title}</H2>
+        </header>
         <article>
           <Marker
             source={post.content}

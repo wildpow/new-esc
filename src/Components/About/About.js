@@ -1,11 +1,11 @@
 import React from 'react';
 import { Helmet } from "react-helmet";
-import { Main, Header, HeaderText, PicHolder, StoreImg,
+import { Main, PicHolder, StoreImg,
           MapImg, Address, Span, RegularParagraph,
           BlueWrapper, SecondP, PopImg, PopNameHolder,
           Josh, Bill, Will
         } from './AboutStyles';
-import { FlexCol } from '../../Styles';
+import { FlexCol, H2 } from '../../Styles';
 
 import store1 from '../../images/OutsideNightRatio.jpg';
 import store2 from '../../images/OutsideDayRatio.jpg';
@@ -28,9 +28,9 @@ const AboutComponent = () => {
         <meta property="og:title" content="E.S.C. Mattress Center"/>
         <meta property="og:description" content="Three of the best trained mattress sales people in Western Washington decided to open their own store; so that they could help people the way they believe they should be helped!  We are bringing back the service you are used to!"/>
       </Helmet>
-      <Header>
-        <HeaderText> Our goal is to help Snohomish County sleep like the experts do and wake up feeling better.</HeaderText>
-      </Header>
+      <header>
+        <H2> Our goal is to help Snohomish County sleep like the experts do and wake up feeling better.</H2>
+      </header>
       <PicHolder>
         <StoreImg src={store1} alt="E.S.C Mattress Center store front in Everett Washington at night"/>
         <MapImg src={map} alt="Map of our mattress store the showing the major cross streets of Pacific Hwy/ Evergreen Way and Everett Mall Way"/>

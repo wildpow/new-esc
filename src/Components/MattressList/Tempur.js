@@ -5,15 +5,16 @@ import { graphql } from 'react-apollo';
 import {  MainWrapper,
           Wrapper,
           LinkWrapper,
-          MainTitle, TempurPImg  } from './MattListStyles';
+          MainTitle, Img  } from './MattListStyles';
 import TempurImg from '../../images/TempurLogo2.png';
 import MattListHoC from './MattListHOC';
 import Loading from '../Loading/Loading';
+import Error from '../Error/Error';
 
 const Tempur = ({ data: { loading, error, Brands} }) => {
   const title = 'tempurpedic';
 
-  if (error) return <h6>panda's having trouble getting mattresses {console.log(error)}</h6>
+  if (error) return <Error/>
   if(!loading) {
     return (
       <MainWrapper>
@@ -31,7 +32,7 @@ const Tempur = ({ data: { loading, error, Brands} }) => {
           <meta property="og:description" content="Tempurpedic is the most recommended brand in the US. They offer a memory foam mattress as well as their flex line, and innovative hybrid from the brand you know and love. Come see JD Power’s Consumers choice award winner for 2017."/>          
         </Helmet>
         <MainTitle>
-          <TempurPImg src={TempurImg} alt="Logo of the Tempurpedic mattress company"/>
+          <Img src={TempurImg} alt="Logo of the Tempurpedic mattress company"/>
         </MainTitle>
         <Wrapper>
           {Brands.mattresses.map((mattress) => {

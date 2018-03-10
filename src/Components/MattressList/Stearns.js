@@ -8,10 +8,11 @@ import {  MainWrapper, Wrapper, LinkWrapper,
 import MattListHoC from './MattListHOC';
 import StearnsImg from '../../images/StearnsLogo.png';
 import Loading from '../Loading/Loading';
+import Error from '../Error/Error';
 
 const Stearns = ({ data: { loading, error, Brands} }) => {
   const title = 'stearns';
-  if (error) return <h6>panda's having trouble getting mattresses {console.log(error)}</h6>
+  if (error) return <Error/>
   if(!loading) {
     return (
       <MainWrapper>

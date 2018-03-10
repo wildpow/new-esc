@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { FadeIn, Border, BoxShadow,
-          MainFont1, MainFont2, Blue, TextShadow,
+          MainFont1, MainFont2, Blue,
           FlexCol, FlexRow, Animation } from '../../Styles';
 
 export const MattLinksWrapper = FlexRow.extend`
@@ -10,6 +10,10 @@ export const MattLinksWrapper = FlexRow.extend`
   justify-content: space-around;
   margin-top: 20px;
   ${Animation}
+  @media(min-width: 1300px) {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
 `;
 
 export const Main = styled.div`
@@ -55,6 +59,10 @@ export const MainLinks = FlexCol.extend`
   box-shadow: ${BoxShadow};
   margin-top: 15px;
   ${Animation}
+  @media(min-width: 1300px) {
+    margin-left: 85px;
+    margin-right: 85px;
+  }
 `;
 
 export const Lilist = styled.li`
@@ -81,18 +89,27 @@ export const UnList = styled.ul`
   padding-left: 0;
 `;
 
-export const TheNew2 = styled.h2`
-    font-family: ${MainFont1};
-    background-color: ${Blue};
-    text-shadow: ${TextShadow}; 
-    text-align: center;
-    color: white;
-    margin: 0;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    letter-spacing: .25rem;
-    font-size: 1.2rem;
-    @media(min-width: 768px) {
-      font-size: 2rem;
-    }
+export const BottomLinks = FlexRow.extend`
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    @media(min-width: 1300px) {
+    margin-left: 85px;
+    margin-right: 85px;
+  }
 `;
+
+// export const TheNew2 = styled.h2`
+//     font-family: ${MainFont1};
+//     background-color: ${Blue};
+//     text-shadow: ${TextShadow}; 
+//     text-align: center;
+//     color: white;
+//     margin: 0;
+//     padding-top: 15px;
+//     padding-bottom: 15px;
+//     letter-spacing: .25rem;
+//     font-size: 1.2rem;
+//     @media(min-width: 768px) {
+//       font-size: 2rem;
+//     }
+// `;

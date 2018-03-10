@@ -7,10 +7,11 @@ import {  MainWrapper, Wrapper, LinkWrapper,
   MainTitle, SealyImgPlace } from './MattListStyles';
 import SealyImg from '../../images/SealyLogo.png';
 import Loading from '../Loading/Loading';
+import Error from '../Error/Error';
 
 const Sealy = ({ data: { loading, error, essentials, performance, premium} }) => {
   const title = 'sealy';
-  if (error) return <h6>panda's having trouble getting mattresses {console.log(error)}</h6>
+  if (error) return <Error/>
   if(!loading) {
     return (
       <MainWrapper>
