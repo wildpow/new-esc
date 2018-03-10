@@ -3,7 +3,7 @@ import gql from 'graphql-tag'
 import { graphql } from 'react-apollo';
 import { Helmet } from "react-helmet";
 import { Wrapper, MainTitle, Main, MainInfo, PriceWrapper,
-        MattOnly, PriceTitle, Warranty, Description, Overview,
+  Price, PriceTitle, Warranty, Description, Overview,
         Article, StyledMarkDown, Profile }
         from '../SingleMattress/SingleMattStyles';
 import DropDown from '../DropDrown/index';
@@ -38,10 +38,10 @@ const SingleBase = ({data: { loading, error, base}}) => {
           <MainInfo>
             <StyledMarkDown source={base.features} escapeHtml={false} />
             <PriceWrapper>
-              <MattOnly>
+              <Price>
                 <PriceTitle>Base Price</PriceTitle>
                 <DropDown data={base.price} data2={base.salePrice}/>
-              </MattOnly>
+              </Price>
             </PriceWrapper>
           </MainInfo>
         </Main>

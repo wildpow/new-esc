@@ -1,25 +1,18 @@
 import Markdown from 'react-markdown';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-
-const AdjFadeIn = keyframes`
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-`;
+import {Animation, FadeIn, FlexCol, BoxShadow, Border, TextShadow,
+  FlexRow, RedBorderBottom, MainFont2, MainFont1, Blue} from '../../Styles';
 
 export const AdjMarkdown = styled(Markdown)`
-  font-family: 'Open Sans', sans-serif;
+  font-family: ${MainFont1};
   padding: 30px;
   display: none;
   & p {
+    border-bottom: ${RedBorderBottom};
     font-size: 1.6rem;
     margin-top: 0;
     margin-bottom: 0;
-    border-bottom: 4px solid #eb1c24;
     padding-bottom: 2px;
   }
   & ul {
@@ -31,15 +24,15 @@ export const AdjMarkdown = styled(Markdown)`
     padding-bottom: 2px;
   }
     @media(min-width: 692px) {
+      font-family: ${MainFont2};
       display: block;
-      font-family: 'Open Sans', sans-serif;
       padding: 30px;
 
       & p {
+        border-bottom: ${RedBorderBottom};
         font-size: 1.6rem;
         margin-top: 0;
         margin-bottom: 0;
-        border-bottom: 4px solid #eb1c24;
         padding-bottom: 2px;
       }
       & ul {
@@ -72,32 +65,24 @@ export const AdjMarkdown = styled(Markdown)`
     }
 `;
 
-export const Main = styled.div`
-  display: flex;
-  flex-direction: column;
+export const Main = FlexCol.extend`
+  animation-name: ${FadeIn};
+  ${Animation}
   margin-left: 0px;
   margin-right: 0px;
-  /* border: 2px solid black; */
   padding-top: 5px;
-  /* box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .9);  */
-  animation-duration: .5s;
-  animation-name: ${AdjFadeIn};
-  animation-fill-mode: both;
   @media(min-width:1200px) { margin-left: 120px; margin-right: 120px; }
 `;
 
 export const StyledLink = styled(Link)`
+  box-shadow: ${BoxShadow};
+  border: ${Border}; 
   text-decoration: none;
   margin-left: 20px;
   margin-right: 20px;
   color: black;
   margin-bottom: 20px;
-  border: 1px solid #eee;
-  box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .6); 
-  border-top-left-radius: .14rem;
-  border-top-right-radius: .14rem;
-  border-bottom-right-radius: .14rem;
-  border-bottom-left-radius: .14rem;
+  border-radius: .14rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -110,15 +95,15 @@ export const StyledLink = styled(Link)`
 `;
 
 export const H3 = styled.h3`
-  font-family: 'Roboto', sans-serif;
-  font-size: 1rem;
-  padding: 10px 5px 10px 5px;
-  background-color: #1565c0;
+  text-shadow: ${TextShadow};
+  font-family: ${MainFont1};
+  background-color: ${Blue};
   color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   margin-top: 0;
   text-align: center;
   margin-bottom: 0;
+  font-size: 1rem;
+  padding: 10px 5px 10px 5px;
   letter-spacing: .12rem;
   @media(min-width: 581px) {
     font-size: 1.2rem;
@@ -131,9 +116,7 @@ export const H3 = styled.h3`
   }
 `;
 
-export const InfoWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
+export const InfoWrapper = FlexRow.extend`
   justify-content: space-around;
   @media(min-width: 1024px) {
     justify-content: space-evenly;

@@ -1,29 +1,24 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import Markdown from 'react-markdown';
+import { BoxShadow, FadeIn, Animation, Border, FlexCol,
+        Blue, MainFont1, MainFont2, TextShadow } from '../../../Styles';
 
-export const PosttFadIn = keyframes`
-  from { opacity: 0; }
-  to { opacity: 1; }
-`;
-
-export const Main = styled.div`
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #eee;
-  box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .6); 
-  animation-duration: .5s;
-  animation-name: ${PosttFadIn};
-  animation-fill-mode: both;
+export const Main = FlexCol.extend`
+  border: ${Border};
+  box-shadow: ${BoxShadow}; 
+  animation-name: ${FadeIn};
+  ${Animation}
   padding-bottom: 20px;
   @media(min-width:1200px) { margin-left: 220px; margin-right: 220px; }
 `;
 
 export const Header = styled.header`
-  font-family: 'Roboto', sans-serif;
-  background-color: #1565c0;
+  font-family: ${MainFont1};
+  background-color: ${Blue};
+  text-shadow: ${TextShadow};
   color: white;
   text-align: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 5px;
 `;
 
 export const HeaderText = styled.h2`
@@ -32,7 +27,7 @@ export const HeaderText = styled.h2`
   padding-left: 5px;
   @media(min-width: 768px) { font-size: 1.4rem; line-height: 2rem;letter-spacing: .2rem; }
   @media(min-width: 1024px) { font-size: 1.5rem; }
-  @media(min-width: 1300px) { font-size: 1.8rem; letter-spacing: .13rem; }
+  @media(min-width: 1300px) { font-size: 1.8rem; letter-spacing: .2rem; }
 `;
 
 export const BottomImg = styled.img`
@@ -44,25 +39,24 @@ export const BottomImg = styled.img`
 
 export const Marker = styled(Markdown)`
   & ol {
+    background-color: ${Blue};
     list-style-position: inside;
-    background-color: #1565c0;
     color: white;
     padding-top: 10px;
     padding-bottom: 20px;
     }
   & li {
+    font-family: ${MainFont2};
     margin: auto;
-    font-family: 'Open Sans', sans-serif;
     padding-left: 12px;
     padding-right: 12px;
     line-height: 1.4rem;
     font-size: 1rem;
-    /* text-indent: 30px; */
     padding-top: 10px;
     padding-bottom: 0px;
   }
   & p {
-    font-family: 'Open Sans', sans-serif;
+    font-family: ${MainFont2};
     padding-left: 12px;
     padding-right: 12px;
     line-height: 1.4rem;
@@ -95,20 +89,20 @@ export const Marker = styled(Markdown)`
     }
     & li {
       margin-bottom: 0;
-
-    padding-right: 60px;
-    padding-left: 60px;
-    font-size: 1.6rem;
-    line-height: 1.85rem;
-    padding-bottom: 10px;
-    }
-    & p {
-      margin-bottom: 0;
       padding-right: 60px;
       padding-left: 60px;
       font-size: 1.6rem;
-      line-height: 1.7rem;
-      padding-bottom: 30px;
+      line-height: 1.85rem;
+      padding-bottom: 10px;
+    }
+    & p {
+      margin-bottom: 0;
+      margin-top: 10px;
+      padding-right: 60px;
+      padding-left: 60px;
+      font-size: 1.6rem;
+      line-height: 2.1rem;
+      padding-bottom: 20px;
     }
   }
 `;

@@ -3,8 +3,8 @@ import gql from 'graphql-tag'
 import { graphql } from 'react-apollo';
 import Helmet from 'react-helmet';
 import { Wrapper, MainTitle, Main,
-        MainInfo, PriceWrapper, MattOnly,
-        MattSet, PriceTitle, Article,
+        MainInfo, PriceWrapper,
+        Price, PriceTitle, Article,
         Overview, Warranty, Description,
         StyledMarkDown, Profile } from './SingleMattStyles';
 import Loading from '../Loading/Loading';
@@ -40,14 +40,14 @@ const SingleMattress = ({ data: { loading, error, mattress } }) => {
         <MainInfo>
           <StyledMarkDown source={mattress.features} escapeHtml={false} />
           <PriceWrapper>
-            <MattOnly>
+            <Price>
               <PriceTitle>Mattress Only Price</PriceTitle>
               <DropDown data={mattress.mattOnly} data2={mattress.mattOnlySale}/>
-            </MattOnly>
-            <MattSet>
+            </Price>
+            <Price>
               <PriceTitle>Mattress Set Price</PriceTitle>
               <DropDown data={mattress.setPrice} data2={mattress.setPriceSale}/>
-            </MattSet>
+            </Price>
           </PriceWrapper>
         </MainInfo>
       </Main>

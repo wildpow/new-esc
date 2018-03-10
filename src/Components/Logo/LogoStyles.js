@@ -1,21 +1,17 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import {Red, Blue, FlexCol, MainFont1,
+  TextShadow} from '../../Styles';
 
-export const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  font-family: 'Roboto', sans-serif;
+export const Wrapper = FlexCol.extend`
   margin-top: -15px;
-  text-decoration: none;
   @media (min-width: 768px) { margin-top: -22px; }
   @media (min-width: 1022px) { margin-top: -85px; }
 `;
 
 export const StyledLink = styled(Link)`
-  text-decoration: none;
   display: flex;
   flex-direction: column;
-  font-family: 'Roboto', sans-serif;
   margin-top: -15px;
   margin: auto;
   transition: all .20s ease-in;
@@ -31,24 +27,24 @@ export const Image = styled.img`
 `;
 
 export const H1 = styled.h1`
+  font-family: ${MainFont1};
+  color: ${Red};
+  text-shadow: ${TextShadow};
   transition: all .25s ease-in;
   z-index: -1;
   align-self: center;
-  margin-top: -26px;
   margin-bottom: 0;
-  color: #eb1c24;
-  font-size: 1.8rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   border: 2px solid black;
   box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .9); 
   border-top-left-radius: .11rem;
   border-top-right-radius: .11rem;
   padding: 5px 15px 5px 15px;
-
+  font-size: 1.8rem;
+  margin-top: -26px;
   @media (min-width: 500px) { font-size: 2.5rem; margin-top: -32px; }
   @media (min-width: 768px) { font-size: 4rem; margin-top: -44px; }
 `
 export const Span = styled.span`
-  color: #1565c0;
+  color: ${Blue};
   font-style: italic;
 `

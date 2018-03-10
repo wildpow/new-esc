@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 
 import { Carousel } from 'react-responsive-carousel'; 
 
-import { Main, SaleWrapper, OneImg, Linky } from './HomeStyles';
+import { Main, OneImg, Linky } from './HomeStyles';
 
 import Sealy from '../../images/SealyFMCOCarouselRatio.jpg';
 import Tempur from '../../images/TempurFMCOCarouselRatio.jpg';
@@ -34,9 +34,9 @@ const HomeComponent = () => {
         centerSlidePercentage={100}
         showStatus={false}
       >
-        <SaleWrapper>
+        <div>
           <OneImg src={Sale} alt="Image of E.S.C Mattress Center's Floor model close out mattress and adjustable base sale."/>
-        </SaleWrapper>
+        </div>
         <Linky to='/brands/stearns'>
           <OneImg src={Stearns} alt="Image of Stearns and Foster top rated inner spring mattress"/>
         </Linky>
