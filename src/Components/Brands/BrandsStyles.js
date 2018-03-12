@@ -10,6 +10,7 @@ export const Main = FlexCol.extend`
 `;
 
 export const TempurImg = styled.img`
+  color: white;
   width: 22rem;
   align-self: center;
   padding-top: 22px;
@@ -18,6 +19,7 @@ export const TempurImg = styled.img`
 `;
 
 export const StearnsImg = styled.img`
+  color: white;
   align-self: center;
   width: 17rem;
   padding-top: 30px;
@@ -26,6 +28,7 @@ export const StearnsImg = styled.img`
 `;
 
 export const SealyImg = styled.img`
+  color: white;
   align-self: center;
   width: 12rem;
   height: 12rem;

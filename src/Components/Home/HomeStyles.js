@@ -16,6 +16,7 @@ export const Linky = styled(Link)`
   margin: auto !important;
 `
 export const OneImg = styled.img`
+  color: white;
   background-color: white;
   max-width: 600px;
   max-height: 1000px;

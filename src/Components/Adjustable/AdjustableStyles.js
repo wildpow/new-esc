@@ -124,6 +124,7 @@ export const InfoWrapper = FlexRow.extend`
 `;
 
 export const Img = styled.img`
+  color: white;
   width: 240px;
   height: 170px;
   align-self: center;

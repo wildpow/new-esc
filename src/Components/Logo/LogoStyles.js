@@ -19,6 +19,7 @@ export const StyledLink = styled(Link)`
 `;
 
 export const Image = styled.img`
+  color: white;
   transition: all .25s ease-in;
   align-self: center;
   height: 6.5em;

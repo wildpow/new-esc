@@ -12,6 +12,7 @@ export const SmallImgHolder = FlexRow.extend`
 `;
 
 export const SmImg = styled.img`
+  color: white;
   width: 60px;
   height: 60px;
   @media(min-width: 500px) { width: 83px; height: 75px; }
@@ -22,6 +23,7 @@ export const SmImg = styled.img`
 `;
 
 export const LargeImg = styled.img`
+  color: white;
   width: 180px;
   height: 160px;
   @media(min-width: 500px) { width: 250px; height: 230px; }

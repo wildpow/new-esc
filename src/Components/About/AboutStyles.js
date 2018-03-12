@@ -17,6 +17,7 @@ export const PicHolder = FlexRow.extend`
 `;
 
 export const StoreImg = styled.img`
+  color: white;
   width: 105px;
   height: 100px;
   @media(min-width: 375px) { width: 110px; height: 100px; }
@@ -29,6 +30,7 @@ export const StoreImg = styled.img`
 `;
 
 export const MapImg = styled.img`
+  color: white;
   width: 130px;
   height: 100px;
   @media(min-width: 375px) { width: 135px; height: 100px; }
@@ -109,6 +111,7 @@ export const SecondP = styled.p`
 `;
 
 export const PopImg = styled.img`
+  color: white;
   max-width: 20rem;
   margin: auto;
   @media(min-width: 700px) { max-width: 50rem; }

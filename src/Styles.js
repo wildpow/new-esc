@@ -41,6 +41,7 @@ export const H2 = styled.h2`
     font-size: 1.4rem;
     padding-bottom: 16px;
     padding-top: 16px;
+    line-height: 1.5rem;
     }
   @media(min-width: 1024px) { 
     font-size: 1.5rem;

@@ -30,6 +30,7 @@ export const StearnTitle = styled.h2`
   font-size: .8rem;
 `;
 export const Img = styled.img`
+  color: white;
   background: white;
   border: 2px solid bkack;
   align-self: center;
@@ -90,6 +91,7 @@ export const StyledLink = styled(Link)`
 `;
 
 export const MattImg = styled.img`
+  color: white;
   margin: auto;
   width: 120px;
   height: 100px;

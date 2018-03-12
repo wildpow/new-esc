@@ -24,6 +24,7 @@ export const StyledLink = styled(Link)`
 `;
 
 export const Img = styled.img`
+  color: white;
   height: 100%;
   max-width: 100px;
   max-height: 100px;

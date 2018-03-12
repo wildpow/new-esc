@@ -30,6 +30,7 @@ export const Wrapper = styled.div`
   }
 `;
 const ImgHover = styled.img`
+  color: white;
   transition: all .25s ease-in;
   &:hover {
     transform: scale3d(1.1,1.1,1);
@@ -75,6 +76,7 @@ export const YelpHolder = styled.div`
 `;
 
 export const YelpImg = styled.img`
+  color: white;
   width: 3.54rem;
   max-height: 3.15rem;
 `;

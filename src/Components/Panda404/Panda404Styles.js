@@ -19,6 +19,7 @@ export const Main = FlexCol.extend`
 `;
 
 export const Img = styled.img`
+  color: white;
   margin: auto;
   max-width: 20rem;
   transition: all .2s ease-in;
