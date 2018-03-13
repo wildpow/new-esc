@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url><loc>https://www.escmattresscenter.com</loc><priority>0.5</priority></url>
-<url><loc>https://www.escmattresscenter.com/tel:1-425-512-0017</loc><priority>0.5</priority></url>
 <url><loc>https://www.escmattresscenter.com/brands</loc><priority>0.5</priority></url>
 <url><loc>https://www.escmattresscenter.com/adjustable</loc><priority>0.5</priority></url>
 <url><loc>https://www.escmattresscenter.com/accessories</loc><priority>0.5</priority></url>
@@ -11,6 +10,9 @@
 <url><loc>https://www.escmattresscenter.com/brands/stearns</loc><priority>0.5</priority></url>
 <url><loc>https://www.escmattresscenter.com/brands/tempurpedic</loc><priority>0.5</priority></url>
 <url><loc>https://www.escmattresscenter.com/brands/sealy</loc><priority>0.5</priority></url>
+<url><loc>https://www.escmattresscenter.com/warranty</loc><priority>0.5</priority></url>
+<url><loc>https://www.escmattresscenter.com/sitemap</loc><priority>0.5</priority></url>
+<url><loc>https://www.escmattresscenter.com/policies</loc><priority>0.5</priority></url>
 <url><loc>https://www.escmattresscenter.com/adjustable/TEMPUR-Ergo-Premier</loc><priority>0.5</priority></url>
 <url><loc>https://www.escmattresscenter.com/adjustable/Stearns&amp;Foster-Reflexion7</loc><priority>0.5</priority></url>
 <url><loc>https://www.escmattresscenter.com/adjustable/TEMPUR-Ergo-Plus</loc><priority>0.5</priority></url>
@@ -19,6 +21,14 @@
 <url><loc>https://www.escmattresscenter.com/blog/sleep-is-important</loc><priority>0.5</priority></url>
 <url><loc>https://www.escmattresscenter.com/blog/believe-that-you-are-worth-it</loc><priority>0.5</priority></url>
 <url><loc>https://www.escmattresscenter.com/blog/benefits-of-adjustable-bases</loc><priority>0.5</priority></url>
+<url><loc>https://www.escmattresscenter.com/brands/stearns/Estate-Oak-Terrace-Luxury-Firm</loc><priority>0.5</priority></url>
+<url><loc>https://www.escmattresscenter.com/brands/stearns/Estate-Oak-Terrace-Luxury-Plush</loc><priority>0.5</priority></url>
+<url><loc>https://www.escmattresscenter.com/brands/stearns/Estate-Oak-Terrace-Luxury-Firm-PT</loc><priority>0.5</priority></url>
+<url><loc>https://www.escmattresscenter.com/brands/stearns/Estate-Scarborough-UF</loc><priority>0.5</priority></url>
+<url><loc>https://www.escmattresscenter.com/brands/stearns/Estate-Scarborough-Luxury-Plush-PT</loc><priority>0.5</priority></url>
+<url><loc>https://www.escmattresscenter.com/brands/stearns/Lux-Estate-Rookwood-Luxury-Firm</loc><priority>0.5</priority></url>
+<url><loc>https://www.escmattresscenter.com/brands/stearns/Lux-Estate-Hybrid-Brooklet-Luxury-CF</loc><priority>0.5</priority></url>
+<url><loc>https://www.escmattresscenter.com/brands/stearns/Reserve-No.3-Luxury-Firm-PT</loc><priority>0.5</priority></url>
 <url><loc>https://www.escmattresscenter.com/brands/tempurpedic/TEMPUR-Contour-Supreme</loc><priority>0.5</priority></url>
 <url><loc>https://www.escmattresscenter.com/brands/tempurpedic/TEMPUR-Contour-Elite</loc><priority>0.5</priority></url>
 <url><loc>https://www.escmattresscenter.com/brands/tempurpedic/TEMPUR-Contour-Elite-Breeze</loc><priority>0.5</priority></url>
@@ -60,7 +70,4 @@
 <url><loc>https://www.escmattresscenter.com/brands/sealy/Hybrid-Cobalt-Firm</loc><priority>0.5</priority></url>
 <url><loc>https://www.escmattresscenter.com/brands/sealy/Hybrid-Copper-Cushion-Firm</loc><priority>0.5</priority></url>
 <url><loc>https://www.escmattresscenter.com/brands/sealy/Hybrid-Copper-Plush</loc><priority>0.5</priority></url>
-<url><loc>https://www.escmattresscenter.com/warranty</loc><priority>0.5</priority></url>
-<url><loc>https://www.escmattresscenter.com/sitemap</loc><priority>0.5</priority></url>
-<url><loc>https://www.escmattresscenter.com/policies</loc><priority>0.5</priority></url>
 </urlset>
