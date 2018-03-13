@@ -19,6 +19,14 @@ const SingleMattress = ({ data: { loading, error, mattress } }) => {
   if (error) return <Error/>
   if (!loading) {
   if(!mattress) return <Redirect to='/404'/>
+  let name = '';
+    if (mattress.brandName === 'Tempur-PEDIC') {
+      name = 'tempurpedic';
+    } else if (mattress.brandName === 'Sealy'){
+      name = 'sealy'
+    } else {
+      name = 'stearns'
+    }
   return (
     <Wrapper>
       <Helmet>
@@ -26,15 +34,15 @@ const SingleMattress = ({ data: { loading, error, mattress } }) => {
         <meta name="description" content={mattress.discription}/>
         <meta property="og:type"   content="website" />
         <meta property="og:site_name" content="E.S.C. Mattress Center"/>
-        <meta property="og:url" content="https://www.escmattresscenter.com/"/>
+        <meta property="og:url" content={`https://www.escmattresscenter.com/brands/${name}/${mattress.uri}`}/>
         <meta property="og:image" content={`https://media.graphcms.com/resize=w:1200,h:627,fit:clip/${mattress.coverImg.handle}`}/>
         <meta property="og:image:width" content="1200"/>
         <meta property="og:image:height" content="627"/>
         <meta property="og:image:alt" content={`E.S.C Mattress Center | ${mattress.name}`}/>
         <meta property="og:title" content="E.S.C. Mattress Center"/>
-        <meta property="og:description" content={`E.S.C Mattress Center | ${mattress.name}`}/>
+        <meta property="og:description" content={`${mattress.name} Mattress`}/>
       </Helmet>
-      <header>
+      <header> 
         <MainTitle>{mattress.name}</MainTitle>
       </header>
       <Main>
