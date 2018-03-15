@@ -17,6 +17,7 @@ export const Top = styled.div`
   transition: all .25s ease-in;
   font-family: 'Roboto', sans-serif;
   font-size: .8rem;
+  letter-spacing: .03rem;
   @media (min-width: 1024px) { font-size: 1.8rem;}
   @media (min-width: 768px) { font-size: 1.3rem; 
     padding: 10px 12px 12px 12px;

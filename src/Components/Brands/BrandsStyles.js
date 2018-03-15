@@ -11,9 +11,10 @@ export const Main = FlexCol.extend`
 
 export const TempurImg = styled.img`
   color: white;
-  width: 22rem;
+  width: 19rem;
   align-self: center;
   padding-top: 22px;
+  @media(min-width: 360px) { width: 22rem; }
   @media(min-width: 768px) { max-width: 25rem; }
   @media(min-width: 1022px) { max-width: 20rem; margin: auto; padding-top: 0px; }
 `;
@@ -21,19 +22,24 @@ export const TempurImg = styled.img`
 export const StearnsImg = styled.img`
   color: white;
   align-self: center;
-  width: 17rem;
+  width: 14rem;
   padding-top: 30px;
   padding-bottom: 15px;
+  @media(min-width: 360px) { width: 17rem; }
   @media(min-width: 1022px) { max-width: 15rem; padding-top: 50px; }
 `;
 
 export const SealyImg = styled.img`
   color: white;
   align-self: center;
-  width: 12rem;
-  height: 12rem;
+  width: 9.1rem;
+  height: 10rem;
   padding-top: 20px;
   padding-bottom: 15px;
+  @media(min-width: 360px) { 
+    width: 12rem;
+    height: 12rem;
+  }
   @media(min-width: 1022px) {
     width: 10rem;
     height: 10rem;
@@ -49,8 +55,12 @@ export const MainText = styled.p`
   padding-left: 15px;
   padding-right: 15px;
   padding-bottom: 15px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.5rem;
+  @media(min-width: 360px) {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
 `;
 
 export const Footer = styled.p`

@@ -42,22 +42,26 @@ export const Social = FlexRow.extend`
 `;
 
 export const FBimage = ImgHover.extend`
-  max-width: 3.5rem;
+  max-width: 3rem;
+  @media(min-width: 360px) { max-width: 3.5rem; }
 `;
 
 export const Timage = ImgHover.extend`
-  max-width: 4.1rem;
+  max-width: 3.7rem;
   padding-left: 10px;
+  @media(min-width: 360px) { max-width: 4.1rem; }
 `;
 
 export const InstaImg = ImgHover.extend`
-  max-width: 3.5rem;
+  max-width: 3.2rem;
   margin-left: 10px;
+  @media(min-width: 360px) { max-width: 3.5rem; }
 `;
 
 export const MapsImg = ImgHover.extend`
-  max-width: 3.5rem;
+  max-width: 3.2rem;
   margin-left: 10px;
+  @media(min-width: 360px) { max-width: 3.5rem; }
 `;
 
 export const GraphImg = ImgHover.extend`
@@ -77,8 +81,9 @@ export const YelpHolder = styled.div`
 
 export const YelpImg = styled.img`
   color: white;
-  width: 3.54rem;
-  max-height: 3.15rem;
+  width: 3.3rem;
+  max-height: 2.9rem;
+  @media(min-width: 360px) { width: 3.54rem; max-height: 3.15rem;}
 `;
 
 export const GraphLink = styled.a`

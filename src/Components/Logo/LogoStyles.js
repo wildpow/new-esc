@@ -40,8 +40,9 @@ export const H1 = styled.h1`
   border-top-left-radius: .11rem;
   border-top-right-radius: .11rem;
   padding: 5px 15px 5px 15px;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   margin-top: -26px;
+  @media(min-width: 360px) { font-size: 1.8rem; }
   @media (min-width: 500px) { font-size: 2.5rem; margin-top: -32px; }
   @media (min-width: 768px) { font-size: 4rem; margin-top: -44px; }
 `

@@ -31,11 +31,12 @@ export const TopButton = styled.button`
   border: none;
   cursor: pointer;
   outline: none !important;
-  padding: 8px;
-  font-size: .8rem;
+  padding: 7px;
+  font-size: .7rem;
   border-radius: .11rem;
   border-bottom: 2px solid white;
   width: 125px;
+  @media(min-width: 360px) { font-size: .8rem; padding: 8px;}
   @media(min-width: 768px) { font-size: 1rem; padding: 9px; width: 150px;}
   @media(min-width: 1024px) { font-size: 1.6rem; padding: 16px; width: 243px;}
   &:hover {background-color: #eb1c24;  outline: none !important;}
@@ -51,12 +52,13 @@ export const Button = styled.button`
   border: none;
   cursor: pointer;
   outline: none;
-  padding: 8px;
-  font-size: .8rem;
+  padding: 6px;
+  font-size: .7rem;
   border-bottom: 2px solid white;
   border-radius: .11rem;
   &:hover {background-color: ${Red}}
   &:focus { background:${Red};}
+  @media(min-width: 360px) { padding: 8px; font-size: .8rem;}
   @media(min-width: 768px) { font-size: 1rem; padding: 9px;}
   @media(min-width: 1024px) { font-size: 1.6rem; padding: 16px;}
 `;
@@ -75,12 +77,13 @@ export const DropDownWrapper = FlexCol.extend`
 
 export const Price = styled.div`
   font-family: ${MainFont2};
-  font-size: 1rem;
+  font-size: .8rem;
   padding: 0;
   padding-top: 5px;
   padding-left: 0px;
-  width: 130px;
+  width: 110px;
   height: 30px;
+  @media(min-width: 360px) {width: 130px; height: 30px; font-size: 1rem;}
   @media(min-width: 768px) { padding-left: 25px; font-size: 1.1rem; width: 200px; height: 60px;}
   @media(min-width: 1024px) { font-size: 1.7rem !important;  width: 250px !important; height: 60px; margin-top: 0; margin-bottom: 0;}
   @media(min-width: 1300px) { padding-left: 35px; height: 70px; width: 300px !important; font-size: 30rem; padding-top: 20px;}

@@ -31,8 +31,9 @@ export const StoreImg = styled.img`
 
 export const MapImg = styled.img`
   color: white;
-  width: 130px;
-  height: 100px;
+  width: 120px;
+  height: 90px;
+  @media(min-width: 360px) { width: 130px; height: 100px; }
   @media(min-width: 375px) { width: 135px; height: 100px; }
   @media(min-width: 412px) { width: 145px; height: 100px; }
   @media(min-width: 768px) { width: 250px; height: 200px; }
@@ -112,8 +113,9 @@ export const SecondP = styled.p`
 
 export const PopImg = styled.img`
   color: white;
-  max-width: 20rem;
+  max-width: 19rem;
   margin: auto;
+  @media(min-width: 360px) { max-width: 20rem; }
   @media(min-width: 700px) { max-width: 50rem; }
 `;
 

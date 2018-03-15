@@ -66,14 +66,18 @@ export const Wrapper = FlexRow.extend`
 
 export const LinkWrapper = styled.div`
   border: 2px solid black;
-  margin: 5px;
-  width: 150px;
-  height: 205px;
+  margin: 2px;
+  width: 140px;
+  height: 200px;
   margin-top: 20px;
   box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .9);
   border-radius: .14rem;
   background-color: white;
   transition: all .15s ease-in-out;
+  @media(min-width: 360px) { 
+    margin: 5px;
+    width: 150px;
+    height: 205px; }
   @media(min-width: 768px) { width: 340px; height: 350px; margin-right: 10px; margin-bottom: 20px; }
   @media(min-width: 1024px) { width: 300px; height: 350px; margin-right: 10px; margin-bottom: 20px; }
   &:hover {
