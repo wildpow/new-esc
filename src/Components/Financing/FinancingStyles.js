@@ -60,6 +60,9 @@ export const Img = styled.img`
   align-self: center;
   margin-top: 8px;
   margin-bottom: 8px;
+  @media(min-width: 640px) and (max-width: 767px) {
+    max-height: 14rem;
+  }
   @media(min-width: 768px) {
     align-self: center;
     margin-bottom: 10px;
@@ -107,7 +110,7 @@ export const P = styled.p`
     padding-left: 15px;
     padding-right: 15px;
   }
-  @media(min-width: 660px) and (max-width: 740px) {
+  @media(min-width: 660px) and (max-width: 767px) {
     margin-right: 30px;
     margin-left: 30px;
   }
