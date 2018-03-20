@@ -47,6 +47,11 @@ export const Marker = styled(Markdown)`
     padding-top: 10px;
     padding-bottom: 0px;
   }
+  & img {
+    margin: auto;
+    margin-top: 20px;
+    max-width: 100%;
+  }
   @media(min-width:768px) {
     & p {
       margin-bottom: 0;
@@ -85,6 +90,9 @@ export const Marker = styled(Markdown)`
       font-size: 1.6rem;
       line-height: 2.1rem;
       padding-bottom: 20px;
+    }
+    & img {
+      width: 100%; height: 100%;
     }
   }
 `;

@@ -34,7 +34,7 @@ const FinancingComponent = () => {
         <Footer><BottomP>*Subject to credit approval. Minimum monthly payments required. See store for details.</BottomP></Footer>
       </CompanyWrapper>
       <CompanyWrapper2>
-        <H3>Acima no-credit needed financing</H3>
+        <H3>Acima No-Credit Needed Financing</H3>
         <InfoWrapper>
           <Img src={Acima} alt="Acima Financing logo for low or no credit financing options" />
           <P>
