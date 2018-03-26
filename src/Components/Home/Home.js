@@ -5,10 +5,10 @@ import { Carousel } from 'react-responsive-carousel';
 
 import { Main, OneImg, Linky } from './HomeStyles';
 
-import Sealy from '../../images/SealyFMCOCarouselRatio.jpg';
-import Tempur from '../../images/TempurFMCOCarouselRatio.jpg';
+import Sealy from '../../images/SealyCarouselKelburnRatio.jpg';
+import Tempur from '../../images/TempurPedicCarouselLuxeBzRatio.jpg';
 import Stearns from '../../images/StearnsTopRatedCarouselRatio.jpg';
-import Sale from '../../images/FMCOCarouselRatio.png';
+import Sale from '../../images/SpringSaleCarouselRatio.jpg';
 import Front from '../FrontInfo/front';
 
 const HomeComponent = () => {

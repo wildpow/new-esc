@@ -1,15 +1,13 @@
 import React from 'react';
-import { Headline, Wrapper, P } from '../Home/HomeStyles';
+import { Headline, Wrapper, P, Links } from '../Home/HomeStyles';
+
 
 const Front = () => {
   return (
     <Wrapper>
-      <Headline>Floor Model Closeout Event</Headline>
+      <Headline>Spring Savings Event</Headline>
       <P>
-        Come in for huge savings on Floor Model mattresses now through March 25th!  Tempur-Pedic is changing out their 
-        line-up and even though we just opened two months ago we’re selling off like-new Floor Models at savings up to 
-        50% off.  The savings are while supplies last, so come in soon to make sure you get a great deal on the bed 
-        of your dreams.
+      The Spring Sale is going on now through April 29th at ESC Mattress Center.  With brand new mattresses popping up, like the Consumer Reports top rated <Links to="/brands/sealy/Hybrid-Kelburn-II-Cushion-Firm">Sealy Kelburn II Hybrid</Links> and <Links to="/brands/stearns/Lux-Estate-Trailwood-Plush-Pillow-Top">Stearns and Foster Lux Estate Trailwood</Links>, it’s a great time to upgrade your sleep.   With spring cleaning going on we still have massive savings on closeout floor model mattresses as well as discontinued pillows and mattress protectors at huge savings.  Swing in to get a great deal on the bed of your dreams.
       </P>
       <Headline red>“Sleep Like the Experts Do!”</Headline>
     </Wrapper>

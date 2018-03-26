@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { FadeIn, Animation, MainFont1, TextShadow, Border,
-          BoxShadow, FlexCol, MainFont2 } from '../../Styles';
+          BoxShadow, FlexCol, MainFont2, Blue, Red } from '../../Styles';
 
 export const Main = styled.div`
   animation-name: ${FadeIn};
@@ -79,4 +79,9 @@ export const P = styled.p`
     font-size: 1.8rem;
     line-height: 2.9rem;
   }
+`;
+
+export const Links = styled(Link)`
+  color: ${Red};
+  &:hover { color: ${Blue}; }
 `;
