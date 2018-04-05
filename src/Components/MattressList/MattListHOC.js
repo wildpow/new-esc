@@ -18,7 +18,7 @@ const MattListHoC = (props) => {
     })}
     return (
       <StyledLink to={`/brands/${props.title}/${props.uri}`} onMouseEnter={prefetch(props.uri)} onTouchStart={prefetch(props.uri)}>
-          <MattImg src={`https://media.graphcms.com/resize=w:290,h:250,fit:clip/${props.img}`} alt={`Image of a ${props.brandName} ${props.subBrand} ${props.subName} mattress`}/>
+          <MattImg src={`https://media.graphcms.com/resize=w:250,h:250,fit:clip/${props.img}`} alt={`Image of a ${props.brandName} ${props.subBrand} ${props.subName} mattress`}/>
           <Name>{props.brandName}<br/>{props.subBrand}<br/>{props.subName}</Name>
       </StyledLink>
     )

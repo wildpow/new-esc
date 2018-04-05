@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { MainFont2, Blue } from '../../Styles';
+import { MainFont2, Blue, Red } from '../../Styles';
 
 export const BreadWrapper = styled.div`
   margin-top: ${props => props.Bottom ? '0px' : '12px'};
@@ -41,6 +41,7 @@ const Span = styled.span`
 `;
 const Crumbs = styled(Link)`
   color: ${Blue};
+  &:hover { color: ${Red}; }
 `;
 const Location = styled.div`
   @media(max-width: 414px) {

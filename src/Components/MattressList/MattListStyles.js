@@ -68,8 +68,8 @@ export const LinkWrapper = styled.div`
   border: 2px solid black;
   margin: 2px;
   width: 140px;
-  height: 200px;
-  margin-top: 20px;
+  height: 190px;
+  margin-top: 15px;
   box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .9);
   border-radius: .14rem;
   background-color: white;
@@ -97,10 +97,10 @@ export const StyledLink = styled(Link)`
 export const MattImg = styled.img`
   color: white;
   margin: auto;
-  width: 120px;
+  width: 100px;
   height: 100px;
   @media(min-width: 768px) { width: 250px; height: 250px; }
-  @media(min-width: 1022px) { width: 290px;}
+  @media(min-width: 1022px) { width: 250px;}
 `;
 
 export const Name = styled.p`
