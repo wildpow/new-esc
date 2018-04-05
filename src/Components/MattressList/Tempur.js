@@ -67,7 +67,7 @@ const Tempur = ({ data: { loading, error, Brands} }) => {
 export const tempurMattresses = gql`
   query tempurMattresses {
     Brands(brand:"Tempur-Pedic") {
-      mattresses {
+      mattresses(filter: {isPublished: true}  ) {
         uri
         brandName
         id

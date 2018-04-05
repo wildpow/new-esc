@@ -130,11 +130,11 @@ export const InfoWrapper = FlexRow.extend`
 export const Img = styled.img`
   color: white;
   width: 240px;
-  height: 170px;
+  height: 240px;
   align-self: center;
   @media(min-width: 991px) {
     width: 400px;
-    height: 300px;
+    height: 400px;
     align-self: center;
     margin-left: 20px; 
   }

@@ -65,7 +65,7 @@ const Stearns = ({ data: { loading, error, Brands} }) => {
 export const stearnsMattresses = gql`
   query stearnsMattresses {
     Brands(brand:"Stearns&Foster") {
-      mattresses {
+      mattresses(filter: {isPublished: true}  ) {
         brandName
         uri
         id

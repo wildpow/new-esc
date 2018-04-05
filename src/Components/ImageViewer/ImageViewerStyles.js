@@ -16,19 +16,19 @@ export const SmImg = styled.img`
   width: 50px;
   height: 50px;
   @media(min-width: 360px) { width: 60px; height: 60px; }
-  @media(min-width: 500px) { width: 83px; height: 75px; }
-  @media(min-width: 768px) { width: 100px; height: 80px; }
-  @media(min-width: 1024px) { width: 165px; height: 150px; }
+  @media(min-width: 500px) { width: 83px; height: 83px; }
+  @media(min-width: 768px) { width: 116px; height: 116px; }
+  @media(min-width: 1024px) { width: 165px; height: 165px; }
   border: 2px solid white;
   &:hover { border: 2px solid black; }
 `;
 
 export const LargeImg = styled.img`
   color: white;
-  width: 160px;
-  height: 140px;
-  @media(min-width: 360px) { width: 180px; height: 160px; }
-  @media(min-width: 500px) { width: 250px; height: 230px; }
-  @media(min-width: 768px) { width: 350px; height: 200px; }
-  @media(min-width: 1024px) { width: 500px; height: 300px; }
+  width: 150px;
+  height: 150px;
+  @media(min-width: 360px) { width: 180px; height: 180px; }
+  @media(min-width: 500px) { width: 250px; height: 250px; }
+  @media(min-width: 768px) { width: 350px; height: 350px; }
+  @media(min-width: 1024px) { width: 500px; height: 500px; }
 `;

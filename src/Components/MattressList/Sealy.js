@@ -92,7 +92,7 @@ const Sealy = ({ data: { loading, error, essentials, performance, premium} }) =>
 export const sealyMattresses = gql`
   query subBrands {
     essentials: SubLine(subLineName: "essentials") {
-    mattresses {
+    mattresses(filter: {isPublished: true}  ) {
       brandName
       uri
       id
@@ -104,7 +104,7 @@ export const sealyMattresses = gql`
     }
   },
   performance: SubLine(subLineName: "performance") {
-    mattresses {
+    mattresses(filter: {isPublished: true}  ) {
       brandName
       id
       uri
@@ -116,7 +116,7 @@ export const sealyMattresses = gql`
     }
   },
   premium: SubLine(subLineName: "premium") {
-    mattresses {
+    mattresses(filter: {isPublished: true}  ) {
       brandName
       id
       uri
