@@ -9,6 +9,7 @@ export const Main = styled.div`
   background-color: white;
   margin-right: 0;
   margin-left: 0;  
+  margin-top: 15px;
   @media (min-width: 1300px) { margin-right: 105px; margin-left: 105px; }
 `;
 

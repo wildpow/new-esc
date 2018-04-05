@@ -13,9 +13,9 @@ import { Redirect } from 'react-router-dom';
 import DropDown from '../DropDrown/index';
 import ImageViewer from '../ImageViewer/ImageViewer';
 import Error from '../Error/Error';
+import BreadCrumbs, { BreadWrapper } from '../BreadCrumbs/BreadCrumbs';
 
 const SingleMattress = ({ data: { loading, error, mattress } }) => {
-  
   if (error) return <Error/>
   if (!loading) {
   if(!mattress) return <Redirect to='/404'/>
@@ -28,7 +28,7 @@ const SingleMattress = ({ data: { loading, error, mattress } }) => {
       name = 'stearns'
     }
   return (
-    <Wrapper>
+    <div>
       <Helmet>
         <title>ESC: {mattress.subBrand} {mattress.subName} Mattress</title>
         <meta name="description" content={mattress.discription}/>
@@ -42,6 +42,10 @@ const SingleMattress = ({ data: { loading, error, mattress } }) => {
         <meta property="og:title" content="E.S.C. Mattress Center"/>
         <meta property="og:description" content={`${mattress.name} Mattress`}/>
       </Helmet>
+      <BreadWrapper>
+        <BreadCrumbs next="Brands" next2={name.charAt(0).toUpperCase() + name.slice(1)} here={mattress.name}/>
+      </BreadWrapper>
+    <Wrapper>
       <header> 
         <MainTitle>{mattress.name}</MainTitle>
       </header>
@@ -73,6 +77,10 @@ const SingleMattress = ({ data: { loading, error, mattress } }) => {
         <Warranty>{mattress.warranty}</Warranty>
       </Article>
     </Wrapper>
+    <BreadWrapper>
+        <BreadCrumbs next="Brands" next2={name.charAt(0).toUpperCase() + name.slice(1)} here={mattress.name}/>
+      </BreadWrapper>
+    </div>
     )
   }
   return <Loading/>

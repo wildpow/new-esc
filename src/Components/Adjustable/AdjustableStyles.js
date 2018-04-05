@@ -23,7 +23,7 @@ export const AdjMarkdown = styled(Markdown)`
   & li {
     padding-bottom: 2px;
   }
-    @media(min-width: 692px) {
+    @media(min-width: 568px) {
       font-family: ${MainFont2};
       display: block;
       padding: 30px;
@@ -68,9 +68,13 @@ export const AdjMarkdown = styled(Markdown)`
 export const Main = FlexCol.extend`
   animation-name: ${FadeIn};
   ${Animation}
+  /* margin-top: 15px; */
   margin-left: 0px;
   margin-right: 0px;
-  padding-top: 5px;
+  /* padding-top: 5px; */
+  @media(min-width: 1022px) {
+    margin-top: ${props => props.MarginTop ? '15px' : '0'};
+  }
   @media(min-width:1200px) { margin-left: 120px; margin-right: 120px; }
 `;
 
@@ -78,8 +82,8 @@ export const StyledLink = styled(Link)`
   box-shadow: ${BoxShadow};
   border: ${Border}; 
   text-decoration: none;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 2px;
+  margin-right: 2px;
   color: black;
   margin-bottom: 20px;
   border-radius: .14rem;
@@ -126,11 +130,11 @@ export const InfoWrapper = FlexRow.extend`
 export const Img = styled.img`
   color: white;
   width: 240px;
-  height: 170px;
+  height: 240px;
   align-self: center;
   @media(min-width: 991px) {
     width: 400px;
-    height: 300px;
+    height: 400px;
     align-self: center;
     margin-left: 20px; 
   }

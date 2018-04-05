@@ -5,6 +5,7 @@ import { Animation, FadeIn, FlexCol, FlexRow, MainFont1,
 export const Main = FlexCol.extend`
   animation-name: ${FadeIn};
   ${Animation}
+  margin-top: 15px;
   border: 2px solid black;
   box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .9); 
   @media(min-width:1200px) { margin-left: 10px; margin-right: 10px; }

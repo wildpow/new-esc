@@ -8,6 +8,7 @@ import {  MainWrapper, Wrapper, LinkWrapper,
 import SealyImg from '../../images/SealyLogo.png';
 import Loading from '../Loading/Loading';
 import Error from '../Error/Error';
+import BreadCrumbs, { BreadWrapper } from '../BreadCrumbs/BreadCrumbs';
 
 const Sealy = ({ data: { loading, error, essentials, performance, premium} }) => {
   const title = 'sealy';
@@ -28,6 +29,9 @@ const Sealy = ({ data: { loading, error, essentials, performance, premium} }) =>
           <meta property="og:title" content="E.S.C. Mattress Center | Sealy"/>
           <meta property="og:description" content="One of the worlds most recognized brands, Sealy offers all three styles of mattresses: Traditional innerspring, Hybrid, a mix of traditional and all foam, and all foam option. The Sealy line up offers a little something for everyone."/>
         </Helmet>
+        <BreadWrapper Brands>
+          <BreadCrumbs next="Brands" here="Sealy"/>
+        </BreadWrapper>
         <MainTitle>
           <SealyImgPlace src={SealyImg} alt="A logo of the Sealy mattress company"/>
         </MainTitle>
@@ -75,6 +79,9 @@ const Sealy = ({ data: { loading, error, essentials, performance, premium} }) =>
               </LinkWrapper>
           ))}
         </Wrapper>
+        <BreadWrapper Brands Bottom>
+          <BreadCrumbs next="Brands" here="Sealy"/>
+        </BreadWrapper>
       </MainWrapper>
       )
     }
@@ -85,7 +92,7 @@ const Sealy = ({ data: { loading, error, essentials, performance, premium} }) =>
 export const sealyMattresses = gql`
   query subBrands {
     essentials: SubLine(subLineName: "essentials") {
-    mattresses {
+    mattresses(filter: {isPublished: true}  ) {
       brandName
       uri
       id
@@ -97,7 +104,7 @@ export const sealyMattresses = gql`
     }
   },
   performance: SubLine(subLineName: "performance") {
-    mattresses {
+    mattresses(filter: {isPublished: true}  ) {
       brandName
       id
       uri
@@ -109,7 +116,7 @@ export const sealyMattresses = gql`
     }
   },
   premium: SubLine(subLineName: "premium") {
-    mattresses {
+    mattresses(filter: {isPublished: true}  ) {
       brandName
       id
       uri

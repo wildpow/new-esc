@@ -3,10 +3,15 @@ import { Link } from 'react-router-dom';
 import { FlexCol, Animation, FadeIn, MainFont1, Blue, MainFont2 } from '../../Styles';
 
 export const Main = FlexCol.extend`
+  /* margin-top: 15px; */
   animation-name: ${FadeIn};
   ${Animation}
   text-align: center;
-  @media(min-width: 1022px) { flex-direction: row; justify-content: center; }
+  @media(min-width: 1022px) { 
+    flex-direction: row; 
+    justify-content: center;
+    margin-top: ${props => props.MarginTop ? '15px' : '0'};
+    }
 `;
 
 export const TempurImg = styled.img`

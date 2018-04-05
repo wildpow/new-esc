@@ -7,7 +7,8 @@ export const MainFooter = styled.footer`
   margin-top: 15px;
   margin-bottom: 5px;
   @media (min-width: 768px) {
-    margin-top: 30px;
+    /* margin-top: 30px; */
+    margin-top: 20px;
     margin-bottom: 10px;
   }
   @media (min-width: 1024px) {

@@ -9,6 +9,7 @@ import MattListHoC from './MattListHOC';
 import StearnsImg from '../../images/StearnsLogo.png';
 import Loading from '../Loading/Loading';
 import Error from '../Error/Error';
+import BreadCrumbs, { BreadWrapper } from '../BreadCrumbs/BreadCrumbs';
 
 const Stearns = ({ data: { loading, error, Brands} }) => {
   const title = 'stearns';
@@ -29,6 +30,9 @@ const Stearns = ({ data: { loading, error, Brands} }) => {
           <meta property="og:title" content="E.S.C. Mattress Center | Stearns and Foster"/>
           <meta property="og:description" content="One of the oldest mattress manufactures in in the US, Stearns and Foster offers traditional luxury that you deserve. Come feel the luxury your body deserves on the new Stearns and Foster lines.  Raise your expectations with an adjustable base for the ultimate in comfort."/>
         </Helmet>
+        <BreadWrapper Brands>
+          <BreadCrumbs next="Brands" here="Stearns"/>
+        </BreadWrapper>
         <MainTitle>
           <StearnsImgPlaceHolder src={StearnsImg} alt="Logo of the Stearns and Foster mattress company"/>
         </MainTitle>
@@ -49,6 +53,9 @@ const Stearns = ({ data: { loading, error, Brands} }) => {
               </LinkWrapper>)
           })}
           </Wrapper>
+          <BreadWrapper Brands Bottom>
+          <BreadCrumbs next="Brands" here="stearns"/>
+        </BreadWrapper>
       </MainWrapper>
     )
   }
@@ -58,7 +65,7 @@ const Stearns = ({ data: { loading, error, Brands} }) => {
 export const stearnsMattresses = gql`
   query stearnsMattresses {
     Brands(brand:"Stearns&Foster") {
-      mattresses {
+      mattresses(filter: {isPublished: true}  ) {
         brandName
         uri
         id
