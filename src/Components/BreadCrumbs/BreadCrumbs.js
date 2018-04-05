@@ -4,7 +4,10 @@ import styled from 'styled-components';
 import { MainFont2 } from '../../Styles';
 
 export const BreadWrapper = styled.div`
-  font-family: ${ MainFont2 };
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: .9rem;
+  /* font-family: ${ MainFont2 }; */
   display: flex;
   @media(min-width: 1022px) {
     display: ${props => props.hidenLarge ? 'none' : 'flex' };

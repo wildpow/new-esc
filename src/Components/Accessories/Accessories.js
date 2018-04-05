@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from "react-helmet";
-import { Main } from '../Adjustable/AdjustableStyles';
-import { H3, InfoWrapper, InfoWrapperReversed, AccWrapper, AccWrapper2, Img, P, Img2} from './AccStyles';
+import { Main, H3, InfoWrapper, InfoWrapperReversed, AccWrapper, AccWrapper2, Img, P, Img2} from './AccStyles';
 import Frame from '../../images/frame.jpg';
 import Pillows from '../../images/PillowCollage.jpg';
 import Protector from '../../images/Protector.jpg';

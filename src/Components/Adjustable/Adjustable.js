@@ -12,7 +12,7 @@ const AdjustableComponent = ({ data: {error, loading, Bases} }, client) => {
   if (error) return <Error/>
   if (!loading) {
     return (
-    <Main>
+    <Main MarginTop>
       <BreadWrapper hidenLarge>
         <BreadCrumbs here="adjustable" hidden="hidenLarge"/>
       </BreadWrapper>

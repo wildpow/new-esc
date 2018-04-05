@@ -72,6 +72,9 @@ export const Main = FlexCol.extend`
   margin-left: 0px;
   margin-right: 0px;
   /* padding-top: 5px; */
+  @media(min-width: 1022px) {
+    margin-top: ${props => props.MarginTop ? '15px' : '0'};
+  }
   @media(min-width:1200px) { margin-left: 120px; margin-right: 120px; }
 `;
 

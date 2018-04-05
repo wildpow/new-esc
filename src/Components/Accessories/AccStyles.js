@@ -1,5 +1,15 @@
 import styled from 'styled-components';
-import { BoxShadow, Border, FlexRow, MainFont2, Blue, TextShadow, MainFont1 } from '../../Styles';
+import { BoxShadow, Border, FlexRow, MainFont2, Blue, TextShadow, MainFont1, FlexCol, FadeIn, Animation } from '../../Styles';
+
+export const Main = FlexCol.extend`
+  animation-name: ${FadeIn};
+  ${Animation}
+  margin-top: 15px;
+  margin-left: 0px;
+  margin-right: 0px;
+  /* padding-top: 5px; */
+  @media(min-width:1200px) { margin-left: 120px; margin-right: 120px; }
+`;
 
 export const P = styled.p`
   margin-top: 0;
