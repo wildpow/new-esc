@@ -6,12 +6,16 @@ import { Main} from './AdjustableStyles';
 import AdjHoc from './adjHOC';
 import Loading from '../Loading/Loading';
 import Error from '../Error/Error';
+import BreadCrumbs, { BreadWrapper } from '../BreadCrumbs/BreadCrumbs';
 
 const AdjustableComponent = ({ data: {error, loading, Bases} }, client) => {
   if (error) return <Error/>
   if (!loading) {
     return (
     <Main>
+      <BreadWrapper hidenLarge>
+        <BreadCrumbs here="adjustable" hidden="hidenLarge"/>
+      </BreadWrapper>
       <Helmet>
         <title>ESC: Ajustable Bases</title>
         <meta name="description" content="E.S.C. Mattress Center carry 4 different Adjustable bases. Sometimes called Lifestyle bases or Movable bases. We have the Tempur-Pedic Ergo Premier and Ergo Plus, the Stearns & Foster Reflection 7, and the Sealy Ease bases. Sleep in zero gravity, or read, game or watch tv in the lounge position."/>

@@ -68,9 +68,10 @@ export const AdjMarkdown = styled(Markdown)`
 export const Main = FlexCol.extend`
   animation-name: ${FadeIn};
   ${Animation}
+  /* margin-top: 15px; */
   margin-left: 0px;
   margin-right: 0px;
-  padding-top: 5px;
+  /* padding-top: 5px; */
   @media(min-width:1200px) { margin-left: 120px; margin-right: 120px; }
 `;
 

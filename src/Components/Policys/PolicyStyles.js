@@ -9,6 +9,7 @@ export const MainArticle = styled.article`
   box-shadow: ${BoxShadow};
   animation-name: ${FadeIn};
   ${Animation}
+  margin-top: 15px;
   @media(min-width: 1300px) {
     margin-left: 85px;
     margin-right: 85px;

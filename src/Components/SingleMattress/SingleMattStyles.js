@@ -15,6 +15,7 @@ export const Wrapper = FlexCol.extend`
   ${Animation}
   justify-content: center; 
   border-radius: .11rem;
+  /* margin-top: 15px; */
   @media(min-width: 1300px) {
     margin-right: 85px;
     margin-left: 85px;

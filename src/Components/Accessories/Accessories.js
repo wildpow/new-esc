@@ -30,20 +30,20 @@ const AccessoriesComponent = () => {
           <P>We carry a wide range of pillows from Tempur-Pedic, Technogel, Protect-A-Bed, Sealy, and Stearns & Foster to others. Offering a large selection of heights and firmnesses to compliment any sleeping style and body type.</P>
         </InfoWrapper>
       </AccWrapper>
-      <AccWrapper2>
+      <AccWrapper>
         <H3>Sheets</H3>
         <InfoWrapperReversed>
           <Img2 src={Sheets}/>
           <P>We proudly carry the full collection of DreamFit sheets. Ranging from a basic microfiber to luxurious Micro Tencel. All DreamFit sheets are of the upmost quality and are guaranteed not to "pop off" your mattress during the night.</P>
         </InfoWrapperReversed>
-      </AccWrapper2>
-      <AccWrapper2>
+      </AccWrapper>
+      <AccWrapper>
         <H3>Mattress Protectors</H3>
         <InfoWrapper>
           <Img src={Protector}/>
           <P>We carry a comprehensive selection of mattress protection options from Protect-A-Bed, the industry leader in mattress protection.  With options including Tencel, Active Cooling, 5-Sided and complete encasements protecting from spills, stains, and soiling.</P>
         </InfoWrapper>
-      </AccWrapper2>
+      </AccWrapper>
       <AccWrapper2>
         <H3>Bed Frames</H3>
         <InfoWrapperReversed>

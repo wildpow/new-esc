@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { FlexCol, Animation, FadeIn, MainFont1, Blue, MainFont2 } from '../../Styles';
 
 export const Main = FlexCol.extend`
+  margin-top: 15px;
   animation-name: ${FadeIn};
   ${Animation}
   text-align: center;

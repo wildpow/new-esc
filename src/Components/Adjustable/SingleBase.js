@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import gql from 'graphql-tag'
 import { graphql } from 'react-apollo';
 import { Helmet } from "react-helmet";
+import BreadCrumbs, { BreadWrapper } from '../BreadCrumbs/BreadCrumbs';
 import { Wrapper, Main, MainInfo, PriceWrapper,
   Price, PriceTitle, Warranty, Description, Overview,
         Article, StyledMarkDown, Profile, MainTitle }
@@ -17,6 +18,10 @@ const SingleBase = ({data: { loading, error, base}}) => {
   if (!loading) {
     if(!base) return <Redirect to='/404'/>
     return(
+      <Fragment>
+        <BreadWrapper>
+          <BreadCrumbs next="adjustable" here={base.fullName}/>
+        </BreadWrapper>
       <Wrapper>
         <Helmet>
           <title>ESC: {base.fullName}</title>
@@ -31,6 +36,7 @@ const SingleBase = ({data: { loading, error, base}}) => {
           <meta property="og:title" content="E.S.C Mattress Center"/>
           <meta property="og:description" content={`${base.fullName} Adjustable Base`}/>
         </Helmet>
+        
         <header>
           <MainTitle>{base.fullName}</MainTitle>
         </header>
@@ -58,6 +64,10 @@ const SingleBase = ({data: { loading, error, base}}) => {
           <Warranty>{base.warranty}</Warranty>
         </Article>
       </Wrapper>
+      <BreadWrapper>
+          <BreadCrumbs next="adjustable" here={base.fullName}/>
+        </BreadWrapper>
+      </Fragment>
     )
   }
   return <Loading/>

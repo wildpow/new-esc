@@ -1,8 +1,8 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { Main } from '../Adjustable/AdjustableStyles';
+
 import { CompanyWrapper, H3, P, InfoWrapper, Footer, CompanyWrapper2,
-          Img, BottomP, ApplyNow } from './FinancingStyles';
+          Img, BottomP, ApplyNow, Main } from './FinancingStyles';
 import Synchrony from '../../images/Synchrony_Card_Image.jpg';
 import Acima from '../../images/Acima_Logo.png';
 
