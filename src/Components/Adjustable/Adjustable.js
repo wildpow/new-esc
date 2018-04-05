@@ -14,7 +14,7 @@ const AdjustableComponent = ({ data: {error, loading, Bases} }, client) => {
     return (
     <Main MarginTop>
       <BreadWrapper hidenLarge>
-        <BreadCrumbs here="adjustable" hidden="hidenLarge"/>
+        <BreadCrumbs here="Adjustable"/>
       </BreadWrapper>
       <Helmet>
         <title>ESC: Ajustable Bases</title>
@@ -33,6 +33,9 @@ const AdjustableComponent = ({ data: {error, loading, Bases} }, client) => {
         <AdjHoc uri={base.uri} key={base.id} img={base.coverImg.handle} markdown={base.features} fullName={base.fullName}/>
       
       ))}
+        <BreadWrapper hidenLarge Bottom>
+          <BreadCrumbs here="Adjustable"/>
+        </BreadWrapper>
       </Main>
     )
   }

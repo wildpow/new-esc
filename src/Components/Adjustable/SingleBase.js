@@ -20,7 +20,7 @@ const SingleBase = ({data: { loading, error, base}}) => {
     return(
       <Fragment>
         <BreadWrapper>
-          <BreadCrumbs next="adjustable" here={base.fullName}/>
+          <BreadCrumbs next="Adjustable" here={base.fullName}/>
         </BreadWrapper>
       <Wrapper>
         <Helmet>

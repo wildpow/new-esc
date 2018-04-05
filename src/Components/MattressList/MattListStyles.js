@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 import { Animation, FadeIn, FlexCol, BoxShadow, FlexRow, MainFont2 } from '../../Styles';
 
 export const MainWrapper = FlexCol.extend`
-  box-shadow: ${BoxShadow}; 
+  /* box-shadow: ${BoxShadow};  */
   animation-name: ${FadeIn};
   ${Animation}
   justify-content: space-between;
-  border-radius: .11rem;
-  border: 1px solid #eee;
+  /* border-radius: .11rem;
+  border: 1px solid #eee; */
 `;
 
 export const MainTitle = styled.header`

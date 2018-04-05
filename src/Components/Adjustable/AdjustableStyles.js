@@ -23,7 +23,7 @@ export const AdjMarkdown = styled(Markdown)`
   & li {
     padding-bottom: 2px;
   }
-    @media(min-width: 692px) {
+    @media(min-width: 568px) {
       font-family: ${MainFont2};
       display: block;
       padding: 30px;
@@ -82,8 +82,8 @@ export const StyledLink = styled(Link)`
   box-shadow: ${BoxShadow};
   border: ${Border}; 
   text-decoration: none;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 2px;
+  margin-right: 2px;
   color: black;
   margin-bottom: 20px;
   border-radius: .14rem;

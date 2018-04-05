@@ -5,6 +5,7 @@ import {Main, TempurImg, StearnsImg, SealyImg,
         MainText, Footer, StyledLink, BrandWrapper,
         StearnsWrapper } from './BrandsStyles';
 import { Helmet } from "react-helmet";
+import BreadCrumbs, { BreadWrapper } from '../BreadCrumbs/BreadCrumbs';
 import SealyLogo from '../../images/SealyLogo.png';
 import StearnsLogo from '../../images/StearnsLogo.png';
 import TempurLogo from '../../images/TempurLogo2.png';
@@ -38,8 +39,8 @@ const BrandsComponent = ({client}) => {
     })
   };
   return (
-    <Main>
-    <Helmet>
+    <Main MarginTop>
+      <Helmet>
         <title>ESC: Brands</title>
         <meta name="description" content="Come visit your locally owned, Everett based Sealy, Stearns and Foster & Tempur-Pedic dealer.  We have over 20 years of experience helping people sleep better on the brands we carry.  We carry 3 of the top 5 mattress brands in the US, so come see us, so we can help you sleep like the experts do!"/>
         <meta property="og:type"   content="website" />
@@ -52,6 +53,9 @@ const BrandsComponent = ({client}) => {
         <meta property="og:title" content="E.S.C. Mattress Center"/>
         <meta property="og:description" content="Come visit your locally owned, Everett based Sealy, Stearns and Foster & Tempur-Pedic dealer.  We have over 20 years of experience helping people sleep better on the brands we carry.  We carry 3 of the top 5 mattress brands in the US, so come see us, so we can help you sleep like the experts do!"/>
       </Helmet>
+      <BreadWrapper hidenLarge>
+        <BreadCrumbs here="Brands"/>
+      </BreadWrapper>
       <StyledLink to='/brands/tempurpedic' onMouseEnter={temperQuery()} onTouchStart={temperQuery()}>
       <BrandWrapper>
         <TempurImg src={TempurLogo} alt="Tempurpedic mattress company logo"/>
@@ -87,6 +91,9 @@ const BrandsComponent = ({client}) => {
         <Footer blue>Sealy:<br/> Proud supporter of you.</Footer>
       </BrandWrapper>
       </StyledLink>
+      <BreadWrapper hidenLarge Bottom>
+          <BreadCrumbs here="Brands"/>
+        </BreadWrapper>
     </Main>
   )
 }
