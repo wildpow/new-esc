@@ -46,6 +46,7 @@ const Crumbs = styled(Link)`
   &:hover { color: ${Red}; }
 `;
 const Location = styled.div`
+  padding-bottom: 1px;
   @media(max-width: 610px) {
     white-space: nowrap;
     overflow: hidden;
