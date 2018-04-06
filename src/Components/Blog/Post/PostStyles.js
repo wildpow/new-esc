@@ -8,7 +8,7 @@ export const Main = FlexCol.extend`
   box-shadow: ${BoxShadow}; 
   animation-name: ${FadeIn};
   ${Animation}
-  margin-top: 15px;
+  /* margin-top: 15px; */
   padding-bottom: 20px;
   @media(min-width:1200px) { margin-left: 220px; margin-right: 220px; }
 `;

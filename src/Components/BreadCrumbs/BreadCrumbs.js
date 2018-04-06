@@ -29,6 +29,8 @@ export const BreadWrapper = styled.div`
   @media(min-width: 1300px) {
     margin-right: ${props => props.Brands ? '55px' : '85px'};
     margin-left: ${props => props.Brands ? '55px' : '85px'};
+    margin-right: ${props => props.Blog ? '220px' : '85px'};
+    margin-left: ${props => props.Blog ? '220px' : '85px'};
   }
 `;
 const Span = styled.span`
@@ -44,7 +46,7 @@ const Crumbs = styled(Link)`
   &:hover { color: ${Red}; }
 `;
 const Location = styled.div`
-  @media(max-width: 414px) {
+  @media(max-width: 610px) {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

@@ -7,12 +7,14 @@ import { Marker, BottomImg, Main } from './PostStyles';
 import Loading from '../../Loading/Loading';
 import Error from '../../Error/Error';
 import { H2 } from '../../../Styles'
+import BreadCrumbs, { BreadWrapper } from '../../BreadCrumbs/BreadCrumbs';
+
 const Post = ({ data: { loading, error, post } }) => {
   if (error) return <Error/>
   if (!loading) {
     if(!post) return <Redirect to='/404'/>
     return (
-      <Main>
+      <div>
         <Helmet>
           <title>{post.title}</title>
           <meta name="description" content={post.content}/>
@@ -25,6 +27,10 @@ const Post = ({ data: { loading, error, post } }) => {
           <meta property="og:title" content={`E.S.C. Mattress Center | ${post.title}`}/>
           <meta property="og:description" content={post.title}/>
         </Helmet>
+        <BreadWrapper Blog>
+          <BreadCrumbs next="Blog" here={post.title}/>
+        </BreadWrapper>
+      <Main>
         <header>
           <H2>{post.title}</H2>
         </header>
@@ -39,6 +45,10 @@ const Post = ({ data: { loading, error, post } }) => {
           <BottomImg src={`https://media.graphcms.com/resize=w:${post.bottomimg.width},h:${post.bottomimg.height},fit:clip/${post.bottomimg.handle}`} alt={`Image related to ${post.title}`}/>
                         : null}
       </Main>
+      <BreadWrapper Blog>
+          <BreadCrumbs next="Blog" here={post.title}/>
+      </BreadWrapper>
+    </div>
     )
   }
   return <Loading/>
