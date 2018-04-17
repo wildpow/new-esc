@@ -112,18 +112,18 @@ const SiteMap = ({ data: { loading, error, Sealy, Stearns, Tempur, Ajustable, Bl
 export const Uri = gql`
   query Uri {
     Sealy: Brands(brand: "Sealy") {
-      mattresses { id subBrand subName uri }
+      mattresses(filter: {isPublished: true}  ) { id subBrand subName uri }
     },
     Stearns: Brands(brand:"Stearns&Foster") {
-      mattresses { id subBrand subName uri }
+      mattresses(filter: {isPublished: true}  ) { id subBrand subName uri }
     },
     Tempur: Brands(brand:"Tempur-Pedic") {
-      mattresses { id subBrand subName uri }
+      mattresses(filter: {isPublished: true}  ) { id subBrand subName uri }
     },
-    Ajustable: allAdjBaseses {
+    Ajustable: allAdjBaseses(filter: {isPublished: true}  ) {
       uri fullName id
     },
-    Blog: allPosts {
+    Blog: allPosts(filter: {isPublished: true}  ) {
       id slug title
     }
   }

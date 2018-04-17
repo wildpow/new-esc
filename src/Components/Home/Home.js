@@ -40,7 +40,7 @@ const HomeComponent = () => {
         <Linky to='/brands/stearns'>
           <OneImg src={Stearns} alt="Image of Stearns and Foster top rated inner spring mattress"/>
         </Linky>
-        <Linky to='/brands/tempurpedic'>
+        <Linky to='/brands/tempurpedic/TEMPUR-Legacy-Limited-Edition'>
           <OneImg src={Tempur} alt="Image of Tempurpedic 50% off mattress floor model close out sale"/>
         </Linky>
         <Linky to='/brands/sealy'>
