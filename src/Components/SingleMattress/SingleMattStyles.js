@@ -1,6 +1,7 @@
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 import styled from 'styled-components';
 import Markdown from 'react-markdown';
-import {Red, FlexCol, FlexRow, MainFont1, MainFont2,
+import {Red, Blue, FlexCol, FlexRow, MainFont1, MainFont2,
   TextShadow, FadeIn, Border, BoxShadow, Animation,
   RedBorderBottom, H2} from '../../Styles';
 
@@ -15,6 +16,7 @@ export const Wrapper = FlexCol.extend`
   ${Animation}
   justify-content: center; 
   border-radius: .11rem;
+  
   /* margin-top: 15px; */
   @media(min-width: 1300px) {
     margin-right: 85px;
@@ -29,11 +31,14 @@ export const Main = FlexRow.extend`
   @media(min-width: 1024px) { 
     justify-content: space-evenly;
     margin-left: 5px; 
-    margin-bottom: 20px;}
+    margin-bottom: 10px;}
 `;
 
 export const MainInfo = FlexCol.extend`
   justify-content: space-around;
+  /* @media(min-width: 1024px) {
+    justify-content: space-between;
+  } */
 `;
 
 export const PriceWrapper = FlexCol.extend`
@@ -146,11 +151,11 @@ export const Profile = styled.p`
   font-family: ${MainFont2};
   margin-top: 0;
   font-size: .9rem;
-  @media(min-width: 768px) { font-size: 1.3rem; }
-  @media(min-width: 1024px) { font-size: 1.6rem; }
-  @media(min-width: 1300px) { font-size: 2rem; }
+  @media(min-width: 768px) { font-size: 1rem; }
+  @media(min-width: 1024px) { font-size: 1.2rem; }
+  @media(min-width: 1300px) { font-size: 1.4rem; }
 `;
-
+//692px
 export const StyledMarkDown = styled(Markdown)`
   font-family: ${MainFont2};
   margin-left: 5px;
@@ -172,9 +177,9 @@ export const StyledMarkDown = styled(Markdown)`
   & li {
     padding-bottom: 2px;
   }
-  @media(min-width: 692px) {
+  @media(min-width: 550px) {
     font-family: ${MainFont2};
-    padding: 10px 30px 10px 30px;
+    padding: 0px 0px 0px 10px;
 
     & p {
       font-size: 1.8rem;
@@ -194,7 +199,7 @@ export const StyledMarkDown = styled(Markdown)`
     }
   }
   @media(min-width: 992px) {
-    padding: 30px;
+    padding: 0px 30px 10px 30px;
     
     & p {
       font-size: 2.4rem;
@@ -239,3 +244,75 @@ export const PriceTitle = styled.p`
     margin-top: 5px;
   }
 `;
+
+export const Stuff = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* @media(min-width: 1024px) {
+    margin-bottom: 25px;
+  } */
+`
+
+export const InfoAnchor = styled(AnchorLink)`
+  display: none;
+  /* align-self: center; */
+  margin-left: 5px;
+  padding-left: 15px;
+  font-size: .9rem;
+  font-family: ${MainFont2};
+  color: ${Red};
+  &:hover { color: ${Blue}; }
+  @media (orientation: landscape) {
+    display: block;
+  }
+  @media(min-width: 568px) {
+    padding-left: 30px;
+    font-size: 1rem;
+  }
+  @media(min-width: 768px) {
+    display: block;
+    font-size: 1.2rem;
+  }
+  @media(min-width: 1024px) { 
+    padding-left: 55px;
+    font-size: 1.6rem;
+    
+    }
+`;
+
+// export const AnchorLink2 = styled(AnchorLink)`
+//   display: none;
+//   padding: 5px 8px 5px 8px;
+//   margin-left: 40px;
+//   font-size: .8rem;
+//   font-family: ${MainFont2};
+//   color: white;
+//   background-color: ${Red};
+//   text-decoration: none;
+//   align-self: flex-start;
+//   transition: all .25s ease-in;
+//   &:hover { 
+//     background-color: ${Blue};
+//     transform: scale3d(1.1,1.1,1);
+//   }
+//   a:visited {
+//     background-color: ${Red};
+//   }
+//   @media (orientation: landscape) {
+//     display: block;
+//   }
+//   @media(min-width: 731px) {
+//     margin-left: 30px;
+//     font-size: 1rem;
+//     padding: 10px;
+//   }
+//   @media(min-width: 768px) {
+//     display: block;
+//   }
+//   @media(min-width: 1024px) { 
+//     margin-left: 55px;
+//     font-size: 1.6rem;
+//     padding: 15px;
+//     }
+// `;
