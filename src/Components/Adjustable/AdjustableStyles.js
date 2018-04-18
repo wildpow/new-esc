@@ -133,8 +133,8 @@ export const Img = styled.img`
   height: 240px;
   align-self: center;
   @media(min-width: 991px) {
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     align-self: center;
     margin-left: 20px; 
   }
