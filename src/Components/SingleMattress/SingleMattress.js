@@ -6,7 +6,7 @@ import { Wrapper, MainTitle, Main,
         MainInfo, PriceWrapper,
         Price, PriceTitle, Article,
         Overview, Warranty, Description,
-        StyledMarkDown, Profile } from './SingleMattStyles';
+        StyledMarkDown, Profile, InfoAnchor, Stuff } from './SingleMattStyles';
 
 import Loading from '../Loading/Loading';
 import { Redirect } from 'react-router-dom';
@@ -52,7 +52,10 @@ const SingleMattress = ({ data: { loading, error, mattress } }) => {
       <Main>
         <ImageViewer cover={mattress.coverImg.handle} img1={mattress.detail1.handle} img2={mattress.detail2.handle} fullname={mattress.name} type={'mattress'}/>
         <MainInfo>
-          <StyledMarkDown source={mattress.features} escapeHtml={false} />
+          <Stuff>
+            <StyledMarkDown source={mattress.features} escapeHtml={false} />
+            <InfoAnchor href="#moreInfo">See more details</InfoAnchor>
+          </Stuff>
           <PriceWrapper>
             <Price>
               <PriceTitle>Mattress Only Price</PriceTitle>
@@ -65,7 +68,7 @@ const SingleMattress = ({ data: { loading, error, mattress } }) => {
           </PriceWrapper>
         </MainInfo>
       </Main>
-      <Overview>
+      <Overview id="moreInfo">
         <h2>OVERVIEW & SPECS</h2>
       </Overview>
       <Article>

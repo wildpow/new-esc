@@ -1,6 +1,7 @@
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 import styled from 'styled-components';
 import Markdown from 'react-markdown';
-import {Red, FlexCol, FlexRow, MainFont1, MainFont2,
+import {Red, Blue, FlexCol, FlexRow, MainFont1, MainFont2,
   TextShadow, FadeIn, Border, BoxShadow, Animation,
   RedBorderBottom, H2} from '../../Styles';
 
@@ -238,4 +239,22 @@ export const PriceTitle = styled.p`
     margin-bottom: 5px;
     margin-top: 5px;
   }
+`;
+
+export const Stuff = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`
+
+export const InfoAnchor = styled(AnchorLink)`
+  display: none;
+  align-self: center;
+  font-family: ${MainFont2};
+  color: ${Red};
+  &:hover { color: ${Blue}; }
+  @media(min-width: 1024px) { 
+    font-size: 1.3rem;
+    display: block;
+    }
 `;

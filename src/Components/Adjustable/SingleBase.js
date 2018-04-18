@@ -5,13 +5,14 @@ import { Helmet } from "react-helmet";
 import BreadCrumbs, { BreadWrapper } from '../BreadCrumbs/BreadCrumbs';
 import { Wrapper, Main, MainInfo, PriceWrapper,
   Price, PriceTitle, Warranty, Description, Overview,
-        Article, StyledMarkDown, Profile, MainTitle }
+        Article, StyledMarkDown, Profile, MainTitle, InfoAnchor, Stuff }
         from '../SingleMattress/SingleMattStyles';
 import DropDown from '../DropDrown/index';
 import ImageViewer from '../ImageViewer/ImageViewer';
 import Loading from '../Loading/Loading';
 import { Redirect } from 'react-router-dom';
 import Error from '../Error/Error';
+
 
 const SingleBase = ({data: { loading, error, base}}) => {
   if (error) return <Error/>
@@ -43,7 +44,10 @@ const SingleBase = ({data: { loading, error, base}}) => {
         <Main>
           <ImageViewer cover={base.coverImg.handle} img1={base.detail1.handle} img2={base.detail2.handle} type={'adjustable base without mattress'} fullname={base.fullName}/>
           <MainInfo>
-            <StyledMarkDown source={base.features} escapeHtml={false} />
+            <Stuff>
+              <StyledMarkDown source={base.features} escapeHtml={false} />
+              <InfoAnchor href="#moreInfo">See more details</InfoAnchor>
+            </Stuff>
             <PriceWrapper>
               <Price>
                 <PriceTitle>Base Price</PriceTitle>
@@ -52,7 +56,7 @@ const SingleBase = ({data: { loading, error, base}}) => {
             </PriceWrapper>
           </MainInfo>
         </Main>
-        <Overview>
+        <Overview id="moreInfo">
           <h2>OVERVIEW & SPECS</h2>
         </Overview>
         <Article>
