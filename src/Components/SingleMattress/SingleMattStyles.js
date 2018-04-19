@@ -280,39 +280,3 @@ export const InfoAnchor = styled(AnchorLink)`
     
     }
 `;
-
-// export const AnchorLink2 = styled(AnchorLink)`
-//   display: none;
-//   padding: 5px 8px 5px 8px;
-//   margin-left: 40px;
-//   font-size: .8rem;
-//   font-family: ${MainFont2};
-//   color: white;
-//   background-color: ${Red};
-//   text-decoration: none;
-//   align-self: flex-start;
-//   transition: all .25s ease-in;
-//   &:hover { 
-//     background-color: ${Blue};
-//     transform: scale3d(1.1,1.1,1);
-//   }
-//   a:visited {
-//     background-color: ${Red};
-//   }
-//   @media (orientation: landscape) {
-//     display: block;
-//   }
-//   @media(min-width: 731px) {
-//     margin-left: 30px;
-//     font-size: 1rem;
-//     padding: 10px;
-//   }
-//   @media(min-width: 768px) {
-//     display: block;
-//   }
-//   @media(min-width: 1024px) { 
-//     margin-left: 55px;
-//     font-size: 1.6rem;
-//     padding: 15px;
-//     }
-// `;

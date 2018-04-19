@@ -17,25 +17,37 @@ const BrandsComponent = ({client}) => {
       query: gql`
         query stearnsMattresses {
     Brands(brand:"Stearns&Foster") {
-      mattresses { brandName uri id subName name discription features profile contruction mattOnly mattOnlySale setPrice setPriceSale warranty subBrand coverImg { handle } detail1 { handle } detail2 { handle }} } } ` }) 
+      mattresses { brandName uri id subName name discription features profile
+                    contruction mattOnly mattOnlySale setPrice setPriceSale
+                    warranty subBrand priceRange
+                    coverImg { handle } detail1 { handle } detail2 { handle }} } } ` }) 
   }
   const temperQuery = () =>{
     client.query({
       query: gql`
       query tempurMattresses {
     Brands(brand:"Tempur-Pedic") {
-      mattresses { uri brandName id subName name discription features profile contruction mattOnly mattOnlySale setPrice setPriceSale warranty subBrand coverImg { handle } detail1 { handle } detail2 { handle }} } }` })
+      mattresses { uri brandName id subName name discription features profile
+                    contruction mattOnly mattOnlySale setPrice setPriceSale
+                    warranty subBrand priceRange 
+                    coverImg { handle } detail1 { handle } detail2 { handle }} } }` })
   }
   const sealyQuery = () => {
     client.query({
       query: gql`
       query subBrands {
         essentials: SubLine(subLineName: "essentials") {
-        mattresses { brandName uri id subBrand subName discription contruction profile features name mattOnly mattOnlySale setPrice setPriceSale coverImg { handle } detail1 { handle} detail2 { handle }} },
+        mattresses { brandName uri id subBrand subName discription contruction profile
+                      features name mattOnly mattOnlySale setPrice setPriceSale priceRange
+                      coverImg { handle } detail1 { handle} detail2 { handle }} },
       performance: SubLine(subLineName: "performance") {
-        mattresses { brandName id uri subBrand subName discription contruction profile features name mattOnly mattOnlySale setPrice setPriceSale coverImg { handle } detail1 { handle} detail2 { handle }} },
+        mattresses { brandName id uri subBrand subName discription contruction profile
+                      features name mattOnly mattOnlySale setPrice setPriceSale priceRange
+                      coverImg { handle } detail1 { handle} detail2 { handle }} },
       premium: SubLine(subLineName: "premium") {
-        mattresses { brandName id uri subBrand subName discription contruction profile features name mattOnly mattOnlySale setPrice setPriceSale coverImg { handle } detail1 { handle} detail2 { handle } } } }`
+        mattresses { brandName id uri subBrand subName discription contruction profile
+                      features name mattOnly mattOnlySale setPrice setPriceSale priceRange
+                      coverImg { handle } detail1 { handle} detail2 { handle } } } }`
     })
   };
   return (

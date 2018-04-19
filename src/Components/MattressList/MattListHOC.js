@@ -1,7 +1,7 @@
 import React from 'react';
 import gql from 'graphql-tag';
 import { withApollo } from 'react-apollo';
-import { StyledLink, MattImg, Name } from './MattListStyles';
+import { StyledLink, MattImg, Name, PriceRange, Span, Divy} from './MattListStyles';
 
 const MattListHoC = (props) => {
   const prefetch = (mattUrl) => () =>{
@@ -18,8 +18,17 @@ const MattListHoC = (props) => {
     })}
     return (
       <StyledLink to={`/brands/${props.title}/${props.uri}`} onMouseEnter={prefetch(props.uri)} onTouchStart={prefetch(props.uri)}>
-          <MattImg src={`https://media.graphcms.com/resize=w:250,h:250,fit:clip/${props.img}`} alt={`Image of a ${props.brandName} ${props.subBrand} ${props.subName} mattress`}/>
-          <Name>{props.brandName}<br/>{props.subBrand}<br/>{props.subName}</Name>
+        <Divy>
+        <MattImg src={`https://media.graphcms.com/resize=w:250,h:250,fit:clip/${props.img}`} alt={`Image of a ${props.brandName} ${props.subBrand} ${props.subName} mattress`}/>
+        <PriceRange>${props.priceRange[0]} - ${props.priceRange[1]}</PriceRange>
+        </Divy>
+        <Name>
+          <Span>{props.brandName} </Span>
+                      <br/>
+                {props.subBrand}
+                      <br/>
+                {props.subName}
+        </Name>
       </StyledLink>
     )
 }
