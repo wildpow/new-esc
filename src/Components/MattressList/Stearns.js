@@ -45,7 +45,8 @@ const Stearns = ({ data: { loading, error, Brands} }) => {
                               subBrand={mattress.subBrand}
                               subName={mattress.subName}
                               img={mattress.coverImg.handle}
-                              title={title} />
+                              title={title} 
+                              priceRange={mattress.priceRange} />
                 {/* <StyledLink to={`/brands/stearns/${mattress.uri}`}>
                   <MattImg src={`https://media.graphcms.com/resize=w:290,h:250,fit:clip/${mattress.coverImg.handle}`} alt="this"/>
                   <StearnName>{mattress.brandName}<br/>{mattress.subBrand}<br/>{mattress.subName}</StearnName>
@@ -71,6 +72,7 @@ export const stearnsMattresses = gql`
         id
         subName
         subBrand
+        priceRange
         coverImg {
           handle
         }

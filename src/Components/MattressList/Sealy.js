@@ -43,7 +43,8 @@ const Sealy = ({ data: { loading, error, essentials, performance, premium} }) =>
                               subBrand={mattress.subBrand}
                               subName={mattress.subName}
                               img={mattress.coverImg.handle}
-                              title={title} />
+                              title={title}
+                              priceRange={mattress.priceRange} />
                 {/* <StyledLink to={`/brands/sealy/${mattress.uri}`}>
                   <MattImg src={`https://media.graphcms.com/resize=w:290,h:250,fit:clip/${mattress.coverImg.handle}`} alt="this"/>
                   <SealyName>{mattress.brandName}<br/>{mattress.subBrand}<br/>{mattress.subName}</SealyName>
@@ -57,7 +58,8 @@ const Sealy = ({ data: { loading, error, essentials, performance, premium} }) =>
                               subBrand={mattress.subBrand}
                               subName={mattress.subName}
                               img={mattress.coverImg.handle}
-                              title={title} />
+                              title={title}
+                              priceRange={mattress.priceRange} />
                 {/* <StyledLink to={`/brands/sealy/${mattress.uri}`}>
                   <MattImg src={`https://media.graphcms.com/resize=w:290,h:250,fit:clip/${mattress.coverImg.handle}`} alt="this"/>
                   <SealyName>{mattress.brandName}<br/>{mattress.subBrand}<br/>{mattress.subName}</SealyName>
@@ -71,7 +73,8 @@ const Sealy = ({ data: { loading, error, essentials, performance, premium} }) =>
                               subBrand={mattress.subBrand}
                               subName={mattress.subName}
                               img={mattress.coverImg.handle}
-                              title={title} />
+                              title={title}
+                              priceRange={mattress.priceRange} />
                 {/* <StyledLink to={`/brands/sealy/${mattress.uri}`}>
                   <MattImg src={`https://media.graphcms.com/resize=w:290,h:250,fit:clip/${mattress.coverImg.handle}`} alt="this"/>
                   <SealyName>{mattress.brandName}<br/>{mattress.subBrand}<br/>{mattress.subName}</SealyName>
@@ -98,6 +101,7 @@ export const sealyMattresses = gql`
       id
       subBrand
       subName
+      priceRange
       coverImg {
         handle
       }
@@ -110,6 +114,7 @@ export const sealyMattresses = gql`
       uri
       subBrand
       subName
+      priceRange
       coverImg {
         handle
       }
@@ -122,6 +127,7 @@ export const sealyMattresses = gql`
       uri
       subBrand
       subName
+      priceRange
       coverImg {
         handle
       }

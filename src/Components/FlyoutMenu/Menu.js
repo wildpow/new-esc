@@ -30,7 +30,7 @@ class Menu extends React.PureComponent {
       query AllMattresses {
         allMattresses { id setPriceSale brandName discription name profile 
                         subName mattOnlySale contruction warranty
-                        subBrand mattOnly uri features
+                        subBrand mattOnly uri features priceRange
                           setPrice coverImg { handle }
                         detail1 { handle } detail2 { handle } } }`
   })
