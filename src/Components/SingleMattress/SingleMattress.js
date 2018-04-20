@@ -7,7 +7,7 @@ import { Wrapper, MainTitle, Main,
         Price, PriceTitle, Article,
         Overview, Warranty, Description,
         StyledMarkDown, Profile, InfoAnchor, Stuff } from './SingleMattStyles';
-
+import PriceCalculator from '../Price/PriceCalculator.js';
 import Loading from '../Loading/Loading';
 import { Redirect } from 'react-router-dom';
 import DropDown from '../DropDrown/index';
@@ -19,12 +19,19 @@ const SingleMattress = ({ data: { loading, error, mattress } }) => {
   if (error) return <Error/>
   if (!loading) {
   if(!mattress) return <Redirect to='/404'/>
+  const SealyBoxPrice = [100, 100, 100, 100, 200];
+  const StearnsBoxPrice = [125, 125, 150, 150, 250];
+  const TempurBoxPrice = [175, 175, 250, 250, 350]; 
+  let BoxspringPrice;
   let name = '';
     if (mattress.brandName === 'Tempur-PEDIC') {
+      BoxspringPrice = TempurBoxPrice;
       name = 'tempurpedic';
     } else if (mattress.brandName === 'Sealy'){
+      BoxspringPrice = SealyBoxPrice;
       name = 'sealy'
     } else {
+      BoxspringPrice = StearnsBoxPrice;
       name = 'stearns'
     }
   return (
@@ -57,14 +64,15 @@ const SingleMattress = ({ data: { loading, error, mattress } }) => {
             <InfoAnchor href="#moreInfo">See more details</InfoAnchor>
           </Stuff>
           <PriceWrapper>
-            <Price>
+            <PriceCalculator data={mattress.mattOnly} name={name} boxPrice={BoxspringPrice}/>
+            {/* <Price>
               <PriceTitle>Mattress Only Price</PriceTitle>
               <DropDown data={mattress.mattOnly} data2={mattress.mattOnlySale}/>
             </Price>
             <Price>
               <PriceTitle>Mattress Set Price</PriceTitle>
               <DropDown data={mattress.setPrice} data2={mattress.setPriceSale}/>
-            </Price>
+            </Price> */}
           </PriceWrapper>
         </MainInfo>
       </Main>
