@@ -63,7 +63,7 @@ const SingleMattress = ({ data: { loading, error, mattress } }) => {
             <StyledMarkDown source={mattress.features} escapeHtml={false} />
             <InfoAnchor href="#moreInfo">See more details</InfoAnchor>
           </Stuff>
-          <PriceWrapper>
+          {/* <PriceWrapper> */}
             <PriceCalculator data={mattress.mattOnly} name={name} boxPrice={BoxspringPrice}/>
             {/* <Price>
               <PriceTitle>Mattress Only Price</PriceTitle>
@@ -73,7 +73,7 @@ const SingleMattress = ({ data: { loading, error, mattress } }) => {
               <PriceTitle>Mattress Set Price</PriceTitle>
               <DropDown data={mattress.setPrice} data2={mattress.setPriceSale}/>
             </Price> */}
-          </PriceWrapper>
+          {/* </PriceWrapper> */}
         </MainInfo>
       </Main>
       <Overview id="moreInfo">
