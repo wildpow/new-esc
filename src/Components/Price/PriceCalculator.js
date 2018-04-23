@@ -1,19 +1,42 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Blue, MainFont2 } from '../../Styles';
-const Thingy = styled.select`
+import {Blue, MainFont2, MainFont1, FlexCol, BoxShadow, Border, RedBorderBottom } from '../../Styles';
+
+const DropDown = styled.select`
   color: white;
   background-color: ${Blue};
   border-radius: 0;
   outline: none;
-  padding: 10px;
+  padding: 10px 190px 10px 10px;
   font-family: ${MainFont2};
+  appearance: none;
+  -webkit-appearance: none;
+    -moz-appearance: none;
+    font-size: 1.6rem;
 `
-const Divy = styled.div`
-display: flex;
-flex-direction: column;
-/* width: 400px;
-height: 300px; */
+const BoxDropDown = DropDown.extend`
+  padding: 10px 10px 10px 10px;
+`
+const BoxWrapper = styled.div`
+  transition: all .25s ease-in-out;
+`
+const BoxHeading = styled.h4`
+  transition: all .25s ease-in-out;
+  margin-bottom: 0;
+  font-size: 1.7rem;
+  font-family: ${MainFont1};
+`
+const Total = styled.h4`
+  transition: all .25s ease-in-out;
+  margin-top: 40px;
+  font-size: 2.3rem;
+  font-family: ${MainFont1};
+`
+const PriceHeading = styled.h4`
+  margin: 0 0 5px 0;
+  font-size: 1.7rem;
+  font-family: ${MainFont2};
+  letter-spacing: .1rem;
 `
 
 class PriceCalculator extends React.Component {
@@ -25,10 +48,11 @@ class PriceCalculator extends React.Component {
       total: 0,
       boxPrice: 0,
       name: '',
-      showButton: false,
-      showPrice: false,
       BoxAdded: false,
-      totalNaN: false
+      opacityAddBox: 0,
+      opacityIsNaN: 0,
+      opacityTotal: 0,
+      notFoundOrAddText: true
     }
     this.mattSizeSector = this.mattSizeSector.bind(this);
     this.AddBoxPrice = this.AddBoxPrice.bind(this);
@@ -105,10 +129,10 @@ class PriceCalculator extends React.Component {
         break;
       default:
         this.setState({
-          showButton: false,
-          showPrice: false,
+          opacityAddBox: 0,
+          opacityTotal: 0,
           BoxAdded: false,
-          totalNaN: false,
+          opacityIsNaN: 0,
           boxSector: '1',
           name: ''
         })
@@ -116,43 +140,62 @@ class PriceCalculator extends React.Component {
   }
   PriceCheck() {
     if(this.state.total === '-n/a-') {
-      this.setState({ totalNaN: true, showButton: false, showPrice: false })
+      this.setState({ 
+        opacityIsNaN: 1,
+        opacityAddBox: 0,
+        opacityTotal: 0,
+        notFoundOrAddText: false
+      })
     } else {
-      this.setState({ totalNaN: false, showButton: true, showPrice: true })
+      this.setState({ 
+        opacityIsNaN: 0,
+        opacityAddBox: 1,
+        opacityTotal: 1,
+        notFoundOrAddText: true
+      })
     }
   }
   boxdropdown() {
     return (
-      <div>
-        <h4>Add a Box Spring</h4>
-        <Thingy onChange={this.AddBoxPrice} value={this.state.boxSector}>
+      <BoxWrapper style={{opacity: this.state.opacityAddBox}}>
+        <BoxDropDown onChange={this.AddBoxPrice} value={this.state.boxSector}>
           <option value={'1'}>[$0.00] No Box Spring</option>
           <option value={'2'}>[${this.state.boxPrice}.00] Standard Foundation</option>
-        </Thingy>
-      </div>
+        </BoxDropDown>
+      </BoxWrapper>
     )
 }
-noMattressSize() {
-  return (
-    <h3>Mattress doesn't come in that size</h3>
-  )
-}
+
   render() {
     return (
-      <Divy>
-        <h4>PRICE: {this.state.name}</h4>
-        <Thingy onChange={this.mattSizeSector}>
-          <option value='10'>Select Size</option>
-          <option value='0'>Twin</option>
-          <option value='1'>TwinXL</option>
-          <option value='2'>Full</option>
-          <option value='3'>Queen</option>
-          <option value='4'>King/Cal. King</option>
-        </Thingy>
-        {this.state.showButton && this.boxdropdown()}
-        {this.state.totalNaN && this.noMattressSize()}
-        {this.state.showPrice ? this.state.total : null }
-      </Divy>
+      <div>
+        <div>
+          <PriceHeading>PRICE: {this.state.name}</PriceHeading>
+          <div>
+            <DropDown onChange={this.mattSizeSector}>
+              <option value='10'>Select Size</option>
+              <option value='0'>Twin</option>
+              <option value='1'>Twin Extra Long</option>
+              <option value='2'>Full</option>
+              <option value='3'>Queen</option>
+              <option value='4'>King/Cal. King</option>
+            </DropDown>
+          </div>
+        </div>
+        <div>
+          {this.state.notFoundOrAddText ? 
+            <BoxHeading style={{opacity: this.state.opacityAddBox}}>
+              Add a Box Spring
+            </BoxHeading> : 
+            <BoxHeading style={{opacity: this.state.opacityIsNaN}}>
+              Mattress doesn't come in that size
+            </BoxHeading>}
+            {this.boxdropdown()}
+        </div>
+        <Total style={{opacity: this.state.opacityTotal}}>
+        TOTAL: {this.state.total}
+        </Total>
+        </div>
     )
   }
 }

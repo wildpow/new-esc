@@ -64,7 +64,7 @@ const SingleMattress = ({ data: { loading, error, mattress } }) => {
             <InfoAnchor href="#moreInfo">See more details</InfoAnchor>
           </Stuff>
           {/* <PriceWrapper> */}
-            <PriceCalculator data={mattress.mattOnly} name={name} boxPrice={BoxspringPrice}/>
+            <PriceCalculator data={mattress.mattOnly} boxPrice={BoxspringPrice}/>
             {/* <Price>
               <PriceTitle>Mattress Only Price</PriceTitle>
               <DropDown data={mattress.mattOnly} data2={mattress.mattOnlySale}/>
