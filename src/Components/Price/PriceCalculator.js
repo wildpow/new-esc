@@ -9,7 +9,6 @@ const DropDown = styled.select`
   outline: none;
   padding: 10px 190px 10px 10px;
   font-family: ${MainFont2};
-  appearance: none;
   -webkit-appearance: none;
     -moz-appearance: none;
     font-size: 1.6rem;
@@ -54,24 +53,13 @@ class PriceCalculator extends React.Component {
       opacityTotal: 0,
       notFoundOrAddText: true,
       isOnSale: false,
-      boxDisabled: true
+      boxDisabled: true,
+      saleOpacity: 0,
+      mattOnlyPrices: null,
+      setPrices: null
     }
     this.mattSizeSector = this.mattSizeSector.bind(this);
     this.AddBoxPrice = this.AddBoxPrice.bind(this);
-  }
-  checkForSalePrice() {
-    const SizeSector = Number(this.state.sizeSector)
-    if (this.props.mattOnlySale === null|| this.props.mattOnlySale[SizeSector] === undefined || this.props.mattOnlySale[SizeSector] === 0){
-      console.log('No sale')
-      this.setState({
-        isOnSale: false
-      }, () => this.changePrice())
-    } else {
-      console.log('Super sale')
-      this.setState({
-        isOnSale: true
-      }, () => this.changePrice())
-    }
   }
   mattSizeSector(e) {
     this.setState({
@@ -79,19 +67,22 @@ class PriceCalculator extends React.Component {
     },() => this.checkForSalePrice())
   }
 
-  AddBoxPrice(e) {
-    if(this.state.BoxAdded) {
+  checkForSalePrice() {
+    const SizeSector = Number(this.state.sizeSector)
+    if (this.props.mattOnlySale === null ||
+        this.props.mattOnlySale[SizeSector] === undefined ||
+        this.props.mattOnlySale[SizeSector] === 0) {
       this.setState({
-        boxSector: e.target.value,
-        total: this.state.total - this.state.boxPrice,
-        BoxAdded: false
-      })
+        isOnSale: false,
+        mattOnlyPrices: this.props.mattOnly,
+        setPrices: this.props.setPrice
+      }, () => this.changePrice())
     } else {
       this.setState({
-        boxSector: e.target.value,
-        total: Number(this.state.total) + this.state.boxPrice,
-        BoxAdded: true
-      })
+        isOnSale: true,
+        mattOnlyPrices: this.props.mattOnlySale,
+        setPrices: this.props.setPriceSale
+      }, () => this.changePrice())
     }
   }
   changePrice() {
@@ -100,7 +91,8 @@ class PriceCalculator extends React.Component {
       case '0':
         this.setState({
           name: 'Twin',
-          total: this.props.mattOnly[0],
+          totalMattOnlyPrice: this.state.mattOnlyPrices[0],
+          totalSetPrice: this.state.setPrices[0],
           boxPrice: this.props.boxPrice[0],
           BoxAdded: false,
           boxSector: '1'
@@ -109,7 +101,8 @@ class PriceCalculator extends React.Component {
       case '1':
         this.setState({
           name: 'TwinXL',
-          total: this.props.mattOnly[1],
+          totalMattOnlyPrice: this.state.mattOnlyPrices[1],
+          totalSetPrice: this.state.setPrices[1],
           boxPrice: this.props.boxPrice[1],
           BoxAdded: false,
           boxSector: '1'
@@ -118,7 +111,8 @@ class PriceCalculator extends React.Component {
       case '2':
         this.setState({
           name: 'Full',
-          total: this.props.mattOnly[2],
+          totalMattOnlyPrice: this.state.mattOnlyPrices[2],
+          totalSetPrice: this.state.setPrices[2],
           boxPrice: this.props.boxPrice[3],
           BoxAdded: false,
           boxSector: '1'
@@ -127,7 +121,8 @@ class PriceCalculator extends React.Component {
       case '3':
         this.setState({
           name: 'Queen',
-          total: this.props.mattOnly[3],
+          totalMattOnlyPrice: this.state.mattOnlyPrices[3],
+          totalSetPrice: this.state.setPrices[3],
           boxPrice: this.props.boxPrice[3],
           BoxAdded: false,
           boxSector: '1'
@@ -136,7 +131,8 @@ class PriceCalculator extends React.Component {
       case '4':
         this.setState({
           name: 'King/Cal. King',
-          total: this.props.mattOnly[4],
+          totalMattOnlyPrice: this.state.mattOnlyPrices[4],
+          totalSetPrice: this.state.setPrices[4],
           boxPrice: this.props.boxPrice[4],
           BoxAdded: false,
           boxSector: '1'
@@ -150,18 +146,20 @@ class PriceCalculator extends React.Component {
           opacityIsNaN: 0,
           boxSector: '1',
           name: '',
-          boxDisabled: true
+          boxDisabled: true,
+          saleOpacity: 0
         })
     }
   }
+
   PriceCheck() {
-    if(this.state.total === '-n/a-') {
+    if(this.state.totalMattOnlyPrice === '-n/a-') {
       this.setState({ 
         opacityIsNaN: 1,
         opacityAddBox: 0,
         opacityTotal: 0,
         notFoundOrAddText: false,
-      })
+      },() => this.showSale())
     } else {
       this.setState({ 
         opacityIsNaN: 0,
@@ -169,6 +167,28 @@ class PriceCalculator extends React.Component {
         opacityTotal: 1,
         notFoundOrAddText: true,
         boxDisabled: false
+      },() => this.showSale())
+    }
+  }
+  showSale() {
+    if(this.state.isOnSale) {
+      this.setState({
+        saleOpacity: 1
+      })
+    }
+  }
+  AddBoxPrice(e) {
+    if(this.state.BoxAdded) {
+      this.setState({
+        boxSector: e.target.value,
+        total: this.state.mattOnlyPrices[this.state.sizeSector],
+        BoxAdded: false
+      })
+    } else {
+      this.setState({
+        boxSector: e.target.value,
+        total: this.state.setPrices[this.state.sizeSector],
+        BoxAdded: true
       })
     }
   }
@@ -181,8 +201,7 @@ class PriceCalculator extends React.Component {
         </BoxDropDown>
       </BoxWrapper>
     )
-}
-
+  }
   render() {
     return (
       <div>
@@ -207,13 +226,29 @@ class PriceCalculator extends React.Component {
             <BoxHeading style={{opacity: this.state.opacityIsNaN}}>
               Mattress doesn't come in that size
             </BoxHeading>}
-            {this.boxdropdown()}
+          {this.boxdropdown()}
         </div>
-        
+        {this.state.isOnSale ? 
+          <h6 style={{opacity: this.state.saleOpacity}}>
+            {
+            this.state.BoxAdded ?
+              this.props.setPrice[this.state.sizeSector]
+              :
+              this.props.mattOnly[this.state.sizeSector]
+            }
+          </h6> 
+        : <h6 style={{opacity: this.state.saleOpacity}}>
+            {
+            this.state.BoxAdded ?
+              this.props.setPrice[0]
+              :
+              this.props.mattOnly[0]
+            }
+        </h6>}
         <Total style={{opacity: this.state.opacityTotal}}>
-        TOTAL: {this.state.total}
-        </Total>
-        </div>
+          TOTAL: {this.state.BoxAdded ? this.state.totalSetPrice : this.state.totalMattOnlyPrice}
+        </Total>       
+    </div>
     )
   }
 }
