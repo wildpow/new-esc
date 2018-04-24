@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Blue, MainFont2, MainFont1, FlexCol, BoxShadow, Border, RedBorderBottom } from '../../Styles';
-
+const Bla = styled.div`
+  border: ${Border};
+  padding: 10px;
+`
 const DropDown = styled.select`
   color: white;
   background-color: ${Blue};
@@ -25,6 +28,9 @@ const BoxHeading = styled.h4`
   font-size: 1.7rem;
   font-family: ${MainFont1};
 `
+const BoxHeading2 = BoxHeading.extend`
+  transition: all .65s ease-in-out;
+`;
 const Total = styled.h4`
   transition: all .25s ease-in-out;
   margin-top: 40px;
@@ -32,10 +38,11 @@ const Total = styled.h4`
   font-family: ${MainFont1};
 `
 const PriceHeading = styled.h4`
-  margin: 0 0 5px 0;
+  margin: 0 auto 5px auto;
   font-size: 1.7rem;
   font-family: ${MainFont2};
   letter-spacing: .1rem;
+  border-bottom: ${RedBorderBottom};
 `
 
 class PriceCalculator extends React.Component {
@@ -44,7 +51,8 @@ class PriceCalculator extends React.Component {
     this.state = {
       sizeSector: '0',
       boxSector: '1',
-      total: 0,
+      totalMattOnlyPrice: 0,
+      totalSetPrice: 0,
       boxPrice: 0,
       name: '',
       BoxAdded: false,
@@ -56,7 +64,8 @@ class PriceCalculator extends React.Component {
       boxDisabled: true,
       saleOpacity: 0,
       mattOnlyPrices: null,
-      setPrices: null
+      setPrices: null,
+      isNaNBool: false
     }
     this.mattSizeSector = this.mattSizeSector.bind(this);
     this.AddBoxPrice = this.AddBoxPrice.bind(this);
@@ -156,6 +165,7 @@ class PriceCalculator extends React.Component {
     if(this.state.totalMattOnlyPrice === '-n/a-') {
       this.setState({ 
         opacityIsNaN: 1,
+        isNaNBool: true,
         opacityAddBox: 0,
         opacityTotal: 0,
         notFoundOrAddText: false,
@@ -163,6 +173,7 @@ class PriceCalculator extends React.Component {
     } else {
       this.setState({ 
         opacityIsNaN: 0,
+        isNaNBool: false,
         opacityAddBox: 1,
         opacityTotal: 1,
         notFoundOrAddText: true,
@@ -171,9 +182,13 @@ class PriceCalculator extends React.Component {
     }
   }
   showSale() {
-    if(this.state.isOnSale) {
+    if(this.state.isOnSale && !this.state.isNaNBool) {
       this.setState({
         saleOpacity: 1
+      })
+    } else {
+      this.setState({
+        saleOpacity: 0
       })
     }
   }
@@ -204,7 +219,7 @@ class PriceCalculator extends React.Component {
   }
   render() {
     return (
-      <div>
+      <Bla>
         <div>
           <PriceHeading>PRICE: {this.state.name}</PriceHeading>
           <div>
@@ -247,10 +262,35 @@ class PriceCalculator extends React.Component {
         </h6>}
         <Total style={{opacity: this.state.opacityTotal}}>
           TOTAL: {this.state.BoxAdded ? this.state.totalSetPrice : this.state.totalMattOnlyPrice}
-        </Total>       
-    </div>
+        </Total>    
+        {/* {console.log("Size selector",this.state.sizeSector)} 
+        {console.log("Total Mat only",this.state.totalMattOnlyPrice)}  
+        {console.log("Total set price",this.state.totalSetPrice)}
+        {console.log("IS -N/A bool", this.state.isNaNBool)}
+        {console.log("is on sale bool", this.state.isOnSale)}
+        {console.log("--------------")} */}
+    </Bla>
     )
   }
 }
+
+// sizeSector: '0',
+// boxSector: '1',
+// totalMattOnlyPrice: 0,
+// totalSetPrice: 0,
+// boxPrice: 0,
+// name: '',
+// BoxAdded: false,
+// opacityAddBox: 0,
+// opacityIsNaN: 0,
+// opacityTotal: 0,
+// notFoundOrAddText: true,
+// isOnSale: false,
+// boxDisabled: true,
+// saleOpacity: 0,
+// mattOnlyPrices: null,
+// setPrices: null,
+// isNaNBool: false
+
 
 export default PriceCalculator;
