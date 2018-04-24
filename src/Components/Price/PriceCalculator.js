@@ -52,16 +52,31 @@ class PriceCalculator extends React.Component {
       opacityAddBox: 0,
       opacityIsNaN: 0,
       opacityTotal: 0,
-      notFoundOrAddText: true
+      notFoundOrAddText: true,
+      isOnSale: false,
+      boxDisabled: true
     }
     this.mattSizeSector = this.mattSizeSector.bind(this);
     this.AddBoxPrice = this.AddBoxPrice.bind(this);
   }
-
+  checkForSalePrice() {
+    const SizeSector = Number(this.state.sizeSector)
+    if (this.props.mattOnlySale === null|| this.props.mattOnlySale[SizeSector] === undefined || this.props.mattOnlySale[SizeSector] === 0){
+      console.log('No sale')
+      this.setState({
+        isOnSale: false
+      }, () => this.changePrice())
+    } else {
+      console.log('Super sale')
+      this.setState({
+        isOnSale: true
+      }, () => this.changePrice())
+    }
+  }
   mattSizeSector(e) {
     this.setState({
       sizeSector: e.target.value,
-    },() => this.changePrice())
+    },() => this.checkForSalePrice())
   }
 
   AddBoxPrice(e) {
@@ -85,7 +100,7 @@ class PriceCalculator extends React.Component {
       case '0':
         this.setState({
           name: 'Twin',
-          total: this.props.data[0],
+          total: this.props.mattOnly[0],
           boxPrice: this.props.boxPrice[0],
           BoxAdded: false,
           boxSector: '1'
@@ -94,7 +109,7 @@ class PriceCalculator extends React.Component {
       case '1':
         this.setState({
           name: 'TwinXL',
-          total: this.props.data[1],
+          total: this.props.mattOnly[1],
           boxPrice: this.props.boxPrice[1],
           BoxAdded: false,
           boxSector: '1'
@@ -103,7 +118,7 @@ class PriceCalculator extends React.Component {
       case '2':
         this.setState({
           name: 'Full',
-          total: this.props.data[2],
+          total: this.props.mattOnly[2],
           boxPrice: this.props.boxPrice[3],
           BoxAdded: false,
           boxSector: '1'
@@ -112,7 +127,7 @@ class PriceCalculator extends React.Component {
       case '3':
         this.setState({
           name: 'Queen',
-          total: this.props.data[3],
+          total: this.props.mattOnly[3],
           boxPrice: this.props.boxPrice[3],
           BoxAdded: false,
           boxSector: '1'
@@ -121,7 +136,7 @@ class PriceCalculator extends React.Component {
       case '4':
         this.setState({
           name: 'King/Cal. King',
-          total: this.props.data[4],
+          total: this.props.mattOnly[4],
           boxPrice: this.props.boxPrice[4],
           BoxAdded: false,
           boxSector: '1'
@@ -134,7 +149,8 @@ class PriceCalculator extends React.Component {
           BoxAdded: false,
           opacityIsNaN: 0,
           boxSector: '1',
-          name: ''
+          name: '',
+          boxDisabled: true
         })
     }
   }
@@ -144,21 +160,22 @@ class PriceCalculator extends React.Component {
         opacityIsNaN: 1,
         opacityAddBox: 0,
         opacityTotal: 0,
-        notFoundOrAddText: false
+        notFoundOrAddText: false,
       })
     } else {
       this.setState({ 
         opacityIsNaN: 0,
         opacityAddBox: 1,
         opacityTotal: 1,
-        notFoundOrAddText: true
+        notFoundOrAddText: true,
+        boxDisabled: false
       })
     }
   }
   boxdropdown() {
     return (
       <BoxWrapper style={{opacity: this.state.opacityAddBox}}>
-        <BoxDropDown onChange={this.AddBoxPrice} value={this.state.boxSector}>
+        <BoxDropDown onChange={this.AddBoxPrice} value={this.state.boxSector} disabled={this.state.boxDisabled}>
           <option value={'1'}>[$0.00] No Box Spring</option>
           <option value={'2'}>[${this.state.boxPrice}.00] Standard Foundation</option>
         </BoxDropDown>
@@ -192,6 +209,7 @@ class PriceCalculator extends React.Component {
             </BoxHeading>}
             {this.boxdropdown()}
         </div>
+        
         <Total style={{opacity: this.state.opacityTotal}}>
         TOTAL: {this.state.total}
         </Total>
