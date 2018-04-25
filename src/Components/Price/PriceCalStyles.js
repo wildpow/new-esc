@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {Blue, MainFont2, FlexCol, Red } from '../../Styles';
+import {Blue, MainFont2, FlexCol, Red, Border } from '../../Styles';
 
 export const DropDown = styled.select`
   color: white;
@@ -14,10 +14,11 @@ export const DropDown = styled.select`
   }
   @media(min-width: 567px) {
     width: auto;
-   
+    -moz-appearance: none;
+  -webkit-appearance: none;
   outline: none;
   padding: 8px;
-  border-radius: 0;
+  border-radius: .18rem;
   }
   @media(min-width: 768px) {
     font-size: 1.2rem;
@@ -107,6 +108,9 @@ export const BeforeSalePrice = styled.h6`
     font-size: 1.3rem;
     margin-bottom: 8px;
   }
+  @media(min-width: 1200px) {
+    margin-right: 70px;
+  }
 `
 
 export const Total = styled.h4`
@@ -126,6 +130,9 @@ export const Total = styled.h4`
     margin-right: 50px;
     font-size: 2.2rem;
   }
+  @media(min-width: 1200px) {
+    margin-right: 70px;
+  }
 `;
 
 export const Wrapper = FlexCol.extend`
@@ -134,10 +141,10 @@ export const Wrapper = FlexCol.extend`
   @media(min-width: 1024px) {
     margin-left: 25px;
     margin-top: 10px;
+    border-left: ${Border};
   }
 `;
 
 export const DropDownWrapper = styled.div`
   align-self: center;
-
 `;

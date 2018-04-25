@@ -196,7 +196,7 @@ class PriceCalculator extends React.Component {
               Add a Box Spring
             </AddBoxTitle> : 
             <AddBoxTitle style={{opacity: this.state.opacityIsNaN}}>
-              Mattress doesn't come in that size
+              Size Unavailable
             </AddBoxTitle>}
           {this.boxdropdown()}
         </DropDownWrapper>
