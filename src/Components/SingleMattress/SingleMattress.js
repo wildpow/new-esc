@@ -3,14 +3,12 @@ import gql from 'graphql-tag'
 import { graphql } from 'react-apollo';
 import Helmet from 'react-helmet';
 import { Wrapper, MainTitle, Main,
-        MainInfo, PriceWrapper,
-        Price, PriceTitle, Article,
+        MainInfo, Article,
         Overview, Warranty, Description,
         StyledMarkDown, Profile, InfoAnchor, Stuff } from './SingleMattStyles';
 import PriceCalculator from '../Price/PriceCalculator.js';
 import Loading from '../Loading/Loading';
 import { Redirect } from 'react-router-dom';
-import DropDown from '../DropDrown/index';
 import ImageViewer from '../ImageViewer/ImageViewer';
 import Error from '../Error/Error';
 import BreadCrumbs, { BreadWrapper } from '../BreadCrumbs/BreadCrumbs';
@@ -63,22 +61,13 @@ const SingleMattress = ({ data: { loading, error, mattress } }) => {
             <StyledMarkDown source={mattress.features} escapeHtml={false} />
             <InfoAnchor href="#moreInfo">See more details</InfoAnchor>
           </Stuff>
-          {/* <PriceWrapper> */}
             <PriceCalculator 
               mattOnly={mattress.mattOnly}
               mattOnlySale={mattress.mattOnlySale}
               setPrice={mattress.setPrice}
               setPriceSale={mattress.setPriceSale}
-              boxPrice={BoxspringPrice}/>
-            {/* <Price>
-              <PriceTitle>Mattress Only Price</PriceTitle>
-              <DropDown data={mattress.mattOnly} data2={mattress.mattOnlySale}/>
-            </Price>
-            <Price>
-              <PriceTitle>Mattress Set Price</PriceTitle>
-              <DropDown data={mattress.setPrice} data2={mattress.setPriceSale}/>
-            </Price> */}
-          {/* </PriceWrapper> */}
+              boxPrice={BoxspringPrice}
+            />
         </MainInfo>
       </Main>
       <Overview id="moreInfo">

@@ -1,50 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
-import {Blue, MainFont2, MainFont1, FlexCol, BoxShadow, Border, RedBorderBottom } from '../../Styles';
-const Bla = styled.div`
-  border: ${Border};
-  padding: 10px;
-`
-const DropDown = styled.select`
-  color: white;
-  background-color: ${Blue};
-  border-radius: 0;
-  outline: none;
-  padding: 10px 190px 10px 10px;
-  font-family: ${MainFont2};
-  -webkit-appearance: none;
-    -moz-appearance: none;
-    font-size: 1.6rem;
-`
-const BoxDropDown = DropDown.extend`
-  padding: 10px 10px 10px 10px;
-`
-const BoxWrapper = styled.div`
-  transition: all .25s ease-in-out;
-`
-const BoxHeading = styled.h4`
-  transition: all .25s ease-in-out;
-  margin-bottom: 0;
-  font-size: 1.7rem;
-  font-family: ${MainFont1};
-`
-const BoxHeading2 = BoxHeading.extend`
-  transition: all .65s ease-in-out;
-`;
-const Total = styled.h4`
-  transition: all .25s ease-in-out;
-  margin-top: 40px;
-  font-size: 2.3rem;
-  font-family: ${MainFont1};
-`
-const PriceHeading = styled.h4`
-  margin: 0 auto 5px auto;
-  font-size: 1.7rem;
-  font-family: ${MainFont2};
-  letter-spacing: .1rem;
-  border-bottom: ${RedBorderBottom};
-`
-
+import { DropDown, PriceTitle, AddBoxTitle,
+          Total, BeforeSalePrice, Wrapper,
+          DropDownSize, DropDownWrapper } from './PriceCalStyles'
 class PriceCalculator extends React.Component {
   constructor(props) {
     super(props);
@@ -209,57 +166,57 @@ class PriceCalculator extends React.Component {
   }
   boxdropdown() {
     return (
-      <BoxWrapper style={{opacity: this.state.opacityAddBox}}>
-        <BoxDropDown onChange={this.AddBoxPrice} value={this.state.boxSector} disabled={this.state.boxDisabled}>
+      <div style={{opacity: this.state.opacityAddBox}}>
+        <DropDown onChange={this.AddBoxPrice} value={this.state.boxSector} disabled={this.state.boxDisabled}>
           <option value={'1'}>[$0.00] No Box Spring</option>
           <option value={'2'}>[${this.state.boxPrice}.00] Standard Foundation</option>
-        </BoxDropDown>
-      </BoxWrapper>
+        </DropDown>
+      </div>
     )
   }
   render() {
     return (
-      <Bla>
-        <div>
-          <PriceHeading>PRICE: {this.state.name}</PriceHeading>
+      <Wrapper>
+        <DropDownWrapper>
+          <PriceTitle>PRICE: {this.state.name}</PriceTitle>
           <div>
-            <DropDown onChange={this.mattSizeSector}>
+            <DropDownSize onChange={this.mattSizeSector}>
               <option value='10'>Select Size</option>
               <option value='0'>Twin</option>
               <option value='1'>Twin Extra Long</option>
               <option value='2'>Full</option>
               <option value='3'>Queen</option>
               <option value='4'>King/Cal. King</option>
-            </DropDown>
+            </DropDownSize>
           </div>
-        </div>
-        <div>
+        </DropDownWrapper>
+        <DropDownWrapper>
           {this.state.notFoundOrAddText ? 
-            <BoxHeading style={{opacity: this.state.opacityAddBox}}>
+            <AddBoxTitle style={{opacity: this.state.opacityAddBox}}>
               Add a Box Spring
-            </BoxHeading> : 
-            <BoxHeading style={{opacity: this.state.opacityIsNaN}}>
+            </AddBoxTitle> : 
+            <AddBoxTitle style={{opacity: this.state.opacityIsNaN}}>
               Mattress doesn't come in that size
-            </BoxHeading>}
+            </AddBoxTitle>}
           {this.boxdropdown()}
-        </div>
+        </DropDownWrapper>
         {this.state.isOnSale ? 
-          <h6 style={{opacity: this.state.saleOpacity}}>
+          <BeforeSalePrice style={{opacity: this.state.saleOpacity}}>
             {
             this.state.BoxAdded ?
-              this.props.setPrice[this.state.sizeSector]
+            this.props.setPrice[this.state.sizeSector]
               :
               this.props.mattOnly[this.state.sizeSector]
             }
-          </h6> 
-        : <h6 style={{opacity: this.state.saleOpacity}}>
+          </BeforeSalePrice> 
+        : <BeforeSalePrice style={{opacity: this.state.saleOpacity}}>
             {
             this.state.BoxAdded ?
               this.props.setPrice[0]
               :
               this.props.mattOnly[0]
             }
-        </h6>}
+        </BeforeSalePrice>}
         <Total style={{opacity: this.state.opacityTotal}}>
           TOTAL: {this.state.BoxAdded ? this.state.totalSetPrice : this.state.totalMattOnlyPrice}
         </Total>    
@@ -269,7 +226,7 @@ class PriceCalculator extends React.Component {
         {console.log("IS -N/A bool", this.state.isNaNBool)}
         {console.log("is on sale bool", this.state.isOnSale)}
         {console.log("--------------")} */}
-    </Bla>
+    </Wrapper>
     )
   }
 }
