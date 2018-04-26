@@ -2,7 +2,7 @@ import React from 'react';
 import { DropDown, PriceTitle, AddBoxTitle,
           Total, BeforeSalePrice, Wrapper,
           DropDownSize, DropDownWrapper } from './PriceCalStyles'
-class PriceCalculator extends React.Component {
+class PriceCalculator extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -196,7 +196,7 @@ class PriceCalculator extends React.Component {
               Add a Box Spring
             </AddBoxTitle> : 
             <AddBoxTitle style={{opacity: this.state.opacityIsNaN}}>
-              Size Unavailable
+              Size is Unavailable
             </AddBoxTitle>}
           {this.boxdropdown()}
         </DropDownWrapper>

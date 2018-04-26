@@ -46,6 +46,7 @@ export const DropDownSize = DropDown.extend`
   @media(min-width: 1024px) {
     padding-right: 170px;
   } 
+  
 `
 
 export const PriceTitle = styled.h4`
@@ -111,6 +112,9 @@ export const BeforeSalePrice = styled.h6`
   @media(min-width: 1200px) {
     margin-right: 70px;
   }
+  @media(min-width: 1300px)  {
+    margin-right: 35px;
+  }
 `
 
 export const Total = styled.h4`
@@ -132,6 +136,9 @@ export const Total = styled.h4`
   }
   @media(min-width: 1200px) {
     margin-right: 70px;
+  }
+  @media(min-width: 1300px)  {
+    margin-right: 35px;
   }
 `;
 
