@@ -7,6 +7,7 @@ export const Wrapper = FlexCol.extend`
   margin-top: -15px;
   @media (min-width: 768px) { margin-top: -22px; }
   @media (min-width: 1022px) { margin-top: -85px; }
+  @media (min-width: 1300px) { margin-top: -90px; }
 `;
 
 export const StyledLink = styled(Link)`

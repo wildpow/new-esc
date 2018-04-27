@@ -10,7 +10,8 @@ export const Main = styled.div`
   margin-right: 0;
   margin-left: 0;  
   margin-top: 15px;
-  @media (min-width: 1300px) { margin-right: 105px; margin-left: 105px; }
+  max-width: 1000px;
+  @media (min-width: 1300px) { margin-right: auto; margin-left: auto; }
 `;
 
 export const Linky = styled(Link)`
@@ -37,8 +38,8 @@ export const Wrapper = FlexCol.extend`
   @media(min-width: 768px) { margin-top: 15px; }
   @media(min-width: 1300px) {
     margin-top: 15px;
-    margin-right: 72px;
-    margin-left: 72px;
+    /* margin-right: 72px;
+    margin-left: 72px; */
   }
 `;
 
