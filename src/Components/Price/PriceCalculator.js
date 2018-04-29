@@ -202,7 +202,7 @@ class PriceCalculator extends React.PureComponent {
         </DropDownWrapper>
         {this.state.isOnSale ? 
           <BeforeSalePrice style={{opacity: this.state.saleOpacity}}>
-            {
+            ${
             this.state.BoxAdded ?
             this.props.setPrice[this.state.sizeSector]
               :
@@ -210,7 +210,7 @@ class PriceCalculator extends React.PureComponent {
             }
           </BeforeSalePrice> 
         : <BeforeSalePrice style={{opacity: this.state.saleOpacity}}>
-            {
+            ${
             this.state.BoxAdded ?
               this.props.setPrice[0]
               :
@@ -218,7 +218,7 @@ class PriceCalculator extends React.PureComponent {
             }
         </BeforeSalePrice>}
         <Total style={{opacity: this.state.opacityTotal}}>
-          TOTAL: {this.state.BoxAdded ? this.state.totalSetPrice : this.state.totalMattOnlyPrice}
+          TOTAL: ${this.state.BoxAdded ? this.state.totalSetPrice : this.state.totalMattOnlyPrice}
         </Total>    
         {/* {console.log("Size selector",this.state.sizeSector)} 
         {console.log("Total Mat only",this.state.totalMattOnlyPrice)}  
