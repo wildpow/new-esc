@@ -5,10 +5,11 @@ import { Carousel } from 'react-responsive-carousel';
 
 import { Main, OneImg, Linky } from './HomeStyles';
 
-import Sealy from '../../images/SealyCarouselKelburnRatio.jpg';
-import Tempur from '../../images/Legacy600OffRatio.jpg';
-import Stearns from '../../images/StearnsTopRatedCarouselRatio.jpg';
-import Sale from '../../images/SpringSaleCarouselRatio.jpg';
+import Sealy from '../../images/SealyDefault980x450.jpg';
+import Tempur from '../../images/TempurDefault980x450.jpg';
+import Stearns from '../../images/StearnsDefault980x450.jpg';
+import Sale from '../../images/SpringSale980x450.jpg';
+import Fifth from '../../images/GildedBreathSpecialBuy980x450.jpg'
 import Front from '../FrontInfo/front';
 
 const HomeComponent = () => {
@@ -35,16 +36,19 @@ const HomeComponent = () => {
         showStatus={false}
       >
         <div>
-          <OneImg src={Sale} alt="Image of E.S.C Mattress Center's Floor model close out mattress and adjustable base sale."/>
+          <OneImg src={Sale} alt="Image of E.S.C Mattress Center's Spring Sales Event on all mattresses and adjustable bases."/>
         </div>
         <Linky to='/brands/stearns'>
           <OneImg src={Stearns} alt="Image of Stearns and Foster top rated inner spring mattress"/>
         </Linky>
-        <Linky to='/brands/tempurpedic/TEMPUR-Legacy-Limited-Edition'>
-          <OneImg src={Tempur} alt="Image of Tempurpedic 50% off mattress floor model close out sale"/>
+        <Linky to='/brands/tempurpedic'>
+          <OneImg src={Tempur} alt="Image of Tempurpedic JD power award for #1 in confort, support and value"/>
         </Linky>
         <Linky to='/brands/sealy'>
-          <OneImg src={Sealy} alt="Image of Sealy's 50% off mattress floor model close out sale"/> 
+          <OneImg src={Sealy} alt="Image of Sealy's number one best rated hybrid mattress"/> 
+        </Linky>
+        <Linky to='/brands/sealy/Sealy-Golden-Elegance-Gilded-Breath-Plush-PT'>
+          <OneImg src={Fifth} alt="Image of Sealy's Golden Elegance Giled Breath plush pilltop mattress"/> 
         </Linky>
       </Carousel>
       <Front/>

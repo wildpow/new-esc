@@ -10,7 +10,7 @@ export const Main = styled.div`
   margin-right: 0;
   margin-left: 0;  
   margin-top: 15px;
-  max-width: 1000px;
+  max-width: 980px;
   @media (min-width: 1300px) { margin-right: auto; margin-left: auto; }
 `;
 
@@ -20,10 +20,10 @@ export const Linky = styled(Link)`
 export const OneImg = styled.img`
   color: white;
   background-color: white;
-  max-width: 600px;
-  max-height: 1000px;
-  @media(min-width: 768px) { max-width: 800px; max-height: 600px; }
-  @media(min-width: 1024px) { max-width: 1000px; height: 600px; }
+  max-width: 980px;
+  max-height: 450px;
+  // @media(min-width: 768px) { max-width: 800px; max-height: 600px; }
+  // @media(min-width: 1024px) { max-width: 1000px; height: 600px; }
 `
 
 export const Wrapper = FlexCol.extend`
