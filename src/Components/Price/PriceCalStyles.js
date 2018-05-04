@@ -15,25 +15,27 @@ export const DropDown = styled.select`
   @media(min-width: 567px) {
     width: auto;
     -moz-appearance: none;
-  -webkit-appearance: none;
-  outline: none;
-  padding: 8px;
-  border-radius: .18rem;
+    -webkit-appearance: none;
+    outline: none;
+    padding: 8px;
+    border-radius: .18rem;
+    line-height: 20px;
   }
   @media(min-width: 768px) {
     font-size: 1.2rem;
     padding: 10px;
     margin-bottom: 20px;
+    line-height: 25px;
   }
   @media(min-width: 1024px) {
     margin-bottom: 30px;
     padding: 15px;
     font-size: 1.3rem;
     -moz-appearance: none;
-  -webkit-appearance: none;
+    -webkit-appearance: none;
   } 
   @media(min-width: 1200px) {
-    padding: 20px;
+    padding: 20px 20px 20px 20px;
   }
 `;
 export const DropDownSize = DropDown.extend`

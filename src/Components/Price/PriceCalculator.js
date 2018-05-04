@@ -166,7 +166,7 @@ class PriceCalculator extends React.PureComponent {
   }
   boxdropdown() {
     return (
-      <div style={{opacity: this.state.opacityAddBox}}>
+      <div style={{opacity: this.state.opacityAddBox, transition: 'opacity 350ms ease-in-out'}}>
         <DropDown onChange={this.AddBoxPrice} value={this.state.boxSector} disabled={this.state.boxDisabled}>
           <option value={'1'}>[$0.00] No Box Spring</option>
           <option value={'2'}>[${this.state.boxPrice}.00] Standard Foundation</option>
@@ -192,16 +192,16 @@ class PriceCalculator extends React.PureComponent {
         </DropDownWrapper>
         <DropDownWrapper>
           {this.state.notFoundOrAddText ? 
-            <AddBoxTitle style={{opacity: this.state.opacityAddBox}}>
+            <AddBoxTitle style={{opacity: this.state.opacityAddBox, transition: 'opacity 350ms ease-in-out'}}>
               Add a Box Spring
             </AddBoxTitle> : 
-            <AddBoxTitle style={{opacity: this.state.opacityIsNaN}}>
+            <AddBoxTitle style={{opacity: this.state.opacityIsNaN, transition: 'opacity 350ms ease-in-out'}}>
               Size is Unavailable
             </AddBoxTitle>}
           {this.boxdropdown()}
         </DropDownWrapper>
         {this.state.isOnSale ? 
-          <BeforeSalePrice style={{opacity: this.state.saleOpacity}}>
+          <BeforeSalePrice style={{opacity: this.state.saleOpacity, transition: 'opacity 350ms ease-in-out'}}>
             ${
             this.state.BoxAdded ?
             this.props.setPrice[this.state.sizeSector]
@@ -209,7 +209,7 @@ class PriceCalculator extends React.PureComponent {
               this.props.mattOnly[this.state.sizeSector]
             }
           </BeforeSalePrice> 
-        : <BeforeSalePrice style={{opacity: this.state.saleOpacity}}>
+        : <BeforeSalePrice style={{opacity: this.state.saleOpacity, transition: 'opacity 350ms ease-in-out'}}>
             ${
             this.state.BoxAdded ?
               this.props.setPrice[0]
@@ -217,7 +217,7 @@ class PriceCalculator extends React.PureComponent {
               this.props.mattOnly[0]
             }
         </BeforeSalePrice>}
-        <Total style={{opacity: this.state.opacityTotal}}>
+        <Total style={{opacity: this.state.opacityTotal, transition: 'opacity 700ms ease-in-out'}}>
           TOTAL: ${this.state.BoxAdded ? this.state.totalSetPrice : this.state.totalMattOnlyPrice}
         </Total>    
         {/* {console.log("Size selector",this.state.sizeSector)} 

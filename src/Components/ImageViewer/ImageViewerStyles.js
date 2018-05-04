@@ -3,12 +3,21 @@ import { FlexCol, FlexRow } from '../../Styles';
 
 export const ImgWrapper = FlexCol.extend`
   margin: 0;
-  @media(min-width: 1024px) {margin-right: 10px;}
+  height: 200px;
+  @media(min-width: 360px) { height: 240px; }
+  @media(min-width: 500px) { height: 340px; }
+  @media(min-width: 768px) { height: 470px; }
+  @media(min-width: 1024px) { height: 660px; margin-right: 10px; }
 `;
 
 export const SmallImgHolder = FlexRow.extend`
   justify-content: center;
   align-self: center;
+  top: 150px;
+  @media(min-width: 360px) { top: 180px; }
+  @media(min-width: 500px) { top: 250px; }
+  @media(min-width: 768px) { top: 350px; }
+  @media(min-width: 1024px) { top: 500px; }
 `;
 
 export const SmImg = styled.img`
@@ -18,7 +27,7 @@ export const SmImg = styled.img`
   @media(min-width: 360px) { width: 60px; height: 60px; }
   @media(min-width: 500px) { width: 83px; height: 83px; }
   @media(min-width: 768px) { width: 116px; height: 116px; }
-  @media(min-width: 1024px) { width: 165px; height: 165px; }
+  @media(min-width: 1024px) { width: 167px; height: 167px; }
   border: 2px solid white;
   &:hover { border: 2px solid black; }
 `;
