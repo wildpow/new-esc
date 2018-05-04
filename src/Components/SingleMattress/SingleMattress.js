@@ -9,7 +9,7 @@ import { Wrapper, MainTitle, Main,
 import PriceCalculator from '../Price/PriceCalculator.js';
 import Loading from '../Loading/Loading';
 import { Redirect } from 'react-router-dom';
-import ImageViewer from '../ImageViewer/ImageViewer';
+import ImageViewer from '../ImageViewer/ImageViewer2';
 import Error from '../Error/Error';
 import BreadCrumbs, { BreadWrapper } from '../BreadCrumbs/BreadCrumbs';
 

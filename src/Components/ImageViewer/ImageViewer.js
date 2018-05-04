@@ -31,11 +31,11 @@ class ImageViewer extends React.PureComponent {
   render() {
     return (
       <ImgWrapper>
-        <div className="MainImgHolder">{this.selector()}</div>
-        <SmallImgHolder className="SmallImgHolder">
-          <SmImg className="SmallPic" onMouseOver={this.changeActiveImage} src={`https://media.graphcms.com/resize=w:500,h:500,fit:clip/${this.props.cover}`} data-id="1" alt={`Small image of ${this.props.fullname} ${this.props.type}`}/>
-          <SmImg className="SmallPic" onMouseOver={this.changeActiveImage} src={`https://media.graphcms.com/resize=w:500,h:500,fit:clip/${this.props.img1}`} data-id="2" alt={`Small image of ${this.props.fullname} ${this.props.type}`}/>
-          <SmImg className="SmallPic" onMouseOver={this.changeActiveImage} src={`https://media.graphcms.com/resize=w:500,h:500,fit:clip/${this.props.img2}`} data-id="3" alt={`Small image of ${this.props.fullname} ${this.props.type}`}/>
+        <div>{this.selector()}</div>
+        <SmallImgHolder>
+          <SmImg onMouseOver={this.changeActiveImage} src={`https://media.graphcms.com/resize=w:500,h:500,fit:clip/${this.props.cover}`} data-id="1" alt={`Small image of ${this.props.fullname} ${this.props.type}`}/>
+          <SmImg onMouseOver={this.changeActiveImage} src={`https://media.graphcms.com/resize=w:500,h:500,fit:clip/${this.props.img1}`} data-id="2" alt={`Small image of ${this.props.fullname} ${this.props.type}`}/>
+          <SmImg onMouseOver={this.changeActiveImage} src={`https://media.graphcms.com/resize=w:500,h:500,fit:clip/${this.props.img2}`} data-id="3" alt={`Small image of ${this.props.fullname} ${this.props.type}`}/>
         </SmallImgHolder>
       </ImgWrapper>
     )
