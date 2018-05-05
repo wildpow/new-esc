@@ -11,7 +11,7 @@ import Error from '../Error/Error';
 const POSTS_PER_PAGE = 4
 
 const BlogComponent = ({ data: { loading, error, allPosts, _allPostsMeta}, loadMorePosts}) => {
-  if (error) return <Error/>
+  if (error) return <Error next="blog" error={true} only2Links={true}/>
   if (allPosts && _allPostsMeta) {
     const areMorePosts = allPosts.length < _allPostsMeta.count
 

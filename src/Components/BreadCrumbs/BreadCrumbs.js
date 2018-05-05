@@ -63,16 +63,16 @@ const BreadCrumbs = (props) => {
       <div>
         
         <Crumbs to={`/${props.next}`}>{props.next}</Crumbs>
-        <Span>></Span>
+        {!props.only2Links ? <Span>></Span> : ''}
       </div>
       }
       {props.next2&&
         <div>
         <Crumbs to={`/${props.next}/${props.next2}`}>{props.next2}</Crumbs>
-        <Span>></Span>
+        {!props.only3Links ? <Span>></Span> : ''}
         </div>
       }
-      <Location>{props.here}</Location>
+      <Location>{props.error ? <Crumbs to={`/${props.next}/${props.next2}/${props.here}`}>{props.here}</Crumbs>: props.here}</Location>
     </Fragment>
   )
 }

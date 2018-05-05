@@ -9,7 +9,7 @@ import Error from '../Error/Error';
 import BreadCrumbs, { BreadWrapper } from '../BreadCrumbs/BreadCrumbs';
 
 const AdjustableComponent = ({ data: {error, loading, Bases} }, client) => {
-  if (error) return <Error/>
+  if (error) return <Error next="adjustable" error={true} only2Links={true}/>
   if (!loading) {
     return (
     <Main MarginTop>

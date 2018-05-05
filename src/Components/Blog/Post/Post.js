@@ -9,8 +9,8 @@ import Error from '../../Error/Error';
 import { H2 } from '../../../Styles'
 import BreadCrumbs, { BreadWrapper } from '../../BreadCrumbs/BreadCrumbs';
 
-const Post = ({ data: { loading, error, post } }) => {
-  if (error) return <Error/>
+const Post = ({ data: { loading, error, post }, match }) => {
+  if (error) return <Error next="blog" next2={match.params.slug} only3Links={true}/>
   if (!loading) {
     if(!post) return <Redirect to='/404'/>
     return (

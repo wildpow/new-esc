@@ -15,7 +15,7 @@ import BreadCrumbs, { BreadWrapper } from '../BreadCrumbs/BreadCrumbs';
 const Tempur = ({ data: { loading, error, Brands} }) => {
   const title = 'tempurpedic';
 
-  if (error) return <Error/>
+  if (error) return <Error next="brands" next2="tempurpedic" only3Links={true}/>
   if(!loading) {
     return (
       <MainWrapper>

@@ -14,8 +14,8 @@ import { Redirect } from 'react-router-dom';
 import Error from '../Error/Error';
 
 
-const SingleBase = ({data: { loading, error, base}}) => {
-  if (error) return <Error/>
+const SingleBase = ({data: { loading, error, base}, match}) => {
+  if (error) return <Error next="adjustable" next2={match.params.uri} error={true} only3Links={true}/>
   if (!loading) {
     if(!base) return <Redirect to='/404'/>
     return(

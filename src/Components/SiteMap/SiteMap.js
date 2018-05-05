@@ -10,7 +10,7 @@ import Error from '../Error/Error';
 
 
 const SiteMap = ({ data: { loading, error, Sealy, Stearns, Tempur, Ajustable, Blog} }) => {
-  if (error) return <Error/>
+  if (error) return <Error next={'sitemap'} only2Links={true}/>
   if(!loading) {
     return (
       <Fragment>
