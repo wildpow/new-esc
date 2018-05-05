@@ -31,7 +31,7 @@ const SingleMattress = ({ data: { loading, error, mattress }, match }) => {
     }
   if (error) return <Error next="Brands" next2={name.charAt(0).toUpperCase() + name.slice(1)} here={match.params.uri} error={true}/>
   if (!loading) {
-  if(mattress) return <Redirect to='/404'/>
+  if(!mattress) return <Redirect to='/404'/>
  
   return (
     <div>
