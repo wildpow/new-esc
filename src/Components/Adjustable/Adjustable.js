@@ -8,7 +8,7 @@ import Loading from '../Loading/Loading';
 import Error from '../Error/Error';
 import BreadCrumbs, { BreadWrapper } from '../BreadCrumbs/BreadCrumbs';
 
-const AdjustableComponent = ({ data: {error, loading, Bases} }, client) => {
+const AdjustableComponent = ({ data: {error, loading, Bases} }) => {
   if (error) return <Error next="adjustable" error={true} only2Links={true}/>
   if (!loading) {
     return (

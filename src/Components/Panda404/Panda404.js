@@ -8,7 +8,7 @@ import BreadCrumbs, { BreadWrapper } from '../BreadCrumbs/BreadCrumbs';
 const Panda404 = (props) => {
   return (
     <div>
-      <BreadWrapper>{console.log(props)}
+      <BreadWrapper>
         <BreadCrumbs next={props.next} next2={props.next2} here={props.here} error={props.error} only2Links={props.only2Links} only3Links={props.only3Links}/>
       </BreadWrapper> 
       <Main>

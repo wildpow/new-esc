@@ -19,16 +19,18 @@ const SingleMattress = ({ data: { loading, error, mattress }, match }) => {
   const TempurBoxPrice = [175, 175, 250, 250, 350]; 
   let BoxspringPrice;
   let name = '';
-    if (mattress.brandName === 'Tempur-PEDIC') {
+  let url = match.path.split( '/' );
+    if (url.indexOf('tempurpedic') > -1 ) {
       BoxspringPrice = TempurBoxPrice;
       name = 'tempurpedic';
-    } else if (mattress.brandName === 'Sealy'){
+    } else if (url.indexOf('Sealy') > -1){
       BoxspringPrice = SealyBoxPrice;
       name = 'sealy'
     } else {
       BoxspringPrice = StearnsBoxPrice;
       name = 'stearns'
     }
+   
   if (error) return <Error next="Brands" next2={name.charAt(0).toUpperCase() + name.slice(1)} here={match.params.uri} error={true}/>
   if (!loading) {
   if(!mattress) return <Redirect to='/404'/>
