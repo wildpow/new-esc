@@ -13,10 +13,7 @@ import ImageViewer from '../ImageViewer/ImageViewer';
 import Error from '../Error/Error';
 import BreadCrumbs, { BreadWrapper } from '../BreadCrumbs/BreadCrumbs';
 
-const SingleMattress = ({ data: { loading, error, mattress } }) => {
-  if (error) return <Error/>
-  if (!loading) {
-  if(!mattress) return <Redirect to='/404'/>
+const SingleMattress = ({ data: { loading, error, mattress }, match }) => {
   const SealyBoxPrice = [100, 100, 100, 100, 200];
   const StearnsBoxPrice = [125, 125, 150, 150, 250];
   const TempurBoxPrice = [175, 175, 250, 250, 350]; 
@@ -32,6 +29,10 @@ const SingleMattress = ({ data: { loading, error, mattress } }) => {
       BoxspringPrice = StearnsBoxPrice;
       name = 'stearns'
     }
+  if (error) return <Error next="Brands" next2={name.charAt(0).toUpperCase() + name.slice(1)} here={match.params.uri} error={true}/>
+  if (!loading) {
+  if(mattress) return <Redirect to='/404'/>
+ 
   return (
     <div>
       <Helmet>

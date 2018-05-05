@@ -13,7 +13,7 @@ import BreadCrumbs, { BreadWrapper } from '../BreadCrumbs/BreadCrumbs';
 
 const Stearns = ({ data: { loading, error, Brands} }) => {
   const title = 'stearns';
-  if (error) return <Error/>
+  if (error) return <Error next="brands" next2="stearns" only3Links={true}/>
   if(!loading) {
     return (
       <MainWrapper>

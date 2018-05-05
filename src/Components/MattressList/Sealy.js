@@ -12,7 +12,7 @@ import BreadCrumbs, { BreadWrapper } from '../BreadCrumbs/BreadCrumbs';
 
 const Sealy = ({ data: { loading, error, essentials, performance, premium} }) => {
   const title = 'sealy';
-  if (error) return <Error/>
+  if (error) return <Error next="brands" next2="sealy" only3Links={true}/>
   if(!loading) {
     return (
       <MainWrapper>
