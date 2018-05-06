@@ -23,7 +23,7 @@ const SingleMattress = ({ data: { loading, error, mattress }, match }) => {
     if (url.indexOf('tempurpedic') > -1 ) {
       BoxspringPrice = TempurBoxPrice;
       name = 'tempurpedic';
-    } else if (url.indexOf('Sealy') > -1){
+    } else if (url.indexOf('sealy') > -1){
       BoxspringPrice = SealyBoxPrice;
       name = 'sealy'
     } else {
