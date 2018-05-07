@@ -1,13 +1,13 @@
 import React from 'react';
-import { Headline, Wrapper, P, Links } from '../Home/HomeStyles';
+import { Headline, Wrapper, P } from '../Home/HomeStyles';
 
 
 const Front = () => {
   return (
     <Wrapper>
-      <Headline>Spring Savings Event</Headline>
+      <Headline>Mattress Price Wars</Headline>
       <P>
-      With brand new mattresses popping up, like the Consumer Reports top rated <Links to="/brands/sealy/Hybrid-Kelburn-II-Cushion-Firm">Sealy Kelburn II Hybrid</Links> and <Links to="/brands/stearns/Lux-Estate-Trailwood-Plush-Pillow-Top">Stearns and Foster Lux Estate Trailwood</Links>, it’s a great time to upgrade your sleep.   With spring cleaning going on we still have massive savings on closeout floor model mattresses as well as discontinued pillows and mattress protectors at huge savings.  Swing in to get a great deal on the bed of your dreams.
+        Mattress Price Wars is going on now through June 3rd, and when brands compete you save big! Savings up to $1000 on movable sets from top brands, zero interest financing for up to 48 months, and huge saving up to 40% off our everyday low pricing.
       </P>
       <Headline red>“Sleep Like the Experts Do!”</Headline>
     </Wrapper>

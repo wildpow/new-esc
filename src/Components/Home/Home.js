@@ -5,10 +5,10 @@ import { Carousel } from 'react-responsive-carousel';
 
 import { Main, OneImg, Linky } from './HomeStyles';
 
-import Sealy from '../../images/SealyDefault980x450.jpg';
-import Tempur from '../../images/TempurDefault980x450.jpg';
-import Stearns from '../../images/StearnsDefault980x450.jpg';
-import Sale from '../../images/SpringSale980x450.jpg';
+import Sealy from '../../images/SealyMemorial980x450.jpg';
+import Tempur from '../../images/TempurMemorial980x450.jpg';
+import Stearns from '../../images/StearnsMemorial980x450.jpg';
+import Sale from '../../images/MPWMain980x450.jpg';
 import Fifth from '../../images/GildedBreathSpecialBuy980x450.jpg'
 import Front from '../FrontInfo/front';
 
