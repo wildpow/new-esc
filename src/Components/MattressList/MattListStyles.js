@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { Animation, FadeIn,
-        FlexCol, BoxShadow, FlexRow,
+import { Animation, FadeIn, Blue, H2,
+        FlexCol, BoxShadow, FlexRow, Border,
         MainFont2 } from '../../Styles';
 
 export const MainWrapper = FlexCol.extend`
@@ -23,6 +23,20 @@ export const Title = styled.h2`
   padding-left: 20px;
   padding-right: 20px;
   font-size: 4rem;
+`;
+export const SaleTitle = styled.header`
+  /* color: white;
+  background-color: ${Blue}; */
+  line-height: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  font-family: ${MainFont2};
+  padding-right: 5px;
+  padding-left: 5px;
+`;
+export const SaleBlurb = styled.p`
+margin: 0;
 `;
 
 export const StearnTitle = styled.h2`
@@ -162,3 +176,57 @@ export const Divy = styled.div`
 //     display: block;
 //   }
 // `
+
+
+export const Wrapper2 = FlexCol.extend`
+  border-top: ${Border};
+  border-right: ${Border};
+  border-left: ${Border};
+  
+  justify-content: center;
+  margin-top: 10px;
+  margin-right: 0px;
+  margin-left: 0px;
+  @media(min-width: 768px) { margin-top: 15px; }
+  @media(min-width: 1300px) {
+    margin-top: 15px;
+    margin-right: 62px;
+    margin-left: 62px;
+  }
+`;
+
+export const Headline = H2.extend`
+   @media(min-width: 1300px) { 
+    font-size: 1.8rem; 
+    letter-spacing: .1rem; 
+    padding-right: 1px;
+    padding-left: 1px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    line-height: 1.8rem;
+    }
+`;
+
+export const P = styled.p`
+  font-family: ${MainFont2};
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 15px 7px 15px 7px;
+  font-size: 1rem;
+  line-height: 1.55rem;
+  @media(min-width: 640px) {
+    padding: 20px 15px 20px 15px;
+    line-height: 1.8rem;
+    font-size: 1.1rem;
+  }
+  @media(min-width: 768px) {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+  }
+  @media(min-width: 1024px) {
+    padding: 15px 65px 15px 65px;
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+`;

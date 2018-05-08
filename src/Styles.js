@@ -29,7 +29,8 @@ export const FadeIn = keyframes`
 export const H2 = styled.h2`
   font-family: ${MainFont1};
   text-shadow: ${TextShadow};
-  background-color: ${Blue};
+  background-color: ${props => props.red ? '#eb1c24' : '#1565c0'};
+  
   text-align: center;
   color: white;
   margin: 0;

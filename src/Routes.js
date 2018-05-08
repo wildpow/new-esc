@@ -17,8 +17,8 @@ export const Stearns = loadable(() => import('./Components/MattressList/Stearns'
 export const Panda404 = loadable(() => import('./Components/Panda404/Panda404'));
 export const SiteMap = loadable(() => import('./Components/SiteMap/SiteMap'));
 export const Warranty = loadable(() => import('./Components/Policys/Warranty'));
-export const Policy = loadable(() => import('./Components/Policys/Policy'))
-
+export const Policy = loadable(() => import('./Components/Policys/Policy'));
+export const OnSaleMatts = loadable(() => import('./Components/MattressList/OnSaleMatts'));
 
 
 HomeComponent.load()

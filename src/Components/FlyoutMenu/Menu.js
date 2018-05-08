@@ -68,6 +68,7 @@ render() {
   <Nav>
     
     <StyledLink to="/" exact>Home</StyledLink>
+    <StyledLink to="/current-sale">Sale</StyledLink>
     <StyledLink to="/brands">Brands</StyledLink>
     <StyledLink to="/adjustable" >Adjustable</StyledLink>
     <StyledLink to="/accessories">Accessories</StyledLink>

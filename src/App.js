@@ -83,6 +83,7 @@ class App extends Component {
         <ScrollToTopWithRouter>
           <Switch>
             <Route path="/" component={Routes.HomeComponent} exact/>
+            <Route path="/current-sale" component={Routes.OnSaleMatts} exact/>
             <Route path="/adjustable" component={Routes.AdjustableComponent} exact/>
             <Route path="/Accessories" component={Routes.AccessoriesCompoent} exact/>
             <Route path="/financing" component={Routes.FinancingComponent} exact/>

@@ -35,17 +35,17 @@ const HomeComponent = () => {
         centerSlidePercentage={100}
         showStatus={false}
       >
-        <div>
-          <OneImg src={Sale} alt="Image of E.S.C Mattress Center's Spring Sales Event on all mattresses and adjustable bases."/>
-        </div>
+        <Linky to='/current-sale'>
+          <OneImg src={Sale} alt="E.S.C Mattress Center's Mattress Wars Sales Event on a selection of mattresses and adjustable bases."/>
+        </Linky>
         <Linky to='/brands/stearns'>
-          <OneImg src={Stearns} alt="Image of Stearns and Foster top rated inner spring mattress"/>
+          <OneImg src={Stearns} alt="Save up to 1000 dollars off Stearns and Foster top rated inner spring mattress"/>
         </Linky>
         <Linky to='/brands/tempurpedic'>
-          <OneImg src={Tempur} alt="Image of Tempurpedic JD power award for #1 in confort, support and value"/>
+          <OneImg src={Tempur} alt="Save up to 600 dollars off Tempurpedic the winner of the JD power award for #1 in confort, support and value"/>
         </Linky>
         <Linky to='/brands/sealy'>
-          <OneImg src={Sealy} alt="Image of Sealy's number one best rated hybrid mattress"/> 
+          <OneImg src={Sealy} alt="Sealy's Memorial day savings event save up to 300 off selected mattresses"/> 
         </Linky>
         <Linky to='/brands/sealy/Sealy-Golden-Elegance-Gilded-Breath-Plush-PT'>
           <OneImg src={Fifth} alt="Image of Sealy's Golden Elegance Giled Breath plush pilltop mattress"/> 

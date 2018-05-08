@@ -57,9 +57,9 @@ export const Bar = styled.span`
 
 export const StyledLink = styled(NavLink)`
   font-family: ${MainFont1};
-  padding: 28px 28px 5px 28px;
+  padding: 12px 28px 5px 28px;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.7rem;
   letter-spacing: .22rem;
   color: white;
   text-decoration: none;
