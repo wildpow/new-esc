@@ -68,8 +68,15 @@ class App extends Component {
   toggleMenu() {
     this.setState({
       visible: !this.state.visible
-    });
+    }, ()=> this.displayNone());
   };
+  displayNone() {
+    if (this.state.visible) {
+      this.setState({display: 'none'})
+    } else {
+      this.setState({display: 'block'})
+    }
+  }
   render() {
     return (
       <Fragment>
@@ -79,7 +86,7 @@ class App extends Component {
           menuVisibility={this.state.visible}/>
         <Navigation/>
         <Logo/>
-        <Container>
+        <Container style={{display: this.state.display}}>
         <ScrollToTopWithRouter>
           <Switch>
             <Route path="/" component={Routes.HomeComponent} exact/>

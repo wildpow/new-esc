@@ -182,27 +182,49 @@ export const Wrapper2 = FlexCol.extend`
   border-top: ${Border};
   border-right: ${Border};
   border-left: ${Border};
-  
-  justify-content: center;
   margin-top: 10px;
+  margin-bottom: 5px;
   margin-right: 0px;
   margin-left: 0px;
-  @media(min-width: 768px) { margin-top: 15px; }
+  box-shadow: ${BoxShadow};
+  align-self: center;
+  @media(min-width: 375px) {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  @media(min-width: 411px) {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+  @media(min-width: 768px) { 
+   margin-top: 12px;
+   margin-bottom: 12px;
+  }
   @media(min-width: 1300px) {
     margin-top: 15px;
-    margin-right: 62px;
-    margin-left: 62px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  @media(min-width: 1366px) {
+    margin-right: 50px;
+    margin-left: 50px;
   }
 `;
 
 export const Headline = H2.extend`
+   line-height: 1.3rem;
+   font-size: 1rem;
+   padding-right: 4px;
+   padding-left: 4px;
+   padding-top: 8px;
+   padding-bottom: 8px;
    @media(min-width: 1300px) { 
-    font-size: 1.8rem; 
+    font-size: 1.6rem; 
     letter-spacing: .1rem; 
     padding-right: 1px;
     padding-left: 1px;
-    padding-top: 18px;
-    padding-bottom: 18px;
+    padding-top: 14px;
+    padding-bottom: 14px;
     line-height: 1.8rem;
     }
 `;
@@ -212,21 +234,23 @@ export const P = styled.p`
   text-align: center;
   margin-bottom: 0;
   margin-top: 0;
-  padding: 15px 7px 15px 7px;
-  font-size: 1rem;
-  line-height: 1.55rem;
+  padding: 7px 7px 7px 7px;
+  font-size: .9rem;
+  line-height: 1.3rem;
   @media(min-width: 640px) {
     padding: 20px 15px 20px 15px;
-    line-height: 1.8rem;
-    font-size: 1.1rem;
+    line-height: 1.4rem;
+    font-size: 1rem;
   }
   @media(min-width: 768px) {
-    font-size: 1.2rem;
-    line-height: 2.2rem;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    padding: 10px 15px 10px 15px;
   }
   @media(min-width: 1024px) {
-    padding: 15px 65px 15px 65px;
-    font-size: 1.4rem;
-    line-height: 2rem;
+    padding: 15px 25px 15px 25px;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+
   }
 `;

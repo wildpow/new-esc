@@ -58,6 +58,7 @@ const Footer = () => {
         </Hours>
       </Contact>
       <BottomLinkWrapper>
+        <BottomLinks to="/current-sale">Current Sale</BottomLinks>
         <BottomLinks to="/warranty">Warranty Infomation</BottomLinks>
         <BottomLinks to="/sitemap" >Site Map</BottomLinks>
         <BottomLinks to="/policies">Terms and Policies</BottomLinks>

@@ -69,20 +69,37 @@ export const StyledLink = styled(NavLink)`
   border-color: #1565c0;
   &:hover { transform: scale3d(1.2,1.3,1); }
   &.active { border-bottom: 8px solid #eb1c24; }
+  @media(orientation: portrait) { 
+    font-size: 2rem;
+  }
+  @media(orientation: landscape) { 
+    padding: 20px 20px 5px 20px;
+  }
 `;
 
 export const Nav = styled.nav`
   display: flex;
+  overflow: hidden !important;
   flex-direction: column;
   font-size: 1.4rem;
   text-align: center;
-  justify-content: space-around;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  justify-items: center;
+  @media(orientation: landscape) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 `;
 
 export const Image = styled.img`
   transition: all .25s ease-in;
   max-height: 6em;
   margin: 0 auto !important;
+  /* @media(orientation: landscape) {
+    display: none;
+  } */
   @media (min-width: 500px) { height: 8em; }
   @media (min-width: 768px) { height: 11em; }
 `;
@@ -92,15 +109,23 @@ export const theme = {
 };
 
 export const Wrapper = styled.div`
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: ${Blue};
   position: fixed;
   top: 0;
   left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   transition: transform .3s cubic-bezier(0, .52, 0, 1);
-  overflow: scroll;
-  z-index: 1000;
+  overflow: hidden !important;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  z-index: 1001;
   &.hide { transform: translate3d(-100vw, 0, 0); }
   &.show { transform: translate3d(0vw, 0, 0); }
+  /* @media(orientation: landscape) { 
+    justify-content: space-around;
+  } */
 `;
