@@ -66,9 +66,9 @@ const OnSaleMatts = ({ data: { loading, error, allIsOnSales} }) => {
 export const OnSaleMattresses = gql`
   query allIsOnSales {
     allIsOnSales {
-      
-      mattresses(filter: {isPublished: true}  ) {
+      mattresses(filter: {isPublished: true} orderBy: orderByPrice_ASC  ) {
       brandName
+        orderByPrice
       uri
       id
       subBrand
@@ -86,6 +86,7 @@ export const OnSaleMattresses = gql`
   }
   }
   }
+
 `;
 
 export default graphql(OnSaleMattresses)(OnSaleMatts);
