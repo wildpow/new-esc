@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom';
-import { Blue, Red, MainFont1 } from '../../Styles';
+import { Blue, Red, MainFont1, Border, BoxShadow } from '../../Styles';
 
 export const Button = styled.button`
   float: right;
@@ -55,58 +55,134 @@ export const Bar = styled.span`
   transition: 0.4s;
 `;
 
-export const StyledLink = styled(NavLink)`
+export const StyledLink2 = styled(NavLink)`
+  z-index: 2000;
   font-family: ${MainFont1};
-  padding: 12px 28px 5px 28px;
-  text-align: center;
   font-size: 1.7rem;
+  font-variant: small-caps;
   letter-spacing: .22rem;
   color: white;
   text-decoration: none;
   transition: all .20s ease-in;
+  border-bottom: 8px solid ${Blue};
+  /* Still working on these */
+  text-align: center;
   margin: auto;
-  font-variant: small-caps;
-  border-color: #1565c0;
+  /*----- */
+  padding: 12px 28px 5px 28px;
   &:hover { transform: scale3d(1.2,1.3,1); }
-  &.active { border-bottom: 8px solid #eb1c24; }
-  @media(orientation: portrait) { 
+  &.active { border-bottom: 8px solid ${Red}; }
+  @media(min-width: 360px) {
+    padding: 12px 28px 5px 28px;
+  }
+  @media(orientation: portrait) and (min-width: 411px) { 
     font-size: 2rem;
   }
+  @media only screen 
+    and (device-width : 375px) 
+    and (device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) { 
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
   @media(orientation: landscape) { 
     padding: 20px 20px 5px 20px;
+    
+  }
+  @media(min-width: 768px) {
+    font-size: 2.6rem;
+  }
+`;
+export const BottomLinks = StyledLink2.extend`
+  @media(min-width: 768px) {
+    margin-top: 0px;
+    text-align: center;
   }
 `;
 
 export const Nav = styled.nav`
   display: flex;
-  overflow: hidden !important;
   flex-direction: column;
-  font-size: 1.4rem;
-  text-align: center;
-  justify-content: center;
-  align-self: center;
-  align-items: center;
-  justify-items: center;
   @media(orientation: landscape) {
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
   }
+  @media(min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-grow: 1;
+  }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    margin-top: 150px;
+  }
+`;
+
+export const LinkWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+`;
+
+export const PooP = styled.div`
+  display: none;
+  @media(orientation: landscape) {
+    display: flex;
+  }
+  @media(min-width: 768px) {
+    display: flex;
+    margin: auto;
+  }
+`;
+
+export const LastLinkWrapper = styled.div`
+  display: none;
+  @media(orientation: landscape) {
+    margin-top: 10px;
+    display: block;
+  }
+  @media(min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-grow: 0;
+    margin: 0 auto;
+  }
+`;
+
+export const Footer = styled.footer`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 export const Image = styled.img`
   transition: all .25s ease-in;
   max-height: 6em;
   margin: 0 auto !important;
-  /* @media(orientation: landscape) {
+  padding-bottom: 10px;
+  margin: auto;
+  @media(min-width: 500px) and (orientation: landscape) {
     display: none;
-  } */
-  @media (min-width: 500px) { height: 8em; }
-  @media (min-width: 768px) { height: 11em; }
+  }
+  @media only screen 
+    and (device-width : 375px) 
+    and (device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) { 
+      max-height: 12rem;
+      z-index: 1000;
+    }
+  @media (min-width: 500px) { max-height: 8em; }
+  @media (min-width: 768px) { 
+    max-height: 14em;
+    padding-bottom: 0px;
+    z-index: 1000;
+  }
+  @media(min-width: 1024px) and (orientation: landscape) {
+    display: block;
+  } 
 `;
-
-export const theme = {
-  main: '#c62828'
-};
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -120,12 +196,42 @@ export const Wrapper = styled.div`
   justify-content: space-between;
   transition: transform .3s cubic-bezier(0, .52, 0, 1);
   overflow: hidden !important;
-  overflow-y: hidden;
-  overflow-x: hidden;
-  z-index: 1001;
   &.hide { transform: translate3d(-100vw, 0, 0); }
   &.show { transform: translate3d(0vw, 0, 0); }
-  /* @media(orientation: landscape) { 
-    justify-content: space-around;
-  } */
+`;
+
+export const BGcolorWrapper = styled.div`
+  display: none;
+  border: ${Border};
+  box-shadow: ${BoxShadow};
+  @media only screen 
+    and (device-width : 375px) 
+    and (device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) { 
+      background-color: white;
+    margin: auto;
+    padding: 15px 25px 15px 25px;
+    display: block;
+    margin-top: -55px;
+    border-radius: .2rem;
+    
+    }
+  @media(min-width: 768px) and (orientation: portrait){
+    background-color: white;
+    margin: auto;
+    padding: 15px 45px 15px 45px;
+    display: block;
+    margin-top: -49px;
+    border-radius: .2rem;
+    margin-bottom: 30px;
+  }
+  @media(min-width: 1024px) and (orientation: landscape) {
+    background-color: white;
+    margin: auto;
+    padding: 15px 45px 15px 45px;
+    display: block;
+    margin-top: -49px;
+    border-radius: .2rem;
+    margin-bottom: 30px;
+  }
 `;

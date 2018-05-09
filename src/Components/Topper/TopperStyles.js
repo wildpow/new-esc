@@ -15,7 +15,7 @@ export const BigPromo = Promo.extend`
   max-width: 160px;
   transition: all .25s ease-in;
   &:hover { transform: scale(1.04); }
-  @media(min-width: 365px) {
+  @media(min-width: 415px) {
     max-width: 2000px;
   }
 `;
@@ -35,11 +35,11 @@ export const Top = styled.div`
   letter-spacing: .036rem;
   @media(min-width: 411px) { font-size: .9rem;}
   @media (min-width: 568px) { font-size: 1rem;}
-  @media (min-width: 768px) { font-size: 1.2rem; 
+  @media (min-width: 768px) { font-size: 1.4rem; 
     padding: 10px 12px 12px 12px;
     letter-spacing: .1rem; 
   }
-  @media (min-width: 1024px) { font-size: 1.3rem;}
+  @media (min-width: 1024px) { font-size: 1.5rem;}
  
 `;
 Top.defaultProps = {
@@ -50,18 +50,24 @@ Top.defaultProps = {
 
 export const Wrapper = styled.div`
   margin-top: 0;
-  margin-right: ${(props) => props.Right ? '10px' : '0px'};
-  margin-left: ${(props) => props.Left ? '10px' : '0px'};
+  margin-right: ${(props) => props.Right ? '5px' : '0px'};
+  margin-left: ${(props) => props.Left ? '5px' : '0px'};
   margin-bottom: 0;
   padding:0;
   text-align: cetner;
+ 
   @media (min-width: 375px) {
-    margin-right: ${(props) => props.Right ? '0px' : '0px'};
-    margin-left: ${(props) => props.Left ? '0px' : '0px'};
+    margin-right: ${(props) => props.Right ? '1px' : '0px'};
+    margin-left: ${(props) => props.Left ? '1px' : '0px'};
   }
-  /* @media(min-width: 411px) {
-    letter-spacing: .03rem;
-  } */
+  @media(orientation: landscape) {
+    margin-right: ${(props) => props.Right ? '20px' : '0px'};
+    margin-left: ${(props) => props.Left ? '20px' : '0px'};
+  }
+  @media(min-width: 768px) {
+    margin-right: ${(props) => props.Right ? '10px' : '0px'};
+    margin-left: ${(props) => props.Left ? '10px' : '0px'};
+  }
 `;
 
 export const Phone = styled.a`
@@ -81,7 +87,7 @@ export const PhoneWrapper = styled.div`
 
 export const BR = styled.br`
   
-  @media(min-width: 365px) {
+  @media(min-width: 415px) {
     display: none;
   }
 `;

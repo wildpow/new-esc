@@ -40,6 +40,7 @@ const ImgHover = styled.img`
 export const Social = FlexRow.extend`
   justify-content: center;
   padding: 7px 7px 4px 7px;
+  background-color: ${(props) => props.Red ? Red : 'white'};
 `;
 
 export const FBimage = ImgHover.extend`

@@ -31,6 +31,7 @@ const SiteMap = ({ data: { loading, error, Sealy, Stearns, Tempur, Ajustable, Bl
         <H2>Main Site Links</H2>
         <UnList>
           <Lilist><SiteLinks to="/">Home</SiteLinks></Lilist>
+          <Lilist><SiteLinks to="/current-sale">Sale</SiteLinks></Lilist>
           <Lilist><SiteLinks to="/about">About</SiteLinks></Lilist>
           <Lilist><SiteLinks to="/accessories">Accessories</SiteLinks></Lilist>
           <Lilist><SiteLinks to="/financing">Financing</SiteLinks></Lilist>

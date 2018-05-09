@@ -86,7 +86,7 @@ export const LinkWrapper = styled.div`
   justify-content: center;
   margin: 2px;
   width: 150px;
-  height: 215px;
+  height: 216px;
   margin-top: 15px;
   box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .9);
   border-radius: .14rem;
@@ -183,18 +183,27 @@ export const Wrapper2 = FlexCol.extend`
   border-right: ${Border};
   border-left: ${Border};
   margin-top: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
   margin-right: 0px;
   margin-left: 0px;
   box-shadow: ${BoxShadow};
   align-self: center;
+  @media(min-width: 360px) {
+    margin-right: 3px;
+    margin-left: 3px;
+    margin-bottom: 5px;
+  }
   @media(min-width: 375px) {
-    margin-right: 10px;
-    margin-left: 10px;
+    margin-right: 12px;
+    margin-left: 12px;
   }
   @media(min-width: 411px) {
     margin-right: 15px;
     margin-left: 15px;
+  }
+  @media(min-width: 414px) {
+    margin-right: 12px;
+    margin-left: 12px;
   }
   @media(min-width: 768px) { 
    margin-top: 12px;

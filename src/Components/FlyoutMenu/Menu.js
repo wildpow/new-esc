@@ -1,10 +1,11 @@
 import React from 'react'
 import {withApollo} from 'react-apollo'
 import gql from 'graphql-tag';
-import { AdjustableComponent, BrandsComponent, BlogComponent } from '../../Routes'
-import { StyledLink, Nav, Wrapper, Image }  from './MenuStyles';
+import { AdjustableComponent, BrandsComponent, BlogComponent, OnSaleMatts } from '../../Routes'
+import { StyledLink2,BottomLinks, Nav, Wrapper, Image, Footer, BGcolorWrapper,PooP, LinkWrapper, LastLinkWrapper }  from './MenuStyles';
 import Topper from '../Topper/Topper';
 import image from '../../images/logo.png';
+import SocialIcons from '../Footer/SocialIcons';
 
 class Menu extends React.PureComponent {
   constructor(props) {
@@ -51,6 +52,7 @@ class Menu extends React.PureComponent {
     AdjustableComponent.load();
     BrandsComponent.load();
     BlogComponent.load();
+    OnSaleMatts.load();
     
   }
 
@@ -66,18 +68,32 @@ render() {
     
     <Topper/>
   <Nav>
-    
-    <StyledLink to="/" exact>Home</StyledLink>
-    <StyledLink to="/current-sale">Sale</StyledLink>
-    <StyledLink to="/brands">Brands</StyledLink>
-    <StyledLink to="/adjustable" >Adjustable</StyledLink>
-    <StyledLink to="/accessories">Accessories</StyledLink>
-    <StyledLink to="/financing">Financing</StyledLink>
-    <StyledLink to="/blog" >Our Blog</StyledLink>
-    <StyledLink to="/about">About Us</StyledLink>
-    {/* <Image src={image} alt="Image of E S C Mattress Center sleeping panda bear"/> */}
+    <LinkWrapper>
+      <StyledLink2 to="/" exact >Home</StyledLink2>
+      <StyledLink2 to="/current-sale">Sale</StyledLink2>
+      <StyledLink2 to="/brands">Brands</StyledLink2>
+    </LinkWrapper>
+    <LinkWrapper>
+      <StyledLink2 to="/adjustable" >Adjustable</StyledLink2>
+      <StyledLink2 to="/accessories">Accessories</StyledLink2>
+      <StyledLink2 to="/financing">Financing</StyledLink2>
+    </LinkWrapper>
+    <LinkWrapper>
+      <StyledLink2 to="/blog" >Our Blog</StyledLink2>
+      <StyledLink2 to="/about">About Us</StyledLink2>
+     <PooP> <StyledLink2 to="/warranty">Warranty</StyledLink2></PooP>
+    </LinkWrapper>
+    <LastLinkWrapper>
+      <BottomLinks to="/policies">Policies</BottomLinks>
+      <BottomLinks to="/sitemap">Site Map</BottomLinks>
+    </LastLinkWrapper>
   </Nav>
+  <Footer>
   <Image src={image} alt="Image of E S C Mattress Center sleeping panda bear"/>
+  <BGcolorWrapper>
+    <SocialIcons/>
+  </BGcolorWrapper>
+  </Footer>
   </Wrapper>
     
   )
