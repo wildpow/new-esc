@@ -30,11 +30,12 @@ const SingleMattress = ({ data: { loading, error, mattress }, match }) => {
       BoxspringPrice = StearnsBoxPrice;
       name = 'stearns'
     }
-   
-  if (error) return <Error next="Brands" next2={name.charAt(0).toUpperCase() + name.slice(1)} here={match.params.uri} error={true}/>
+  if (error) return <Error  next="Brands" 
+                            next2={name.charAt(0).toUpperCase() + name.slice(1)}
+                            here={match.params.uri} 
+                            error={true}/>
   if (!loading) {
   if(!mattress) return <Redirect to='/404'/>
- 
   return (
     <div>
       <Helmet>
@@ -58,7 +59,12 @@ const SingleMattress = ({ data: { loading, error, mattress }, match }) => {
         <MainTitle>{mattress.name}</MainTitle>
       </header>
       <Main>
-        <ImageViewer cover={mattress.coverImg.handle} img1={mattress.detail1.handle} img2={mattress.detail2.handle} fullname={mattress.name} type={'mattress'}/>
+        <ImageViewer  cover={mattress.coverImg.handle} 
+                      img1={mattress.detail1.handle} 
+                      img2={mattress.detail2.handle} 
+                      fullname={mattress.name} 
+                      type={'mattress'}
+        />
         <MainInfo>
           <Stuff>
             <StyledMarkDown source={mattress.features} escapeHtml={false} />
@@ -86,7 +92,10 @@ const SingleMattress = ({ data: { loading, error, mattress }, match }) => {
       </Article>
     </Wrapper>
     <BreadWrapper>
-        <BreadCrumbs next="Brands" next2={name.charAt(0).toUpperCase() + name.slice(1)} here={mattress.name}/>
+        <BreadCrumbs  next="Brands" 
+                      next2={name.charAt(0).toUpperCase() + name.slice(1)} 
+                      here={mattress.name}
+        />
       </BreadWrapper>
     </div>
     )

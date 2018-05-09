@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { Animation, FadeIn,
-        FlexCol, BoxShadow, FlexRow,
+import { Animation, FadeIn, Blue, H2,
+        FlexCol, BoxShadow, FlexRow, Border,
         MainFont2 } from '../../Styles';
 
 export const MainWrapper = FlexCol.extend`
@@ -23,6 +23,18 @@ export const Title = styled.h2`
   padding-left: 20px;
   padding-right: 20px;
   font-size: 4rem;
+`;
+export const SaleTitle = styled.header`
+  line-height: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  font-family: ${MainFont2};
+  padding-right: 5px;
+  padding-left: 5px;
+`;
+export const SaleBlurb = styled.p`
+margin: 0;
 `;
 
 export const StearnTitle = styled.h2`
@@ -72,7 +84,7 @@ export const LinkWrapper = styled.div`
   justify-content: center;
   margin: 2px;
   width: 150px;
-  height: 215px;
+  height: 216px;
   margin-top: 15px;
   box-shadow: 0 10px 6px -6px rgba(119, 119, 119, .9);
   border-radius: .14rem;
@@ -97,14 +109,10 @@ export const StyledLink = styled(Link)`
   flex-direction: column;
   justify-content: space-around;
   color: #1565c0;
-  /* margin-top: -10px; */
 `;
 
 export const MattImg = styled.img`
-  /* align-self: flex-start;
-  justify-self: flex-start; */
   color: white;
-  /* align-self: flex-end; */
   margin: 0 auto 0px auto;
   width: 110px;
   height: 110px;
@@ -140,25 +148,97 @@ export const PriceRange = styled.div`
   }
   @media(min-width: 768px) {
     font-size: 1rem;
-    /* margin-bottom: 20px; */
   }
 `;
 
-export const Span = styled.span`
-  /* display: none;
-  @media(min-width: 360px) {
-    display: block;
-  } */
-`;
 export const Divy = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
 `;
 
-// export const Br = styled.br`
-//   display: none;
-//   @media(min-width: 641px) {
-//     display: block;
-//   }
-// `
+export const Wrapper2 = FlexCol.extend`
+  border-top: ${Border};
+  border-right: ${Border};
+  border-left: ${Border};
+  margin-top: 10px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+  box-shadow: ${BoxShadow};
+  align-self: center;
+  @media(min-width: 360px) {
+    margin-right: 3px;
+    margin-left: 3px;
+    margin-bottom: 5px;
+  }
+  @media(min-width: 375px) {
+    margin-right: 12px;
+    margin-left: 12px;
+  }
+  @media(min-width: 411px) {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+  @media(min-width: 414px) {
+    margin-right: 12px;
+    margin-left: 12px;
+  }
+  @media(min-width: 768px) { 
+   margin-top: 12px;
+   margin-bottom: 12px;
+  }
+  @media(min-width: 1300px) {
+    margin-top: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  @media(min-width: 1366px) {
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+`;
+
+export const Headline = H2.extend`
+  line-height: 1.3rem;
+  font-size: 1rem;
+  padding-right: 4px;
+  padding-left: 4px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  @media(min-width: 1300px) { 
+    font-size: 1.6rem; 
+    letter-spacing: .1rem; 
+    padding-right: 1px;
+    padding-left: 1px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    line-height: 1.8rem;
+    }
+`;
+
+export const P = styled.p`
+  font-family: ${MainFont2};
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 7px 7px 7px 7px;
+  font-size: .9rem;
+  line-height: 1.3rem;
+  @media(min-width: 640px) {
+    padding: 20px 15px 20px 15px;
+    line-height: 1.4rem;
+    font-size: 1rem;
+  }
+  @media(min-width: 768px) {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    padding: 10px 15px 10px 15px;
+  }
+  @media(min-width: 1024px) {
+    padding: 15px 25px 15px 25px;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+
+  }
+`;

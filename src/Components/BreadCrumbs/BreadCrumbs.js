@@ -19,8 +19,6 @@ export const BreadWrapper = styled.div`
   }
   @media(min-width: 768px) {
     font-size: 1.1rem;
-    /* margin-right: 25px;
-    margin-left: 25px; */
   }
   @media(min-width: 1022px) {
     font-size: 1.2rem;
@@ -61,7 +59,6 @@ const BreadCrumbs = (props) => {
       <Span>></Span>
       {props.next&&
       <div>
-        
         <Crumbs to={`/${props.next}`}>{props.next}</Crumbs>
         {!props.only2Links ? <Span>></Span> : ''}
       </div>

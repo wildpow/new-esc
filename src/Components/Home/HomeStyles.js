@@ -38,8 +38,6 @@ export const Wrapper = FlexCol.extend`
   @media(min-width: 768px) { margin-top: 15px; }
   @media(min-width: 1300px) {
     margin-top: 15px;
-    /* margin-right: 72px;
-    margin-left: 72px; */
   }
 `;
 

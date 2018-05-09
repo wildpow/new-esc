@@ -7,15 +7,12 @@ export const Main = FlexCol.extend`
   margin-top: 15px;
   margin-left: 0px;
   margin-right: 0px;
-  /* padding-top: 5px; */
   @media(min-width:1200px) { margin-left: 120px; margin-right: 120px; }
 `;
 
 export const P = styled.p`
   margin-top: 0;
-  /* max-width: 500px; */
   align-self: center;
-  /* margin-right: 60px; */
   font-size: 1rem;
   line-height: 1.5rem;
   padding-left: 5px;
@@ -33,7 +30,6 @@ export const P = styled.p`
   @media(min-width: 568px) {
     padding-top: 10px;
     font-size: 1.1rem;
-    /* align-self: center; */
   }
   @media(min-width: 660px) and (max-width: 767px) {
     margin-right: 30px;
@@ -150,9 +146,6 @@ export const Img = styled.img`
     align-self: flex-start;
     max-height: 16rem;
   }
-  /* @media(min-width: 1300px) {
-    align-self: flex-end;
-  } */
 `;
 
 export const Img2 = Img.extend`

@@ -7,7 +7,6 @@ export const MainFooter = styled.footer`
   margin-top: 15px;
   margin-bottom: 5px;
   @media (min-width: 768px) {
-    /* margin-top: 30px; */
     margin-top: 20px;
     margin-bottom: 10px;
   }
@@ -40,6 +39,7 @@ const ImgHover = styled.img`
 export const Social = FlexRow.extend`
   justify-content: center;
   padding: 7px 7px 4px 7px;
+  background-color: ${(props) => props.Red ? Red : 'white'};
 `;
 
 export const FBimage = ImgHover.extend`

@@ -53,7 +53,6 @@ class ImageViewer extends React.PureComponent{
           )}
           </NodeGroup>
         <SmallImgHolder style={{position: 'relative'}}>
-          
           <SmImg onMouseOver={this.changeActiveImage} src={`https://media.graphcms.com/resize=w:500,h:500,fit:clip/${ImagesArray[0]}`} data-id={0} alt={`Small image of ${this.props.fullname} ${this.props.type}`}/>
           <SmImg onMouseOver={this.changeActiveImage} src={`https://media.graphcms.com/resize=w:500,h:500,fit:clip/${ImagesArray[1]}`} data-id={1} alt={`Small image of ${this.props.fullname} ${this.props.type}`}/>
           <SmImg onMouseOver={this.changeActiveImage} src={`https://media.graphcms.com/resize=w:500,h:500,fit:clip/${ImagesArray[2]}`} data-id={2} alt={`Small image of ${this.props.fullname} ${this.props.type}`}/>

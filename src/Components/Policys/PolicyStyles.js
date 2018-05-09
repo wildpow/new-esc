@@ -112,26 +112,3 @@ export const Heading = styled.h3`
     font-size: 1.8rem;
   }
 `; 
-
-// export const WarrantyHeadline = Headline.extend`
-//   margin-bottom: 20px
-// `;
-
-// export const Headline = styled.h2`
-//   font-family: ${MainFont1};
-//   text-shadow: ${TextShadow};
-//   background-color: ${Blue};
-//   text-align: center;
-//   color: white;
-//   margin: 0;
-//   padding-top: 15px;
-//   padding-bottom: 15px;
-//   letter-spacing: .25rem;
-//   font-size: 1.2rem;
-//   @media(min-width: 768px) {
-//     font-size: 2rem;
-//   }
-//   @media(min-width: 1024px) {
-//     font-size: 2.2rem;
-//   }
-// `;

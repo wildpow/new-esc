@@ -48,11 +48,8 @@ const Tempur = ({ data: { loading, error, Brands} }) => {
                               subName={mattress.subName}
                               img={mattress.coverImg.handle}
                               title={title}
-                              priceRange={mattress.priceRange} />
-                  {/* <StyledLink to={`/brands/tempurpedic/${mattress.uri}`}>
-                  <MattImg src={`https://media.graphcms.com/resize=w:290,h:250,fit:clip/${mattress.coverImg.handle}`} alt="this"/>
-                  <Name>{mattress.brandName}<br/>{mattress.subBrand}<br/>{mattress.subName}</Name>
-                </StyledLink> */}
+                              priceRange={mattress.priceRange} 
+                />
               </LinkWrapper>)
           })}
           </Wrapper>

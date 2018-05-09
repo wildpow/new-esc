@@ -28,8 +28,6 @@ const Container = styled.div`
   margin-right: auto;
   padding-left: 5px;
   padding-right: 5px;
-  /* margin-top: 15px; */
-  /* transition: all .25s ease-in; */
   @media (min-width: 768px) { width: 750px; padding-left: 10px; padding-right: 10px; }
   @media (min-width: 992px) { width: 970px; padding-left: 5px; padding-right: 5px; }
   @media (min-width: 1200px) { width: 1170px; }
@@ -68,8 +66,15 @@ class App extends Component {
   toggleMenu() {
     this.setState({
       visible: !this.state.visible
-    });
+    }, ()=> this.displayNone());
   };
+  displayNone() {
+    if (this.state.visible) {
+      this.setState({display: 'none'})
+    } else {
+      this.setState({display: 'block'})
+    }
+  }
   render() {
     return (
       <Fragment>
@@ -79,10 +84,11 @@ class App extends Component {
           menuVisibility={this.state.visible}/>
         <Navigation/>
         <Logo/>
-        <Container>
+        <Container style={{display: this.state.display}}>
         <ScrollToTopWithRouter>
           <Switch>
             <Route path="/" component={Routes.HomeComponent} exact/>
+            <Route path="/current-sale" component={Routes.OnSaleMatts} exact/>
             <Route path="/adjustable" component={Routes.AdjustableComponent} exact/>
             <Route path="/Accessories" component={Routes.AccessoriesCompoent} exact/>
             <Route path="/financing" component={Routes.FinancingComponent} exact/>

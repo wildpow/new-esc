@@ -104,8 +104,8 @@ const BrandsComponent = ({client}) => {
       </BrandWrapper>
       </StyledLink>
       <BreadWrapper hidenLarge Bottom>
-          <BreadCrumbs here="Brands"/>
-        </BreadWrapper>
+        <BreadCrumbs here="Brands"/>
+      </BreadWrapper>
     </Main>
   )
 }

@@ -7,7 +7,6 @@ export const Main = FlexCol.extend`
   margin-top: 15px;
   margin-left: 0px;
   margin-right: 0px;
-  /* padding-top: 5px; */
   @media(min-width:1200px) { margin-left: 120px; margin-right: 120px; }
 `;
 
@@ -84,9 +83,6 @@ export const Img = styled.img`
     align-self: flex-start;
     max-height: 16rem;
   }
-  /* @media(min-width: 1300px) {
-    align-self: flex-end;
-  } */
 `;
 
 export const InfoWrapper = FlexRow.extend`
@@ -103,9 +99,7 @@ export const InfoWrapper = FlexRow.extend`
 
 export const P = styled.p`
   margin-top: 0;
-  /* max-width: 500px; */
   align-self: center;
-  /* margin-right: 60px; */
   font-size: 1rem;
   line-height: 1.5rem;
   padding-left: 5px;
