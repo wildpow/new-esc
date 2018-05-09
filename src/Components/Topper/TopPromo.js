@@ -7,7 +7,11 @@ const TopPromo = ({data: {loading, error, allToppers }}) => {
   if (error) return <Promo> Welcome to E.S.C. Mattress Center</Promo>
   if (!loading) {
     return (
-      <PromoLink to="/current-sale"><BigPromo>{allToppers[0].currentpromo}</BigPromo></PromoLink>
+      <PromoLink to="/current-sale">
+        <BigPromo>
+          {allToppers[0].currentpromo}
+        </BigPromo>
+      </PromoLink>
     )
   }
   return <Promo>Welcome to E.S.C.<BR/> Mattress Center</Promo>

@@ -25,8 +25,6 @@ export const Title = styled.h2`
   font-size: 4rem;
 `;
 export const SaleTitle = styled.header`
-  /* color: white;
-  background-color: ${Blue}; */
   line-height: 1.15rem;
   display: flex;
   flex-direction: column;
@@ -111,14 +109,10 @@ export const StyledLink = styled(Link)`
   flex-direction: column;
   justify-content: space-around;
   color: #1565c0;
-  /* margin-top: -10px; */
 `;
 
 export const MattImg = styled.img`
-  /* align-self: flex-start;
-  justify-self: flex-start; */
   color: white;
-  /* align-self: flex-end; */
   margin: 0 auto 0px auto;
   width: 110px;
   height: 110px;
@@ -154,29 +148,14 @@ export const PriceRange = styled.div`
   }
   @media(min-width: 768px) {
     font-size: 1rem;
-    /* margin-bottom: 20px; */
   }
 `;
 
-export const Span = styled.span`
-  /* display: none;
-  @media(min-width: 360px) {
-    display: block;
-  } */
-`;
 export const Divy = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
 `;
-
-// export const Br = styled.br`
-//   display: none;
-//   @media(min-width: 641px) {
-//     display: block;
-//   }
-// `
-
 
 export const Wrapper2 = FlexCol.extend`
   border-top: ${Border};
@@ -221,13 +200,13 @@ export const Wrapper2 = FlexCol.extend`
 `;
 
 export const Headline = H2.extend`
-   line-height: 1.3rem;
-   font-size: 1rem;
-   padding-right: 4px;
-   padding-left: 4px;
-   padding-top: 8px;
-   padding-bottom: 8px;
-   @media(min-width: 1300px) { 
+  line-height: 1.3rem;
+  font-size: 1rem;
+  padding-right: 4px;
+  padding-left: 4px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  @media(min-width: 1300px) { 
     font-size: 1.6rem; 
     letter-spacing: .1rem; 
     padding-right: 1px;

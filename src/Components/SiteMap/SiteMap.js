@@ -46,19 +46,27 @@ const SiteMap = ({ data: { loading, error, Sealy, Stearns, Tempur, Ajustable, Bl
             {Sealy.mattresses.map((mattress) => {
               return (
                 <li key={mattress.id}>
-                  <SiteLinks to={`/brands/sealy/${mattress.uri}`}>{mattress.subBrand} {mattress.subName}</SiteLinks>
+                  <SiteLinks to={`/brands/sealy/${mattress.uri}`}>
+                    {mattress.subBrand} {mattress.subName}
+                  </SiteLinks>
                 </li>
               )
             })}
           </ul>
           </Main>
           <Main>
-          <h3><BrandLinks to="/brands/tempurpedic">Tempurpedic Mattresses</BrandLinks></h3>
+          <h3>
+            <BrandLinks to="/brands/tempurpedic">
+              Tempurpedic Mattresses
+            </BrandLinks>
+          </h3>
           <ul>
             {Tempur.mattresses.map((mattress) => {
               return (
                 <li key={mattress.id}>
-                  <SiteLinks to={`/brands/tempurpedic/${mattress.uri}`}>{mattress.subBrand} {mattress.subName}</SiteLinks>
+                  <SiteLinks to={`/brands/tempurpedic/${mattress.uri}`}>
+                    {mattress.subBrand} {mattress.subName}
+                  </SiteLinks>
                 </li>
               )
             })}
@@ -70,7 +78,9 @@ const SiteMap = ({ data: { loading, error, Sealy, Stearns, Tempur, Ajustable, Bl
             {Stearns.mattresses.map((mattress) => {
               return (
                 <li key={mattress.id}>
-                  <SiteLinks to={`/brands/stearns/${mattress.uri}`}>{mattress.subBrand} {mattress.subName}</SiteLinks>
+                  <SiteLinks to={`/brands/stearns/${mattress.uri}`}>
+                    {mattress.subBrand} {mattress.subName}
+                  </SiteLinks>
                 </li>
               )
             })}
@@ -84,7 +94,9 @@ const SiteMap = ({ data: { loading, error, Sealy, Stearns, Tempur, Ajustable, Bl
           {Ajustable.map((adj) => {
             return (
               <li key={adj.id}>
-                <SiteLinks to={`/adjustable/${adj.uri}`}>{adj.fullName}</SiteLinks>
+                <SiteLinks to={`/adjustable/${adj.uri}`}>
+                  {adj.fullName}
+                </SiteLinks>
               </li>
             )
           })}
@@ -96,7 +108,9 @@ const SiteMap = ({ data: { loading, error, Sealy, Stearns, Tempur, Ajustable, Bl
           {Blog.map((post) => {
             return (
               <li key={post.id}>
-                <SiteLinks to={`/blog/${post.slug}`}>{post.title}</SiteLinks>
+                <SiteLinks to={`/blog/${post.slug}`}>
+                  {post.title}
+                </SiteLinks>
               </li>
             )
           })}

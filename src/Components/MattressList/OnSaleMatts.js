@@ -55,8 +55,6 @@ const OnSaleMatts = ({ data: { loading, error, allIsOnSales} }) => {
             )
           })}
         </Wrapper>
-       
-        
       </MainWrapper>
     )
   }

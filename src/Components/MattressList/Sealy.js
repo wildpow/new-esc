@@ -44,11 +44,8 @@ const Sealy = ({ data: { loading, error, essentials, performance, premium} }) =>
                               subName={mattress.subName}
                               img={mattress.coverImg.handle}
                               title={title}
-                              priceRange={mattress.priceRange} />
-                {/* <StyledLink to={`/brands/sealy/${mattress.uri}`}>
-                  <MattImg src={`https://media.graphcms.com/resize=w:290,h:250,fit:clip/${mattress.coverImg.handle}`} alt="this"/>
-                  <SealyName>{mattress.brandName}<br/>{mattress.subBrand}<br/>{mattress.subName}</SealyName>
-                </StyledLink> */}
+                              priceRange={mattress.priceRange} 
+                />
               </LinkWrapper>
           ))}
             {performance.mattresses.map((mattress) => (
@@ -59,11 +56,8 @@ const Sealy = ({ data: { loading, error, essentials, performance, premium} }) =>
                               subName={mattress.subName}
                               img={mattress.coverImg.handle}
                               title={title}
-                              priceRange={mattress.priceRange} />
-                {/* <StyledLink to={`/brands/sealy/${mattress.uri}`}>
-                  <MattImg src={`https://media.graphcms.com/resize=w:290,h:250,fit:clip/${mattress.coverImg.handle}`} alt="this"/>
-                  <SealyName>{mattress.brandName}<br/>{mattress.subBrand}<br/>{mattress.subName}</SealyName>
-                </StyledLink> */}
+                              priceRange={mattress.priceRange} 
+                />
               </LinkWrapper>
           ))}
             {premium.mattresses.map((mattress) => (
@@ -74,11 +68,8 @@ const Sealy = ({ data: { loading, error, essentials, performance, premium} }) =>
                               subName={mattress.subName}
                               img={mattress.coverImg.handle}
                               title={title}
-                              priceRange={mattress.priceRange} />
-                {/* <StyledLink to={`/brands/sealy/${mattress.uri}`}>
-                  <MattImg src={`https://media.graphcms.com/resize=w:290,h:250,fit:clip/${mattress.coverImg.handle}`} alt="this"/>
-                  <SealyName>{mattress.brandName}<br/>{mattress.subBrand}<br/>{mattress.subName}</SealyName>
-                </StyledLink> */}
+                              priceRange={mattress.priceRange} 
+                />
               </LinkWrapper>
           ))}
         </Wrapper>

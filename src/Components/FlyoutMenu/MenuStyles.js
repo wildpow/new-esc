@@ -55,7 +55,48 @@ export const Bar = styled.span`
   transition: 0.4s;
 `;
 
-export const StyledLink2 = styled(NavLink)`
+export const Wrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  background-color: ${Blue};
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform .3s cubic-bezier(0, .52, 0, 1);
+  overflow: hidden !important;
+  &.hide { transform: translate3d(-100vw, 0, 0); }
+  &.show { transform: translate3d(0vw, 0, 0); }
+`;
+
+export const Nav = styled.nav`
+  display: flex;
+  flex-direction: column;
+  @media(orientation: landscape) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  @media(min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-grow: 1;
+  }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    margin-top: 150px;
+  }
+`;
+
+export const LinkWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+`;
+
+export const StyledLink = styled(NavLink)`
   z-index: 2000;
   font-family: ${MainFont1};
   font-size: 1.7rem;
@@ -93,39 +134,15 @@ export const StyledLink2 = styled(NavLink)`
     font-size: 2.6rem;
   }
 `;
-export const BottomLinks = StyledLink2.extend`
+
+export const BottomLinks = StyledLink.extend`
   @media(min-width: 768px) {
     margin-top: 0px;
     text-align: center;
   }
 `;
 
-export const Nav = styled.nav`
-  display: flex;
-  flex-direction: column;
-  @media(orientation: landscape) {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  @media(min-width: 768px) {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-grow: 1;
-  }
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-    margin-top: 150px;
-  }
-`;
-
-export const LinkWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-`;
-
-export const PooP = styled.div`
+export const NoLinkOnSM = styled.div`
   display: none;
   @media(orientation: landscape) {
     display: flex;
@@ -184,22 +201,6 @@ export const Image = styled.img`
   } 
 `;
 
-export const Wrapper = styled.div`
-  width: 100%;
-  height: 100%;
-  background-color: ${Blue};
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: transform .3s cubic-bezier(0, .52, 0, 1);
-  overflow: hidden !important;
-  &.hide { transform: translate3d(-100vw, 0, 0); }
-  &.show { transform: translate3d(0vw, 0, 0); }
-`;
-
 export const BGcolorWrapper = styled.div`
   display: none;
   border: ${Border};
@@ -209,13 +210,12 @@ export const BGcolorWrapper = styled.div`
     and (device-height : 812px) 
     and (-webkit-device-pixel-ratio : 3) { 
       background-color: white;
-    margin: auto;
-    padding: 15px 25px 15px 25px;
-    display: block;
-    margin-top: -55px;
-    border-radius: .2rem;
-    
-    }
+      margin: auto;
+      padding: 15px 25px 15px 25px;
+      display: block;
+      margin-top: -55px;
+      border-radius: .2rem;
+      }
   @media(min-width: 768px) and (orientation: portrait){
     background-color: white;
     margin: auto;

@@ -56,14 +56,44 @@ import { Header, Nav, StyledLinkLeft, StyledLinkRight
   return (
     <Header>
       <Nav>
-        <StyledLinkLeft to="/brands" onMouseEnter={AllthePre()} onTouchStart={AllthePre()}>Brands</StyledLinkLeft>
-        <StyledLinkLeft to="/adjustable" onMouseEnter={adjAndPreLoad()} onTouchStart={adjAndPreLoad()}>Adjustable</StyledLinkLeft>
-        <StyledLinkLeft to="/accessories" onMouseEnter={() => AccessoriesCompoent.load()} onTouchStart={() =>AccessoriesCompoent.load()}>Accessories</StyledLinkLeft>
+        <StyledLinkLeft 
+            to="/brands" 
+            onMouseEnter={AllthePre()} 
+            onTouchStart={AllthePre()}
+          >Brands
+        </StyledLinkLeft>
+        <StyledLinkLeft 
+            to="/adjustable" 
+            onMouseEnter={adjAndPreLoad()} 
+            onTouchStart={adjAndPreLoad()}
+          >Adjustable
+        </StyledLinkLeft>
+        <StyledLinkLeft 
+            to="/accessories" 
+            onMouseEnter={() => AccessoriesCompoent.load()} 
+            onTouchStart={() =>AccessoriesCompoent.load()}
+          >Accessories
+        </StyledLinkLeft>
       </Nav>
       <Nav>
-      <StyledLinkRight to="/financing" onMouseEnter={() =>FinancingComponent.load()} onTouchStart={() =>FinancingComponent.load()}>Financing</StyledLinkRight>
-        <StyledLinkRight to="/blog" onMouseEnter={BlogPre()} onTouchStart={BlogPre()}>Our Blog</StyledLinkRight>
-        <StyledLinkRight to="/about" onMouseEnter={() =>AboutComponent.load()} onTouchStart={() =>AboutComponent.load()}>About Us</StyledLinkRight>
+        <StyledLinkRight 
+            to="/financing" 
+            onMouseEnter={() =>FinancingComponent.load()} 
+            onTouchStart={() =>FinancingComponent.load()}
+              >Financing
+        </StyledLinkRight>
+        <StyledLinkRight 
+            to="/blog" 
+            onMouseEnter={BlogPre()} 
+            onTouchStart={BlogPre()}
+              >Our Blog
+        </StyledLinkRight>
+        <StyledLinkRight 
+            to="/about" 
+            onMouseEnter={() =>AboutComponent.load()} 
+            onTouchStart={() =>AboutComponent.load()}
+          >About Us
+        </StyledLinkRight>
       </Nav>
     </Header>
   )

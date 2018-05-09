@@ -154,21 +154,3 @@ margin-bottom: 10px;
 @media(min-width: 768px) { padding-right: 50px; padding-left: 50px; }
 @media(min-width:1024px) { padding-right: 50px; padding-left: 50px; }
 `;
-
-
-// export const Header = styled.header`
-//   font-family: ${MainFont1};
-//   background-color: ${Blue};
-//   text-shadow: ${TextShadow};
-//   color: white;
-//   text-align: center;
-// `;
-
-// export const HeaderText = styled.h2`
-//   font-size: .9rem;
-//   padding-right: 5px;
-//   padding-left: 5px;
-//   @media(min-width: 768px) { font-size: 1.4rem; line-height: 2rem; }
-//   @media(min-width: 1024px) { font-size: 1.5rem; }
-//   @media(min-width: 1300px) { font-size: 1.8rem; letter-spacing: .1rem; }
-// `;

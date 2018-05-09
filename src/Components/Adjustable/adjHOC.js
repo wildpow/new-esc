@@ -20,7 +20,10 @@ const AdjHoc = (props) => {
     <StyledLink to={`/adjustable/${props.uri}`} key={props.id} onMouseEnter={prefetch(props.uri)}>
           <H3>{props.fullName}</H3>
           <InfoWrapper>
-            <Img src={`https://media.graphcms.com/resize=w:400,h:400,fit:clip/${props.img}`} alt={`${props.fullName} Ajustable base`}/>
+            <Img 
+              src={`https://media.graphcms.com/resize=w:400,h:400,fit:clip/${props.img}`} 
+              alt={`${props.fullName} Ajustable base`}
+            />
             <AdjMarkdown source={props.markdown} escapeHtml={false} />
           </InfoWrapper>
         </StyledLink>

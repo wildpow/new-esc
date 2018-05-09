@@ -2,7 +2,9 @@ import React from 'react'
 import {withApollo} from 'react-apollo'
 import gql from 'graphql-tag';
 import { AdjustableComponent, BrandsComponent, BlogComponent, OnSaleMatts } from '../../Routes'
-import { StyledLink2,BottomLinks, Nav, Wrapper, Image, Footer, BGcolorWrapper,PooP, LinkWrapper, LastLinkWrapper }  from './MenuStyles';
+import { StyledLink, BottomLinks, Nav,
+        Wrapper, Image, Footer, BGcolorWrapper,
+        NoLinkOnSM, LinkWrapper, LastLinkWrapper }  from './MenuStyles';
 import Topper from '../Topper/Topper';
 import image from '../../images/logo.png';
 import SocialIcons from '../Footer/SocialIcons';
@@ -62,26 +64,28 @@ render() {
       visibility = "show";
     }
   return (
-    <Wrapper
+  <Wrapper
     onMouseUp={this.props.handleMouseDown} 
-    className={visibility}>
-    
-    <Topper/>
+    className={visibility}
+  >
+  <Topper/>
   <Nav>
     <LinkWrapper>
-      <StyledLink2 to="/" exact >Home</StyledLink2>
-      <StyledLink2 to="/current-sale">Sale</StyledLink2>
-      <StyledLink2 to="/brands">Brands</StyledLink2>
+      <StyledLink to="/" exact >Home</StyledLink>
+      <StyledLink to="/current-sale">Sale</StyledLink>
+      <StyledLink to="/brands">Brands</StyledLink>
     </LinkWrapper>
     <LinkWrapper>
-      <StyledLink2 to="/adjustable" >Adjustable</StyledLink2>
-      <StyledLink2 to="/accessories">Accessories</StyledLink2>
-      <StyledLink2 to="/financing">Financing</StyledLink2>
+      <StyledLink to="/adjustable" >Adjustable</StyledLink>
+      <StyledLink to="/accessories">Accessories</StyledLink>
+      <StyledLink to="/financing">Financing</StyledLink>
     </LinkWrapper>
     <LinkWrapper>
-      <StyledLink2 to="/blog" >Our Blog</StyledLink2>
-      <StyledLink2 to="/about">About Us</StyledLink2>
-     <PooP> <StyledLink2 to="/warranty">Warranty</StyledLink2></PooP>
+      <StyledLink to="/blog" >Our Blog</StyledLink>
+      <StyledLink to="/about">About Us</StyledLink>
+      <NoLinkOnSM> 
+        <StyledLink to="/warranty">Warranty</StyledLink>
+      </NoLinkOnSM>
     </LinkWrapper>
     <LastLinkWrapper>
       <BottomLinks to="/policies">Policies</BottomLinks>
@@ -89,10 +93,10 @@ render() {
     </LastLinkWrapper>
   </Nav>
   <Footer>
-  <Image src={image} alt="Image of E S C Mattress Center sleeping panda bear"/>
-  <BGcolorWrapper>
-    <SocialIcons/>
-  </BGcolorWrapper>
+    <Image src={image} alt="Image of E S C Mattress Center sleeping panda bear"/>
+    <BGcolorWrapper>
+      <SocialIcons/>
+    </BGcolorWrapper>
   </Footer>
   </Wrapper>
     

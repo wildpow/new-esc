@@ -28,7 +28,6 @@ export const Top = styled.div`
   background-color: ${props => props.theme.main};
   font-variant: small-caps;
   padding: 10px 6px 10px 6px;
-  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, .2); */
   transition: all .25s ease-in;
   font-family: 'Roboto', sans-serif;
   font-size: .8rem;
