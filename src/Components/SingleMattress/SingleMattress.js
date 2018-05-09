@@ -36,7 +36,6 @@ const SingleMattress = ({ data: { loading, error, mattress }, match }) => {
                             error={true}/>
   if (!loading) {
   if(!mattress) return <Redirect to='/404'/>
- 
   return (
     <div>
       <Helmet>
