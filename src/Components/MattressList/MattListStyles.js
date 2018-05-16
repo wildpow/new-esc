@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { Animation, FadeIn, Blue, H2,
+import { Animation, FadeIn, H2,
         FlexCol, BoxShadow, FlexRow, Border,
         MainFont2 } from '../../Styles';
 

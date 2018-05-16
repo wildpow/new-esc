@@ -20,9 +20,9 @@ const OnSaleMatts = ({ data: { loading, error, allIsOnSales} }) => {
           <meta property="og:type"   content="website" />
           <meta property="og:site_name" content="E.S.C. Mattress Center"/>
           <meta property="og:url" content="https://www.escmattresscenter.com/current-sale"/>
-          <meta property="og:image" content={`https://media.graphcms.com/resize=w:1200,h:627,fit:clip/${allIsOnSales[0].currentSaleImg.handle}`}/>
-          <meta property="og:image:width" content="1200"/>
-          <meta property="og:image:height" content="627"/>
+          <meta property="og:image" content={`https://media.graphcms.com/resize=w:980,h:450,fit:clip/${allIsOnSales[0].currentSaleImg.handle}`}/>
+          <meta property="og:image:width" content="980"/>
+          <meta property="og:image:height" content="450"/>
           <meta property="og:image:alt" content={`E.S.C Mattress Center | ${allIsOnSales[0].saleName}`}/>
           <meta property="og:title" content="E.S.C. Mattress Center"/>
           <meta property="og:description" content={allIsOnSales[0].description}/>
