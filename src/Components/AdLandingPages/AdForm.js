@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FormWrapper } from './LandingStyles';
+import { FormWrapper, Form, Label, Button, Input } from './LandingStyles';
 
 const encode = (data) => {
   return Object.keys(data)
@@ -32,27 +32,40 @@ class AdForm extends Component {
   render() { 
     const { name, email, tel } = this.state;
     return ( 
+     
       <FormWrapper>
-        <form onSubmit={this.handleSubmit}>
-          <lable>
-            Your Name: <input type="text" name="name" value={name} onChange={this.handleChange} />
-          </lable>
-          <lable>
-            Your Email: <input type="email" name="email" value={email} onChange={this.handleChange} />
-          </lable>
-          <lable>
-            Phone Number: 
-            <input 
+        <Form onSubmit={this.handleSubmit}>
+          <Label>
+            Name: 
+            <Input 
+              type="text" 
+              name="name" 
+              autoComplete="name"
+              value={name} onChange={this.handleChange} />
+          </Label>
+          <Label>
+            Email: 
+            <Input 
+              type="email" 
+              name="email" 
+              autoComplete="email"
+              value={email} onChange={this.handleChange} />
+          </Label>
+          <Label>
+            Phone: 
+            <Input 
               tpye="tel" 
               name="tel"
-              placeholder="425-512-0017" 
+              autoComplete="tel" 
               value={tel} 
               onChange={this.handleChange}
             />
-          </lable>
-          <button type="submit">Send</button>
-        </form>
+            {/* <input type="checkbox"/> */}
+          </Label>
+          <Button type="submit">Send</Button>
+        </Form>
       </FormWrapper>
+     
      )
   }
 }
