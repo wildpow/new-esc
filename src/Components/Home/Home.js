@@ -5,11 +5,11 @@ import { Carousel } from 'react-responsive-carousel';
 
 import { Main, OneImg, Linky } from './HomeStyles';
 
-import Sealy from '../../images/SealyMemorial980x450.jpg';
-import Tempur from '../../images/TempurMemorial980x450.jpg';
-import Stearns from '../../images/StearnsMemorial980x450.jpg';
-import Sale from '../../images/MPWMain980x450.jpg';
-import Fifth from '../../images/GildedBreathSpecialBuy980x450.jpg'
+import Sealy from '../../images/SealyDefault980x450.jpg';
+import Tempur from '../../images/TempurDefault980x450.jpg';
+import Stearns from '../../images/StearnsDefault980x450.jpg';
+import Sale from '../../images/Freex3_980x450.jpg';
+// import Fifth from '../../images/GildedBreathSpecialBuy980x450.jpg'
 import Front from '../FrontInfo/front';
 
 const HomeComponent = () => {
@@ -47,9 +47,9 @@ const HomeComponent = () => {
         <Linky to='/brands/sealy'>
           <OneImg src={Sealy} alt="Sealy's Memorial day savings event save up to 300 off selected mattresses"/> 
         </Linky>
-        <Linky to='/brands/sealy/Sealy-Golden-Elegance-Gilded-Breath-Plush-PT'>
+        {/* <Linky to='/brands/sealy/Sealy-Golden-Elegance-Gilded-Breath-Plush-PT'>
           <OneImg src={Fifth} alt="Image of Sealy's Golden Elegance Giled Breath plush pilltop mattress"/> 
-        </Linky>
+        </Linky> */}
       </Carousel>
       <Front/>
     </Main>
