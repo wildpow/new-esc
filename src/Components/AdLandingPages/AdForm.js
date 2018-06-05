@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 import { FormWrapper, Form, Label, Button, Input } from './LandingStyles';
-
+// import { FlexRow } from '../../Styles'
+import styled from 'styled-components';
+const DIV = styled.div`
+  margin-top: ${props => props.TopM ? '2px' : '0px'};
+  display: flex;
+  margin-bottom: 4px;
+  flex-direction: row;
+`
 const encode = (data) => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
@@ -14,8 +21,13 @@ class AdForm extends Component {
       name: "",
       email: "",
       tel: "",
+    
     }
   }
+  componentDidUpdate(prevProps, prevState) {
+    this._input.focus();
+  }
+
   handleSubmit = e => {
     fetch("/", {
       method: "POST",
@@ -32,42 +44,42 @@ class AdForm extends Component {
   render() { 
     const { name, email, tel } = this.state;
     return ( 
-     
+    
       <FormWrapper>
         <Form onSubmit={this.handleSubmit}>
-          <Label>
-            Name: 
-            <Input 
+        <DIV TopM>
+          <Label>Name:</Label>
+            <Input
               type="text" 
               name="name" 
               autoComplete="name"
               value={name} onChange={this.handleChange} />
-          </Label>
-          <Label>
-            Email: 
+          </DIV>
+          <DIV>
+          <Label>Email:</Label>
             <Input 
               type="email" 
               name="email" 
               autoComplete="email"
               value={email} onChange={this.handleChange} />
-          </Label>
-          <Label>
-            Phone: 
+          </DIV>
+          <DIV>
+          <Label>Phone:</Label>
             <Input 
               tpye="tel" 
               name="tel"
               autoComplete="tel" 
               value={tel} 
               onChange={this.handleChange}
-            />
-            {/* <input type="checkbox"/> */}
-          </Label>
+            /></DIV>
+           
+          
           <Button type="submit">Send</Button>
         </Form>
       </FormWrapper>
-     
-     )
+    
+    )
   }
 }
- 
+
 export default AdForm;

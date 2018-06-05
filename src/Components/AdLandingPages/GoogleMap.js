@@ -33,7 +33,7 @@ class GoogleMapContainer extends React.Component {
   }
   render() {
     const style = {
-      width: '94vw',
+      width: '100%',
       height: '200px',
       position: 'relative',
       display: 'flex',
@@ -63,8 +63,11 @@ class GoogleMapContainer extends React.Component {
         <InfoWindow
           marker = { this.state.activeMarker }
           visible = { this.state.showingInfoWindow }
-        >
+        ><div>
         <h3>E.S.C Mattress Center</h3>
+        <a href="tel:1-425-512-0017">
+            (425)-512-0017
+          </a></div>
         </InfoWindow>
       </Map>
 

@@ -1,13 +1,13 @@
 import React from 'react';
 import StearnsLogo from '../../images/Stears_Logo_WarmGray_Cropped.png';
-import MarriedLady from '../../images/StearnsTopImage600x400.jpg';
+import MarriedLady from '../../images/Indulgent-Comfort-Square.jpg';
 import StearnsIcon from '../../images/StearnsFleur_Cropped.png';
 import StearnsBed from '../../images/StearnsAboveReviews600x400.jpg';
 import Stars from '../../images/StearnsStars200x50.png';
 import { MainLogo, FirstImg, BottomImg, Icon, StarImg,
   Header, Container, FlexWrapper, CallTOAction, Headline,
-  Wrap, Row, Holder, BottomWrapper, Ratings,
-  BottomImgWrapper, RatingsWrap, FooterWraper } from './LandingStyles';
+  Wrap, Row, Holder, BottomWrapper, Ratings, MainHeadline,
+  BottomImgWrapper, RatingsWrap, FooterWraper, LGWrapper } from './LandingStyles';
 import AdForm from './AdForm';
 import GoogleMapContainer from './GoogleMap';
 import { Link } from 'react-router-dom';
@@ -19,19 +19,19 @@ const StearnsLanding = () => {
       </Header>
       <FlexWrapper>
         <FirstImg src={MarriedLady} alt="this"/>
-        <div>
-        <Headline>
+        <LGWrapper>
+        <MainHeadline>
           For over 165 years, Stearns & Foster has worked to build the perfect mattres.
           Every Stearns & Foster mattress is carefully crafted with the finest materials
           to provide you unsurpassed luxury and unparalleled 
           sleep. 
-        </Headline>
+        </MainHeadline>
         <CallTOAction>
           Visit today or contact us to schedule a time to experience Consumer Reports 
           top rated Luxury Inneerspring Mattress.
         </CallTOAction>
         <AdForm/>
-        </div>
+        </LGWrapper>
       </FlexWrapper> 
       <Wrap>
         <Row>
@@ -56,7 +56,7 @@ const StearnsLanding = () => {
           </Holder>
 
         </Row>
-        <Holder Cream>
+        <Holder Cream Last>
           <h3>Exceptional Quality</h3>
           <Headline>
             Each Stearns & Foster mattress is precisely engineered to meet the highest
