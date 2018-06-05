@@ -108,6 +108,10 @@ export const Icon = styled.img`
   @media(min-width: 768px) {
     max-width: 220px;
   }
+  @media(min-width: 1200px) {
+    margin-bottom: 20px;
+    max-width: 250px;
+  }
 `;
 
 export const FormWrapper = styled.div`
@@ -192,10 +196,20 @@ export const Button = styled.button`
 
 export const Input = styled.input`
   width: 70%;
+  font-family: ${MainFont2} !important;
   &:focus {
     outline: none;
     border: 2px solid #706259;
   }
+  /* ::-webkit-input-placeholder {
+    color: rgba(112, 98, 89, .5);
+    font-family: ${MainFont2};
+    }
+  ::-moz-input-placeholder {
+    color: rgba(112, 98, 89, .5);
+    font-family: ${MainFont2};
+  } */
+  
   @media(min-width: 360px) {
     font-size: 1rem;
     padding: 3px;
@@ -216,6 +230,9 @@ export const Row = styled.div`
     margin-top: 20px;
     flex-direction: row;
   }
+  @media(min-width: 1200px) {
+    justify-content: space-evenly;
+  }
  
 `
 
@@ -227,7 +244,11 @@ export const Holder = styled.div`
   @media(min-width: 768px) {
     flex-basis: 40%;
     width: ${(props) => props.Last ? '80%' : 'auto'};
-    margin: 0 auto;
+    margin: ${props => props.Last ? '0 auto' : '10px 0 5px 0'};
+  }
+  @media(min-width: 1200px) {
+    flex-basis: 30%;
+    width: ${(props) => props.Last ? '38%' : 'auto'};
   }
   /* background-color: #f6f5f2; */
   & h3 {
@@ -258,6 +279,7 @@ export const BottomWrapper = styled.div`
     padding-bottom: 10px;
     text-align: center;
     color: #706259;
+    text-shadow: ${TextShadow};
     font-size: 1.3rem;
     letter-spacing: .1rem;
     font-variant: small-caps;
@@ -366,3 +388,18 @@ export const CallTOAction = styled.p`
     letter-spacing: .27rem;
     padding-bottom: 25px;
 `;
+
+export const MapInfo = styled.div`
+  color: #706259;
+  font-variant: small-caps;
+  font-family: ${MainFont1};
+  @media(min-width: 1200px) {
+    font-size: 1.3rem;
+  }
+  & a {
+    color: #706259;
+  }
+  & img {
+    width: 70px;
+  }
+`

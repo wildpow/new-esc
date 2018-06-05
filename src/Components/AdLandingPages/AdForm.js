@@ -24,9 +24,6 @@ class AdForm extends Component {
     
     }
   }
-  componentDidUpdate(prevProps, prevState) {
-    this._input.focus();
-  }
 
   handleSubmit = e => {
     fetch("/", {
@@ -50,14 +47,17 @@ class AdForm extends Component {
         <DIV TopM>
           <Label>Name:</Label>
             <Input
+              placeholder="Mr. Sleeping Panda"
               type="text" 
               name="name" 
               autoComplete="name"
+              autoFocus="true"
               value={name} onChange={this.handleChange} />
           </DIV>
           <DIV>
           <Label>Email:</Label>
             <Input 
+              placeholder="youremail@example.com"
               type="email" 
               name="email" 
               autoComplete="email"
@@ -65,7 +65,9 @@ class AdForm extends Component {
           </DIV>
           <DIV>
           <Label>Phone:</Label>
-            <Input 
+            <Input
+              placeholder="425-512-0017"
+              pattern="^[0-9-+s()]*$"
               tpye="tel" 
               name="tel"
               autoComplete="tel" 

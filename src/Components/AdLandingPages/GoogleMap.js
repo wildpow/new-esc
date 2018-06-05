@@ -1,6 +1,8 @@
 import React from 'react';
 import { GoogleApiWrapper, InfoWindow, Map, Marker } from 'google-maps-react';
 import mapStyles from './mapStyles.json';
+import { MapInfo } from './LandingStyles';
+import Logo from '../../images/logo.png';
 
 const defaultMapOptions = {
   styles: mapStyles
@@ -54,6 +56,7 @@ class GoogleMapContainer extends React.Component {
         initialCenter={{ lat: 47.90504, lng: -122.242032 }}
       >
         <Marker
+          options={{icon: Logo, size: '1', scaledSize: '1'}}
           animation={ this.props.google.maps.Animation.DROP}
           onClick={ this.onMarkerClick }
           title={ 'E.S.C Mattress Center' }
@@ -63,11 +66,11 @@ class GoogleMapContainer extends React.Component {
         <InfoWindow
           marker = { this.state.activeMarker }
           visible = { this.state.showingInfoWindow }
-        ><div>
+        ><MapInfo>
         <h3>E.S.C Mattress Center</h3>
         <a href="tel:1-425-512-0017">
             (425)-512-0017
-          </a></div>
+          </a><img src={Logo}/></MapInfo>
         </InfoWindow>
       </Map>
 
