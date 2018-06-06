@@ -45,7 +45,7 @@ const StearnsLanding = () => {
 
           <Holder Cream>
             <h3>Authentic Craftsmanship</h3>
-            <Headline>
+            <Headline bottom>
               Every Stearns & Foster mattress is handcrafted by certified craftsmen
               who have been specialy trained and pay relentless attention to detail
               to build the best beds.
@@ -56,7 +56,7 @@ const StearnsLanding = () => {
 
           <Holder Cream>
             <h3>Indulgent Comfort</h3>
-            <Headline>
+            <Headline bottom>
               Nothing is as supremely comfortable as a Stearns & Foster bed, offering
               you that perfect “ahh” moment every time you lie down.
             </Headline>
@@ -65,7 +65,7 @@ const StearnsLanding = () => {
         </Row>
         <Holder Cream Last>
           <h3>Exceptional Quality</h3>
-          <Headline>
+          <Headline bottom>
             Each Stearns & Foster mattress is precisely engineered to meet the highest
             standards to deliver you exceptional, lasting quality.
           </Headline>

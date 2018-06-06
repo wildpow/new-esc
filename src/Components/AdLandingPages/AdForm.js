@@ -7,6 +7,10 @@ const DIV = styled.div`
   display: flex;
   margin-bottom: 4px;
   flex-direction: row;
+  @media(min-width: 360px) {
+    margin-top: ${props => props.TopM ? '6px' : '0px'};
+    margin-bottom: 8px;
+  }
 `
 const encode = (data) => {
   return Object.keys(data)
@@ -52,7 +56,7 @@ class AdForm extends Component {
               type="text" 
               name="name" 
               autoComplete="name"
-              autoFocus
+              // autoFocus
               value={name} onChange={this.handleChange} />
           </DIV>
           <DIV>

@@ -16,12 +16,19 @@ export const Container = styled.div`
 export const Header = styled.header`
   margin-top: 7px;
   align-self: center;
+  @media(min-width: 360px) {
+    margin-top: 12px;
+  }
   @media(min-width: 768px) {
     margin-top: 10px;
   }
   @media(min-width: 1024px) {
     margin-top: 15px;
     margin-bottom: 10px;
+  }
+  @media(min-width: 1300px) {
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 `
 export const MainLogo = styled.img`
@@ -33,11 +40,17 @@ export const MainLogo = styled.img`
   @media(min-width: 1024px) {
     max-width: 550px;
   }
+  @media(min-width: 1300px) {
+    max-width: 600px;
+  }
 `;
-export const LGWrapper = styled.div`
+export const LGWrapper = styled.article`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  @media(min-width: 1300px) {
+    justify-content: space-between;
+  }
 `;
 export const FirstImg = styled.img`
   /* max-width: 240px; */
@@ -64,8 +77,8 @@ export const Headline = styled.p`
   letter-spacing: .1rem;
   padding-left: 15px;
   padding-right: 5px;
-  margin-bottom: 5px;
-  margin-top: 10px;
+  margin-bottom: 3px;
+  margin-top: 5px;
   color: #706259;
   word-break: break-word;
   /* @media(min-width: 768px) {
@@ -78,23 +91,37 @@ export const Headline = styled.p`
   &::first-letter {
     font-size: 140%;
   }
-  @media(min-width: 1024px) {
+  @media(min-width: 360px) {
+    margin-top: 10px;
+    margin-bottom: 6px;
+    line-height: 1.35rem;
+  }
+  @media(min-width: 1200px) {
     font-size: 1.3rem;
-    line-height: 1.5rem;
+    line-height: 2rem;
+    text-align: ${props => props.bottom ? 'justify' : 'auto'};
+    text-justify: ${props => props.bottom ? 'inter-character' : 'auto'};
+    padding-left: ${props => props.bottom ? '0px' : '15px'};
+    padding-right: ${props => props.bottom ? '0px' : '5px'};
+    letter-spacing: ${props => props.bottom ? 'auto' : '.1rem'}
   }
 `;
 export const MainHeadline = Headline.extend`
   @media(min-width: 1024px) {
     line-height: 2rem;
+    font-size: 1.4rem;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 `
 
-export const FlexWrapper = styled.div`
+export const FlexWrapper = styled.main`
   display: flex;
   flex-direction: column;
-  /* background-color: #f6f5f2; */
-  /* font-family: ${MainFont2}; */
   font-size: .9rem;
+  @media(min-width: 360px) {
+    font-size: 1rem;
+  }
   @media(min-width: 768px) {
     flex-direction: row;
   }
@@ -140,28 +167,49 @@ export const Label = styled.label`
   }
   @media(min-width: 1024px) {
     font-size: 1.6rem;
-    width: 120px;
+    width: 100px;
   }
   @media(min-width: 1300px) {
     font-family: ${MainFont1};
   }
 `;
-export const Button2 = styled.button`
-
-  background: #ededed;
+export const Button = styled.button`
+  position: relative;
+  display: block;
+  width: 250px;
+  margin: 5px auto;
+  /* margin: 20px auto; */
+  padding: 10px;
+  background-color: #706259;
+  /* background-color: #fff; */
   border: 1px solid #ccc;
-  padding: 10px 30px;
-  border-radius: 3px;
-  cursor: pointer;
-  outline: none;
-
-&:active {
-  background: #e5e5e5;
-  box-shadow: inset 0px 0px 5px #c1c1c1;
+  font-family: ${MainFont2};
+  letter-spacing: .25rem;
+  color: #f6f5f2;
+  /* color: #000; */
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  
+  transform-style: flat;
+  transition: all ease 0.3s;
+  &:active {
+  box-shadow: 0 3px 0 #ccc;
+  top: 3px;
   outline: none;
 }
+  &:hover {
+    background-color: #f6f5f2;
+    color: #706259;
+  }
+  @media(min-width: 360px) {
+    width: 300px;
+  }
+  @media(min-width: 1300px) {
+    font-size: 1.7rem;
+  }
 `
-export const Button = styled.button`
+export const Button2 = styled.button`
   text-decoration: none;
   outline: none;
   cursor: pointer;
@@ -176,11 +224,15 @@ export const Button = styled.button`
   border-radius: 7px;
   border: 1px solid black;
   font-family: ${MainFont1};
-  & :active {
-    background: #e5e5e5;
-    box-shadow: inset 0px 0px 5px #c1c1c1;
+  transition: all .25s ease-in;
+  &:active {
+    background: #e5e5e5 !important;
+    box-shadow: inset 0px 0px 5px #c1c1c1 !important;
     outline: none;
-}
+  }
+  &:hover {
+    transform: scale3d(1.02,1.02,1);
+  }
   @media(min-width: 360px) {
     margin-top: 5px;
     font-size: 1.2rem;
@@ -212,7 +264,10 @@ export const Input = styled.input`
   
   @media(min-width: 360px) {
     font-size: 1rem;
-    padding: 3px;
+    padding: 6px;
+  }
+  @media(min-width: 1300px) {
+    padding: 10px;
   }
 `;
 
@@ -222,7 +277,7 @@ export const Wrap = styled.div`
   background-color: #f6f5f2;
 `;
 
-export const Row = styled.div`
+export const Row = styled.article`
   display: flex;
   flex-direction: column;
   background-color: #f6f5f2;
@@ -231,12 +286,12 @@ export const Row = styled.div`
     flex-direction: row;
   }
   @media(min-width: 1200px) {
-    justify-content: space-evenly;
+    justify-content: space-around;
   }
  
 `
 
-export const Holder = styled.div`
+export const Holder = styled.aside`
   margin-top: 10px;
   display: flex;
   flex-direction: column;
@@ -265,7 +320,7 @@ export const Holder = styled.div`
   } 
 `;
 
-export const BottomWrapper = styled.div`
+export const BottomWrapper = styled.article`
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -363,8 +418,8 @@ export const FooterWraper = styled.div`
 
 export const CallTOAction = styled.p`
   margin-top: 0;
-  padding-top: 7px;
-  padding-bottom: 7px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   padding-right: 5px;
   padding-left: 5px;
   text-align: center;
@@ -375,6 +430,11 @@ export const CallTOAction = styled.p`
   line-height: 1.4rem;
   font-family: ${MainFont2};
   /* letter-spacing: .1rem; */
+  @media(min-width: 360px) {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    line-height: 1.45rem;
+  }
   @media(min-width: 1024px) {
     font-size: 1.4rem;
     line-height: 1.8rem;
@@ -399,10 +459,17 @@ export const MapInfo = styled.div`
   @media(min-width: 1200px) {
     font-size: 1.3rem;
   }
+  & h3 {
+    margin-bottom: 1px;
+    margin-top: 2px;
+  }
   & a {
     color: #706259;
-  }
-  & img {
-    width: 70px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-size: 1rem;
+    &:hover {
+      color: black;
+    }
   }
 `
