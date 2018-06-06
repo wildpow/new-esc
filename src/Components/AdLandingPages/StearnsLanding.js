@@ -1,8 +1,9 @@
 import React from 'react';
+import { Helmet } from "react-helmet";
 import StearnsLogo from '../../images/Stears_Logo_WarmGray_Cropped.png';
 import MarriedLady from '../../images/Indulgent-Comfort-Square.jpg';
 import StearnsIcon from '../../images/StearnsFleur_Cropped.png';
-import StearnsBed from '../../images/StearnsAboveReviews600x400.jpg';
+import StearnsBed from '../../images/StearnsImage700x390.jpg';
 import Stars from '../../images/StearnsStars200x50.png';
 import { MainLogo, FirstImg, BottomImg, Icon, StarImg,
   Header, Container, FlexWrapper, CallTOAction, Headline,
@@ -11,9 +12,15 @@ import { MainLogo, FirstImg, BottomImg, Icon, StarImg,
 import AdForm from './AdForm';
 import GoogleMapContainer from './GoogleMap';
 import { Link } from 'react-router-dom';
+// import ResponsiveImg from './ResponsiveImg';
+
 const StearnsLanding = () => {
   return (
     <Container>
+      <Helmet>
+          <title>ESC: Stearns & Foster</title>
+          <meta name="description" content="TODO: words and stuff"/>
+      </Helmet>
       <Header>
         <MainLogo src={StearnsLogo} alt="this"/>
       </Header>

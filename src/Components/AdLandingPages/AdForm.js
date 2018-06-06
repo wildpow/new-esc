@@ -47,16 +47,18 @@ class AdForm extends Component {
         <DIV TopM>
           <Label>Name:</Label>
             <Input
+              required
               placeholder="Mr. Sleeping Panda"
               type="text" 
               name="name" 
               autoComplete="name"
-              autoFocus="true"
+              autoFocus
               value={name} onChange={this.handleChange} />
           </DIV>
           <DIV>
           <Label>Email:</Label>
-            <Input 
+            <Input
+              required
               placeholder="youremail@example.com"
               type="email" 
               name="email" 
@@ -66,7 +68,8 @@ class AdForm extends Component {
           <DIV>
           <Label>Phone:</Label>
             <Input
-              placeholder="425-512-0017"
+              required
+              placeholder="###-###-####"
               pattern="^[0-9-+s()]*$"
               tpye="tel" 
               name="tel"
@@ -74,7 +77,7 @@ class AdForm extends Component {
               value={tel} 
               onChange={this.handleChange}
             /></DIV>
-           
+          
           
           <Button type="submit">Send</Button>
         </Form>

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { MainFont2, MainFont1, Border, TextShadow, BoxShadow } from '../../Styles';
+import { MainFont2, MainFont1, TextShadow } from '../../Styles';
 
 
 export const Container = styled.div`
@@ -201,14 +201,14 @@ export const Input = styled.input`
     outline: none;
     border: 2px solid #706259;
   }
-  /* ::-webkit-input-placeholder {
-    color: rgba(112, 98, 89, .5);
+  ::-webkit-input-placeholder {
+    color: rgba(112, 98, 89, .25);
     font-family: ${MainFont2};
     }
   ::-moz-input-placeholder {
-    color: rgba(112, 98, 89, .5);
+    color: rgba(112, 98, 89, .25);
     font-family: ${MainFont2};
-  } */
+  }
   
   @media(min-width: 360px) {
     font-size: 1rem;
@@ -306,6 +306,7 @@ export const BottomImg = styled.img`
   @media(min-width: 360px) {
     max-width: 100%;
   }
+
   
 `;
 
@@ -391,6 +392,8 @@ export const CallTOAction = styled.p`
 
 export const MapInfo = styled.div`
   color: #706259;
+  display: flex;
+  flex-direction: column;
   font-variant: small-caps;
   font-family: ${MainFont1};
   @media(min-width: 1200px) {
