@@ -20,6 +20,7 @@ export const Warranty = loadable(() => import('./Components/Policys/Warranty'));
 export const Policy = loadable(() => import('./Components/Policys/Policy'));
 export const OnSaleMatts = loadable(() => import('./Components/MattressList/OnSaleMatts'));
 
+export const StearnsLanding = loadable(() => import('./Components/AdLandingPages/StearnsLanding'));
 
 HomeComponent.load()
 
