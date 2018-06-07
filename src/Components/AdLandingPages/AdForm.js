@@ -127,7 +127,7 @@ class AdForm extends Component {
               value={name} 
               onChange={this.handleChange} />
           </DIV>
-          <DIV>{console.log(modalRoot)}
+          <DIV>
           <Label>Email:</Label>
             <Input
               required
