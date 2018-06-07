@@ -68,7 +68,7 @@ class GoogleMapContainer extends React.Component {
           marker = { this.state.activeMarker }
           visible = { this.state.showingInfoWindow }
         ><MapInfo>
-        <h3>E.S.C Mattress Center</h3>
+        <h3>ESC Mattress Center</h3>
         <a href="tel:1-425-512-0017">
             (425)-512-0017
           </a>

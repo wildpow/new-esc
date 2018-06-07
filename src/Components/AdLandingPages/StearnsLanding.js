@@ -19,7 +19,7 @@ const StearnsLanding = () => {
     <Container>
       <Helmet>
           <title>ESC: Stearns & Foster</title>
-          <meta name="description" content="TODO: words and stuff"/>
+          <meta name="description" content="Experience the height of luxury with Stearns & Foster mattresses.  Learn more about the top rated luxury innerspring mattress collection from Stearns and Foster at ESC Mattress Center in Everett WA.  Our local non-commission staff will be happy to show you the Estate and Estate Lux collections."/>
       </Helmet>
       <Header>
         <MainLogo src={StearnsLogo} alt="this"/>
@@ -28,14 +28,14 @@ const StearnsLanding = () => {
         <FirstImg src={MarriedLady} alt="this"/>
         <LGWrapper>
         <MainHeadline>
-          For over 165 years, Stearns & Foster has worked to build the perfect mattres.
+          For over 165 years, Stearns & Foster has worked to build the perfect mattress.
           Every Stearns & Foster mattress is carefully crafted with the finest materials
           to provide you unsurpassed luxury and unparalleled 
           sleep. 
         </MainHeadline>
         <CallTOAction>
           Visit today or contact us to schedule a time to experience Consumer Reports 
-          top rated Luxury Inneerspring Mattress.
+          top rated Luxury Innerspring Mattress.
         </CallTOAction>
         <AdForm/>
         </LGWrapper>
@@ -47,7 +47,7 @@ const StearnsLanding = () => {
             <h3>Authentic Craftsmanship</h3>
             <Headline bottom>
               Every Stearns & Foster mattress is handcrafted by certified craftsmen
-              who have been specialy trained and pay relentless attention to detail
+              who have been especially trained and pay relentless attention to detail
               to build the best beds.
             </Headline>
           </Holder>
@@ -82,7 +82,7 @@ const StearnsLanding = () => {
             <StarImg src={Stars} alt="this"/>
           </Ratings>
           <Ratings>
-            <p>Wake up with no back pain and well rested!<br/> - Penny s.</p>
+            <p>Wake up with no back pain and well rested!<br/> - Penny S.</p>
             <StarImg src={Stars} alt="this"/>
           </Ratings>
           <Ratings Bottom>

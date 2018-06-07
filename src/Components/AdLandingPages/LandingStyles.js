@@ -472,4 +472,25 @@ export const MapInfo = styled.div`
       color: black;
     }
   }
-`
+`;
+
+export const ModalBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #706259;
+  width: 82vw;
+  height: 34vh;
+  background: #f6f5f2;
+  color: #706259;
+  font-family: ${MainFont2};
+  & h3 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+  }
+  & p {
+    text-align: center;
+    margin-top: 5px;
+  }
+`;
