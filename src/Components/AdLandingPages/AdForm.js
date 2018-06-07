@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import './css.css'
-import { FormWrapper, Form, Label, Button, Input, ModalBox } from './LandingStyles';
+// import './css.css'
+import { FormWrapper, Form, Label,
+          Button, Input, ModalBox,
+          ModalContainer, ModalButton } from './LandingStyles';
 import styled from 'styled-components';
 
 //modal div
@@ -57,7 +59,11 @@ class AdForm extends Component {
   handleShow() {
     this.setState({ showModal: true });
     document.body.style.overflow = "hidden";
-    // document.body.style.filter = "blur(5px) grayscale(50%)";
+    document.getElementById('root').style.filter = 'blur(5px) grayscale(50%)'
+    document.getElementById('root').style.transition = '.35s'
+
+    // document.body.style.filter = "blur(5px)";
+    // document.body.style.position = "absolute"
     // document.body.style.transform = "scale(1);"
     // modalRoot.style.filter = "blur(none) grayscale(0%)"
   }
@@ -71,7 +77,10 @@ class AdForm extends Component {
       opacity: .3
     });
     document.body.style.overflow = "visible";
+    document.getElementById('root').style.filter = 'blur(0px) grayscale(0%)'
+
     // document.body.style.filter = "blur(0px) grayscale(0%)"
+    // document.getElementById('root').style.filter = 'blur(5px) grayscale(50%)'
 
   }
 
@@ -92,13 +101,13 @@ class AdForm extends Component {
     const { name, email, tel } = this.state;
     const modal = this.state.showModal ? (
       <Modal>
-        <div className="modal">
+        <ModalContainer onClick={this.handleHide}>
           <ModalBox>
           <h3>Thank You!</h3>
-          <p>We will get in touch with you within 24 to 48 hours</p>
-          <Button onClick={this.handleHide}>Hide</Button>
+          <p>We will get in touch with you <br/>within 24 hours</p>
+          <ModalButton onClick={this.handleHide}>Close</ModalButton>
           </ModalBox>
-        </div>
+        </ModalContainer>
       </Modal>
     ) : null;
     return ( 
@@ -118,7 +127,7 @@ class AdForm extends Component {
               value={name} 
               onChange={this.handleChange} />
           </DIV>
-          <DIV>
+          <DIV>{console.log(modalRoot)}
           <Label>Email:</Label>
             <Input
               required

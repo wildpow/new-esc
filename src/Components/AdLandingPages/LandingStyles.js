@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { MainFont2, MainFont1, TextShadow } from '../../Styles';
+import { MainFont2, MainFont1, TextShadow, Red } from '../../Styles';
 
 
 export const Container = styled.div`
@@ -144,6 +144,9 @@ export const Icon = styled.img`
 export const FormWrapper = styled.div`
   padding-top: 5px;
   background-color: #f6f5f2;
+  @media(min-width: 1300px) {
+    margin-bottom: 60px;
+  }
 `;
 
 export const Form = styled.form`
@@ -456,41 +459,94 @@ export const MapInfo = styled.div`
   flex-direction: column;
   font-variant: small-caps;
   font-family: ${MainFont1};
-  @media(min-width: 1200px) {
-    font-size: 1.3rem;
-  }
   & h3 {
     margin-bottom: 1px;
     margin-top: 2px;
+    @media(min-width:768px) {
+      font-size: 2rem;
+    }
+    @media(min-width:1024px) {
+      font-size: 2.1rem;
+    }
   }
   & a {
     color: #706259;
     padding-top: 4px;
     padding-bottom: 4px;
     font-size: 1rem;
+    @media(min-width:768px) {
+      font-size: 1.4rem;
+    }
+    @media(min-width:1024px) {
+      font-size: 1.6rem;
+      letter-spacing: .2rem;
+    }
     &:hover {
-      color: black;
+      color: ${Red} !important;
     }
   }
 `;
 
 export const ModalBox = styled.div`
+  align-self: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border: 2px solid #706259;
-  width: 82vw;
-  height: 34vh;
+  margin-left: 6px;
+  margin-right: 6px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  /* width: 82vw;
+  height: 34vh; */
   background: #f6f5f2;
   color: #706259;
   font-family: ${MainFont2};
+  @media(min-width: 768px) {
+    padding: 40px;
+  }
+  @media(min-width: 768px) {
+    padding: 60px;
+  }
   & h3 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     font-size: 2rem;
     margin-bottom: 5px;
+    margin-top: 10px;
+    @media(min-width: 768px) {
+      font-size: 2.8rem;
+    }
   }
   & p {
     text-align: center;
     margin-top: 5px;
+    @media(min-width: 768px) {
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+    }
   }
 `;
+
+export const ModalContainer = styled.div`
+  /* background-color: rgba(0,0,0,0.5); */
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* transition: 3s; */
+  /* overflow: hidden; */
+
+`
+
+export const ModalButton = Button.extend`
+  @media(min-width: 768px) {
+    font-size: 2rem;
+  }
+`
