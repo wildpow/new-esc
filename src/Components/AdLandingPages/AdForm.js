@@ -3,9 +3,7 @@ import ReactDOM from 'react-dom';
 // import './css.css'
 import { FormWrapper, Form, Label,
           Button, Input, ModalBox,
-          ModalContainer, ModalButton } from './LandingStyles';
-import styled from 'styled-components';
-
+          ModalContainer, ModalButton, LabelWrapper } from './LandingStyles';
 //modal div
 const modalRoot = document.getElementById('modal-root');
 class Modal extends React.Component {
@@ -25,17 +23,6 @@ class Modal extends React.Component {
     );
   }
 }
-
-const DIV = styled.div`
-  margin-top: ${props => props.TopM ? '2px' : '0px'};
-  display: flex;
-  margin-bottom: 4px;
-  flex-direction: row;
-  @media(min-width: 360px) {
-    margin-top: ${props => props.TopM ? '6px' : '0px'};
-    margin-bottom: 8px;
-  }
-`
 const encode = (data) => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
@@ -56,17 +43,14 @@ class AdForm extends Component {
     this.handleShow = this.handleShow.bind(this);
     this.handleHide = this.handleHide.bind(this);
   }
+
   handleShow() {
     this.setState({ showModal: true });
     document.body.style.overflow = "hidden";
-    document.getElementById('root').style.filter = 'blur(5px) grayscale(50%)'
-    document.getElementById('root').style.transition = '.35s'
-
-    // document.body.style.filter = "blur(5px)";
-    // document.body.style.position = "absolute"
-    // document.body.style.transform = "scale(1);"
-    // modalRoot.style.filter = "blur(none) grayscale(0%)"
+    document.getElementById('root').style.filter = 'blur(5px) grayscale(50%)';
+    document.getElementById('root').style.transition = '.35s';
   }
+
   handleHide() {
     this.setState({
       showModal: false,
@@ -77,11 +61,7 @@ class AdForm extends Component {
       opacity: .3
     });
     document.body.style.overflow = "visible";
-    document.getElementById('root').style.filter = 'blur(0px) grayscale(0%)'
-
-    // document.body.style.filter = "blur(0px) grayscale(0%)"
-    // document.getElementById('root').style.filter = 'blur(5px) grayscale(50%)'
-
+    document.getElementById('root').style.filter = 'blur(0px) grayscale(0%)';
   }
 
   handleSubmit = e => {
@@ -91,8 +71,7 @@ class AdForm extends Component {
       body: encode({ "form-name": "contact", ...this.state })
     })
     .then(() => this.handleShow())
-    .catch(error => alert(error))
-
+    .catch(error => alert(error));
     e.preventDefault();
   }
 
@@ -100,71 +79,70 @@ class AdForm extends Component {
   render() { 
     const { name, email, tel } = this.state;
     const modal = this.state.showModal ? (
-      <Modal>
-        <ModalContainer onClick={this.handleHide}>
-          <ModalBox>
+    <Modal>
+      <ModalContainer onClick={this.handleHide}>
+        <ModalBox>
           <h3>Thank You!</h3>
           <p>We will get in touch with you <br/>within 24 hours</p>
           <ModalButton onClick={this.handleHide}>Close</ModalButton>
-          </ModalBox>
-        </ModalContainer>
-      </Modal>
+        </ModalBox>
+      </ModalContainer>
+    </Modal>
     ) : null;
     return ( 
-    
       <FormWrapper style={{opacity: this.state.opacity}}>
         <Form onSubmit={this.handleSubmit}>
-        <DIV TopM>
-          <Label>Name:</Label>
-            <Input
-              required
-              placeholder="Mr. Sleeping Panda"
-              type="text" 
-              name="name" 
-              autoComplete="name"
-              // autoFocus
+          <LabelWrapper TopM>
+            <Label>Name:</Label>
+              <Input
+                required
+                placeholder="Mr. Sleeping Panda"
+                type="text" 
+                name="name" 
+                autoComplete="name"
+                //TODO:
+              // I would like to have this field autoFocus but clicking on the map pin makes it fire 
               disabled={this.state.disabled}
               value={name} 
-              onChange={this.handleChange} />
-          </DIV>
-          <DIV>
-          <Label>Email:</Label>
-            <Input
-              required
-              placeholder="youremail@example.com"
-              type="email" 
-              name="email" 
-              autoComplete="email"
-              disabled={this.state.disabled}
-              value={email} 
-              onChange={this.handleChange} />
-          </DIV>
-          <DIV>
-          <Label>Phone:</Label>
-            <Input
-              required
-              placeholder="###-###-####"
-              pattern="^[0-9-+s()]*$"
-              tpye="tel" 
-              name="tel"
-              autoComplete="tel"
-              disabled={this.state.disabled}
-              value={tel} 
-              onChange={this.handleChange}
-            /></DIV>
-          
-          
+              onChange={this.handleChange} 
+            />
+          </LabelWrapper>
+          <LabelWrapper>
+            <Label>Email:</Label>
+              <Input
+                required
+                placeholder="youremail@example.com"
+                type="email" 
+                name="email" 
+                autoComplete="email"
+                disabled={this.state.disabled}
+                value={email} 
+                onChange={this.handleChange} 
+              />
+            </LabelWrapper>
+          <LabelWrapper>
+            <Label>Phone:</Label>
+              <Input
+                required
+                placeholder="###-###-####"
+                pattern="^[0-9-+s()]*$"
+                tpye="tel" 
+                name="tel"
+                autoComplete="tel"
+                disabled={this.state.disabled}
+                value={tel} 
+                onChange={this.handleChange} 
+              />
+            </LabelWrapper>  
           <Button 
             type="submit"
             disabled={this.state.disabled}
-            // style={{opacity: this.state.opacity}}
           >
           Send
           </Button>
           {modal}
         </Form>
       </FormWrapper>
-    
     )
   }
 }
