@@ -27,7 +27,9 @@ const client = new ApolloClient({
 //   storage: window.localStorage
 // })
 
-
+if (module.hot) {
+  module.hot.accept();
+} 
 ReactDOM.render(
   <BrowserRouter>
     <ApolloProvider client={ client } >
