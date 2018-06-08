@@ -200,11 +200,17 @@ export const Button = styled.button`
   box-shadow: 0 3px 0 #ccc;
   top: 3px;
   outline: none;
-}
-  &:hover {
+  }
+  &:hover:enabled{
     background-color: #f6f5f2;
     color: #706259;
   }
+  &:active:enabled{
+    background: #e5e5e5 !important;
+    box-shadow: inset 0px 0px 5px #c1c1c1 !important;
+    outline: none;
+  }
+
   @media(min-width: 360px) {
     width: 300px;
   }
