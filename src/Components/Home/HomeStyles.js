@@ -7,11 +7,10 @@ export const Main = styled.div`
   animation-name: ${FadeIn};
   ${Animation}
   background-color: white;
-  margin-right: 0;
-  margin-left: 0;  
+  margin-right: auto;
+  margin-left: auto;  
   margin-top: 15px;
   max-width: 980px;
-  @media (min-width: 1300px) { margin-right: auto; margin-left: auto; }
 `;
 
 export const Linky = styled(Link)`
@@ -59,7 +58,8 @@ export const Headline = styled.h2`
 
 export const P = styled.p`
   font-family: ${MainFont2};
-  text-align: center;
+  text-align: justify;
+  text-justify: inter-character !important;
   margin-bottom: 0;
   margin-top: 0;
   padding: 15px 7px 15px 7px;

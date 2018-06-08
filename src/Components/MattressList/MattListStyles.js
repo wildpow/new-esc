@@ -219,7 +219,8 @@ export const Headline = H2.extend`
 
 export const P = styled.p`
   font-family: ${MainFont2};
-  text-align: center;
+  text-align: justify;
+  text-justify: inter-character !important;
   margin-bottom: 0;
   margin-top: 0;
   padding: 7px 7px 7px 7px;
