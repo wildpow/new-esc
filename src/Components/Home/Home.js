@@ -3,8 +3,11 @@ import { Helmet } from "react-helmet";
 
 import { Carousel } from 'react-responsive-carousel'; 
 
-import { Main, OneImg, Linky } from './HomeStyles';
-
+import { Main, Linky } from './HomeStyles';
+import SealyWebp from '../../images/SealyDefault980x450.webp'
+import TempurWebp from '../../images/TempurDefault980x450.webp'
+import SaleWebp from '../../images/Freex3_980x450.webp'
+import StearnsWebp from '../../images/StearnsDefault980x450.webp'
 import Sealy from '../../images/SealyDefault980x450.jpg';
 import Tempur from '../../images/TempurDefault980x450.jpg';
 import Stearns from '../../images/StearnsDefault980x450.jpg';
@@ -36,16 +39,28 @@ const HomeComponent = () => {
         showStatus={false}
       >
         <Linky to='/current-sale'>
-          <OneImg src={Sale} alt="E.S.C Mattress Center's Mattress Wars Sales Event on a selection of mattresses and adjustable bases."/>
+        <picture>
+          <source type="image/webp" srcSet={SaleWebp}/>
+          <img src={Sale} alt="E.S.C Mattress Center's Mattress Wars Sales Event on a selection of mattresses and adjustable bases."/>
+        </picture>
         </Linky>
         <Linky to='/brands/stearns'>
-          <OneImg src={Stearns} alt="Save up to 1000 dollars off Stearns and Foster top rated inner spring mattress"/>
+        <picture>
+          <source type="image/webp" srcSet={StearnsWebp}/>
+          <img src={Stearns} alt="Save up to 1000 dollars off Stearns and Foster top rated inner spring mattress"/>
+        </picture>
         </Linky>
         <Linky to='/brands/tempurpedic'>
-          <OneImg src={Tempur} alt="Save up to 600 dollars off Tempurpedic the winner of the JD power award for #1 in confort, support and value"/>
+        <picture>
+          <source type="image/webp" srcSet={TempurWebp}/>
+          <img src={Tempur} alt="Save up to 600 dollars off Tempurpedic the winner of the JD power award for #1 in confort, support and value"/>
+        </picture>
         </Linky>
         <Linky to='/brands/sealy'>
-          <OneImg src={Sealy} alt="Sealy's Memorial day savings event save up to 300 off selected mattresses"/> 
+        <picture>
+          <source type="image/webp" srcSet={SealyWebp}/>
+          <img src={Sealy} alt="Sealy's Memorial day savings event save up to 300 off selected mattresses"/> 
+        </picture>
         </Linky>
         {/* <Linky to='/brands/sealy/Sealy-Golden-Elegance-Gilded-Breath-Plush-PT'>
           <OneImg src={Fifth} alt="Image of Sealy's Golden Elegance Giled Breath plush pilltop mattress"/> 

@@ -124,11 +124,11 @@ class AdForm extends Component {
             <Label>Phone:</Label>
               <Input
                 required
+                autoComplete="tel-national"
                 placeholder="###-###-####"
                 pattern="^[0-9-+s()]*$"
                 tpye="tel" 
                 name="tel"
-                autoComplete="tel"
                 disabled={this.state.disabled}
                 value={tel} 
                 onChange={this.handleChange} 
