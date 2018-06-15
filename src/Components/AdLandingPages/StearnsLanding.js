@@ -22,10 +22,10 @@ const StearnsLanding = () => {
           <meta name="description" content="Experience the height of luxury with Stearns & Foster mattresses.  Learn more about the top rated luxury innerspring mattress collection from Stearns and Foster at ESC Mattress Center in Everett WA.  Our local non-commission staff will be happy to show you the Estate and Estate Lux collections."/>
       </Helmet>
       <Header>
-        <MainLogo src={StearnsLogo} alt="this"/>
+        <MainLogo src={StearnsLogo} alt="Stearns and Foster Mattress company logo for ESC mattress centers luxury landing page"/>
       </Header>
       <FlexWrapper>
-        <FirstImg src={MarriedLady} alt="this"/>
+        <FirstImg src={MarriedLady} alt="Consumer reports top rated mattress at you local mattress store"/>
         <LGWrapper>
         <MainHeadline>
           For over 165 years, Stearns & Foster has worked to build the perfect mattress.
@@ -52,7 +52,7 @@ const StearnsLanding = () => {
             </Headline>
           </Holder>
 
-          <Icon src={StearnsIcon} alt="this"/>
+          <Icon src={StearnsIcon} alt="Icon you'll find on every luxury stearn and foster mattress Estate, estate lux and reserve"/>
 
           <Holder Cream>
             <h3>Indulgent Comfort</h3>
@@ -73,21 +73,21 @@ const StearnsLanding = () => {
       </Wrap>
       <BottomWrapper>
         <BottomImgWrapper>
-          <BottomImg src={StearnsBed} alt="this"/>
+          <BottomImg src={StearnsBed} alt="Top rated luxury mattress from stearn and foster at ESC mattress center"/>
         </BottomImgWrapper>
         <h3>The Stearns & Foster Experience</h3>
         <RatingsWrap>
           <Ratings>
             <p>Love our S&F Mattress!<br/> - Howie C.</p>
-            <StarImg src={Stars} alt="this"/>
+            <StarImg src={Stars} alt="Rating for mattresses found in you local Everett washington ESC mattress center"/>
           </Ratings>
           <Ratings>
             <p>Wake up with no back pain and well rested!<br/> - Penny S.</p>
-            <StarImg src={Stars} alt="this"/>
+            <StarImg src={Stars} alt="Rating for mattresses found in you local Everett washington ESC mattress center"/>
           </Ratings>
           <Ratings Bottom>
             <p>A dreamers paradise!<br/> -Houston T.</p>
-            <StarImg src={Stars} alt="this"/>
+            <StarImg src={Stars} alt="Rating for mattresses found in you local Everett washington ESC mattress center"/>
           </Ratings>
         </RatingsWrap>
         
