@@ -1,7 +1,7 @@
 import React from 'react'
 import {withApollo} from 'react-apollo'
 import gql from 'graphql-tag';
-import { AdjustableComponent, BrandsComponent, BlogComponent, OnSaleMatts } from '../../Routes'
+// import { AdjustableComponent, BrandsComponent, BlogComponent, OnSaleMatts } from '../../Routes'
 import { StyledLink, BottomLinks, Nav,
         Wrapper, Image, Footer, BGcolorWrapper,
         NoLinkOnSM, LinkWrapper, LastLinkWrapper }  from './MenuStyles';
@@ -47,14 +47,14 @@ class Menu extends React.PureComponent {
         allPosts { id slug title dateAndTime coverImage { handle } } }`  
     }) 
   };
-  componentWillUpdate() {
+  UNSAFE_componentWillUpdate() {
     this.adjPreFetch();
     this.allThePreFetch();
     this.blogPreFetch();
-    AdjustableComponent.load();
-    BrandsComponent.load();
-    BlogComponent.load();
-    OnSaleMatts.load();
+    // AdjustableComponent.load();
+    // BrandsComponent.load();
+    // BlogComponent.load();
+    // OnSaleMatts.load();
     
   }
 

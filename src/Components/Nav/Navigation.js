@@ -1,8 +1,8 @@
 import React from 'react';
 import {withApollo} from 'react-apollo'
 import gql from 'graphql-tag';
-import {BrandsComponent, AdjustableComponent, AccessoriesCompoent,
-  FinancingComponent, BlogComponent, AboutComponent} from '../../Routes'
+// import {BrandsComponent, AdjustableComponent, AccessoriesCompoent,
+//   FinancingComponent, BlogComponent, AboutComponent} from '../../Routes'
 import { Header, Nav, StyledLinkLeft, StyledLinkRight
         } from './NavStyles';
 
@@ -43,15 +43,15 @@ import { Header, Nav, StyledLinkLeft, StyledLinkRight
 
   const adjAndPreLoad = () => () => {
     adjPreFetch()
-    AdjustableComponent.load()
+    // AdjustableComponent.load()
   }
   const AllthePre = () => () => {
     allThePreFetch()
-    BrandsComponent.load()
+    // BrandsComponent.load()
   }
   const BlogPre = () => () => {
     blogPreFetch()
-    BlogComponent.load()
+    // BlogComponent.load()
   }
   return (
     <Header>
@@ -70,16 +70,16 @@ import { Header, Nav, StyledLinkLeft, StyledLinkRight
         </StyledLinkLeft>
         <StyledLinkLeft 
             to="/accessories" 
-            onMouseEnter={() => AccessoriesCompoent.load()} 
-            onTouchStart={() =>AccessoriesCompoent.load()}
+            // onMouseEnter={() => AccessoriesCompoent.load()} 
+            // onTouchStart={() =>AccessoriesCompoent.load()}
           >Accessories
         </StyledLinkLeft>
       </Nav>
       <Nav>
         <StyledLinkRight 
             to="/financing" 
-            onMouseEnter={() =>FinancingComponent.load()} 
-            onTouchStart={() =>FinancingComponent.load()}
+            // onMouseEnter={() =>FinancingComponent.load()} 
+            // onTouchStart={() =>FinancingComponent.load()}
               >Financing
         </StyledLinkRight>
         <StyledLinkRight 
@@ -90,8 +90,8 @@ import { Header, Nav, StyledLinkLeft, StyledLinkRight
         </StyledLinkRight>
         <StyledLinkRight 
             to="/about" 
-            onMouseEnter={() =>AboutComponent.load()} 
-            onTouchStart={() =>AboutComponent.load()}
+            // onMouseEnter={() =>AboutComponent.load()} 
+            // onTouchStart={() =>AboutComponent.load()}
           >About Us
         </StyledLinkRight>
       </Nav>

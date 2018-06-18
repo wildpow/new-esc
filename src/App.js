@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { Route, Switch, withRouter } from 'react-router-dom';
-import * as Routes from './Routes'
+// import * as Routes from './Routes'
 import styled, { injectGlobal } from 'styled-components';
 import styledNormalize from 'styled-normalize';
 import MenuButton from './Components/FlyoutMenu/MenuButton';
@@ -9,6 +9,26 @@ import Footer from './Components/Footer/Footer';
 import Topper from './Components/Topper/Topper';
 import Navigation from './Components/Nav/Navigation';
 import Logo from './Components/Logo/Logo';
+
+import AboutComponent from './Components/About/About';
+import AdjustableComponent from './Components/Adjustable/Adjustable'
+import BrandsComponent from './Components/Brands/Brands';
+import HomeComponent from './Components/Home/Home';
+import SingleBase from './Components/Adjustable/SingleBase';
+import Panda404 from './Components/Panda404/Panda404';
+import SingleMattress from './Components/SingleMattress/SingleMattress';
+import OnSaleMatts from './Components/MattressList/OnSaleMatts';
+import AccessoriesCompoent from './Components/Accessories/Accessories';
+import FinancingComponent from './Components/Financing/Financing';
+import BlogComponent from './Components/Blog/Blog';
+import Warranty from './Components/Policys/Warranty';
+import Policy from './Components/Policys/Policy';
+import SiteMap from './Components/SiteMap/SiteMap';
+import Sealy from './Components/MattressList/Sealy';
+import StearnsLanding from './Components/AdLandingPages/StearnsLanding';
+import Stearns from './Components/MattressList/Stearns';
+import Tempur from './Components/MattressList/Tempur';
+import Post from './Components/Blog/Post/Post';
 
 
 injectGlobal`
@@ -87,27 +107,27 @@ class App extends Component {
         <Container style={{display: this.state.display}}>
         <ScrollToTopWithRouter>
           <Switch>
-            <Route path="/" component={Routes.HomeComponent} exact/>
-            <Route path="/current-sale" component={Routes.OnSaleMatts} exact/>
-            <Route path="/adjustable" component={Routes.AdjustableComponent} exact/>
-            <Route path="/Accessories" component={Routes.AccessoriesCompoent} exact/>
-            <Route path="/financing" component={Routes.FinancingComponent} exact/>
-            <Route path="/blog" component={Routes.BlogComponent} exact/>
-            <Route path="/about" component={Routes.AboutComponent} exact/>
-            <Route path="/sitemap" component={Routes.SiteMap} exact/>
-            <Route path="/warranty" component={Routes.Warranty} exact/>
-            <Route path="/policies" component={Routes.Policy} exact/>
-            <Route path="/landing/stearns" component={Routes.StearnsLanding} exact/>
-            <Route path="/brands" component={Routes.BrandsComponent} exact/>
-            <Route path="/brands/sealy" component={Routes.Sealy} exact/>
-            <Route path="/brands/stearns" component={Routes.Stearns} exact/>
-            <Route path="/brands/tempurpedic" component={Routes.Tempur} exact/>
-            <Route path="/blog/:slug" component={Routes.Post} />
-            <Route path="/adjustable/:uri" component={Routes.SingleBase}/>
-            <Route path="/brands/tempurpedic/:uri" component={Routes.SingleMattress}/>
-            <Route path="/brands/sealy/:uri" component={Routes.SingleMattress}/>
-            <Route path="/brands/stearns/:uri" component={Routes.SingleMattress}/>
-            <Route component={Routes.Panda404}/>
+            <Route path="/" component={HomeComponent} exact/>
+            <Route path="/current-sale" component={OnSaleMatts} exact/>
+            <Route path="/adjustable" component={AdjustableComponent} exact/>
+            <Route path="/Accessories" component={AccessoriesCompoent} exact/>
+            <Route path="/financing" component={FinancingComponent} exact/>
+            <Route path="/blog" component={BlogComponent} exact/>
+            <Route path="/about" component={AboutComponent} exact/>
+            <Route path="/sitemap" component={SiteMap} exact/>
+            <Route path="/warranty" component={Warranty} exact/>
+            <Route path="/policies" component={Policy} exact/>
+            <Route path="/landing/stearns" component={StearnsLanding} exact/>
+            <Route path="/brands" component={BrandsComponent} exact/>
+            <Route path="/brands/sealy" component={Sealy} exact/>
+            <Route path="/brands/stearns" component={Stearns} exact/>
+            <Route path="/brands/tempurpedic" component={Tempur} exact/>
+            <Route path="/blog/:slug" component={Post} />
+            <Route path="/adjustable/:uri" component={SingleBase}/>
+            <Route path="/brands/tempurpedic/:uri" component={SingleMattress}/>
+            <Route path="/brands/sealy/:uri" component={SingleMattress}/>
+            <Route path="/brands/stearns/:uri" component={SingleMattress}/>
+            <Route component={Panda404}/>
             </Switch>
             </ScrollToTopWithRouter>
           <Footer/>
