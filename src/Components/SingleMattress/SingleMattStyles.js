@@ -23,8 +23,9 @@ export const Wrapper = FlexCol.extend`
 `;
 
 export const Main = FlexRow.extend`
-  margin-top: 4px;
+  margin-top: 2px;
   justify-content: space-around;
+  @media(min-width: 360px) { margin-top: 4px }
   @media(min-width: 768px) { margin-bottom: 10px; }
   @media(min-width: 1024px) { 
     justify-content: space-evenly;
@@ -164,13 +165,18 @@ export const StyledMarkDown = styled(Markdown)`
   }
   & ul {
     list-style: square;
-    margin-top: 10px;
+    margin-top: 2px;
     font-size:  .7rem;
     padding-left: 20px;
     margin-bottom: 5px;
   }
   & li {
     padding-bottom: 2px;
+  }
+  @media(min-width: 360px) {
+    & ul {
+      margin-top: 10px;
+    }
   }
   @media(min-width: 550px) {
     font-family: ${MainFont2};

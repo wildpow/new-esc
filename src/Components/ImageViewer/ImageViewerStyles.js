@@ -2,9 +2,9 @@ import styled from 'styled-components';
 import { FlexCol, FlexRow } from '../../Styles';
 
 export const ImgWrapper = FlexCol.extend`
-  margin: 0;
+  margin: 10px 0 0 0;
   height: 200px;
-  @media(min-width: 360px) { height: 240px; }
+  @media(min-width: 360px) { height: 240px; margin: 0px }
   @media(min-width: 500px) { height: 340px; }
   @media(min-width: 768px) { height: 470px; }
   @media(min-width: 1024px) { height: 660px; margin-right: 10px; }
@@ -12,9 +12,10 @@ export const ImgWrapper = FlexCol.extend`
 
 export const SmallImgHolder = FlexRow.extend`
   justify-content: center;
+  margin-top: 10px;
   align-self: center;
   top: 150px;
-  @media(min-width: 360px) { top: 180px; }
+  @media(min-width: 360px) { top: 180px; margin-top: 0px; }
   @media(min-width: 500px) { top: 250px; }
   @media(min-width: 768px) { top: 350px; }
   @media(min-width: 1024px) { top: 500px; }

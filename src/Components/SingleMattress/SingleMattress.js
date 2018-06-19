@@ -71,6 +71,7 @@ const SingleMattress = ({ data: { loading, error, mattress }, match }) => {
             <InfoAnchor href="#moreInfo">See more details</InfoAnchor>
           </Stuff>
             <PriceCalculator 
+              mattress={mattress.name} // For MakeOffer Component
               mattOnly={mattress.mattOnly}
               mattOnlySale={mattress.mattOnlySale}
               setPrice={mattress.setPrice}
