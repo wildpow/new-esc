@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { ModalContainer, ModalBox, Form,
           FormWrapper, LabelWrapper, Label,
           Input, Headline, Span, Button,
-          Header, MakeOfferWrapper } from './MakeOfferStyles';
+          Header, MakeOfferWrapper, SubmitButton } from './MakeOfferStyles';
 
 const modalRoot = document.getElementById('modal-root'); //React Portal ref
 // const mainRoot = document.getElementById('root'); // div containing the whole React app
@@ -38,10 +38,12 @@ class MakeOffer extends Component {
       name: "",
       email: "",
       note: "",
-      deliveryZip: "",
+      tel: "",
       mattress: this.props.mattress,
       size: this.props.size,
-      formSubmit: false
+      formSubmit: false,
+      disabled: false,
+      opacity: 1,
     }
 
     this.handleShow = this.handleShow.bind(this);
@@ -56,9 +58,14 @@ class MakeOffer extends Component {
       headers: { "Content-Type": "application/x-www-form-urlencoded"},
       body: encode({ "form-name": "makeOffer", ...this.state })
     })
-      .then(() => this.setState({ formSubmit: true }))
+      .then(() => this.setState({ 
+                    formSubmit: !this.state.formSubmit, 
+                    disabled: !this.state.disabled,
+                    opacity: .3 }))
+      .then(() => this.handleHide())
       .catch(error => alert(error));
-    
+    // document.body.style.overflow = "visible";
+    // document.getElementById('root').style.filter = 'blur(0px) grayscale(0%)';
     e.preventDefault();
   };
 
@@ -70,21 +77,27 @@ class MakeOffer extends Component {
   }
 
   handleHide() {
-    this.setState({ showModal: false });
+    this.setState({ 
+      showModal: false,
+      name: "",
+      email: "",
+      note: "",
+
+      });
     document.body.style.overflow = "visible";
     document.getElementById('root').style.filter = 'blur(0px) grayscale(0%)';
   }
   render() {
-    const { name, email, tel, note } = this.state;
+    const { name, email, tel, note, mattress, size } = this.state;
     const modal = this.state.showModal ? (
-      <Modal>
+      <Modal size={this.props.size}>
         <ModalContainer>
-          <div>
+        <ModalBox>
           <Header>
             <Headline>Make an Offer</Headline>
             <button onClick={this.handleHide}>X</button>
           </Header>
-          <ModalBox>
+          
             
             <p>
               We now are making it even easier to comparison shop with our locally owned and operated mattress center.
@@ -131,29 +144,35 @@ class MakeOffer extends Component {
                     />
                 </LabelWrapper>
                 <LabelWrapper>
-                  <Label>Url:</Label>
-                  <Input
+                  <Label>Note:</Label>
+                  <textarea
+                    onChange={this.handleChange}
+                    placeholder="Price match info"
                     required
-                    placeHolder="http://www.PriceMatchMattressStore.com"
+                    rows="7"
+                    cols="15"
                     type="text"
                     value={note} 
-                    onChange={this.handleChange}
+                    
                     name="note"
                   />
                 </LabelWrapper>
+                <input hidden type="text" name="mattress" defaultValue={mattress}/>
+                <input hidden type="text" name="size" defaultValue={size} />
+                <SubmitButton type="submit">Send</SubmitButton>
               </Form>
             </FormWrapper>
-            <button type="submit" onClick={this.handleHide}>Send</button>
+           
           </ModalBox>
-          </div>
+          
         </ModalContainer>
       </Modal>
     ) : null;
     return (
-      <MakeOfferWrapper>
-        <Button onClick={this.handleShow}
+      <MakeOfferWrapper style={{opacity: this.state.opacity}}>        <Button onClick={this.handleShow}
                 style={{opacity: this.props.opacity,
                         transition: 'opacity 700ms ease-in-out'}}
+                disabled={this.state.disabled}
         >Make <Span>an</Span> Offer</Button>
         {modal}
       </MakeOfferWrapper>
