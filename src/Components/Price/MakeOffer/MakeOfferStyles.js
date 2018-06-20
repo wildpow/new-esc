@@ -61,6 +61,10 @@ export const Headline = styled.h3`
   font-size: 1.3rem;
   letter-spacing: .2rem;
   text-shadow: ${TextShadow};
+  @media(min-width: 1300px) {
+    font-size: 2rem;
+  }
+
 `;
 
 export const ModalContainer = styled.div`
@@ -96,15 +100,25 @@ export const ModalBox = styled.div`
     font-size: .9rem;
     line-height: 1.2rem;
     border-bottom: ${RedBorderBottom};
+    @media(min-width: 1300px) {
+      font-size: 1.4rem;
+      line-height: 2rem;
+    }
   }  
+  @media(min-width: 1300px) {
+    max-width: 40vw;
+  }
 `;
 
 export const FormWrapper = styled.div`
+  display: flex;
+  /* justify-content: flex-start; */
 `;
 
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
+  /* justify-content: flex-start; */
   margin-top: 5px;
 `;
 
@@ -127,6 +141,7 @@ export const Label = styled.label`
   font-family: ${MainFont1};
   @media(min-width: 360px) { font-size: 1rem; }
   @media(min-width: 1024px) { font-size: 1.6rem; width: 100px; }
+  
 `;
 
 export const Input = styled.input`
@@ -213,7 +228,7 @@ export const Button = styled.button`
     align-self: flex-end;
     margin-right: 5px;
   }
-  @media(min-width: 1300px) { font-size: 1.7rem; margin: 5px 35px 5px 5px; }
+  @media(min-width: 1300px) { font-size: 1.7rem; margin: 5px 35px 5px 5px; width: 300px; }
 `;
 
 export const SubmitButton = Button.extend`

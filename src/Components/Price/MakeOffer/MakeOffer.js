@@ -104,7 +104,7 @@ class MakeOffer extends Component {
               If you find a lower price on the same mattress from a competitor, just let us know by filling out the quick form.
               We will get back to you within 24 hours and help you "sleep like the experts do".
             </p>
-            <FormWrapper>
+            {/* <FormWrapper> */}
               <Form onSubmit={this.handleSubmit}>
                 <LabelWrapper>
                   <Label>Name:</Label>
@@ -161,7 +161,7 @@ class MakeOffer extends Component {
                 <input hidden type="text" name="size" defaultValue={size} />
                 <SubmitButton type="submit">Send</SubmitButton>
               </Form>
-            </FormWrapper>
+            {/* </FormWrapper> */}
            
           </ModalBox>
           
