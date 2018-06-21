@@ -1,5 +1,8 @@
 import styled from 'styled-components';
-import { MainFont1, RedBorderBottom, MainFont2, Blue, Red, TextShadow} from '../../../Styles';
+import { MainFont1,
+        RedBorderBottom, MainFont2,
+        Blue, Red, TextShadow
+        ,BoxShadow, Border, FadeIn, Animation} from '../../../Styles';
 
 export const SubmitButton2 = styled.button`
   background-color: ${Blue};
@@ -33,22 +36,49 @@ export const SubmitButton2 = styled.button`
 `;
 export const Header = styled.header`
   display: flex;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
   width: 100%;
   background-color: ${Blue};
   justify-content: space-between;
-
+position: relative;
   & button {
-    font-family: ${MainFont1};
+    position: absolute;
+    overflow: hidden;
+    border: 0;
     color: white;
-    font-size: 1.3rem;
+    outline: none;
+    background-color: ${Blue};
+    top: 0.1rem;
+    right: 0.3rem;
+    padding: 0.3rem;
+    font-size: 2.2em;
+    height: 1em;
+    width: 1.3em;
+    text-indent: 10em;
+    /* font-family: ${MainFont1}; */
+   
+    /* font-size: 1.3rem;
     padding-right: 5px;
     transition: all ease 0.3s;
     background-color: ${Blue};
-    border-color: ${Blue};
+    border-color: ${Blue}; */
+    transition: all ease 0.3s;
+    @media(min-width: 1300px) {
+      font-size: 3.2em;
+    }
     &:hover {
       color: ${Red};
-      
     }
+    &:after {
+      position: absolute;
+      line-height: 0.5;
+      top: 0.2em;
+      left: 0.6em;
+      text-indent: 0;
+      content: "\00D7";
+    }
+
 
   }
 `;
@@ -63,6 +93,8 @@ export const Headline = styled.h3`
   text-shadow: ${TextShadow};
   @media(min-width: 1300px) {
     font-size: 2rem;
+    padding: 15px;
+    margin-left: 20px;
   }
 
 `;
@@ -82,14 +114,18 @@ export const ModalContainer = styled.div`
 `;
 
 export const ModalBox = styled.div`
+  /* width: 80vw; */
   align-self: center;
   margin: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 2px solid black;
+  /* border: ${Border}; */
+  box-shadow: ${BoxShadow};
   background-color: white;
+  animation-name: ${FadeIn};
+  ${Animation};
   & p {
     padding-bottom: 7px;
     margin-bottom: 0px;
@@ -103,6 +139,8 @@ export const ModalBox = styled.div`
     @media(min-width: 1300px) {
       font-size: 1.4rem;
       line-height: 2rem;
+      padding: 20px;
+      margin-top: 0px;
     }
   }  
   @media(min-width: 1300px) {
@@ -117,12 +155,15 @@ export const FormWrapper = styled.div`
 
 export const Form = styled.form`
   display: flex;
+  width: 100%;
   flex-direction: column;
-  /* justify-content: flex-start; */
+  justify-content: center;
   margin-top: 5px;
 `;
 
 export const LabelWrapper = styled.div`
+  /* align-self: flex-start; */
+  margin-left: 15px;
   margin-top: ${props => props.TopM ? '2px' : '0px'};
   display: flex;
   margin-bottom: 4px;
@@ -137,7 +178,7 @@ export const Label = styled.label`
   padding: 5px 5px 5px 0px;
   text-align: left;
   color: black;
-  width: 70px;
+  width: 20%;
   font-family: ${MainFont1};
   @media(min-width: 360px) { font-size: 1rem; }
   @media(min-width: 1024px) { font-size: 1.6rem; width: 100px; }
@@ -145,18 +186,19 @@ export const Label = styled.label`
 `;
 
 export const Input = styled.input`
+  border: ${Border};
   width: 70%;
   font-family: ${MainFont2} !important;
   &:focus {
     outline: none;
-    border: 2px solid black;
+    border: 2px solid ${Blue};
   }
   ::-webkit-input-placeholder {
-    color: rgba(112, 98, 89, .25);
+    color: rgba(112, 98, 89, 1);
     font-family: ${MainFont2};
     }
   ::-moz-input-placeholder {
-    color: rgba(112, 98, 89, .25);
+    color: rgba(112, 98, 89, 1);
     font-family: ${MainFont2};
   }
   
@@ -166,6 +208,7 @@ export const Input = styled.input`
   }
   @media(min-width: 1300px) {
     padding: 10px;
+    width: 300px;
   }
 `;
 export const NoteInput = Input.extend`
@@ -188,6 +231,7 @@ export const Button = styled.button`
   position: relative;
   display: block;
   width: 120px;
+  cursor: pointer !important;
   margin: 0px 5px 1px 0px;
   padding: 5px;
   background-color: ${Blue};
@@ -235,4 +279,29 @@ export const SubmitButton = Button.extend`
   align-self: center;
   margin-bottom: 5px;
   font-size: 1.4rem;
+`;
+
+export const Textarea = styled.textarea`
+  font-family: ${MainFont2} !important;
+  border: ${Border};
+  width: 70%;
+  height: 75px;
+  resize: none;
+  /* opacity: .5; */
+  &:focus {
+    outline: none;
+    border: 2px solid ${Blue};
+  }
+  ::-webkit-textarea-placeholder {
+    color: rgba(112, 98, 89, .25);
+    font-family: ${MainFont2};
+    }
+  ::-moz-textarea-placeholder {
+    color: rgba(112, 98, 89, .25);
+    font-family: ${MainFont2};
+  }
+  @media(min-width: 1300px){
+    width: 300px;
+    height: 150px;
+  }
 `

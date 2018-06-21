@@ -3,6 +3,7 @@ import {Blue, MainFont2, FlexCol, Red, Border } from '../../Styles';
 
 export const DropDown = styled.select`
   color: white;
+  cursor: pointer;
   background-color: ${Blue};
   font-family: ${MainFont2};
   width: 150px;

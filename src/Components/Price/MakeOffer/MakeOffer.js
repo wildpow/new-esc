@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { ModalContainer, ModalBox, Form,
-          FormWrapper, LabelWrapper, Label,
+          Textarea, LabelWrapper, Label,
           Input, Headline, Span, Button,
           Header, MakeOfferWrapper, SubmitButton } from './MakeOfferStyles';
 
@@ -95,10 +95,8 @@ class MakeOffer extends Component {
         <ModalBox>
           <Header>
             <Headline>Make an Offer</Headline>
-            <button onClick={this.handleHide}>X</button>
+            <button onClick={this.handleHide}>close</button>
           </Header>
-          
-            
             <p>
               We now are making it even easier to comparison shop with our locally owned and operated mattress center.
               If you find a lower price on the same mattress from a competitor, just let us know by filling out the quick form.
@@ -106,7 +104,7 @@ class MakeOffer extends Component {
             </p>
             {/* <FormWrapper> */}
               <Form onSubmit={this.handleSubmit}>
-                <LabelWrapper>
+                <LabelWrapper TopM>
                   <Label>Name:</Label>
                   <Input
                     required
@@ -145,12 +143,11 @@ class MakeOffer extends Component {
                 </LabelWrapper>
                 <LabelWrapper>
                   <Label>Note:</Label>
-                  <textarea
+                  <Textarea
                     onChange={this.handleChange}
-                    placeholder="Price match info"
+                    placeholder="Where you found the price match"
                     required
-                    rows="7"
-                    cols="15"
+                    
                     type="text"
                     value={note} 
                     
