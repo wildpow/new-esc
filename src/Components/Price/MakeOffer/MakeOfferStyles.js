@@ -56,6 +56,7 @@ position: relative;
     height: 1em;
     width: 1.3em;
     text-indent: 10em;
+    cursor: pointer;
     /* font-family: ${MainFont1}; */
    
     /* font-size: 1.3rem;
@@ -91,6 +92,10 @@ export const Headline = styled.h3`
   font-size: 1.3rem;
   letter-spacing: .2rem;
   text-shadow: ${TextShadow};
+  @media(min-width: 568px) and (orientation: landscape) {
+    padding: 12px;
+    font-size: 1.2rem;
+  }
   @media(min-width: 1300px) {
     font-size: 2rem;
     padding: 15px;
@@ -136,13 +141,33 @@ export const ModalBox = styled.div`
     font-size: .9rem;
     line-height: 1.2rem;
     border-bottom: ${RedBorderBottom};
+    @media(min-width: 568px) and (orientation: portrait) {
+      padding-bottom: 4px;
+      padding-top: 4px;
+    }
     @media(min-width: 1300px) {
       font-size: 1.4rem;
       line-height: 2rem;
       padding: 20px;
       margin-top: 0px;
     }
-  }  
+    @media(orientation: landscape) {
+    margin-top: 2px;
+  }
+  }
+  @media(orientation: landscape) {
+    max-height: 99vh;
+    max-width: 99vw;
+  }
+  @media(min-width: 736px) and (orientation: landscape) {
+    max-width: 80vw;
+  }
+  @media(min-width: 823px) and (orientation: landscape) {
+    max-width: 80vw;
+  }
+  @media(min-width: 768px) and (orientation: portrait) {
+    max-width: 50vw;
+  }
   @media(min-width: 1300px) {
     max-width: 40vw;
   }
@@ -159,6 +184,7 @@ export const Form = styled.form`
   flex-direction: column;
   justify-content: center;
   margin-top: 5px;
+  @media(orientation: landscape) { margin-top: 0px; }
 `;
 
 export const LabelWrapper = styled.div`
@@ -168,6 +194,9 @@ export const LabelWrapper = styled.div`
   display: flex;
   margin-bottom: 4px;
   flex-direction: row;
+  @media(min-width: 568px) and (orientation: landscape) {
+   justify-content: center;
+  }
   @media(min-width: 360px) {
     margin-top: ${props => props.TopM ? '6px' : '0px'};
     margin-bottom: 8px;
@@ -181,12 +210,16 @@ export const Label = styled.label`
   width: 20%;
   font-family: ${MainFont1};
   @media(min-width: 360px) { font-size: 1rem; }
+  @media(min-width: 568px) and (orientation: landscape) {
+    font-size: .9rem;
+    width: 10%;
+  }
   @media(min-width: 1024px) { font-size: 1.6rem; width: 100px; }
   
 `;
 
 export const Input = styled.input`
-  border: ${Border};
+  border: 2px solid #eee;
   width: 70%;
   font-family: ${MainFont2} !important;
   &:focus {
@@ -231,7 +264,7 @@ export const Button = styled.button`
   position: relative;
   display: block;
   width: 120px;
-  cursor: pointer !important;
+  
   margin: 0px 5px 1px 0px;
   padding: 5px;
   background-color: ${Blue};
@@ -254,6 +287,7 @@ export const Button = styled.button`
   &:hover:enabled{
     background-color: ${Red};
     color: white;
+    cursor: pointer !important;
   }
   &:active:enabled{
     background: ${Blue} !important;
@@ -263,7 +297,7 @@ export const Button = styled.button`
 
   @media(min-width: 360px) { width: 130px; }
   @media(orientation: landscape) { width: 160px; }
-  @media(min-width: 768px) {
+  @media(min-width: 768px) and (orientation: portrait){
     width: 260px;
     letter-spacing: .25rem;
     font-size: 1.4rem;
@@ -272,13 +306,23 @@ export const Button = styled.button`
     align-self: flex-end;
     margin-right: 5px;
   }
+  @media(min-width: 1024px) { align-self: center; margin: 5px 35px 5px 5px;}
   @media(min-width: 1300px) { font-size: 1.7rem; margin: 5px 35px 5px 5px; width: 300px; }
 `;
 
 export const SubmitButton = Button.extend`
   align-self: center;
+  width: 200px;
   margin-bottom: 5px;
   font-size: 1.4rem;
+  @media(min-width: 568px) and (orientation: landscape) {
+    margin-top: 4px;
+    padding: 4px 4px 10px 4px;
+    width: 250px;
+  }
+  @media(min-width: 640px) and (orientation: landscape) {
+    padding-top: 10px;
+  }
 `;
 
 export const Textarea = styled.textarea`
@@ -300,8 +344,41 @@ export const Textarea = styled.textarea`
     color: rgba(112, 98, 89, .25);
     font-family: ${MainFont2};
   }
+  @media(min-width: 568px) and (orientation: landscape) {
+    height: 40px;
+  }
+  @media(min-width: 640px) and (orientation: landscape) {
+    height: 60px;
+  }
+  /* @media(orientation: landscape) { height: 60px; } */
   @media(min-width: 1300px){
     width: 300px;
     height: 150px;
+  }
+`;
+
+export const ThankYouHeadline = styled.div`
+  font-size: 4rem;
+  cursor: pointer;
+  width: 40vw;
+  text-align: center;
+  padding: 40px;
+  box-shadow: ${BoxShadow};
+  background-color: white;
+  animation-name: ${FadeIn};
+  ${Animation};
+  font-family: ${MainFont2};
+`;
+
+export const SleepSpan = styled.span`
+  display: none;
+  @media(orientation: portrait) {
+    display: initial;
+  }
+`;
+
+export const Spanner = styled.span`
+  @media(orientation: portrait) {
+    display: none;
   }
 `

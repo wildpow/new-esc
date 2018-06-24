@@ -3,10 +3,29 @@ import ReactDOM from 'react-dom';
 import { ModalContainer, ModalBox, Form,
           Textarea, LabelWrapper, Label,
           Input, Headline, Span, Button,
-          Header, MakeOfferWrapper, SubmitButton } from './MakeOfferStyles';
+          Header, MakeOfferWrapper, SubmitButton, FormWrapper, SleepSpan, Spanner,
+          ThankYouHeadline } from './MakeOfferStyles';
 
 const modalRoot = document.getElementById('modal-root'); //React Portal ref
+const ThankYou = document.getElementById('thank-you');
 // const mainRoot = document.getElementById('root'); // div containing the whole React app
+class ThankYouModal extends Component {
+  constructor(props) {
+    super(props)
+    this.el = document.createElement('div');
+  }
+  componentDidMount() {
+    ThankYou.appendChild(this.el);
+  }
+  componentWillUnmount() {
+    ThankYou.removeChild(this.el);
+  }
+  render() {
+    return ReactDOM.createPortal(
+      this.props.children, this.el,
+    );
+  }
+}
 class Modal extends Component {
   constructor(props) {
     super(props);
@@ -44,10 +63,12 @@ class MakeOffer extends Component {
       formSubmit: false,
       disabled: false,
       opacity: 1,
+      thankyou: false
     }
 
     this.handleShow = this.handleShow.bind(this);
     this.handleHide = this.handleHide.bind(this);
+    this.handleThankYou = this.handleThankYou.bind(this);
   }
 
   handleChange = e => this.setState({ [e.target.name]: e.target.value })
@@ -62,7 +83,7 @@ class MakeOffer extends Component {
                     formSubmit: !this.state.formSubmit, 
                     disabled: !this.state.disabled,
                     opacity: .3 }))
-      .then(() => this.handleHide())
+      .then(() => this.handleThankYou())
       .catch(error => alert(error));
     // document.body.style.overflow = "visible";
     // document.getElementById('root').style.filter = 'blur(0px) grayscale(0%)';
@@ -75,20 +96,36 @@ class MakeOffer extends Component {
     document.getElementById('root').style.filter = 'blur(5px) grayscale(50%)';
     document.getElementById('root').style.transition = '.35s';
   }
-
+  handleThankYou() {
+    this.setState({
+      thankyou: true
+    }, this.handleHide())
+  }
   handleHide() {
     this.setState({ 
       showModal: false,
       name: "",
       email: "",
       note: "",
-
+      thankyou: false
       });
     document.body.style.overflow = "visible";
     document.getElementById('root').style.filter = 'blur(0px) grayscale(0%)';
   }
   render() {
     const { name, email, tel, note, mattress, size } = this.state;
+    const thankyouModal = this.state.thankyou ? (
+      <ThankYouModal>
+        <ModalContainer>
+          <ModalBox>
+            <Header>
+            <button onClick={this.handleHide}>close</button>
+            </Header>
+            <h1>Thank you</h1>
+          </ModalBox>
+        </ModalContainer>
+      </ThankYouModal>
+    ) : null
     const modal = this.state.showModal ? (
       <Modal size={this.props.size}>
         <ModalContainer>
@@ -97,12 +134,15 @@ class MakeOffer extends Component {
             <Headline>Make an Offer</Headline>
             <button onClick={this.handleHide}>close</button>
           </Header>
+          {/* {this.state.thankyou ? <ThankYouHeadline onClick={this.handleHide}>Thank you</ThankYouHeadline> :  */}
+          {/* <FormWrapper> */}
             <p>
               We now are making it even easier to comparison shop with our locally owned and operated mattress center.
-              If you find a lower price on the same mattress from a competitor, just let us know by filling out the quick form.
-              We will get back to you within 24 hours and help you "sleep like the experts do".
+              If you find a lower price on the same mattress from a competitor, just let us know by filling out this form<Spanner>.</Spanner>
+              <SleepSpan>&nbsp;and we will help you "sleep like the experts do".</SleepSpan>
             </p>
-            {/* <FormWrapper> */}
+            
+            
               <Form onSubmit={this.handleSubmit}>
                 <LabelWrapper TopM>
                   <Label>Name:</Label>
@@ -159,19 +199,20 @@ class MakeOffer extends Component {
                 <SubmitButton type="submit">Send</SubmitButton>
               </Form>
             {/* </FormWrapper> */}
-           
+          {/* } */}
           </ModalBox>
           
         </ModalContainer>
       </Modal>
     ) : null;
     return (
-      <MakeOfferWrapper style={{opacity: this.state.opacity}}>        <Button onClick={this.handleShow}
-                style={{opacity: this.props.opacity,
-                        transition: 'opacity 700ms ease-in-out'}}
+      <MakeOfferWrapper style={{opacity: this.state.opacity}}>        
+        <Button onClick={this.handleShow}
+                style={{opacity: this.props.opacity, transition: 'opacity 700ms ease-in-out'}}
                 disabled={this.state.disabled}
-        >Make <Span>an</Span> Offer</Button>
-        {modal}
+          >Make <Span>an</Span> Offer
+        </Button>
+        {modal}{thankyouModal}
       </MakeOfferWrapper>
     )
   }
