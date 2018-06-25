@@ -1,17 +1,21 @@
 import React from 'react';
 import { Helmet } from "react-helmet";
-
 import { Carousel } from 'react-responsive-carousel'; 
-
 import { Main, Linky } from './HomeStyles';
-import SealyWebp from '../../images/SealyDefault980x450.webp'
-import TempurWebp from '../../images/TempurDefault980x450.webp'
-import SaleWebp from '../../images/Freex3_980x450.webp'
-import StearnsWebp from '../../images/StearnsDefault980x450.webp'
-import Sealy from '../../images/SealyDefault980x450.jpg';
-import Tempur from '../../images/TempurDefault980x450.jpg';
-import Stearns from '../../images/StearnsDefault980x450.jpg';
-import Sale from '../../images/Freex3_980x450.jpg';
+
+import Tempur from '../../images/July4thTempurCarouselImage.jpg';
+import TempurWebp from '../../images/July4thTempurCarouselImage.webp'
+
+import Stearns from '../../images/July4thStearnsCarouselImage.jpg';
+import StearnsWebp from '../../images/July4thStearnsCarouselImage.webp'
+
+import Sealy from '../../images/July4thSealyCarouselImage.jpg';
+import SealyWebp from '../../images/July4thSealyCarouselImage.webp'
+
+
+import Sale from '../../images/July4thMainCarouselImage.jpg';
+import SaleWebp from '../../images/July4thMainCarouselImage.webp'
+
 // import Fifth from '../../images/GildedBreathSpecialBuy980x450.jpg'
 import Front from '../FrontInfo/front';
 
@@ -41,25 +45,25 @@ const HomeComponent = () => {
         <Linky to='/current-sale'>
         <picture>
           <source type="image/webp" srcSet={SaleWebp}/>
-          <img src={Sale} alt="E.S.C Mattress Center's Mattress Wars Sales Event on a selection of mattresses and adjustable bases."/>
+          <img src={Sale} alt="E.S.C Mattress Center's 4th of July sales event on a selection of mattresses and adjustable bases."/>
         </picture>
         </Linky>
         <Linky to='/brands/stearns'>
         <picture>
           <source type="image/webp" srcSet={StearnsWebp}/>
-          <img src={Stearns} alt="Save up to 1000 dollars off Stearns and Foster top rated inner spring mattress"/>
+          <img src={Stearns} alt="Stearns and Foster, Free box spring and 10% off select mattresses on our 4th of july sale"/>
         </picture>
         </Linky>
         <Linky to='/brands/tempurpedic'>
         <picture>
           <source type="image/webp" srcSet={TempurWebp}/>
-          <img src={Tempur} alt="Save up to 600 dollars off Tempurpedic the winner of the JD power award for #1 in confort, support and value"/>
+          <img src={Tempur} alt="Free adjustable base with Tempurpedic Luxe or breeze mattress purchase"/>
         </picture>
         </Linky>
         <Linky to='/brands/sealy'>
         <picture>
           <source type="image/webp" srcSet={SealyWebp}/>
-          <img src={Sealy} alt="Sealy's Memorial day savings event save up to 300 off selected mattresses"/> 
+          <img src={Sealy} alt="Sealy's 4th of July sales event save up to 200 off selected mattresses"/> 
         </picture>
         </Linky>
         {/* <Linky to='/brands/sealy/Sealy-Golden-Elegance-Gilded-Breath-Plush-PT'>
