@@ -1,7 +1,5 @@
 import styled from 'styled-components';
-import { MainFont1,
-        RedBorderBottom, MainFont2,
-        Blue, Red, TextShadow
+import { MainFont1, MainFont2, Blue
         ,BoxShadow, Border, FadeIn, Animation} from '../../../Styles';
 
 
