@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { ModalContainer, ModalBox, Form,
+import { Form,
           Textarea, LabelWrapper, Label,
-          Input, Headline, Span, Button,
-          Header, MakeOfferWrapper, SubmitButton, FormWrapper, SleepSpan, Spanner,
-          ThankYouHeadline } from './MakeOfferStyles';
-
+          Input, Span,
+          SleepSpan, Spanner,} from './MakeOfferStyles';
+import { MakeOfferWrapper, Button, ModalContainer, ModalBox,
+          SubmitButton, Header, Headline } from './FinalStyles';
 const modalRoot = document.getElementById('modal-root'); //React Portal ref
 const ThankYou = document.getElementById('thank-you');
 // const mainRoot = document.getElementById('root'); // div containing the whole React app
