@@ -1,5 +1,5 @@
 import React from 'react';
-import MakeOffer from './MakeOffer/MakeOffer';
+import MakeOffer from './MakeOffer/TestMakeOffer';
 import { DropDown, PriceTitle, AddBoxTitle,
           Total, BeforeSalePrice, Wrapper,
           DropDownSize, DropDownWrapper } from './PriceCalStyles'
