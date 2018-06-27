@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { MakeOfferWrapper, Button, ModalContainer } from './FinalStyles';
 import { Span } from './MakeOfferStyles';
-import { CardContainer, Card, Front, Back} from './TestStyles';
+import { CardContainer, Card, Front, Back, Header, Form} from './TestStyles';
 import Logo from '../../../images/ezgif.com-optimize.gif'
 const modalRoot = document.getElementById('modal-root');
 
@@ -96,42 +96,34 @@ class MakeOffer extends Component {
           <CardContainer>
             <Card style={{transform: this.state.flipCard}}>
               <Front>
-                <header>
+                <Header>
                   <h3>Make an Offer</h3>
                   <button onClick={this.handleHide}>close</button>
-                </header>
+                </Header>
                 <p>
                   We now are making it even easier to comparison shop with our locally owned and operated mattress center.
                   If you find a lower price on the same mattress from a competitor, just let us know by filling out this form
                   and we will help you "sleep like the experts do".
                 </p>
-                <form onSubmit={this.handleSubmit}>
-                <div>
-                  <label>Name:</label>
+                <Form onSubmit={this.handleSubmit}>
                   <input
                     required
-                    placeholder="Mr. Sleeping Panda"
+                    placeholder="Name"
                     type="text" 
                     name="name" 
                     autoComplete="name"
                     value={name} 
                     onChange={this.handleChange} 
                   />
-                </div>
-                <div>
-                  <label>Email:</label>
                     <input
                     required
-                    placeholder="youremail@example.com"
+                    placeholder="Email"
                     type="email" 
                     name="email" 
                     autoComplete="email" 
                     value={email} 
                     onChange={this.handleChange} 
                   />
-                </div>
-                <div>
-                  <label>Phone:</label>
                     <input
                       required
                       autoComplete="tel-national"
@@ -142,22 +134,18 @@ class MakeOffer extends Component {
                       value={tel} 
                       onChange={this.handleChange} 
                     />
-                </div>
-                <div>
-                  <label>Note:</label>
                   <textarea
                     onChange={this.handleChange}
-                    placeholder="Where you found the price match"
+                    placeholder="Price match info"
                     required
                     type="text"
                     value={note} 
                     name="note"
                   />
-                </div>
                 <input hidden type="text" name="mattress" defaultValue={mattress}/>
                 <input hidden type="text" name="size" defaultValue={size} />
                 <button type="submit">Send</button>
-              </form>
+              </Form>
               </Front>
               <Back onClick={this.handleHide}>
                 <h3>Thank you for reaching out to us. We will get back to you with in 24 hours</h3>
