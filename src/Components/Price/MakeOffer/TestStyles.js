@@ -3,8 +3,12 @@ import { Blue, TextShadow, MainFont1, Red, MainFont2 } from '../../../Styles';
 ////////////////Cards///////////////////////////
 export const CardContainer = styled.div`
   position: relative;
-  width: 600px; 
-  height: 600px;
+  width: 90vw; 
+  height: 85vh;
+  @media(min-width: 1300px) {
+    width: 600px; 
+    height: 600px;
+  }
 `;
 //w250 h320
 export const Card = styled.div`
@@ -26,8 +30,21 @@ export const Front = styled.div`
   display: flex;
   flex-direction: column;
   & p {
-    padding: 30px;
+    padding: 5px 10px 5px 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    line-height: 1.25rem;
+    font-size: .9rem;
+    text-align: justify;
+    text-justify: inter-character;
+    @media(min-width: 1300px) {
+      padding: 10px 30px 10px 30px;
+      margin-top: 0px;
+      line-height: 1.6rem;
+    }
+    
     font-family: ${MainFont2};
+    border-bottom: 4px solid ${Red};
   }
 `;
 
@@ -57,10 +74,15 @@ export const Header = styled.header`
   border-top-left-radius: 10px;
   color: white;
   & h3 {
-    margin: 0;
-    padding: 10px;
-    font-size: 1.3rem;
+    padding: 15px 15px 15px 15px;
+    font-size: 1.2rem;
     letter-spacing: .2rem;
+    @media(min-width: 1300px) {
+      padding: 10px;
+      font-size: 1.3rem;
+      letter-spacing: .2rem;
+    }
+    margin: 0;
     text-shadow: ${TextShadow};
     @media(min-width: 568px) and (orientation: landscape) {
       padding: 12px;
@@ -97,8 +119,8 @@ export const Header = styled.header`
     &::after {
       position: absolute;
       line-height: 0.5;
-      top: 0.2em;
-      left: 0.6em;
+      top: 0.45em;
+      left: 0.5em;
       text-indent: 0;
       content: "\00D7";
       @media(min-width: 768px) {
@@ -117,7 +139,10 @@ export const Header = styled.header`
 `;
 
 export const Form = styled.form`
-  padding: 10px 30px 10px 30px;
+  padding: 5px 15px 5px 15px;
+  @media(min-width: 1300px) {
+    padding: 10px 30px 10px 30px;
+  }
   font-family: ${MainFont2};
   display: flex;
   flex-direction: column;
@@ -140,7 +165,12 @@ export const Form = styled.form`
   & textarea{
     resize:none;
     overflow: hidden;
-    margin-bottom: 60px;
+    margin-bottom: 10px;
+    height: 60px;
+    @media(min-width: 1300px) {
+      margin-bottom: 60px;
+      height: 70px;
+    }
   }
 `;
 export const SubmitButton = styled.button`
@@ -158,10 +188,10 @@ export const SubmitButton = styled.button`
   
   transition: all ease 0.3s;
   letter-spacing: .18rem;
-  font-size: .8rem;
+  font-size: 1rem;
   width: 120px;
   margin: 0px 5px 1px 0px;
-  padding: 5px;
+  padding: 10px;
   &:active {
     box-shadow: 0 3px 0 #ccc;
     top: 3px;
