@@ -33,6 +33,9 @@ export const Front = styled.div`
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
   display: flex;
   flex-direction: column;
+  @media(min-width: 360px) and (orientation: portrait) {
+    justify-content: space-between;
+  }
   & p {
     padding: 5px 10px 5px 10px;
     margin-top: 0px;
@@ -45,6 +48,10 @@ export const Front = styled.div`
       padding: 2px 10px 2px 10px;
       border-bottom: 2px solid ${Red};
     }
+    @media(min-width: 360px) and (orientation: portrait) {
+      font-size: 1rem;
+      padding: 7px 15px 7px 15px;
+  }
     @media(min-width: 1300px) {
       padding: 10px 30px 10px 30px;
       margin-top: 0px;
@@ -85,6 +92,9 @@ export const Header = styled.header`
     padding: 15px 15px 15px 15px;
     font-size: 1.2rem;
     letter-spacing: .2rem;
+    @media(min-width: 360px) and (orientation: portrait) {
+      font-size: 1.3rem;
+    }
     @media(min-width: 1300px) {
       padding: 10px;
       font-size: 1.3rem;
@@ -170,6 +180,9 @@ export const Form = styled.form`
       height: auto;
       margin-bottom: 0px;
     }
+    @media(orientation: landscape) and (min-width: 640px) {
+      margin-bottom: 4px;
+    }
     &:focus {
       border-bottom: 1px solid ${Blue};
     }
@@ -186,6 +199,12 @@ export const Form = styled.form`
       margin-bottom: 3px;
       height: auto;
     }
+    @media(orientation: landscape) and (min-width: 640px) {
+      margin-bottom: 10px;
+    }
+    @media(min-width: 360px) and (orientation: portrait) {
+      margin-bottom: 20px;
+  }
     @media(min-width: 1300px) {
       margin-bottom: 60px;
       height: 70px;
@@ -227,7 +246,10 @@ export const SubmitButton = styled.button`
     outline: none;
   }
   @media(min-width: 360px) { width: 130px; }
-  @media(orientation: landscape) and (max-width: 568px) { width: 140px; padding-bottom: 15px }
+  @media(min-width: 360px) and (orientation: portrait) {
+      font-size: 1.3rem;
+  }
+  @media(orientation: landscape) and (max-width: 568px) { width: 140px; padding-bottom: 10px }
   @media(orientation: landscape) and (min-width: 569px) { width: 180px; padding: 7px;}
   @media(orientation: landscape) and (min-width: 811px) { 
     width: 220px; 
