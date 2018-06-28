@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { MakeOfferWrapper, Button, ModalContainer } from './FinalStyles';
 import { Span } from './MakeOfferStyles';
-import { CardContainer, Card, Front, Back, Header, Form} from './TestStyles';
+import { CardContainer, Card, Front, Back, Header, Form, SubmitButton} from './TestStyles';
 import Logo from '../../../images/ezgif.com-optimize.gif'
 const modalRoot = document.getElementById('modal-root');
 
@@ -144,7 +144,7 @@ class MakeOffer extends Component {
                   />
                 <input hidden type="text" name="mattress" defaultValue={mattress}/>
                 <input hidden type="text" name="size" defaultValue={size} />
-                <button type="submit">Send</button>
+                <SubmitButton type="submit">Send</SubmitButton>
               </Form>
               </Front>
               <Back onClick={this.handleHide}>

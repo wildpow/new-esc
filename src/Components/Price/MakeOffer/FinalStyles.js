@@ -13,18 +13,19 @@ export const MakeOfferWrapper = styled.div`
 export const Button = styled.button`
   background-color: ${Blue};
   border-radius: 4px;
+  border: 1px solid #ccc;
   color: white;
+  display: block;
   font-family: ${MainFont2};
   position: relative;
-  display: block;
-  border: 1px solid #ccc;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   transform-style: flat;
+  
+  transition: all ease 0.3s;
   letter-spacing: .18rem;
   font-size: .8rem;
-  transition: all ease 0.3s;
   width: 120px;
   margin: 0px 5px 1px 0px;
   padding: 5px;
