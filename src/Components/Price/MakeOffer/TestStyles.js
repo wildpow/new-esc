@@ -1,19 +1,7 @@
 import styled from 'styled-components';
 import { Blue, TextShadow, MainFont1, Red, MainFont2 } from '../../../Styles';
 ////////////////Cards///////////////////////////
-export const CardContainer = styled.div`
-  position: relative;
-  width: 90vw; 
-  height: 85vh;
-  @media(orientation: landscape) {
-    width: 95vw;
-    height: 95vh;
-  }
-  @media(min-width: 1300px) {
-    width: 600px; 
-    height: 600px;
-  }
-`;
+
 //w250 h320
 export const Card = styled.div`
   position: absolute;
@@ -29,37 +17,40 @@ export const Front = styled.div`
   height: 100%;
   backface-visibility: hidden;
   background: #FFFFFF;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
   display: flex;
   flex-direction: column;
-  @media(min-width: 360px) and (orientation: portrait) {
-    justify-content: space-between;
-  }
   & p {
-    padding: 5px 10px 5px 10px;
+    padding: 7px 10px 7px 10px;
     margin-top: 0px;
     margin-bottom: 0px;
-    line-height: 1.25rem;
+    line-height: 1.32rem;
     font-size: .9rem;
     text-align: justify;
     text-justify: inter-character;
-    @media(orientation: landscape) {
+    font-family: ${MainFont2};
+    border-bottom: 4px solid ${Red};
+    @media(orientation: landscape) { 
       padding: 2px 10px 2px 10px;
       border-bottom: 2px solid ${Red};
     }
-    @media(min-width: 360px) and (orientation: portrait) {
-      font-size: 1rem;
-      padding: 7px 15px 7px 15px;
-  }
-    @media(min-width: 1300px) {
-      padding: 10px 30px 10px 30px;
-      margin-top: 0px;
-      line-height: 1.6rem;
+    @media(orientation: landscape) and (min-width:640px){ 
+      padding: 7px 10px 7px 10px;
+      border-bottom: 4px solid ${Red};
+    }
+    @media (min-width: 768px) and (min-height:823px) and (orientation: portrait) {
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+      padding: 5px 18px 12px 18px;
+    }
+    @media (min-width: 1024px) {
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+      padding: 5px 18px 12px 18px;
     }
     
-    font-family: ${MainFont2};
-    border-bottom: 4px solid ${Red};
+
   }
 `;
 
@@ -85,34 +76,24 @@ export const Header = styled.header`
   justify-content: space-between;
   font-family: ${MainFont1};
   background: ${Blue};
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
+  /* border-top-right-radius: 10px;
+  border-top-left-radius: 10px; */
   color: white;
   & h3 {
     padding: 15px 15px 15px 15px;
     font-size: 1.2rem;
     letter-spacing: .2rem;
-    @media(min-width: 360px) and (orientation: portrait) {
-      font-size: 1.3rem;
-    }
-    @media(min-width: 1300px) {
-      padding: 10px;
-      font-size: 1.3rem;
-      letter-spacing: .2rem;
-    }
     margin: 0;
     text-shadow: ${TextShadow};
-    @media(min-width: 568px) and (orientation: landscape) {
-      padding: 12px;
-      font-size: 1.2rem;
+    @media (min-width: 768px) and (min-height:823px) and (orientation: portrait) {
+    font-size: 1.7rem;
+    letter-spacing: .3rem;
+    padding-left: 25px;
     }
-    @media(min-width: 768px) {
-      font-size: 1.4rem;
-    }
-    @media(min-width: 1024px) {
-      font-size: 2rem;
-      padding: 15px;
-      margin-left: 10px;
+    @media (min-width: 1024px) {
+      font-size: 1.7rem;
+      letter-spacing: .3rem;
+      padding-left: 25px;
     }
   }
   & button {
@@ -131,6 +112,12 @@ export const Header = styled.header`
     text-indent: 10em;
     cursor: pointer;
     transition: all ease 0.3s;
+    @media (min-width: 768px) and (min-height:823px) and (orientation: portrait) {
+      font-size: 2.8rem;
+    }
+    @media (min-width: 1024px) {
+      font-size: 2.8rem;
+    }
     &:hover {
       color: ${Red};
     }
@@ -140,34 +127,38 @@ export const Header = styled.header`
       top: 0.45em;
       left: 0.5em;
       text-indent: 0;
-      content: "\00D7";
-      @media(orientation: landscape) {
-        top: 0.3em;
+      content: "\00D7"; 
+      @media (min-width: 768px) and (min-height:823px) and (orientation: portrait) {
+        top: 0.35em;
+        left: 0.45em;
       }
-      @media(min-width: 768px) {
-        top: 0.3em;
-        left: 0.55em;
-      }
-      @media(min-width: 1024px) {
-        top: 0.25em;
-        left: 0.5em;
+      @media (min-width: 1024px) {
+        top: 0.35em;
+        left: 0.45em;
       }
     }
-    @media(min-width: 1024px) {
-      font-size: 3.2em;
-    }
-  }
+    
 `;
 
 export const Form = styled.form`
-  padding: 5px 15px 5px 15px;
-  @media(min-width: 1300px) {
-    padding: 10px 30px 10px 30px;
-  }
+  padding: 10px 15px 5px 15px;
   font-family: ${MainFont2};
   display: flex;
   flex-direction: column;
-  & input, textarea {
+  @media(orientation: landscape) { 
+    padding: 2px 15px 2px 15px;
+  }
+  @media(orientation: landscape) and (min-width:640px){
+    padding: 0px 15px 5px 15px;
+  }
+  @media (min-width: 730px) and (orientation: landscape) {
+    padding: 10px 15px 5px 15px;
+    }
+    @media (min-width: 1024px) {
+      font-size: 1.2rem;
+    }
+  
+  & input {
     outline: none;
     padding: 7px;
     background: transparent;
@@ -177,37 +168,32 @@ export const Form = styled.form`
     height: 45px;
     transition: all .2s ease-in-out;
     @media(orientation: landscape) {
-      height: auto;
       margin-bottom: 0px;
+      height: auto;
+      padding: 2px 7px 2px 7px;
     }
-    @media(orientation: landscape) and (min-width: 640px) {
-      margin-bottom: 4px;
+    @media(orientation: landscape) and (min-width:640px){
+      /* height: 45px; */
+      padding: 7px;
     }
+    @media (min-width: 730px) and (orientation: landscape) {
+      margin-bottom: 10px;
+    }
+    @media (min-width: 812px) and (orientation: landscape) {
+      margin-bottom: 5px;
+    }
+    @media (min-width: 768px) and (min-height:823px) and (orientation: portrait) {
+      font-size: 1.2rem;
+    }
+    @media (min-width: 1024px) {
+      font-size: 1.2rem;
+    }
+    
     &:focus {
       border-bottom: 1px solid ${Blue};
     }
     &:invalid {
       color: ${Red};
-    }
-  }
-  & textarea{
-    resize:none;
-    overflow: hidden;
-    margin-bottom: 10px;
-    height: 60px;
-    @media(orientation: landscape) {
-      margin-bottom: 3px;
-      height: auto;
-    }
-    @media(orientation: landscape) and (min-width: 640px) {
-      margin-bottom: 10px;
-    }
-    @media(min-width: 360px) and (orientation: portrait) {
-      margin-bottom: 20px;
-  }
-    @media(min-width: 1300px) {
-      margin-bottom: 60px;
-      height: 70px;
     }
   }
 `;
@@ -245,30 +231,12 @@ export const SubmitButton = styled.button`
     box-shadow: inset 0px 0px 5px #c1c1c1 !important;
     outline: none;
   }
-  @media(min-width: 360px) { width: 130px; }
-  @media(min-width: 360px) and (orientation: portrait) {
-      font-size: 1.3rem;
+  @media (min-width: 768px) and (min-height:823px) and (orientation: portrait) {
+    font-size: 1.6rem;
+    width: 140px;
   }
-  @media(orientation: landscape) and (max-width: 568px) { width: 140px; padding-bottom: 10px }
-  @media(orientation: landscape) and (min-width: 569px) { width: 180px; padding: 7px;}
-  @media(orientation: landscape) and (min-width: 811px) { 
-    width: 220px; 
-    padding: 10px; 
-    font-size: 1.2rem;
-  }
-  @media(min-width: 768px) and (orientation: portrait){
-    width: 260px;
-    letter-spacing: .25rem;
-    font-size: 1.4rem;
-    margin: 5px auto;
-    padding: 10px;
-    align-self: flex-end;
-    margin-right: 5px;
-  }
-  @media(min-width: 1024px) { align-self: center; margin: 5px 35px 5px 5px;}
-  @media(min-width: 1300px) { 
-    font-size: 1.7rem;
-    margin: 5px 5px 5px 5px;
-    align-self: flex-start;
+  @media (min-width: 1024px) {
+    font-size: 1.6rem;
+    width: 140px;
   }
 `;

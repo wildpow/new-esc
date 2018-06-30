@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { MakeOfferWrapper, Button, ModalContainer } from './FinalStyles';
 import { Span } from './MakeOfferStyles';
-import { CardContainer, Card, Front, Back, Header, Form, SubmitButton} from './TestStyles';
+import { Card, Front, Back, Header, Form, SubmitButton} from './TestStyles';
 import Logo from '../../../images/ezgif.com-optimize.gif'
-const modalRoot = document.getElementById('modal-root');
+import { CardContainer, TextArea } from './card'
 
+const modalRoot = document.getElementById('modal-root');
 class Modal extends Component {
   constructor(props) {
     super(props);
@@ -134,7 +135,7 @@ class MakeOffer extends Component {
                       value={tel} 
                       onChange={this.handleChange} 
                     />
-                  <textarea
+                  <TextArea
                     onChange={this.handleChange}
                     placeholder="Price match info"
                     required
