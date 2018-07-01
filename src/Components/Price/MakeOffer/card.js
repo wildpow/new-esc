@@ -4,9 +4,9 @@ export const CardContainer = styled.div`
   position: relative;
   width: 90vw; 
   height: 90vh;
-  @media(orientation: landscape) {
+  @media(orientation: landscape) and (max-width: 812px) and (max-height: 450px) {
     width: 92vw; 
-    height: 92vh;
+    height: 97vh;
   }
   @media(min-width: 360px) and (orientation: portrait){
     height: 80vh;
@@ -38,6 +38,45 @@ export const CardContainer = styled.div`
     width: 50vw;
     height: 50vh;
   }
+  @media(min-width: 400px) and (min-height: 920px) {
+    height: 53vh;
+  }
+  @media(min-width: 769px) and (min-height: 920px) {
+    height: 60vh;
+  }
+  @media(min-width: 931px) and (min-height: 920px) {
+    width: 50vw;
+    height: 50vh;
+  }
+  @media(min-width: 1024px) and (min-height: 920px) and (orientation: portrait) {
+    width: 40vw;
+    height: 44vh;
+  }
+  @media(min-width: 1024px) and (min-height: 920px) and (orientation: landscape){
+    width: 500px;
+    height: 530px;
+  }
+ 
+  /* @media(min-width: 1500px) and (min-height: 920px) {
+    width: 35vw;
+    height: 60vh;
+  } */
+  /* @media(min-width: 375px) and (min-height: 920px) and (orientation: portrait){
+    height: 53vh;
+  }
+  @media(min-width: 420px) and (min-height: 920px) and (orientation: portrait){
+    height: 51vh;
+  }
+  @media(min-width: 540px) and (min-height: 920px) and (orientation: portrait){
+    width: 60vw;
+  }
+  @media(min-width: 768px) and (min-height: 920px) and (orientation: portrait){
+    height: 60vh;
+  }
+  @media(min-width: 857px) and (min-height: 920px) and (orientation: portrait){
+    height: 57vh;
+  } */
+ 
   
 `;
 export const TextArea = styled.textarea`

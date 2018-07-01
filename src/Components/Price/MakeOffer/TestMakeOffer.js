@@ -149,7 +149,15 @@ class MakeOffer extends Component {
               </Form>
               </Front>
               <Back onClick={this.handleHide}>
-                <h3>Thank you for reaching out to us. We will get back to you with in 24 hours</h3>
+                <Header>
+                  <h3>Form submitted.</h3>
+                  <button onClick={this.handleHide}>close</button>
+                </Header>
+                <p>
+                  Thank you for reaching out to us and giving us
+                  the opertunity to earn your busness.
+                  We will get back to you with in 24 hours
+                </p>
                 <img src={Logo} alt="bla bla"/>
               </Back>
             </Card>

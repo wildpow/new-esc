@@ -60,13 +60,44 @@ export const Back = styled.div`
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  background: gray;
-  color: #333;
+  background: #FFFFFF;
   transform: rotateY(180deg);
-  text-align: center;
-  font-family: 'zilla slab', sans-serif;
-  border-radius: 20px;
-  font-size: 18px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+  display: flex;
+  flex-direction: column;
+  
+  & p {
+    padding: 7px 10px 7px 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    line-height: 1.32rem;
+    font-size: .9rem;
+    text-align: justify;
+    text-justify: inter-character;
+    font-family: ${MainFont2};
+    border-bottom: 4px solid ${Red};
+    @media(orientation: landscape) { 
+      padding: 2px 10px 2px 10px;
+      border-bottom: 2px solid ${Red};
+    }
+    @media(orientation: landscape) and (min-width:640px){ 
+      padding: 7px 10px 7px 10px;
+      border-bottom: 4px solid ${Red};
+    }
+    @media (min-width: 768px) and (min-height:823px) and (orientation: portrait) {
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+      padding: 5px 18px 12px 18px;
+    }
+    @media (min-width: 1024px) {
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+      padding: 5px 18px 12px 18px;
+    }
+  }
+  & img {
+    max-width: 5rem;
+  }
 `;
 
 ///////////////////////////////////////////////////////////////////
