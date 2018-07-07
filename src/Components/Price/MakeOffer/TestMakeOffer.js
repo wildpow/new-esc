@@ -5,7 +5,7 @@ import { Span } from './MakeOfferStyles';
 import { Card, Front, Back, Header, Form, SubmitButton} from './TestStyles';
 import Logo from '../../../images/ezgif.com-optimize.gif'
 import { CardContainer, TextArea } from './card'
-
+const mainRoot = document.getElementById('root')
 const modalRoot = document.getElementById('modal-root');
 class Modal extends Component {
   constructor(props) {
@@ -14,9 +14,20 @@ class Modal extends Component {
   }
   componentDidMount() {
     modalRoot.appendChild(this.el);
+    document.body.style.overflow = "hidden";  //make backgroup not scrollable
+    mainRoot.style.position = 'fixed';
+    mainRoot.style.filter = 'blur(5px) grayscale(50%)';
+    mainRoot.style.width = '100%';
+    mainRoot.style.height = '100%';
+    mainRoot.style.transition = '.35s';
   }
   componentWillUnmount() {
     modalRoot.removeChild(this.el);
+    document.body.style.overflow = "visible";
+    mainRoot.style.position = 'static';
+    mainRoot.style.filter = 'blur(0px) grayscale(0%)';
+    mainRoot.style.width = 'auto';
+    mainRoot.style.height = 'auto';
   }
   render() {
     return ReactDOM.createPortal(
@@ -44,7 +55,8 @@ class MakeOffer extends Component {
       formSubmit: false,
       disabled: false,
       opacity: 1,                       
-      flipCard: ""                      
+      flipCard: "", 
+      pointerEvents: 'auto'                     
     }
     this.handleShow = this.handleShow.bind(this); 
     this.handleHide = this.handleHide.bind(this); 
@@ -62,7 +74,8 @@ class MakeOffer extends Component {
       .then(() => this.setState({ 
                     formSubmit: !this.state.formSubmit, 
                     disabled: !this.state.disabled,
-                    opacity: .3 }))
+                    opacity: .3,
+                    pointerEvents: 'none'}))
       .then(() => this.handleFlip())
       .catch(error => alert(error));
     
@@ -71,9 +84,6 @@ class MakeOffer extends Component {
 
   handleShow() {
     this.setState({ showModal: true });
-    document.body.style.overflow = "hidden";  //make backgroup not scrollable
-    document.getElementById('root').style.filter = 'blur(5px) grayscale(50%)';
-    document.getElementById('root').style.transition = '.35s';
   }
 
   handleHide() {
@@ -83,19 +93,19 @@ class MakeOffer extends Component {
       email: "",
       note: "",
       });
-    document.body.style.overflow = "visible";
-    document.getElementById('root').style.filter = 'blur(0px) grayscale(0%)';
+    
   }
   handleFlip() {
     this.setState({ flipCard: 'rotateY(180deg)'})
   }
+
   render() {
     const { name, email, tel, note, mattress, size } = this.state;
     const modal = this.state.showModal ? (
       <Modal size={this.props.size}> 
         <ModalContainer>
           <CardContainer>
-            <Card style={{transform: this.state.flipCard}}>
+            <Card style={{transform: this.state.flipCard, WebkitTransform: this.state.flipCard}}>
               <Front>
                 <Header>
                   <h3>Make an Offer</h3>
@@ -130,7 +140,7 @@ class MakeOffer extends Component {
                       autoComplete="tel-national"
                       placeholder="###-###-####"
                       pattern="^[0-9-+s()]*$"
-                      tpye="tel" 
+                      type="tel" 
                       name="tel"
                       value={tel} 
                       onChange={this.handleChange} 
@@ -168,7 +178,9 @@ class MakeOffer extends Component {
     return (
       <MakeOfferWrapper style={{opacity: this.state.opacity}}>        
         <Button onClick={this.handleShow}
-                style={{opacity: this.props.opacity, transition: 'opacity 700ms ease-in-out'}}
+                style={{  opacity: this.props.opacity, 
+                          transition: 'opacity 700ms ease-in-out',
+                          pointerEvents: this.state.pointerEvents}}
                 disabled={this.state.disabled}
           >Make <Span>an</Span> Offer
         </Button>

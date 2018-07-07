@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-// import './css.css'
 import { FormWrapper, Form, Label,
           Button, Input, ModalBox,
           ModalContainer, ModalButton, LabelWrapper } from './LandingStyles';
 //modal div
 const modalRoot = document.getElementById('modal-root');
+const mainRoot = document.getElementById('root');
+
 class Modal extends React.Component {
   constructor(props) {
     super(props);
@@ -13,9 +14,20 @@ class Modal extends React.Component {
   }
   componentDidMount() {
     modalRoot.appendChild(this.el);
+    document.body.style.overflow = "hidden";  //make backgroup not scrollable
+    mainRoot.style.position = 'fixed';
+    mainRoot.style.filter = 'blur(5px) grayscale(50%)';
+    mainRoot.style.width = '100%';
+    mainRoot.style.height = '100%';
+    mainRoot.style.transition = '.35s';
   }
   componentWillUnmount() {
     modalRoot.removeChild(this.el);
+    document.body.style.overflow = "visible";
+    mainRoot.style.position = 'static';
+    mainRoot.style.filter = 'blur(0px) grayscale(0%)';
+    mainRoot.style.width = 'auto';
+    mainRoot.style.height = 'auto';
   }
   render() {
     return ReactDOM.createPortal(
@@ -38,17 +50,15 @@ class AdForm extends Component {
       tel: "",
       showModal: false,
       disabled: false,
-      opacity: 1
+      opacity: 1,
+      pointerEvents: 'auto'
     }
     this.handleShow = this.handleShow.bind(this);
     this.handleHide = this.handleHide.bind(this);
   }
 
   handleShow() {
-    this.setState({ showModal: true });
-    document.body.style.overflow = "hidden";
-    document.getElementById('root').style.filter = 'blur(5px) grayscale(50%)';
-    document.getElementById('root').style.transition = '.35s';
+    this.setState({ showModal: true, pointerEvents: 'none' });
   }
 
   handleHide() {
@@ -60,8 +70,6 @@ class AdForm extends Component {
       tel: "",
       opacity: .3
     });
-    document.body.style.overflow = "visible";
-    document.getElementById('root').style.filter = 'blur(0px) grayscale(0%)';
   }
 
   handleSubmit = e => {
@@ -127,7 +135,7 @@ class AdForm extends Component {
                 autoComplete="tel-national"
                 placeholder="###-###-####"
                 pattern="^[0-9-+s()]*$"
-                tpye="tel" 
+                type="tel" 
                 name="tel"
                 disabled={this.state.disabled}
                 value={tel} 
@@ -137,6 +145,7 @@ class AdForm extends Component {
           <Button 
             type="submit"
             disabled={this.state.disabled}
+            style={{pointerEvents: this.state.pointerEvents}}
           >
           Send
           </Button>

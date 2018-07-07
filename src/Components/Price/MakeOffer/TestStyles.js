@@ -13,6 +13,7 @@ export const Card = styled.div`
 
 export const Front = styled.div`
   position: absolute;
+  z-index: 1;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
@@ -58,10 +59,15 @@ export const Back = styled.div`
   position: absolute;
   cursor: pointer;
   width: 100%;
+  z-index: 1000;
   height: 100%;
   backface-visibility: hidden;
   background: #FFFFFF;
   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
   display: flex;
   flex-direction: column;
@@ -271,3 +277,6 @@ export const SubmitButton = styled.button`
     width: 140px;
   }
 `;
+
+
+
