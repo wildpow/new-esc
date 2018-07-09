@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Form,
-          Textarea, LabelWrapper, Label,
-          Input, Span,
-          SleepSpan, Spanner,} from './MakeOfferStyles';
-import { MakeOfferWrapper, Button, ModalContainer, ModalBox,
-          SubmitButton, Header, Headline } from './FinalStyles';
-const modalRoot = document.getElementById('modal-root'); //React Portal ref
 
+import { MakeOfferContainer, MakeOfferButton, MakeOfferSpan } from './Styles/MakeOfferStyles';
+import { ModalContainer, CardContainer, Card } from './Styles/ModalStyles';
+import { Front, Header } from './Styles/FrontCardStyles';
+import { Form, Input, TextArea, SubmitButton } from './Styles/FormStyles';
+import { Back } from './Styles/BackCardStyles';
+
+import Logo from '../../../images/ezgif.com-optimize.gif'
+
+const mainRoot = document.getElementById('root')
+const modalRoot = document.getElementById('modal-root');
 class Modal extends Component {
   constructor(props) {
     super(props);
@@ -15,9 +18,20 @@ class Modal extends Component {
   }
   componentDidMount() {
     modalRoot.appendChild(this.el);
+    document.body.style.overflow = "hidden";  //make backgroup not scrollable
+    mainRoot.style.position = 'fixed';
+    mainRoot.style.filter = 'blur(5px) grayscale(50%)';
+    mainRoot.style.width = '100%';
+    mainRoot.style.height = '100%';
+    mainRoot.style.transition = '.35s';
   }
   componentWillUnmount() {
     modalRoot.removeChild(this.el);
+    document.body.style.overflow = "visible";
+    mainRoot.style.position = 'static';
+    mainRoot.style.filter = 'blur(0px) grayscale(0%)';
+    mainRoot.style.width = 'auto';
+    mainRoot.style.height = 'auto';
   }
   render() {
     return ReactDOM.createPortal(
@@ -33,8 +47,8 @@ const encode = (data) => {
 
 class MakeOffer extends Component {
   constructor(props) {
-    super(props);
-    this.state = { 
+    super(props)
+    this.state = {
       showModal: false,
       name: "",
       email: "",
@@ -43,16 +57,18 @@ class MakeOffer extends Component {
       mattress: this.props.mattress,
       size: this.props.size,
       formSubmit: false,
-      disabled: false,
-      opacity: 1,
+      disabled: this.props.pdisabled,
+      opacity: 1,                       
+      flipCard: "", 
+      pointerEvents: 'auto'                     
     }
-
-    this.handleShow = this.handleShow.bind(this);
-    this.handleHide = this.handleHide.bind(this);
+    this.handleShow = this.handleShow.bind(this); 
+    this.handleHide = this.handleHide.bind(this); 
+    this.handleFlip = this.handleFlip.bind(this)  
   }
 
   handleChange = e => this.setState({ [e.target.name]: e.target.value })
-
+  
   handleSubmit = e => {
     fetch("/", {
       method: "POST",
@@ -62,20 +78,18 @@ class MakeOffer extends Component {
       .then(() => this.setState({ 
                     formSubmit: !this.state.formSubmit, 
                     disabled: !this.state.disabled,
-                    opacity: .3 }))
-      .then(() => this.handleHide())
+                    opacity: .3,
+                    pointerEvents: 'none'}))
+      .then(() => this.handleFlip())
       .catch(error => alert(error));
-    // document.body.style.overflow = "visible";
-    // document.getElementById('root').style.filter = 'blur(0px) grayscale(0%)';
+    
     e.preventDefault();
   };
 
   handleShow() {
     this.setState({ showModal: true });
-    document.body.style.overflow = "hidden";
-    document.getElementById('root').style.filter = 'blur(5px) grayscale(50%)';
-    document.getElementById('root').style.transition = '.35s';
   }
+
   handleHide() {
     this.setState({ 
       showModal: false,
@@ -83,90 +97,102 @@ class MakeOffer extends Component {
       email: "",
       note: "",
       });
-    document.body.style.overflow = "visible";
-    document.getElementById('root').style.filter = 'blur(0px) grayscale(0%)';
+    
   }
+  handleFlip() {
+    this.setState({ flipCard: 'rotateY(180deg)'})
+  }
+
   render() {
     const { name, email, tel, note, mattress, size } = this.state;
     const modal = this.state.showModal ? (
-      <Modal size={this.props.size}>
+      <Modal size={this.props.size}> 
         <ModalContainer>
-        <ModalBox>
-          <Header>
-            <Headline>Make an Offer</Headline>
-            <button onClick={this.handleHide}>close</button>
-          </Header>
-            <p>
-              We now are making it even easier to comparison shop with our locally owned and operated mattress center.
-              If you find a lower price on the same mattress from a competitor, just let us know by filling out this form<Spanner>.</Spanner>
-              <SleepSpan>&nbsp;and we will help you "sleep like the experts do".</SleepSpan>
-            </p>
-              <Form onSubmit={this.handleSubmit}>
-                <LabelWrapper TopM>
-                  <Label>Name:</Label>
+          <CardContainer>
+            <Card style={{transform: this.state.flipCard, WebkitTransform: this.state.flipCard}}>
+              <Front>
+                <Header>
+                  <h3>Make an Offer</h3>
+                  <button onClick={this.handleHide}>close</button>
+                </Header>
+                <p>
+                  We now are making it even easier to comparison shop with our locally owned and operated mattress center.
+                  If you find a lower price on the same mattress from a competitor, just let us know by filling out this form
+                  and we will help you "sleep like the experts do".
+                </p>
+                <Form onSubmit={this.handleSubmit}>
                   <Input
                     required
-                    placeholder="Mr. Sleeping Panda"
+                    placeholder="Name"
                     type="text" 
                     name="name" 
                     autoComplete="name"
                     value={name} 
                     onChange={this.handleChange} 
                   />
-                </LabelWrapper>
-                <LabelWrapper>
-                  <Label>Email:</Label>
                     <Input
                     required
-                    placeholder="youremail@example.com"
+                    placeholder="Email"
                     type="email" 
                     name="email" 
                     autoComplete="email" 
                     value={email} 
                     onChange={this.handleChange} 
                   />
-                </LabelWrapper>
-                <LabelWrapper>
-                  <Label>Phone:</Label>
                     <Input
                       required
                       autoComplete="tel-national"
                       placeholder="###-###-####"
                       pattern="^[0-9-+s()]*$"
-                      tpye="tel" 
+                      type="tel" 
                       name="tel"
                       value={tel} 
                       onChange={this.handleChange} 
                     />
-                </LabelWrapper>
-                <LabelWrapper>
-                  <Label>Note:</Label>
-                  <Textarea
+                  <TextArea
                     onChange={this.handleChange}
-                    placeholder="Where you found the price match"
+                    placeholder="Price match info"
                     required
                     type="text"
                     value={note} 
                     name="note"
                   />
-                </LabelWrapper>
                 <input hidden type="text" name="mattress" defaultValue={mattress}/>
                 <input hidden type="text" name="size" defaultValue={size} />
                 <SubmitButton type="submit">Send</SubmitButton>
               </Form>
-          </ModalBox>
+              </Front>
+              <Back onClick={this.handleHide}>
+                <Header>
+                  <h3>Form submitted</h3>
+                  <button onClick={this.handleHide}>close</button>
+                </Header>
+                <p>
+                  Thank you for reaching out to us and giving us
+                  the opportunity to earn your business.
+                  We will get back to you with in 24 hours and hopefully
+                  help you "sleep like the experts do".
+                </p>
+                <img src={Logo} alt="bla bla"/>
+                
+              </Back>
+            </Card>
+          </CardContainer>
         </ModalContainer>
       </Modal>
     ) : null;
     return (
-      <MakeOfferWrapper style={{opacity: this.state.opacity}}>        
-        <Button onClick={this.handleShow}
-                style={{opacity: this.props.opacity, transition: 'opacity 700ms ease-in-out'}}
-                disabled={this.state.disabled}
-          >Make <Span>an</Span> Offer
-        </Button>
-        {modal}
-      </MakeOfferWrapper>
+      <MakeOfferContainer style={{opacity: this.state.opacity}}>        
+        <MakeOfferButton 
+          onClick={this.handleShow}
+          style={{  opacity: this.props.opacity, 
+                    transition: 'opacity 700ms ease-in-out',
+                    pointerEvents: this.state.pointerEvents }}
+          disabled={this.props.disabled}
+          >Make <MakeOfferSpan>an</MakeOfferSpan> Offer
+        </MakeOfferButton>
+        {modal}{console.log(this.state.disabled)}
+      </MakeOfferContainer>
     )
   }
 }

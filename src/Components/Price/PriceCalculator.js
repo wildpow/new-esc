@@ -1,5 +1,5 @@
 import React from 'react';
-import MakeOffer from './MakeOffer/TestMakeOffer';
+import MakeOffer from './MakeOffer/MakeOffer';
 import { DropDown, PriceTitle, AddBoxTitle,
           Total, BeforeSalePrice, Wrapper,
           DropDownSize, DropDownWrapper } from './PriceCalStyles'
@@ -221,10 +221,11 @@ class PriceCalculator extends React.PureComponent {
         <Total style={{opacity: this.state.opacityTotal, transition: 'opacity 700ms ease-in-out'}}>
           TOTAL: ${this.state.BoxAdded ? this.state.totalSetPrice : this.state.totalMattOnlyPrice}
         </Total> 
-        <MakeOffer  opacity={this.state.opacityTotal} // MakeOffer only shows when total is visiable
+        <MakeOffer  disabled={this.state.boxDisabled}
+                    opacity={this.state.opacityTotal} // MakeOffer only shows when total is visiable
                     mattress={this.props.mattress} // from SingleMattres -> priceCalculator ->
                     size={this.state.name}
-                    />
+                    />{console.log('from price cal',this.state.boxDisabled)}
     </Wrapper>
     )
   }
