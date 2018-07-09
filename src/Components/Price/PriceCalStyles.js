@@ -3,6 +3,7 @@ import {Blue, MainFont2, FlexCol, Red, Border } from '../../Styles';
 
 export const DropDown = styled.select`
   color: white;
+  cursor: pointer;
   background-color: ${Blue};
   font-family: ${MainFont2};
   width: 150px;
@@ -37,6 +38,9 @@ export const DropDown = styled.select`
   @media(min-width: 1200px) {
     padding: 20px 20px 20px 20px;
   }
+  @media(min-width: 1300px) {
+    margin-bottom: 10px;
+  }
 `;
 export const DropDownSize = DropDown.extend`
   @media(min-width: 567px) {
@@ -67,7 +71,9 @@ export const PriceTitle = styled.h4`
   @media(min-width: 1024px) {
     font-size: 1.5rem;
   }
-  
+  @media(min-width: 1300px) {
+    margin-top: 2px;
+  }
 `;
 
 export const AddBoxTitle = styled.h4`
@@ -90,7 +96,7 @@ export const AddBoxTitle = styled.h4`
 `;
 export const BeforeSalePrice = styled.h6`
   font-family: ${MainFont2};
-  margin-top: 4px;
+  margin-top: 2px;
   margin-bottom: 0px;
   margin-right: 10px;
   text-decoration: line-through;
@@ -98,6 +104,7 @@ export const BeforeSalePrice = styled.h6`
   -webkit-text-decoration-color: ${Red};
   -moz-text-decoration-color: ${Red};
   text-align: right;
+  @media(min-width: 360px) { margin-top: 4px;}
   @media(min-width: 567px) {
     margin-top: 8px;
     margin-left: 0px;
@@ -151,6 +158,9 @@ export const Wrapper = FlexCol.extend`
     margin-left: 25px;
     margin-top: 10px;
     border-left: ${Border};
+  }
+  @media(min-width: 1300px) {
+    margin-top: 0px;
   }
 `;
 
