@@ -225,7 +225,7 @@ class PriceCalculator extends React.PureComponent {
                     opacity={this.state.opacityTotal} // MakeOffer only shows when total is visiable
                     mattress={this.props.mattress} // from SingleMattres -> priceCalculator ->
                     size={this.state.name}
-                    />{console.log('from price cal',this.state.boxDisabled)}
+                    />
     </Wrapper>
     )
   }

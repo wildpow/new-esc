@@ -57,7 +57,6 @@ class MakeOffer extends Component {
       mattress: this.props.mattress,
       size: this.props.size,
       formSubmit: false,
-      disabled: this.props.pdisabled,
       opacity: 1,                       
       flipCard: "", 
       pointerEvents: 'auto'                     
@@ -191,7 +190,7 @@ class MakeOffer extends Component {
           disabled={this.props.disabled}
           >Make <MakeOfferSpan>an</MakeOfferSpan> Offer
         </MakeOfferButton>
-        {modal}{console.log(this.state.disabled)}
+        {modal}
       </MakeOfferContainer>
     )
   }
