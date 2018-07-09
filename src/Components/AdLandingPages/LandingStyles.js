@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { MainFont2, MainFont1, TextShadow, Red } from '../../Styles';
+import { MainFont2, MainFont1, TextShadow, Red, Animation, FadeIn } from '../../Styles';
 
 
 export const Container = styled.div`
@@ -386,6 +386,8 @@ export const MapInfo = styled.div`
 `;
 
 export const ModalBox = styled.div`
+  animation-name: ${FadeIn};
+  ${Animation}
   align-self: center;
   display: flex;
   flex-direction: column;
