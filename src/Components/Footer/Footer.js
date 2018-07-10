@@ -2,18 +2,21 @@ import React from 'react';
 import { MainFooter, Wrapper,
           Hours, HoursSpan, HoursPara,
           Contact, GraphImg, GraphLink, MapLink, Divy, BottomLinkWrapper,
-          BottomLinks
+          BottomLinks, BBBLink, BottomBBLink
         } from './FooterStyles';
 
 import GraphCMS from '../../images/powered_by_graphcms.svg';
 import SocialIcons from './SocialIcons';
-
-
+import BBB from '../../images/Accredited_Business_Seal_in_Black.jpg';
+import BBBWebp from '../../images/Accredited_Business_Seal_in_Black.webp'
+import BBBHor from '../../images/ab_seal_horizontal_black_large.jpg';
+import BBBWebpHor from '../../images/ab_seal_horizontal_black_large.webp'
 const Footer = () => {
   return(
     <MainFooter>
       <Wrapper>
         <SocialIcons/>
+        
         <Contact>
           <Hours>
             <HoursSpan>Hours</HoursSpan>
@@ -23,6 +26,12 @@ const Footer = () => {
                 Sunday 10am - 6pm
             </HoursPara>
           </Hours>
+          <BBBLink href="https://www.bbb.org/northwest/customer-reviews/mattress/esc-mattress-center-in-everett-wa-1000056497/add/" target="_blank" rel="noopener noreferrer">
+          <picture>
+            <source type="image/webp" srcSet={BBBWebp}/>
+            <img src={BBB} alt="Better Business Bureau seal of approvel, click to leave review"/>
+          </picture>
+          </BBBLink>
         <Hours>
           <HoursSpan>Address</HoursSpan>
           <HoursPara>
@@ -33,6 +42,13 @@ const Footer = () => {
           </HoursPara>
         </Hours>
       </Contact>
+      <BottomBBLink href="https://www.bbb.org/northwest/customer-reviews/mattress/esc-mattress-center-in-everett-wa-1000056497/add/" target="_blank" rel="noopener noreferrer">
+          <picture>
+            <source type="image/webp" srcSet={BBBWebpHor}/>
+            <img src={BBBHor} alt="Better Business Bureau seal of approvel, click to leave review"/>
+          </picture>
+          </BottomBBLink>
+      
       <BottomLinkWrapper>
         <BottomLinks to="/current-sale">Current Sale</BottomLinks>
         <BottomLinks to="/warranty">Warranty Infomation</BottomLinks>
@@ -42,9 +58,9 @@ const Footer = () => {
       </Wrapper>
       <Divy>
         <GraphLink href="https://graphcms.com/" target="_blank" rel="noopener noreferrer">
-            <GraphImg src={GraphCMS} alt="GraphCMS Company logo"/>
-          </GraphLink>
-          </Divy>
+          <GraphImg src={GraphCMS} alt="GraphCMS Company logo"/>
+        </GraphLink>
+      </Divy>
     </MainFooter>
   )
 };

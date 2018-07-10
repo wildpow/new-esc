@@ -105,7 +105,11 @@ export const Hours = FlexCol.extend`
   font-family: ${MainFont2};
   text-align: center;
   font-size: 1rem;
-  @media (min-width: 768px) { font-size: 1.3rem; }
+  width: 160px;
+  @media(orientation: landscape) {
+    width: 200px;
+  }
+  @media (min-width: 768px) { font-size: 1.3rem; width: 250px;}
   @media (min-width: 1024px) { font-size: 1.5rem;}
 `;
 
@@ -142,7 +146,7 @@ export const BottomLinkWrapper = FlexCol.extend`
   line-height: 1.7rem;
   justify-content: space-around;
   margin-bottom: 15px;
-  margin-top: 25px;
+  margin-top: 5px;
   text-align: center;
   @media(min-width:640px) { flex-direction: row; }
   @media(min-width: 1024px) { font-size: 1.3rem;}
@@ -151,4 +155,45 @@ export const BottomLinkWrapper = FlexCol.extend`
 export const BottomLinks = styled(Link)`
   color: ${Red};
   &:hover { color: ${Blue}; }
+`;
+
+export const BBBLink = styled.a`
+  display: none;
+  
+  @media(orientation: landscape) {
+    display: flex;
+    justify-content: center;
+    width: 100px;
+  }
+  @media(min-width: 600px) {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    transition: all .25s ease-in;
+    &:hover {
+      transform: scale3d(1.1,1.1,1);
+    }
+  }
+  & img {
+    max-width: 5rem;
+  }
+`;
+export const BottomBBLink = styled.a`
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 300px;
+  @media(orientation: landscape) {
+    display: none;
+  }
+  @media(min-width: 600px) {
+    display: none;
+  }
+  & img {
+    max-width: 10rem;
+  }
+`;
+export const ContactWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
