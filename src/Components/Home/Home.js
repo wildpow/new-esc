@@ -3,18 +3,18 @@ import { Helmet } from "react-helmet";
 import { Carousel } from 'react-responsive-carousel'; 
 import { Main, Linky } from './HomeStyles';
 
-import Tempur from '../../images/July4thTempurCarouselImage.jpg';
-import TempurWebp from '../../images/July4thTempurCarouselImage.webp'
+// import Tempur from '../../images/July4thTempurCarouselImage.jpg';
+// import TempurWebp from '../../images/July4thTempurCarouselImage.webp'
 
 import Stearns from '../../images/July4thStearnsCarouselImage.jpg';
 import StearnsWebp from '../../images/July4thStearnsCarouselImage.webp'
 
-import Sealy from '../../images/July4thSealyCarouselImage.jpg';
-import SealyWebp from '../../images/July4thSealyCarouselImage.webp'
+import Sealy from '../../images/SealyDefault980x450.jpg';
+import SealyWebp from '../../images/SealyDefault980x450.webp'
 
 
-import Sale from '../../images/July4thMainCarouselImage.jpg';
-import SaleWebp from '../../images/July4thMainCarouselImage.webp'
+import Sale from '../../images/TempurGWPBanner.jpg';
+import SaleWebp from '../../images/TempurGWPBanner.webp'
 
 // import Fifth from '../../images/GildedBreathSpecialBuy980x450.jpg'
 import Front from '../FrontInfo/front';
@@ -45,7 +45,7 @@ const HomeComponent = () => {
         <Linky to='/current-sale'>
         <picture>
           <source type="image/webp" srcSet={SaleWebp}/>
-          <img src={Sale} alt="E.S.C Mattress Center's 4th of July sales event on a selection of mattresses and adjustable bases."/>
+          <img src={Sale} alt="E.S.C Mattress Center's Tempur-Pedic Gift With Purchase on all tempur-pedic."/>
         </picture>
         </Linky>
         <Linky to='/brands/stearns'>
@@ -54,12 +54,12 @@ const HomeComponent = () => {
           <img src={Stearns} alt="Stearns and Foster, Free box spring and 10% off select mattresses on our 4th of july sale"/>
         </picture>
         </Linky>
-        <Linky to='/brands/tempurpedic'>
+        {/* <Linky to='/brands/tempurpedic'>
         <picture>
           <source type="image/webp" srcSet={TempurWebp}/>
           <img src={Tempur} alt="Free adjustable base with Tempurpedic Luxe or breeze mattress purchase"/>
         </picture>
-        </Linky>
+        </Linky> */}
         <Linky to='/brands/sealy'>
         <picture>
           <source type="image/webp" srcSet={SealyWebp}/>

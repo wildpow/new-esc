@@ -5,10 +5,9 @@ import { Headline, Wrapper, P } from '../Home/HomeStyles';
 const Front = () => {
   return (
     <Wrapper>
-      <Headline>4th of July Sale</Headline>
+      <Headline>Tempur-Pedic Gift With Purchase</Headline>
       <P>
-      Pursue Your Happiness with huge savings going on now through July 15th at ESC Mattress Center in Everett!  Now you can save up to $200 on Sealy Hybrid and Sealy Conform mattress sets.  Tempur-Pedic is raising your expectations with a free movable base upgrade on Tempur Luxe and Tempur Breeze models.  Stearns & Foster is offering bonus savings of 10% on all S&F Estate, S&F Lux, and Stearns & Foster Reserve mattresses and including a free matching box spring with purchase.  Stop by today to save big!   
-      </P>
+      The new Tempur-Pedic lineup has arrived and to celebrate we have huge savings of up to 50% on Tempur-Pedic FloorModels and any Tempur-Pedic mattress purchase qualifies for up to $300 in free gifts with puchase! Stop by today in Everett to check out the new Adapt and ProAdapt mattresses from Tempur-Pedic!      </P>
       <Headline red>“Sleep Like the Experts Do!”</Headline>
     </Wrapper>
   )
