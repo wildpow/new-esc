@@ -6,15 +6,15 @@ import { Main, Linky } from './HomeStyles';
 // import Tempur from '../../images/July4thTempurCarouselImage.jpg';
 // import TempurWebp from '../../images/July4thTempurCarouselImage.webp'
 
-import Stearns from '../../images/July4thStearnsCarouselImage.jpg';
-import StearnsWebp from '../../images/July4thStearnsCarouselImage.webp'
+import Stearns from '../../images/StearnsDefault980x450.jpg';
+import StearnsWebp from '../../images/StearnsDefault980x450.webp'
 
 import Sealy from '../../images/SealyDefault980x450.jpg';
 import SealyWebp from '../../images/SealyDefault980x450.webp'
 
 
-import Sale from '../../images/TempurGWPBanner.jpg';
-import SaleWebp from '../../images/TempurGWPBanner.webp'
+import Sale from '../../images/Tempur_Free_Watch_Carousel.jpg';
+import SaleWebp from '../../images/Tempur_Free_Watch_Carousel.webp'
 
 // import Fifth from '../../images/GildedBreathSpecialBuy980x450.jpg'
 import Front from '../FrontInfo/front';
