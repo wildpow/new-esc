@@ -13,8 +13,8 @@ import Sealy from '../../images/SealyDefault980x450.jpg';
 import SealyWebp from '../../images/SealyDefault980x450.webp'
 
 
-import Sale from '../../images/Tempur_Free_Watch_Carousel.jpg';
-import SaleWebp from '../../images/Tempur_Free_Watch_Carousel.webp'
+import Sale from '../../images/Tempur_Default_GWP_Carousel.jpg';
+import SaleWebp from '../../images/Tempur_Default_GWP_Carousel.webp'
 
 // import Fifth from '../../images/GildedBreathSpecialBuy980x450.jpg'
 import Front from '../FrontInfo/front';
