@@ -5,9 +5,9 @@ import { Headline, Wrapper, P } from '../Home/HomeStyles';
 const Front = () => {
   return (
     <Wrapper>
-      <Headline>Tempur-Pedic Gift With Purchase</Headline>
+      <Headline>The Real Deal</Headline>
       <P>
-      The new Tempur-Pedic lineup has arrived and to celebrate we have huge savings of up to 50% on closeout Tempur-Pedic Floor Models (while supplies last). Also receive a Free Gift valued at up to $300 with purchase of select Tempur-Pedic Mattresses. Stop by today in Everett to check out the new Adapt and ProAdapt mattresses from Tempur-Pedic!
+      The Real Deal is going on now, save up to $1000 on popular mattress sets! Save $550 on Tempur-Pedic Elite, Luxe, and Breeze models or upgrade to an Adjustable Base at no additional charge. Upgrade to the highest rated luxury innerspring and save up to $1000 on Stearns & Foster Adjustable mattress sets. Save up to $200 on top-rated Sealy Hybrid and Conform mattress models. The biggest mattress sale of the year is going on now with The Real Deal now through September 10th, so stop by today and save!
       </P>
       <Headline red>“Sleep Like the Experts Do!”</Headline>
     </Wrapper>
