@@ -3,8 +3,8 @@ import { Helmet } from "react-helmet";
 import { Carousel } from 'react-responsive-carousel'; 
 import { Main, Linky } from './HomeStyles';
 
-import Tempur from '../../images/TempurRealDealCarousel.jpg';
-import TempurWebp from '../../images/TempurRealDealCarousel.webp'
+import Tempur from '../../images/300GWPCAROUSEL.jpg';
+import TempurWebp from '../../images/300GWPCAROUSEL.webp'
 
 import Stearns from '../../images/StearnsRealDealCarousel.jpg';
 import StearnsWebp from '../../images/StearnsRealDealCarousel.webp'
